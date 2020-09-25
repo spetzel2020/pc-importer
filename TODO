@@ -1,0 +1,16 @@
+# TO DO
+
+## BUGS
+
+
+## FEATURES
+- Read an XFDF file
+- Parse into internal data structure
+- Create internal JSON representation
+- Create Actor from that JSON 
+
+
+## FIXED BUGS
+
+
+## COMPLETED FEATURES
