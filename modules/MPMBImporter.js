@@ -45,7 +45,78 @@ export class MPMBImporter {
     }
 
     static async importFromXML(xfdf) {
+        let parser = new DOMParser();
+        let xmlDoc = parser.parseFromString(xfdf,"text/xml");
+        const parsedXFDF = MPMBImporter.traverseXML(xmlDoc);
+    }
 
+    static async traverseXML(xmlDoc) {
+        const Direction = {
+            right: "right",
+            down: "down",
+            up: "up"
+        }
+
+        if (!xmlDoc) {return;}
+        //Traverse the xmlDoc by childNodes - follow each path until we get to a value
+        //Note that the parsed xmlDoc contains many shortcuts for traversing the XML
+        let currentNode = xmlDoc;
+        let direction = Direction.down;
+        let parentObject = {};
+        let objectTree = {};
+        let nodeObjects;
+        do {
+            switch (direction) {
+                case Direction.down:
+                    const firstChild = currentNode.firstChild;
+                    if (firstChild) {
+                        currentNode = firstChild;
+                        if (nodeObjects) {
+                            parentObject = nodeObjects[nodeObjects.childIndex];
+                        } else {
+                            parentObject = objectTree;
+                        }
+
+                        nodeObjects = {}
+                        parentObject.children = nodeObjects;
+                        nodeObjects.parent = parentObject;
+                        nodeObjects.childIndex = 0;
+                        nodeObjects[nodeObjects.childIndex] = {}
+                        nodeObjects[nodeObjects.childIndex].name = currentNode.nodeName;
+
+                    } else {
+                        //read the terminal value
+                        if (nodeObjects && nodeObjects[nodeObjects.childIndex]) {
+                            nodeObjects[nodeObjects.childIndex].value =  currentNode.nodeValue;
+                        }
+
+                        //and step currentNode to the right
+                        direction = Direction.right;
+                    }
+                    break;
+                case Direction.right:
+                    const nextNode = currentNode.nextSibling;
+                    if (nextNode) {
+                        nodeObjects.childIndex++;
+                        currentNode = nextNode;
+                        nodeObjects[nodeObjects.childIndex] = {}
+                        nodeObjects[nodeObjects.childIndex].name = currentNode.nodeName;
+                        direction = Direction.down;
+                    } else {
+                        //back up a level and go right again
+                        direction = Direction.up;
+                    }
+                    break;
+                case Direction.up:
+                    //The only way this loop ends is if currentNode.parentNode == null;
+                    currentNode = currentNode.parentNode;
+                    nodeObjects = nodeObjects.parent.children;
+                    //Can actually delete the child parent at this point since we will never traverse down here again
+                    direction = Direction.right;
+                    break;
+            }
+        } while (currentNode);
+        const waitHere = 1;
     }
 
     //TEMPORARY way of reading a file
