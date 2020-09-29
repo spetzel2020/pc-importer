@@ -1,6 +1,9 @@
 /*
 25-Sep-2020     Created
-
+27-Sep-2020     traverseXML condenses the XML tree down into the values and attributes we need
+                v0.3.0 Pull the traversed tree into a simple (field, values) array
+                This is actually too destructured; we should walk the tree and create more
+                meaningful dynamic structures
 */
 
 
@@ -47,10 +50,33 @@ export class MPMBImporter {
     static async importFromXML(xfdf) {
         let parser = new DOMParser();
         let xmlDoc = parser.parseFromString(xfdf,"text/xml");
-        const parsedXFDF = MPMBImporter.traverseXML(xmlDoc);
+        const parsedObjectTree = await MPMBImporter.traverseXML(xmlDoc);
+        if (!parsedObjectTree) return;
+        //Now convert this simplified version into an even simpler array of (fieldName, value) pairs
+        let fieldDictionary = [];
+        let fieldsSubTree;
+        try {
+            fieldsSubTree = parsedObjectTree[0].childNodes[1];
+            if (!fieldsSubTree || !fieldsSubTree.childNodes) {return;}
+            const nodeValues = Object.values(fieldsSubTree.childNodes);
+            for (const leaf of nodeValues) {
+                let name,value = null;
+                if (leaf.attributes && leaf.attributes.name) {
+                    name = leaf.attributes.name.nodeValue;
+                }
+                if (leaf.childNodes && leaf.childNodes[0] && leaf.childNodes[0].childNodes && leaf.childNodes[0].childNodes[0]) {
+                    value = leaf.childNodes[0].childNodes[0].value;
+                }
+                if (name) {fieldDictionary.push([name, value]);}
+            }
+        } catch {
+            return;
+        }
+        return fieldDictionary;
     }
 
     static async traverseXML(xmlDoc) {
+        //One way of pulling the essential nodeName, attributes, values from the XFDF
         const Direction = {
             right: "right",
             down: "down",
@@ -62,32 +88,32 @@ export class MPMBImporter {
         //Note that the parsed xmlDoc contains many shortcuts for traversing the XML
         let currentNode = xmlDoc;
         let direction = Direction.down;
+        let objectTree;
         let parentObject = {};
-        let objectTree = {};
-        let nodeObjects;
+        let childNodes;
         do {
             switch (direction) {
                 case Direction.down:
                     const firstChild = currentNode.firstChild;
                     if (firstChild) {
                         currentNode = firstChild;
-                        if (nodeObjects) {
-                            parentObject = nodeObjects[nodeObjects.childIndex];
-                        } else {
-                            parentObject = objectTree;
+
+                        const newNodes = {}
+                        if (childNodes) {
+                            parentObject = childNodes;
+                            childNodes[childNodes.childIndex].childNodes = newNodes;
                         }
 
-                        nodeObjects = {}
-                        parentObject.children = nodeObjects;
-                        nodeObjects.parent = parentObject;
-                        nodeObjects.childIndex = 0;
-                        nodeObjects[nodeObjects.childIndex] = {}
-                        nodeObjects[nodeObjects.childIndex].name = currentNode.nodeName;
-
+                        childNodes = newNodes;
+                        childNodes.parent = parentObject;
+                        childNodes.childIndex = 0;
+                        childNodes[childNodes.childIndex] = {}
+                        childNodes[childNodes.childIndex].nodeName = currentNode.nodeName;
+                        if (currentNode.attributes) {childNodes[childNodes.childIndex].attributes = currentNode.attributes;}
                     } else {
                         //read the terminal value
-                        if (nodeObjects && nodeObjects[nodeObjects.childIndex]) {
-                            nodeObjects[nodeObjects.childIndex].value =  currentNode.nodeValue;
+                        if (childNodes && childNodes[childNodes.childIndex]) {
+                            childNodes[childNodes.childIndex].value =  currentNode.nodeValue;
                         }
 
                         //and step currentNode to the right
@@ -97,10 +123,11 @@ export class MPMBImporter {
                 case Direction.right:
                     const nextNode = currentNode.nextSibling;
                     if (nextNode) {
-                        nodeObjects.childIndex++;
+                        childNodes.childIndex++;
                         currentNode = nextNode;
-                        nodeObjects[nodeObjects.childIndex] = {}
-                        nodeObjects[nodeObjects.childIndex].name = currentNode.nodeName;
+                        childNodes[childNodes.childIndex] = {}
+                        childNodes[childNodes.childIndex].nodeName = currentNode.nodeName;
+                        if (currentNode.attributes) {childNodes[childNodes.childIndex].attributes = currentNode.attributes;}
                         direction = Direction.down;
                     } else {
                         //back up a level and go right again
@@ -110,13 +137,15 @@ export class MPMBImporter {
                 case Direction.up:
                     //The only way this loop ends is if currentNode.parentNode == null;
                     currentNode = currentNode.parentNode;
-                    nodeObjects = nodeObjects.parent.children;
+                    if (currentNode) {objectTree = childNodes;}
+                    childNodes = childNodes.parent;
+
                     //Can actually delete the child parent at this point since we will never traverse down here again
                     direction = Direction.right;
                     break;
             }
         } while (currentNode);
-        const waitHere = 1;
+        return objectTree;
     }
 
     //TEMPORARY way of reading a file
