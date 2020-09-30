@@ -5,12 +5,18 @@
                 This is actually too destructured; we should walk the tree and create more
                 meaningful dynamic structures
 */
-
+import {Actor5e} from "./Actor5e.js";
 
 export const MODULE_NAME = "MPMB-importer";
 
 
+
 export class MPMBImporter {
+    constructor(fieldDictionary) {
+        this.fieldDictionary = fieldDictionary;
+    }
+
+
     static init() {
         game.settings.register(MODULE_NAME, "MPMBImporterVersion", {
           name: "MPMB Importer version",
@@ -52,8 +58,9 @@ export class MPMBImporter {
         let xmlDoc = parser.parseFromString(xfdf,"text/xml");
         const parsedObjectTree = await MPMBImporter.traverseXML(xmlDoc);
         if (!parsedObjectTree) return;
+
         //Now convert this simplified version into an even simpler array of (fieldName, value) pairs
-        let fieldDictionary = [];
+        let fieldDictionary = new Map();
         let fieldsSubTree;
         try {
             fieldsSubTree = parsedObjectTree[0].childNodes[1];
@@ -67,12 +74,21 @@ export class MPMBImporter {
                 if (leaf.childNodes && leaf.childNodes[0] && leaf.childNodes[0].childNodes && leaf.childNodes[0].childNodes[0]) {
                     value = leaf.childNodes[0].childNodes[0].value;
                 }
-                if (name) {fieldDictionary.push([name, value]);}
+                if (name) {fieldDictionary.set(name, value);}
             }
         } catch {
             return;
         }
-        return fieldDictionary;
+
+        //Populate the Actor5e structure from the fieldDictionary
+        const importedActor = new Actor5e(fieldDictionary);
+
+
+        //Now export the importedActor to JSON
+        importedActor.exportToJSON();
+
+
+        return importedActor;
     }
 
     static async traverseXML(xmlDoc) {
@@ -147,6 +163,13 @@ export class MPMBImporter {
         } while (currentNode);
         return objectTree;
     }
+
+    static getValueForName(fieldDictionary, fieldName) {
+        const value = fieldDictionary.get(fieldName);
+        return value;
+    }
+
+
 
     //TEMPORARY way of reading a file
     static getSceneControlButtons(buttons) {

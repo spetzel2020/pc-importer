@@ -1,6 +1,6 @@
 {
   "MPMBI.id": "MPMB-importer",
-  "MPMBI.Version" : "v0.1.1",
+  "MPMBI.Version" : "v0.4.0",
   "MPMBI.Name": "MPMB Importer",
   "MPMBI.Welcome" : "Welcome to MPMB Importer",
   "MPMBI.BUTTON.ImportXFDF" : "Import an MPMB character sheet"
