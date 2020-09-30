@@ -25,7 +25,6 @@ export class Actor5e {
         //See https://stackoverflow.com/questions/8085004/iterate-through-nested-javascript-objects
         //Use recursion (only 3 levels deep) to walk through the mapping tree and object in parallel
         this.mapAndIterate(MPMBToActorMapping, this);
-        delete this.fieldDictionary;
     }
 
     mapAndIterate(subMappingTree, subObject) {
@@ -68,7 +67,7 @@ export class AbilityValues {
 
 //Provides the mapping to the field names in the XFDF
 const MPMBToActorMapping = {
-      "name": "PC Name",
+      "name": "AdvLog.PC Name",
       "type": "character",
       "flags": {
         "exportSource": {
@@ -151,7 +150,7 @@ const MPMBToActorMapping = {
             "tempmax": null
           },
           "init": {
-            "value": null,
+            "value": "Initiative Bonus",
             "bonus": null,
             "mod": null,
             "prof": null,
@@ -159,7 +158,7 @@ const MPMBToActorMapping = {
           },
           "spellcasting": "int",
           "speed": {
-            "value": "30 ft",
+            "value": "Speed",
             "special": null
           },
           "death": {
@@ -173,7 +172,7 @@ const MPMBToActorMapping = {
             "encumbered": false
           },
           "exhaustion": null,
-          "inspiration": false,
+          "inspiration": "Inspiration",
           "hd": null,
           "prof": 1,
           "spelldc": 9
@@ -183,19 +182,19 @@ const MPMBToActorMapping = {
             "value": null,
             "public": null
           },
-          "alignment": null,
-          "race": null,
-          "background": null,
+          "alignment": "Alignment",
+          "race": "Race",
+          "background": "Background",
           "xp": {
-            "value": null,
+            "value": "Total Experience",
             "min": null,
             "max": null,
             "pct": null
           },
-          "trait": null,
-          "ideal": null,
-          "bond": null,
-          "flaw": null,
+          "trait": "Trait",
+          "ideal": "Ideal",
+          "bond": "Bond",
+          "flaw": "Flaw",
           "level": null
         },
         "traits": {
@@ -205,7 +204,7 @@ const MPMBToActorMapping = {
             "custom": null
           },
           "dr": {
-            "value": [],
+            "value": ["Resistance Damage Type 1"],
             "custom": null
           },
           "dv": {
@@ -218,7 +217,7 @@ const MPMBToActorMapping = {
           },
           "senses": null,
           "languages": {
-            "value": [],
+            "value": ["Language 1","Language 2","Language 3","Language 4","Language 5"],
             "custom": null
           },
           "weaponProf": {
@@ -235,11 +234,11 @@ const MPMBToActorMapping = {
           }
         },
         "currency": {
-          "pp": null,
-          "gp": null,
-          "ep": null,
-          "sp": null,
-          "cp": null
+          "pp": "Platinum Pieces",
+          "gp": "Gold Pieces",
+          "ep": "Electrum Pieces",
+          "sp": "Silver Pieces",
+          "cp": "Copper Pieces"
         },
         "skills": {
           "acr": {
@@ -315,11 +314,11 @@ const MPMBToActorMapping = {
             "passive": null
           },
           "inv": {
-            "value": null,
+            "value": "Inv",
             "ability": "int",
-            "bonus": null,
+            "bonus": "Inv Bonus",
             "mod": null,
-            "prof": null,
+            "prof": "Inv Prof",
             "total": null,
             "passive": null
           },

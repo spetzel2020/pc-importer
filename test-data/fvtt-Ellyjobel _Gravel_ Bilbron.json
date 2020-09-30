@@ -1,4 +1,5 @@
 {
+  "fieldDictionary": {},
   "name": "Ellyjobel \"Gravel\" Bilbron",
   "type": "character",
   "flags": {
@@ -82,7 +83,7 @@
         "tempmax": null
       },
       "init": {
-        "value": null,
+        "value": "Initiative Bonus",
         "bonus": null,
         "mod": null,
         "prof": null,
@@ -90,7 +91,7 @@
       },
       "spellcasting": "int",
       "speed": {
-        "value": "30 ft",
+        "value": "25 ft",
         "special": null
       },
       "death": {
@@ -104,7 +105,7 @@
         "encumbered": false
       },
       "exhaustion": null,
-      "inspiration": false,
+      "inspiration": "Off",
       "hd": null,
       "prof": 1,
       "spelldc": 9
@@ -114,19 +115,19 @@
         "value": null,
         "public": null
       },
-      "alignment": null,
-      "race": null,
-      "background": null,
+      "alignment": "CG",
+      "race": "Gnome, Deep (Svirfneblin)",
+      "background": "Anthropologist",
       "xp": {
-        "value": null,
+        "value": "12190",
         "min": null,
         "max": null,
         "pct": null
       },
-      "trait": null,
-      "ideal": null,
-      "bond": null,
-      "flaw": null,
+      "trait": "Trait",
+      "ideal": "Knowledge: By understanding other races and cultures, we learn to understand ourselves. (Any)",
+      "bond": "I have a trinket (crystal) that I believe is the key to finding a long-lost society.",
+      "flaw": "I've picked up some unpleasant habits living among goblins, like blowing a wad of snot into a stew to improve the flavor.\nTerrified of the \"sea\" (can swim however) - horribly seasick\nBelieve lots of pseudo-science about crystals",
       "level": null
     },
     "traits": {
@@ -136,7 +137,9 @@
         "custom": null
       },
       "dr": {
-        "value": {},
+        "value": {
+          "0": " "
+        },
         "custom": null
       },
       "dv": {
@@ -149,7 +152,13 @@
       },
       "senses": null,
       "languages": {
-        "value": {},
+        "value": {
+          "0": "Common",
+          "1": "Gnomish",
+          "2": "Undercommon",
+          "3": "Dwarvish",
+          "4": "Goblin"
+        },
         "custom": null
       },
       "weaponProf": {
@@ -166,11 +175,11 @@
       }
     },
     "currency": {
-      "pp": null,
-      "gp": null,
-      "ep": null,
-      "sp": null,
-      "cp": null
+      "pp": "Platinum Pieces",
+      "gp": "15",
+      "ep": "Electrum Pieces",
+      "sp": "4",
+      "cp": "5"
     },
     "skills": {
       "acr": {
@@ -246,11 +255,11 @@
         "passive": null
       },
       "inv": {
-        "value": null,
+        "value": "7",
         "ability": "int",
-        "bonus": null,
+        "bonus": "0",
         "mod": null,
-        "prof": null,
+        "prof": "True",
         "total": null,
         "passive": null
       },
@@ -441,7 +450,7 @@
   },
   "sort": null,
   "token": {
-    "flags": null,
+    "flags": {},
     "name": "Test Import",
     "displayName": null,
     "img": "icons/svg/mystery-man.svg",
@@ -452,20 +461,24 @@
     "lockRotation": false,
     "rotation": null,
     "vision": true,
-    "dimSight": 30,
+    "dimSight": 60,
     "brightSight": null,
     "dimLight": null,
     "brightLight": null,
     "sightAngle": 360,
     "lightAngle": 360,
     "lightAlpha": 1,
-    "actorId": "uTQqBCXQTkYsOc6g",
+    "actorId": null,
     "actorLink": true,
     "actorData": null,
     "disposition": 1,
     "displayBars": null,
-    "bar1": null,
-    "bar2": null,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": ""
+    },
     "randomImg": false
   },
   "items": {},

@@ -4,6 +4,9 @@
                 v0.3.0 Pull the traversed tree into a simple (field, values) array
                 This is actually too destructured; we should walk the tree and create more
                 meaningful dynamic structures
+30-Sep-2020     v0.5.0 Trim the xmlDoc recursively rather than walking the tree to get the components we care about
+                The approaches are equivalent and traverseXML avoids recursion, but for this limited depth it will be Fine
+                v0.5.0 Make fieldDictionary a multi-dimensional array with multiple field values
 */
 import {Actor5e} from "./Actor5e.js";
 
@@ -12,8 +15,8 @@ export const MODULE_NAME = "MPMB-importer";
 
 
 export class MPMBImporter {
-    constructor(fieldDictionary) {
-        this.fieldDictionary = fieldDictionary;
+    constructor() {
+        this.fieldDictionary = new Map();
     }
 
 
@@ -56,32 +59,25 @@ export class MPMBImporter {
     static async importFromXML(xfdf) {
         let parser = new DOMParser();
         let xmlDoc = parser.parseFromString(xfdf,"text/xml");
-        const parsedObjectTree = await MPMBImporter.traverseXML(xmlDoc);
+        let MPMB = new MPMBImporter();
+        const parsedObjectTree = MPMBImporter.trimXML(xmlDoc);
         if (!parsedObjectTree) return;
 
         //Now convert this simplified version into an even simpler array of (fieldName, value) pairs
-        let fieldDictionary = new Map();
         let fieldsSubTree;
         try {
-            fieldsSubTree = parsedObjectTree[0].childNodes[1];
+            fieldsSubTree = parsedObjectTree.childNodes[0].childNodes[1];   //the fields structure from xfdf - should probably check
             if (!fieldsSubTree || !fieldsSubTree.childNodes) {return;}
-            const nodeValues = Object.values(fieldsSubTree.childNodes);
-            for (const leaf of nodeValues) {
-                let name,value = null;
-                if (leaf.attributes && leaf.attributes.name) {
-                    name = leaf.attributes.name.nodeValue;
-                }
-                if (leaf.childNodes && leaf.childNodes[0] && leaf.childNodes[0].childNodes && leaf.childNodes[0].childNodes[0]) {
-                    value = leaf.childNodes[0].childNodes[0].value;
-                }
-                if (name) {fieldDictionary.set(name, value);}
-            }
+            const childNodes = Object.values(fieldsSubTree.childNodes);
+
+            MPMB.getNestedFields(childNodes, null);
+
         } catch {
             return;
         }
 
         //Populate the Actor5e structure from the fieldDictionary
-        const importedActor = new Actor5e(fieldDictionary);
+        const importedActor = new Actor5e(MPMB.fieldDictionary);
 
 
         //Now export the importedActor to JSON
@@ -91,6 +87,47 @@ export class MPMBImporter {
         return importedActor;
     }
 
+    getNestedFields(childNodes, dottedFieldPrefix) {
+        let dottedFields;
+        for (const node of childNodes) {
+            dottedFields = dottedFieldPrefix ? dottedFieldPrefix : "";
+            if (node.nodeName === "field") {
+                if (node.attributes && node.attributes.name) {
+                    if (dottedFields === "") {
+                        dottedFields = node.attributes.name.nodeValue;
+                    } else {
+                        dottedFields = dottedFields + "." + node.attributes.name.nodeValue;
+                    }
+                }
+                this.getNestedFields(node.childNodes, dottedFields);
+            } else if ((node.nodeName === "value") && node.childNodes && node.childNodes[0]) {
+                const value = node.childNodes[0].nodeValue;
+                this.fieldDictionary.set(dottedFields, value);
+            }
+        }
+    }
+
+    static trimXML(xml) {
+        if (!xml) {return;}
+        let trimmedXML = {
+            nodeName : xml.nodeName,
+            nodeValue : xml.nodeValue,
+            attributes: xml.attributes,
+            childNodes: xml.childNodes
+        }
+        Object.keys(trimmedXML).forEach(key => {
+            if (trimmedXML[key] === null) {delete trimmedXML[key];}
+        });
+
+        let newChildNodes = [];
+        trimmedXML.childNodes.forEach((node, i) => {
+            newChildNodes.push(MPMBImporter.trimXML(node));
+        });
+        trimmedXML.childNodes = newChildNodes;
+        return trimmedXML;
+    }
+
+    //DEPRECATED - won't work (changed property names) and use trimXML instead (although it's recursive)
     static async traverseXML(xmlDoc) {
         //One way of pulling the essential nodeName, attributes, values from the XFDF
         const Direction = {
