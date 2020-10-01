@@ -1,10 +1,12 @@
 # Changelog
 
-## 0.5.0 (30-Sep-2020)
-- Try deconstructing xmlDoc instead of traversing the XML
+## 0.4.2 (1-Oct-Sep-2020)
+- More sophisticated Mapping template which allows for arrays, and uses null as the default
+    - uses inline functions to define what should be done after mapping
 
 ## 0.4.1 (30-Sep-2020)
 - Add more field mappings
+- Try deconstructing xmlDoc instead of traversing the XML
 
 ## 0.4.0 (29-Sep-2020)
 - Basic version of Actor5e.js to create an appropriate structure

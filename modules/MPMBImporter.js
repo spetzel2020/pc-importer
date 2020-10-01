@@ -64,6 +64,7 @@ export class MPMBImporter {
         if (!parsedObjectTree) return;
 
         //Now convert this simplified version into an even simpler array of (fieldName, value) pairs
+        //If the value is nested in several fields, we dot the fields together
         let fieldsSubTree;
         try {
             fieldsSubTree = parsedObjectTree.childNodes[0].childNodes[1];   //the fields structure from xfdf - should probably check
@@ -75,6 +76,7 @@ export class MPMBImporter {
         } catch {
             return;
         }
+        console.log(MPMB.fieldDictionary);
 
         //Populate the Actor5e structure from the fieldDictionary
         const importedActor = new Actor5e(MPMB.fieldDictionary);

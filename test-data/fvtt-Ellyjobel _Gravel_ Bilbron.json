@@ -1,73 +1,56 @@
 {
-  "fieldDictionary": {},
   "name": "Ellyjobel \"Gravel\" Bilbron",
   "type": "character",
   "flags": {
     "exportSource": {
-      "world": null,
       "system": "dnd5e",
       "coreVersion": "0.6.6",
-      "systemVersion": 0.96
+      "systemVersion": "0.96"
     },
     "dnd5e": {},
     "core": {
-      "sheetClass": ""
-    }
+      "sheetClass": {}
+    },
+    "MPMB Importer": "0.4.2"
   },
   "data": {
     "abilities": {
       "str": {
         "value": "9",
-        "proficient": "Off",
+        "proficient": 0,
         "mod": "-1",
-        "prof": null,
-        "saveBonus": null,
-        "checkBonus": null,
         "save": "-1"
       },
       "dex": {
         "value": "16",
-        "proficient": "Off",
+        "proficient": 0,
         "mod": "3",
-        "prof": null,
-        "saveBonus": null,
-        "checkBonus": null,
         "save": "3"
       },
       "con": {
         "value": "12",
-        "proficient": "Off",
+        "proficient": 0,
         "mod": "1",
-        "prof": null,
-        "saveBonus": null,
-        "checkBonus": null,
         "save": "1"
       },
       "int": {
         "value": "18",
-        "proficient": "True",
+        "proficient": 1,
         "mod": "4",
-        "prof": null,
         "saveBonus": "0",
-        "checkBonus": null,
         "save": "7"
       },
       "wis": {
         "value": "11",
-        "proficient": "True",
+        "proficient": 1,
         "mod": "0",
-        "prof": null,
-        "saveBonus": null,
-        "checkBonus": null,
         "save": "3"
       },
       "cha": {
         "value": "11",
-        "proficient": "Off",
+        "proficient": 0,
         "mod": "0",
-        "prof": null,
         "saveBonus": "0",
-        "checkBonus": null,
         "save": "0"
       }
     },
@@ -76,412 +59,123 @@
         "value": "16"
       },
       "hp": {
-        "value": "HP Current",
-        "min": null,
-        "max": "27",
-        "temp": "HP Temp",
-        "tempmax": null
+        "max": "27"
       },
-      "init": {
-        "value": "Initiative Bonus",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null
-      },
-      "spellcasting": "int",
+      "init": {},
       "speed": {
-        "value": "25 ft",
-        "special": null
+        "value": "25 ft"
       },
-      "death": {
-        "success": null,
-        "failure": null
-      },
-      "encumbrance": {
-        "value": null,
-        "max": 150,
-        "pct": null,
-        "encumbered": false
-      },
-      "exhaustion": null,
-      "inspiration": "Off",
-      "hd": null,
-      "prof": 1,
-      "spelldc": 9
+      "death": {},
+      "encumbrance": {},
+      "inspiration": false
     },
     "details": {
-      "biography": {
-        "value": null,
-        "public": null
-      },
+      "biography": {},
       "alignment": "CG",
       "race": "Gnome, Deep (Svirfneblin)",
       "background": "Anthropologist",
       "xp": {
-        "value": "12190",
-        "min": null,
-        "max": null,
-        "pct": null
+        "value": "12190"
       },
-      "trait": "Trait",
       "ideal": "Knowledge: By understanding other races and cultures, we learn to understand ourselves. (Any)",
       "bond": "I have a trinket (crystal) that I believe is the key to finding a long-lost society.",
-      "flaw": "I've picked up some unpleasant habits living among goblins, like blowing a wad of snot into a stew to improve the flavor.\nTerrified of the \"sea\" (can swim however) - horribly seasick\nBelieve lots of pseudo-science about crystals",
-      "level": null
+      "flaw": "I've picked up some unpleasant habits living among goblins, like blowing a wad of snot into a stew to improve the flavor.\nTerrified of the \"sea\" (can swim however) - horribly seasick\nBelieve lots of pseudo-science about crystals"
     },
     "traits": {
-      "size": "med",
       "di": {
-        "value": {},
-        "custom": null
+        "value": []
       },
       "dr": {
-        "value": {
-          "0": " "
-        },
-        "custom": null
+        "value": []
       },
       "dv": {
-        "value": {},
-        "custom": null
+        "value": []
       },
       "ci": {
-        "value": {},
-        "custom": null
+        "value": []
       },
-      "senses": null,
       "languages": {
-        "value": {
-          "0": "Common",
-          "1": "Gnomish",
-          "2": "Undercommon",
-          "3": "Dwarvish",
-          "4": "Goblin"
-        },
-        "custom": null
+        "value": [
+          "common",
+          "gnomish",
+          "undercommon",
+          "dwarvish",
+          "goblin"
+        ]
       },
       "weaponProf": {
-        "value": {},
-        "custom": null
+        "value": []
       },
       "armorProf": {
-        "value": {},
-        "custom": null
+        "value": []
       },
       "toolProf": {
-        "value": {},
-        "custom": null
+        "value": []
       }
     },
     "currency": {
-      "pp": "Platinum Pieces",
       "gp": "15",
-      "ep": "Electrum Pieces",
       "sp": "4",
       "cp": "5"
     },
     "skills": {
       "acr": {
-        "value": null,
-        "ability": "dex",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
+        "value": 0
       },
-      "ani": {
-        "value": null,
-        "ability": "wis",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "arc": {
-        "value": null,
-        "ability": "int",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "ath": {
-        "value": null,
-        "ability": "str",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "dec": {
-        "value": null,
-        "ability": "cha",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "his": {
-        "value": null,
-        "ability": "int",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "ins": {
-        "value": null,
-        "ability": "wis",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "itm": {
-        "value": null,
-        "ability": "cha",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
+      "ani": {},
+      "arc": {},
+      "ath": {},
+      "dec": {},
+      "his": {},
+      "ins": {},
+      "itm": {},
       "inv": {
-        "value": "7",
-        "ability": "int",
+        "value": [
+          1
+        ],
         "bonus": "0",
-        "mod": null,
-        "prof": "True",
-        "total": null,
-        "passive": null
+        "prof": "True"
       },
-      "med": {
-        "value": null,
-        "ability": "wis",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "nat": {
-        "value": null,
-        "ability": "int",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "prc": {
-        "value": null,
-        "ability": "wis",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "prf": {
-        "value": null,
-        "ability": "cha",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "per": {
-        "value": null,
-        "ability": "cha",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "rel": {
-        "value": null,
-        "ability": "int",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "slt": {
-        "value": null,
-        "ability": "dex",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "ste": {
-        "value": null,
-        "ability": "dex",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      },
-      "sur": {
-        "value": null,
-        "ability": "wis",
-        "bonus": null,
-        "mod": null,
-        "prof": null,
-        "total": null,
-        "passive": null
-      }
+      "med": {},
+      "nat": {},
+      "prc": {},
+      "prf": {},
+      "per": {},
+      "rel": {},
+      "slt": {},
+      "ste": {},
+      "sur": {}
     },
     "spells": {
-      "spell1": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell2": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell3": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell4": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell5": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell6": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell7": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell8": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "spell9": {
-        "value": null,
-        "max": null,
-        "override": null
-      },
-      "pact": {
-        "value": null,
-        "max": null,
-        "override": null,
-        "level": null
-      }
+      "spell1": {},
+      "spell2": {},
+      "spell3": {},
+      "spell4": {},
+      "spell5": {},
+      "spell6": {},
+      "spell7": {},
+      "spell8": {},
+      "spell9": {},
+      "pact": {}
     },
     "bonuses": {
-      "mwak": {
-        "attack": null,
-        "damage": null
-      },
-      "rwak": {
-        "attack": null,
-        "damage": null
-      },
-      "msak": {
-        "attack": null,
-        "damage": null
-      },
-      "rsak": {
-        "attack": null,
-        "damage": null
-      },
-      "abilities": {
-        "check": null,
-        "save": null,
-        "skill": null
-      },
-      "spell": {
-        "dc": null
-      }
+      "mwak": {},
+      "rwak": {},
+      "msak": {},
+      "rsak": {},
+      "abilities": {},
+      "spell": {}
     },
     "resources": {
-      "primary": {
-        "value": null,
-        "max": null,
-        "sr": false,
-        "lr": false,
-        "label": null
-      },
-      "secondary": {
-        "value": null,
-        "max": null,
-        "sr": false,
-        "lr": false,
-        "label": null
-      },
-      "tertiary": {
-        "value": null,
-        "max": null,
-        "sr": false,
-        "lr": false,
-        "label": null
-      }
+      "primary": {},
+      "secondary": {},
+      "tertiary": {}
     }
   },
-  "sort": null,
   "token": {
     "flags": {},
-    "name": "Test Import",
-    "displayName": null,
-    "img": "icons/svg/mystery-man.svg",
-    "tint": null,
-    "width": 1,
-    "height": 1,
-    "scale": 1,
-    "lockRotation": false,
-    "rotation": null,
-    "vision": true,
-    "dimSight": 60,
-    "brightSight": null,
-    "dimLight": null,
-    "brightLight": null,
-    "sightAngle": 360,
-    "lightAngle": 360,
-    "lightAlpha": 1,
-    "actorId": null,
-    "actorLink": true,
-    "actorData": null,
-    "disposition": 1,
-    "displayBars": null,
-    "bar1": {
-      "attribute": "attributes.hp"
-    },
-    "bar2": {
-      "attribute": ""
-    },
-    "randomImg": false
+    "bar1": {},
+    "bar2": {}
   },
-  "items": {},
-  "_id": null,
-  "img": null
+  "items": []
 }

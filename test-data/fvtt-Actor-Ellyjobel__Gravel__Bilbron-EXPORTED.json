@@ -1,0 +1,516 @@
+{
+  "name": "Gravel",
+  "type": "character",
+  "data": {
+    "abilities": {
+      "str": {
+        "value": 9,
+        "proficient": 0,
+        "mod": -1,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": -1
+      },
+      "dex": {
+        "value": 16,
+        "proficient": 0,
+        "mod": 3,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 3
+      },
+      "con": {
+        "value": 11,
+        "proficient": 0,
+        "mod": 0,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 0
+      },
+      "int": {
+        "value": 18,
+        "proficient": 0,
+        "mod": 4,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 4
+      },
+      "wis": {
+        "value": 11,
+        "proficient": 0,
+        "mod": 0,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 0
+      },
+      "cha": {
+        "value": 11,
+        "proficient": 0,
+        "mod": 0,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 10
+      },
+      "hp": {
+        "value": 10,
+        "min": 0,
+        "max": 10,
+        "temp": "",
+        "tempmax": ""
+      },
+      "init": {
+        "value": 0,
+        "bonus": 0,
+        "mod": 3,
+        "prof": 0,
+        "total": 3
+      },
+      "spellcasting": "int",
+      "speed": {
+        "value": "30 ft",
+        "special": ""
+      },
+      "death": {
+        "success": 0,
+        "failure": 0
+      },
+      "encumbrance": {
+        "value": 0,
+        "max": 135,
+        "pct": 0,
+        "encumbered": false
+      },
+      "exhaustion": 0,
+      "inspiration": false,
+      "hd": 5,
+      "prof": 3,
+      "spelldc": 15
+    },
+    "details": {
+      "biography": {
+        "value": "",
+        "public": ""
+      },
+      "alignment": "",
+      "race": "",
+      "background": "",
+      "xp": {
+        "value": 0,
+        "min": 0,
+        "max": 14000,
+        "pct": 0
+      },
+      "trait": "",
+      "ideal": "",
+      "bond": "",
+      "flaw": "",
+      "level": 5
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "senses": "",
+      "languages": {
+        "value": [],
+        "custom": ""
+      },
+      "weaponProf": {
+        "value": [],
+        "custom": ""
+      },
+      "armorProf": {
+        "value": [],
+        "custom": ""
+      },
+      "toolProf": {
+        "value": [],
+        "custom": ""
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 3,
+        "prof": 0,
+        "total": 3,
+        "passive": 13
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "arc": {
+        "value": 1,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 3,
+        "total": 7,
+        "passive": 17
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonus": 0,
+        "mod": -1,
+        "prof": 0,
+        "total": -1,
+        "passive": 9
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "inv": {
+        "value": 1,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 3,
+        "total": 7,
+        "passive": 17
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "prc": {
+        "value": 1,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 3,
+        "total": 3,
+        "passive": 13
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 3,
+        "prof": 0,
+        "total": 3,
+        "passive": 13
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 3,
+        "prof": 0,
+        "total": 3,
+        "passive": 13
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "max": 4,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "max": 3,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "max": 2,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "max": 0,
+        "override": null,
+        "level": 0
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "primary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "secondary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "tertiary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      }
+    }
+  },
+  "sort": 600000,
+  "flags": {
+    "exportSource": {
+      "world": "Ghost-Warriors",
+      "system": "dnd5e",
+      "coreVersion": "0.6.6",
+      "systemVersion": 0.96
+    }
+  },
+  "token": {
+    "flags": {},
+    "name": "Gravel",
+    "displayName": 0,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 1,
+    "height": 1,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": true,
+    "dimSight": 30,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "actorId": "Jb7nyb2Jg9JEYHoa",
+    "actorLink": true,
+    "actorData": {},
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {},
+    "bar2": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "_id": "IGFATLodiVkMLhd1",
+      "flags": {},
+      "name": "Wizard",
+      "type": "class",
+      "img": "systems/dnd5e/icons/skills/blue_13.jpg",
+      "data": {
+        "description": {
+          "value": "<p>As a wizard, you gain the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong>&nbsp;1d6 per wizard level<br><strong>Hit Points at 1st Level:</strong>&nbsp;6 + your Constitution modifier<br><strong>Hit Points at Higher Levels:</strong>&nbsp;1d6 (or 4) + your Constitution modifier per wizard level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong>&nbsp;None<br><strong>Weapons:</strong>&nbsp;Daggers, darts, slings, quarterstaffs, light crossbows<br><strong>Tools:</strong>&nbsp;None<br><strong>Saving Throws:</strong>&nbsp;Intelligence, Wisdom<br><strong>Skills:</strong>&nbsp;Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a quarterstaff or (b) a dagger</li>\n<li>(a) a component pouch or (b) an arcane focus</li>\n<li>(a) a scholar’s pack or (b) an explorer’s pack</li>\n<li>A spellbook</li>\n</ul>\n<h1>Wizard Advancement</h1>\n<table>\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Features</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.gbNo5eVPaqr8IVKL]{Spellcasting}, @Compendium[dnd5e.classfeatures.e0uTcFPpgxjIyUW9]{Arcane Recovery}</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.AEWr9EMxy5gj4ZFT]{Arcane Tradition}</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>2nd Level Spell Slot</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>3rd&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>Arcane Tradition feature</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>4th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>5th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>Arcane Tradition feature</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>6&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>7th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>Arcane Tradition feature</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>8th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>9&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.JfFfHTeIszx1hNRx]{Spell Mastery}</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>\n<p>@Compendium[dnd5e.classfeatures.nUrZDi6QN1YjwAr6]{Signature Spells (First Spell)}</p>\n<p>@Compendium[dnd5e.classfeatures.31bKbWe9ZGVLEns6]{Signature Spells (Second Spell)}</p>\n</td>\n</tr>\n</tbody>\n</table>\n<h3>Your Spellbook</h3>\n<p>The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard’s chest, for example, or in a dusty tome in an ancient library.</p>\n<p><em><strong>Copying a Spell into the Book.</strong></em> When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell level you can prepare and if you can spare the time to decipher and copy it.</p>\n<p>Copying that spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation.</p>\n<p>For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.</p>\n<p><em><strong>Replacing the Book.</strong></em> You can copy a spell from your own spellbook into another book—for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.</p>\n<p>If you lose your spellbook, you can use the same procedure to transcribe the spells that you have prepared into a new spellbook. Filling out the remainder of your spellbook requires you to find new spells to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place.</p>\n<p><em><strong>The Book’s Appearance.</strong></em> Your spellbook is a unique compilation of spells, with its own decorative flourishes and margin notes. It might be a plain, functional leather volume that you received as a gift from your master, a finely bound gilt-edged tome you found in an ancient library, or even a loose collection of notes scrounged together after you lost your previous spellbook in a mishap.</p>\n<h1>Arcane Traditions</h1>\n<p>The study of wizardry is ancient, stretching back to the earliest mortal discoveries of magic. It is firmly established in fantasy gaming worlds, with various traditions dedicated to its complex study.</p>\n<p>The most common arcane traditions in the multiverse revolve around the schools of magic. Wizards through the ages have cataloged thousands of spells, grouping them into eight categories called schools. In some places, these traditions are literally schools. In other institutions, the schools are more like academic departments, with rival faculties competing for students and funding. Even wizards who train apprentices in the solitude of their own towers use the division of magic into schools as a learning device, since the spells of each school require mastery of different techniques.</p>\n<h2>School of Evocation</h2>\n<p>You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.</p>\n<h3>School of Evocation Features</h3>\n<p>2nd Level: @Compendium[dnd5e.classfeatures.7uzJ2JkmsdRGLra3]{Evocation Savant} @Compendium[dnd5e.classfeatures.6VBXkjjBgjSpNElh]{Sculpt Spells}</p>\n<p>6th Level: @Compendium[dnd5e.classfeatures.evEWCpE5MYgr5RRW]{Potent Cantrip}</p>\n<p>10th Level: @Compendium[dnd5e.classfeatures.7O85kj6uDEG5NzUE]{Empowered Evocation}</p>\n<p>14th Level: @Compendium[dnd5e.classfeatures.VUtSLeCzFubGXmGx]{Overchannel}</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "levels": 5,
+        "subclass": "Evoker",
+        "hitDice": "d6",
+        "hitDiceUsed": 0,
+        "skills": {
+          "number": 2,
+          "choices": [
+            "arc",
+            "his",
+            "ins",
+            "inv",
+            "med",
+            "rel"
+          ],
+          "value": [
+            "arc",
+            "inv"
+          ],
+          "custom": ""
+        },
+        "spellcasting": "full",
+        "damage": {
+          "parts": []
+        }
+      },
+      "sort": 100000,
+      "labels": {},
+      "isStack": false,
+      "hasTarget": false,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    }
+  ],
+  "_id": "Jb7nyb2Jg9JEYHoa",
+  "img": "icons/svg/mystery-man.svg"
+}

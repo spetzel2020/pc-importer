@@ -1,9 +1,14 @@
 /*
 29-Sep-2020     Created
-TODO: Want to record the mapping in a table somewhere so we can lookup from Actor5e to fieldName (and vice versa)
-If you created a skeleton with everything except terminal values, could do a lot
-*/
+30-Sep-2020     Mapping template: provide the key and the default if it's not found (because some defaults are empty arrays etc)
+1-Oct-2020      v0.4.2: Embed functions in the mapping template to guide specific calculations
+                basically replaces inline code in an importer/constructor
+                Handle: lowercase languages, flags which are True/Off -> 1/0, trim " " to null
 
+PROBLEMS:
+    - Perhaps use Object.create to create the skeleton Actor5e and then populate it from the fieldDictionary the other way round
+        using dot or array notation
+*/
 
 import {MODULE_NAME, MPMBImporter} from "./MPMBImporter.js";
 
@@ -25,22 +30,64 @@ export class Actor5e {
         //See https://stackoverflow.com/questions/8085004/iterate-through-nested-javascript-objects
         //Use recursion (only 3 levels deep) to walk through the mapping tree and object in parallel
         this.mapAndIterate(MPMBToActorMapping, this);
+        delete this.fieldDictionary;
     }
 
     mapAndIterate(subMappingTree, subObject) {
         for (const entry of Object.entries(subMappingTree)) {
             const entryProperty = entry[0];
             const entryValue = entry[1];
-            //If entryValue is null, then just use as is
-            if (entryValue && typeof entryValue === 'object') {
-                subObject[entryProperty] = {}
-                this.mapAndIterate(entryValue, subObject[entryProperty]);
-            } else {
-                //Either find a match or keep the mapping string/value
-                const value = MPMBImporter.getValueForName(this.fieldDictionary, entryValue);
-                subObject[entryProperty] = value ? value : entryValue;
-            }
+            //If itself an object, then keep on drilling down
+            //0.4.2 Have to run it through the mapper because we have both legitimate nested objects
+            //and also the special mapping objects like {key: , default: }
+            let mappedValue = this.mapToMPMBField(entryValue);
+            subObject[entryProperty] = mappedValue;
         }
+        return subObject;
+    }
+
+    mapToMPMBField(entryValue) {
+        //v0.4.2 Allow for different forms of the mapping variable
+        //  null -> do nothing
+        //  {key, default} -> look up the key (if present); use the default if not found
+        //  String -> look up the key and use null if not found
+        // Array -> do all these things for each element of the array
+        // Empty object - will probably become null
+        let mappedValue;
+        if (!entryValue) {
+            mappedValue = mappedValue;  //Works if the default is null or 0
+        } else if (Array.isArray(entryValue)) {
+            //Not sure this will handle all possibilities
+            //Should handle both the empty array [] and also [key1, key2, ....]
+            const mappedArray = [];
+
+
+
+            entryValue.forEach(elem => {
+                const mappedArrayValue = this.mapToMPMBField(elem);
+                if (mappedArrayValue) {mappedArray.push(mappedArrayValue);}
+            });
+            mappedValue = mappedArray;
+        } else if (entryValue.key) {
+            mappedValue = MPMBImporter.getValueForName(this.fieldDictionary, entryValue.key);
+            if (!mappedValue) {mappedValue = entryValue.default ? entryValue.default : null}
+        } else if (typeof entryValue === 'function') {
+            mappedValue = entryValue(this.fieldDictionary);
+        } else if (entryValue.default) {
+            mappedValue = entryValue.default;
+        } else if (typeof entryValue === 'object') {
+            //This is for the nested form of the mapping template
+            const subObject = {}
+            mappedValue = this.mapAndIterate(entryValue, subObject);
+        } else {
+            //Trims spaces from beginning and end (so turns " " into "")
+            mappedValue = MPMBImporter.getValueForName(this.fieldDictionary, entryValue);
+            if (typeof mappedValue === 'string') {mappedValue = mappedValue.trim();}
+        }
+        //FXIME: Do some clean-up - would be better if this could be done inline
+        if (mappedValue ==="Off") {mappedValue = false;}
+        if (mappedValue === "") {mappedValue = null;}
+        return mappedValue;
     }
 
     exportToJSON() {
@@ -65,76 +112,101 @@ export class AbilityValues {
     }
 }
 
+function defaulted(defaultValue) {return defaultValue;}
+
+function lowercaseArray(mappedArray) {
+    mappedArray.forEach((elem,i) => {mappedArray[i] = elem.toLowerCase()});
+    return mappedArray;
+}
+
+function mapArray(dictionary, keys) {
+    const keyArray = Array.from(keys);
+    let mappedArray = [];
+    keyArray.forEach((key, i) => {
+        const mappedValue = MPMBImporter.getValueForName(dictionary, key);
+        if (mappedValue && (mappedValue !== " ")) {mappedArray.push(mappedValue);}
+    });
+    return mappedArray;
+}
+
+function mapAndSwitchToInteger(dictionary,key) {
+    const switchValue = MPMBImporter.getValueForName(dictionary, key);
+    if (switchValue === "Off") {return 0;}
+    else if (switchValue === "True") {return 1;}
+    else {return 0;}
+}
+
 //Provides the mapping to the field names in the XFDF
 const MPMBToActorMapping = {
       "name": "AdvLog.PC Name",
-      "type": "character",
+      "type": () => "character",
       "flags": {
         "exportSource": {
           "world": null,
-          "system": "dnd5e",
-          "coreVersion": "0.6.6",
-          "systemVersion": 0.96
+          "system": {default: "dnd5e"},
+          "coreVersion": {default: "0.6.6"},
+          "systemVersion": {default: "0.96"}
         },
         "dnd5e": {},
         "core": {
-          "sheetClass": ""
-        }
+          "sheetClass": {default: ""}
+        },
+        "MPMB Importer" : {default: "0.4.2"}
       },
       "data": {
         "abilities": {
           "str": {
             "value": "Str",
-            "proficient":  "Str ST Prof",
+            "proficient":  function(dictionary,key="Str ST Prof") {return mapAndSwitchToInteger(dictionary,key);},
             "mod": "Str Mod",
-            "prof": null,
-            "saveBonus": null,
-            "checkBonus": null,
+            "prof": 0,
+            "saveBonus": 0,
+            "checkBonus": 0,
             "save": "Str ST Mod"
           },
           "dex": {
             "value": "Dex",
-            "proficient":  "Dex ST Prof",
+            "proficient": function(dictionary,key="Dex ST Prof") {return mapAndSwitchToInteger(dictionary,key);},
             "mod": "Dex Mod",
-            "prof": null,
-            "saveBonus": null,
-            "checkBonus": null,
+            "prof": 0,
+            "saveBonus": 0,
+            "checkBonus": 0,
             "save": "Dex ST Mod"
           },
           "con": {
             "value": "Con",
-            "proficient":  "Con ST Prof",
+            "proficient":  function(dictionary,key="Con ST Prof") {return mapAndSwitchToInteger(dictionary,key);},
             "mod": "Con Mod",
-            "prof": null,
-            "saveBonus": null,
-            "checkBonus": null,
+            "prof": 0,
+            "saveBonus": 0,
+            "checkBonus": 0,
             "save": "Con ST Mod"
           },
           "int": {
             "value": "Int",
-            "proficient":  "Int ST Prof",
+            "proficient":  function(dictionary,key="Int ST Prof") {return mapAndSwitchToInteger(dictionary,key);},
             "mod": "Int Mod",
-            "prof": null,
+            "prof": 0,
             "saveBonus": "Int ST Bonus",
-            "checkBonus": null,
+            "checkBonus": 0,
             "save": "Int ST Mod"
           },
           "wis": {
             "value": "Wis",
-            "proficient":  "Wis ST Prof",
+            "proficient":  function(dictionary,key="Wis ST Prof") {return mapAndSwitchToInteger(dictionary,key);},
             "mod": "Wis Mod",
-            "prof": null,
-            "saveBonus": null,
-            "checkBonus": null,
+            "prof": 0,
+            "saveBonus": 0,
+            "checkBonus": 0,
             "save": "Wis ST Mod"
           },
           "cha": {
             "value": "Cha",
-            "proficient":  "Cha ST Prof",
+            "proficient": function(dictionary,key="Cha ST Prof") {return mapAndSwitchToInteger(dictionary,key);},
             "mod": "Cha Mod",
-            "prof": null,
+            "prof": 0,
             "saveBonus": "Cha ST Bonus",
-            "checkBonus": null,
+            "checkBonus": 0,
             "save": "Cha ST Mod"
           }
         },
@@ -144,17 +216,17 @@ const MPMBToActorMapping = {
           },
           "hp": {
             "value": "HP Current",
-            "min": null,
+            "min": 0,
             "max": "HP Max",
             "temp": "HP Temp",
-            "tempmax": null
+            "tempmax": 0
           },
           "init": {
             "value": "Initiative Bonus",
-            "bonus": null,
-            "mod": null,
-            "prof": null,
-            "total": null
+            "bonus": 0,
+            "mod": 0,
+            "prof": 0,
+            "total": 0
           },
           "spellcasting": "int",
           "speed": {
@@ -166,9 +238,9 @@ const MPMBToActorMapping = {
             "failure": null
           },
           "encumbrance": {
-            "value": null,
+            "value": 0,
             "max": 150,
-            "pct": null,
+            "pct": 0,
             "encumbered": false
           },
           "exhaustion": null,
@@ -179,7 +251,7 @@ const MPMBToActorMapping = {
         },
         "details": {
           "biography": {
-            "value": null,
+            "value": "Background History",
             "public": null
           },
           "alignment": "Alignment",
@@ -204,7 +276,7 @@ const MPMBToActorMapping = {
             "custom": null
           },
           "dr": {
-            "value": ["Resistance Damage Type 1"],
+            "value":  function(dictionary) {return mapArray(dictionary, ["Resistance Damage Type 1","Resistance Damage Type 2","Resistance Damage Type 3","Resistance Damage Type 4","Resistance Damage Type 5"]);},
             "custom": null
           },
           "dv": {
@@ -217,7 +289,7 @@ const MPMBToActorMapping = {
           },
           "senses": null,
           "languages": {
-            "value": ["Language 1","Language 2","Language 3","Language 4","Language 5"],
+            "value":  function(dictionary) {return lowercaseArray(mapArray(dictionary, ["Language 1","Language 2","Language 3","Language 4","Language 5"]));},
             "custom": null
           },
           "weaponProf": {
@@ -242,7 +314,7 @@ const MPMBToActorMapping = {
         },
         "skills": {
           "acr": {
-            "value": null,
+            "value":  function(dictionary,key="Acr Exp") {return mapAndSwitchToInteger(dictionary,key);},
             "ability": "dex",
             "bonus": null,
             "mod": null,
@@ -314,7 +386,7 @@ const MPMBToActorMapping = {
             "passive": null
           },
           "inv": {
-            "value": "Inv",
+            "value": [(p,e) => (p ? 1 : 0 + e ? 1 : 0), "Inv.Prof", "Inv.Exp"],
             "ability": "int",
             "bonus": "Inv Bonus",
             "mod": null,
