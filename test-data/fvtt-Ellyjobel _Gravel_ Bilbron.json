@@ -67,7 +67,10 @@
       },
       "death": {},
       "encumbrance": {},
-      "inspiration": false
+      "inspiration": false,
+      "hd": "5",
+      "prof": "3",
+      "spelldc": "15"
     },
     "details": {
       "biography": {},
@@ -77,11 +80,14 @@
       "xp": {
         "value": "12190"
       },
+      "trait": "When I arrive at a new settlement for the first time, I must learn all its customs. I'm a stickler when it comes to observing proper etiquette and local customs.\nI'm especially interested in local recipes and cooking.",
       "ideal": "Knowledge: By understanding other races and cultures, we learn to understand ourselves. (Any)",
       "bond": "I have a trinket (crystal) that I believe is the key to finding a long-lost society.",
-      "flaw": "I've picked up some unpleasant habits living among goblins, like blowing a wad of snot into a stew to improve the flavor.\nTerrified of the \"sea\" (can swim however) - horribly seasick\nBelieve lots of pseudo-science about crystals"
+      "flaw": "I've picked up some unpleasant habits living among goblins, like blowing a wad of snot into a stew to improve the flavor.\nTerrified of the \"sea\" (can swim however) - horribly seasick\nBelieve lots of pseudo-science about crystals",
+      "level": "5"
     },
     "traits": {
+      "size": "1",
       "di": {
         "value": []
       },
@@ -94,6 +100,7 @@
       "ci": {
         "value": []
       },
+      "senses": "Darkvision 120 ft",
       "languages": {
         "value": [
           "common",
@@ -122,40 +129,88 @@
       "acr": {
         "value": 0
       },
-      "ani": {},
-      "arc": {},
-      "ath": {},
-      "dec": {},
-      "his": {},
-      "ins": {},
-      "itm": {},
-      "inv": {
-        "value": [
-          1
-        ],
-        "bonus": "0",
-        "prof": "True"
+      "ani": {
+        "value": 0
       },
-      "med": {},
-      "nat": {},
-      "prc": {},
-      "prf": {},
-      "per": {},
-      "rel": {},
-      "slt": {},
-      "ste": {},
-      "sur": {}
+      "arc": {
+        "value": 1
+      },
+      "ath": {
+        "value": 0
+      },
+      "dec": {
+        "value": 0
+      },
+      "his": {
+        "value": 0
+      },
+      "ins": {
+        "value": 1
+      },
+      "itm": {
+        "value": 0
+      },
+      "inv": {
+        "value": 1,
+        "bonus": "0"
+      },
+      "med": {
+        "value": 0
+      },
+      "nat": {
+        "value": 0
+      },
+      "prc": {
+        "value": 1,
+        "passive": "13"
+      },
+      "prf": {
+        "value": 0
+      },
+      "per": {
+        "value": 0
+      },
+      "rel": {
+        "value": 1
+      },
+      "slt": {
+        "value": 0
+      },
+      "ste": {
+        "value": 0
+      },
+      "sur": {
+        "value": 0
+      }
     },
     "spells": {
-      "spell1": {},
-      "spell2": {},
-      "spell3": {},
-      "spell4": {},
-      "spell5": {},
-      "spell6": {},
-      "spell7": {},
-      "spell8": {},
-      "spell9": {},
+      "spell1": {
+        "max": "4"
+      },
+      "spell2": {
+        "max": "3"
+      },
+      "spell3": {
+        "max": "2"
+      },
+      "spell4": {
+        "max": "0"
+      },
+      "spell5": {
+        "max": "0"
+      },
+      "spell6": {
+        "max": "0"
+      },
+      "spell7": {
+        "max": "1"
+      },
+      "spell8": {
+        "max": "0"
+      },
+      "spell9": {
+        "max": "0"
+      },
       "pact": {}
     },
     "bonuses": {
@@ -174,7 +229,9 @@
   },
   "token": {
     "flags": {},
-    "bar1": {},
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
     "bar2": {}
   },
   "items": []

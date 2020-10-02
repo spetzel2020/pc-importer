@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.4.3
+- Fill out inline functions to handle special case conversions
+
 ## 0.4.2 (1-Oct-Sep-2020)
 - More sophisticated Mapping template which allows for arrays, and uses null as the default
     - uses inline functions to define what should be done after mapping

@@ -203,7 +203,7 @@ export class MPMBImporter {
         return objectTree;
     }
 
-    static getValueForName(fieldDictionary, fieldName) {
+    static getValueForFieldName(fieldDictionary, fieldName) {
         const value = fieldDictionary.get(fieldName);
         return value;
     }

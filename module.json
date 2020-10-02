@@ -3,7 +3,7 @@
     "title": "MPMB Importer",
     "description": "Import your MPMB character sheet to Foundry and match to SRD or other licensed content",
     "author" : "Spetzel",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "minimumCoreVersion": "0.6.5",
     "compatibleCoreVersion": "0.7.2",
     "languages": [{
@@ -21,10 +21,10 @@
         }
     ],
     "system": "dnd5e",
-    "readme": "https://github.com/opus1217/MPMB-importer/blob/v0.4.2/README.md",
+    "readme": "https://github.com/opus1217/MPMB-importer/blob/v0.4.3/README.md",
     "bugs": "https://github.com/opus1217/MPMB-importer/issues",
     "changelog": "https://github.com/opus1217/MPMB-importer/blob/master/CHANGELOG.md",
-    "manifest": "https://raw.githubusercontent.com/opus1217/MPMB-importer/v0.4.2/module.json",
-    "download": "https://github.com/opus1217/MPMB-importer/archive/v0.4.2.zip",
+    "manifest": "https://raw.githubusercontent.com/opus1217/MPMB-importer/v0.4.3/module.json",
+    "download": "https://github.com/opus1217/MPMB-importer/archive/v0.4.3.zip",
     "url": "https://github.com/opus1217/MPMB-importer"
 }
