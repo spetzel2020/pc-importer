@@ -1,0 +1,901 @@
+{
+  "name": "Ignis Ashwalker",
+  "type": "character",
+  "data": {
+    "abilities": {
+      "str": {
+        "value": 19,
+        "proficient": 0,
+        "mod": 4,
+        "save": 4,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0
+      },
+      "dex": {
+        "value": 12,
+        "proficient": 0,
+        "mod": 1,
+        "save": 1,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0
+      },
+      "con": {
+        "value": 16,
+        "proficient": 1,
+        "mod": 3,
+        "save": 8,
+        "prof": 5,
+        "saveBonus": 0,
+        "checkBonus": 0
+      },
+      "int": {
+        "value": 12,
+        "proficient": 0,
+        "mod": 1,
+        "save": 1,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0
+      },
+      "wis": {
+        "value": 11,
+        "proficient": 1,
+        "mod": 0,
+        "save": 5,
+        "prof": 5,
+        "saveBonus": 0,
+        "checkBonus": 0
+      },
+      "cha": {
+        "value": 20,
+        "proficient": 1,
+        "mod": 5,
+        "save": 10,
+        "prof": 5,
+        "saveBonus": 0,
+        "checkBonus": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 14
+      },
+      "hp": {
+        "value": 10,
+        "min": 0,
+        "max": 118,
+        "temp": "",
+        "tempmax": ""
+      },
+      "init": {
+        "value": 0,
+        "bonus": 0,
+        "mod": 1,
+        "prof": 0,
+        "total": 1
+      },
+      "spellcasting": "cha",
+      "speed": {
+        "value": "30 ft",
+        "special": ""
+      },
+      "death": {
+        "success": 0,
+        "failure": 0
+      },
+      "encumbrance": {
+        "value": 0,
+        "max": 2280,
+        "pct": 0,
+        "encumbered": false
+      },
+      "exhaustion": 0,
+      "inspiration": false,
+      "hd": 15,
+      "prof": 5,
+      "spelldc": 18
+    },
+    "details": {
+      "biography": {
+        "value": "",
+        "public": ""
+      },
+      "alignment": "",
+      "race": "Tiefling",
+      "background": "Outlander",
+      "xp": {
+        "value": 165000,
+        "min": 0,
+        "max": 195000,
+        "pct": 0
+      },
+      "trait": "",
+      "ideal": "",
+      "bond": "",
+      "flaw": "",
+      "level": 15
+    },
+    "traits": {
+      "size": "grg",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "Fire"
+        ],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "senses": "Darkvision 60 ft",
+      "languages": {
+        "value": [
+          "common",
+          "halfling",
+          "infernal"
+        ],
+        "custom": ""
+      },
+      "weaponProf": {
+        "value": [],
+        "custom": ""
+      },
+      "armorProf": {
+        "value": [],
+        "custom": ""
+      },
+      "toolProf": {
+        "value": [],
+        "custom": ""
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 0,
+        "total": 1,
+        "passive": 11
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "arc": {
+        "value": 1,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 5,
+        "total": 6,
+        "passive": 16
+      },
+      "ath": {
+        "value": 1,
+        "ability": "str",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 5,
+        "total": 9,
+        "passive": 19
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 5,
+        "prof": 0,
+        "total": 5,
+        "passive": 15
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 0,
+        "total": 1,
+        "passive": 11
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 5,
+        "prof": 0,
+        "total": 5,
+        "passive": 15
+      },
+      "inv": {
+        "value": 1,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 5,
+        "total": 6,
+        "passive": 16
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 0,
+        "total": 1,
+        "passive": 11
+      },
+      "prc": {
+        "value": 0,
+        "ability": "wis",
+        "passive": 10,
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 5,
+        "prof": 0,
+        "total": 5,
+        "passive": 15
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 5,
+        "prof": 0,
+        "total": 5,
+        "passive": 15
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 0,
+        "total": 1,
+        "passive": 11
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 0,
+        "total": 1,
+        "passive": 11
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 1,
+        "prof": 0,
+        "total": 1,
+        "passive": 11
+      },
+      "sur": {
+        "value": 1,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 5,
+        "total": 5,
+        "passive": 15
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "max": 4,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "max": 3,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "max": 2,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "max": 2,
+        "override": null,
+        "level": 5
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "primary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "secondary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "tertiary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      }
+    }
+  },
+  "sort": 200000,
+  "flags": {
+    "exportSource": {
+      "world": "Ghost-Warriors",
+      "system": "dnd5e",
+      "coreVersion": "0.6.6",
+      "systemVersion": 0.96
+    },
+    "dnd5e": {},
+    "core": {
+      "sheetClass": {}
+    },
+    "MPMB Importer": "0.4.2"
+  },
+  "token": {
+    "flags": {},
+    "name": "Ignis Ashwalker",
+    "displayName": 0,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 4,
+    "height": 4,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": true,
+    "dimSight": 30,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "actorId": "NQbZOAzK9EeQOdkB",
+    "actorLink": true,
+    "actorData": {},
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {},
+    "randomImg": false
+  },
+  "items": [
+    {
+      "_id": "3xY3CHzArdvglQS4",
+      "flags": {},
+      "name": "Warlock",
+      "type": "class",
+      "img": "systems/dnd5e/icons/skills/violet_21.jpg",
+      "data": {
+        "description": {
+          "value": "<p>As a warlock, you gain the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong>&nbsp;1d8 per warlock level<br><strong>Hit Points at 1st Level:</strong>&nbsp;8 + your Constitution modifier<br><strong>Hit Points at Higher Levels:</strong>&nbsp;1d8 (or 5) + your Constitution modifier per warlock level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong>&nbsp;Light armor<br><strong>Weapons:</strong>&nbsp;Simple weapons<br><strong>Tools:</strong>&nbsp;None<br><strong>Saving Throws:</strong>&nbsp;Wisdom, Charisma<br><strong>Skills:</strong>&nbsp;Choose two skills from Arcana, Deception, History, Intimidation, Investigation, Nature, and Religion</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a light crossbow and 20 bolts or (b) any simple weapon</li>\n<li>(a) a component pouch or (b) an arcane focus</li>\n<li>(a) a scholar’s pack or (b) a dungeoneer’s pack</li>\n<li>Leather armor, any simple weapon, and two daggers</li>\n</ul>\n<h1>Warlock Advancement</h1>\n<table border=\"0\" cellspacing=\"0\">\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Features</td>\n<td>Invocations Known</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.jTXHaK0vvT5DV3uO]{Otherworldly Patron}, @Compendium[dnd5e.classfeatures.x6IJZwr6f0SGral7]{Pact Magic}</td>\n<td>̶</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.8MlxM2nEfE3Q0EVk]{Eldritch Invocations}</td>\n<td>2</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.QwgfIpCN8VWfoUtX]{Pact Boon}</td>\n<td>2</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>2</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>3rd Level Spells, +1 Invocation</td>\n<td>3</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>Otherworldly Patron feature</td>\n<td>3</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>4th Level Spells, +1 Invocation</td>\n<td>4</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>4</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>5th Level Spells, +1 Invocation</td>\n<td>5</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>Otherworldly Patron feature</td>\n<td>5</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>@Compendium[dnd5e.classfeatures.zB77V8BcCJvWVxck]{Mystic Arcanum (6th-Level Spell)}</td>\n<td>5</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement},&nbsp; +1 Invocation</td>\n<td>6</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>@Compendium[dnd5e.classfeatures.HBn6FXLz7Eiudz0V]{Mystic Arcanum (7th-Level Spell)}</td>\n<td>6</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>Otherworldly Patron feature</td>\n<td>6</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>@Compendium[dnd5e.classfeatures.knDZR4l4QfLTKinm]{Mystic Arcanum (8th-Level Spell)}, +1 Invocation</td>\n<td>7</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>7</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.vMxJQEKeK6WwZFaF]{Mystic Arcanum (9th-Level Spell)}</td>\n<td>7</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>+1 Invocation</td>\n<td>8</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n<td>8</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>@Compendium[dnd5e.classfeatures.0C04rwyvoknvFYiy]{Eldritch Master}</td>\n<td>8</td>\n</tr>\n</tbody>\n</table>\n<hr>\n<h3>Your Pact Boon</h3>\n<p>Each Pact Boon option produces a special creature or an object that reflects your patron’s nature.</p>\n<p><em><strong>Pact of the Chain. </strong></em>Your familiar is more cunning than a typical familiar. Its default form can be a reflection of your patron, with imps and quasits tied to the Fiend.</p>\n<p><em><strong>Pact of the Blade. </strong></em>If you serve the Fiend, your weapon could be an axe made of black metal and adorned with decorative flames.</p>\n<p><em><strong>Pact of the Tome. </strong></em>Your Book of Shadows could be a weighty tome bound in demon hide studded with iron, holding spells of conjuration and a wealth of forbidden lore about the sinister regions of the cosmos, a gift of the Fiend.</p>\n<hr>\n<h1>Otherworldly Patrons</h1>\n<p>The beings that serve as patrons for warlocks are mighty inhabitants of other planes of existence—not gods, but almost godlike in their power. Various patrons give their warlocks access to different powers and invocations, and expect significant favors in return.</p>\n<p>Some patrons collect warlocks, doling out mystic knowledge relatively freely or boasting of their ability to bind mortals to their will. Other patrons bestow their power only grudgingly, and might make a pact with only one warlock. Warlocks who serve the same patron might view each other as allies, siblings, or rivals.</p>\n<h2>The Fiend</h2>\n<p>You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even if you strive against those aims. Such beings desire the corruption or destruction of all things, ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon, Orcus, Fraz’Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial; pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.</p>\n<h3>The Fiend Features</h3>\n<p>1st Level: @Compendium[dnd5e.classfeatures.4IHsIcBhAVDt8QjY]{Expanded Spell List} @Compendium[dnd5e.classfeatures.Jv0zu4BtUi8bFCqJ]{Dark One's Blessing }</p>\n<p>6th Level: @Compendium[dnd5e.classfeatures.OQSb0bO1yDI4aiMx]{Dark One's Own Luck}</p>\n<p>10th Level: @Compendium[dnd5e.classfeatures.9UZ2WjUF2k58CQug]{Fiendish Resilience}</p>\n<p>14th Level: @Compendium[dnd5e.classfeatures.aCUmlnHlUPHS0rdu]{Hurl Through Hell}</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "levels": 10,
+        "subclass": "Fiend",
+        "hitDice": "d8",
+        "hitDiceUsed": 0,
+        "skills": {
+          "number": 2,
+          "choices": [
+            "arc",
+            "dec",
+            "his",
+            "itm",
+            "inv",
+            "nat",
+            "rel"
+          ],
+          "value": []
+        },
+        "spellcasting": "pact",
+        "damage": {
+          "parts": []
+        }
+      },
+      "sort": 100000,
+      "labels": {},
+      "isStack": false,
+      "hasTarget": false,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "uRSkTfh7mzXjX7hc",
+      "flags": {},
+      "name": "Sorcerer",
+      "type": "class",
+      "img": "systems/dnd5e/icons/skills/fire_08.jpg",
+      "data": {
+        "description": {
+          "value": "<p>As a sorcerer, you gain the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong>&nbsp;1d6 per sorcerer level<br><strong>Hit Points at 1st Level:</strong>&nbsp;6 + your Constitution modifier<br><strong>Hit Points at Higher Levels:</strong>&nbsp;1d6 (or 4) + your Constitution modifier per sorcerer level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong>&nbsp;None<br><strong>Weapons:</strong>&nbsp;Daggers, darts, slings, quarterstaffs, light crossbows<br><strong>Tools:</strong>&nbsp;None<br><strong>Saving Throws:</strong>&nbsp;Constitution, Charisma<br><strong>Skills:</strong>&nbsp;Choose two from Arcana, Deception, Insight, Intimidation, Persuasion, and Religion</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a light crossbow and 20 bolts or (b) any simple weapon</li>\n<li>(a) a component pouch or (b) an arcane focus</li>\n<li>(a) a dungeoneer’s pack or (b) an explorer’s pack</li>\n<li>Two daggers</li>\n</ul>\n<h1>Sorcerer Advancement</h1>\n<table>\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Sorcery Points</td>\n<td>Features</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>̶</td>\n<td>@Compendium[dnd5e.classfeatures.oygRF3ZjTv2T7z0Y]{Spellcasting}, @Compendium[dnd5e.classfeatures.cmRCL9T9UgRYOj1c]{Sorcerous Origins}</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>2</td>\n<td>@Compendium[dnd5e.classfeatures.LBKChJY5n02Afhnq]{Font of Magic}</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>3</td>\n<td>2nd Level Spell Slot, @Compendium[dnd5e.classfeatures.9Uh7uTDNZ04oTJsL]{Metamagic}</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>4</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>5</td>\n<td>3rd Level Spell Slot</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>6</td>\n<td>Sorcerous Origin feature</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>7</td>\n<td>4th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>8</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>9</td>\n<td>5th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>10</td>\n<td>@Compendium[dnd5e.classfeatures.9Uh7uTDNZ04oTJsL]{Metamagic improvement}</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>11</td>\n<td>6th Level Spell Slot</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>12</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>13</td>\n<td>7th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>14</td>\n<td>Sorcerous Origin feature</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>15</td>\n<td>8th&nbsp;Level Spell Slot</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>16</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>17</td>\n<td>9th Level Spell Slot, @Compendium[dnd5e.classfeatures.9Uh7uTDNZ04oTJsL]{Metamagic improvement}</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>18</td>\n<td>Sorcerous Origin feature</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>19</td>\n<td>@Compendium[dnd5e.classfeatures.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>20</td>\n<td>@Compendium[dnd5e.classfeatures.F2lEKSmOY0NUruzY]{Sorcerous Restoration}</td>\n</tr>\n</tbody>\n</table>\n<h1>Sorcerous Origins</h1>\n<p>Different sorcerers claim different origins for their innate magic, such as a draconic bloodline.</p>\n<h2>Draconic Bloodline</h2>\n<p>Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors. Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the first of a new bloodline, as a result of a pact or some other exceptional circumstance.</p>\n<h3>Draconic Bloodline Features</h3>\n<p>1st Level: @Compendium[dnd5e.classfeatures.EZsonMThTNLZq35j]{Dragon Ancestor} @Compendium[dnd5e.classfeatures.MW1ExvBLm8Hg82aA]{Draconic Resilience}</p>\n<p>6th Level: @Compendium[dnd5e.classfeatures.x6eEZ9GUsuOcEa3G]{Elemental Affinity}</p>\n<p>14th Level: @Compendium[dnd5e.classfeatures.3647zjKSE9zFwOXc]{Dragon Wings}</p>\n<p>18th Level: @Compendium[dnd5e.classfeatures.Gsha4bl0apxqspFy]{Draconic Presence}</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "levels": 5,
+        "subclass": "Divine Soul",
+        "hitDice": "d6",
+        "hitDiceUsed": 0,
+        "skills": {
+          "number": 2,
+          "choices": [
+            "arc",
+            "dec",
+            "ins",
+            "itm",
+            "per",
+            "rel"
+          ],
+          "value": []
+        },
+        "spellcasting": "full",
+        "damage": {
+          "parts": []
+        }
+      },
+      "sort": 200000,
+      "labels": {},
+      "isStack": false,
+      "hasTarget": false,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "3WOWC9ckS0lK9nBw",
+      "flags": {},
+      "name": "Eldritch Blast",
+      "type": "spell",
+      "img": "systems/dnd5e/icons/spells/fireball-eerie-1.jpg",
+      "data": {
+        "description": {
+          "value": "<p>A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 force damage.</p>\n<p>The spell creates more than one beam when you reach higher levels: two beams at 5th level, three beams at 11th level, and four beams at 17th level. You can direct the beams at the same target or at different ones. Make a separate attack roll for each beam.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 237",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": "inst"
+        },
+        "target": {
+          "value": 1,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": 120,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "rsak",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [
+            [
+              "1d10",
+              "force"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 0,
+        "school": "evo",
+        "components": {
+          "value": "",
+          "vocal": true,
+          "somatic": true,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 100001,
+      "labels": {
+        "level": "Cantrip",
+        "school": "Evocation",
+        "components": [
+          "V",
+          "S"
+        ],
+        "materials": "",
+        "activation": "1 Action",
+        "target": "1 Creature",
+        "range": "120 Feet",
+        "duration": "Instantaneous",
+        "recharge": "Recharge [undefined]",
+        "save": "",
+        "damage": "1d10",
+        "damageTypes": "Force"
+      },
+      "isStack": false,
+      "hasUses": false,
+      "hasTarget": true,
+      "toggleClass": "",
+      "toggleTitle": "Unprepared"
+    },
+    {
+      "_id": "bk5NCUy1DVKHp6sg",
+      "flags": {},
+      "name": "Fireball",
+      "type": "spell",
+      "img": "systems/dnd5e/icons/spells/fireball-red-2.jpg",
+      "data": {
+        "description": {
+          "value": "<p>A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. Each creature in a 20-foot-radius sphere centered on that point must make a Dexterity saving throw. A target takes 8d6 fire damage on a failed save, or half as much damage on a successful one.</p>\n<p>The fire spreads around corners. It ignites flammable objects in the area that aren’t being worn or carried.</p>\n<p><strong>Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 241",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": "inst"
+        },
+        "target": {
+          "value": 20,
+          "units": "ft",
+          "type": "sphere"
+        },
+        "range": {
+          "value": 150,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [
+            [
+              "8d6",
+              "fire"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "dex",
+          "dc": 18,
+          "scaling": "spell"
+        },
+        "level": 3,
+        "school": "evo",
+        "components": {
+          "value": "",
+          "vocal": true,
+          "somatic": true,
+          "material": true,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "A tiny ball of bat guano and sulfur",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "level",
+          "formula": "1d6"
+        }
+      },
+      "sort": 100001,
+      "labels": {
+        "level": "3rd Level",
+        "school": "Evocation",
+        "components": [
+          "V",
+          "S",
+          "M"
+        ],
+        "materials": "A tiny ball of bat guano and sulfur",
+        "activation": "1 Action",
+        "target": "20 Feet Sphere",
+        "range": "150 Feet",
+        "duration": "Instantaneous",
+        "recharge": "Recharge [undefined]",
+        "save": "DC 14 Dexterity",
+        "damage": "8d6",
+        "damageTypes": "Fire"
+      },
+      "isStack": false,
+      "hasUses": false,
+      "hasTarget": true,
+      "toggleClass": "",
+      "toggleTitle": "Unprepared"
+    },
+    {
+      "_id": "G5ALrLB9L29Nt08k",
+      "flags": {},
+      "name": "Fly",
+      "type": "spell",
+      "img": "systems/dnd5e/icons/spells/link-spirit-1.jpg",
+      "data": {
+        "description": {
+          "value": "<p>You touch a willing creature. The target gains a flying speed of 60 feet for the Duration. When the spell ends, the target falls if it is still aloft, unless it can stop the fall.</p>\n<p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 243",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 10,
+          "units": "minute"
+        },
+        "target": {
+          "value": 1,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "touch"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 3,
+        "school": "trs",
+        "components": {
+          "value": "",
+          "vocal": true,
+          "somatic": true,
+          "material": true,
+          "ritual": false,
+          "concentration": true
+        },
+        "materials": {
+          "value": "A wing feather from any bird",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "level",
+          "formula": ""
+        }
+      },
+      "sort": 100001,
+      "labels": {
+        "level": "3rd Level",
+        "school": "Transmutation",
+        "components": [
+          "V",
+          "S",
+          "M",
+          "C"
+        ],
+        "materials": "A wing feather from any bird",
+        "activation": "1 Action",
+        "target": "1 Creature",
+        "range": "Touch",
+        "duration": "10 Minutes",
+        "recharge": "Recharge [undefined]",
+        "save": "",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": false,
+      "hasTarget": true,
+      "toggleClass": "",
+      "toggleTitle": "Unprepared"
+    }
+  ],
+  "_id": "NQbZOAzK9EeQOdkB",
+  "img": "icons/svg/mystery-man.svg"
+}

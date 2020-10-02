@@ -1,13 +1,16 @@
 # TO DO
 
+- Create the template Actor5e from the JSON import
+- Add additional items consisting of classes, inventory, spells, features etc. by referencing the Compendium
+
 ## BUGS
 
 
 ## FEATURES
-- Read an XFDF file
-- Parse into internal data structure
-- Create internal JSON representation
-- Create Actor from that JSON 
+DONE Read an XFDF file
+DONE Parse into internal data structure
+DONE Create internal JSON representation
+- Create Actor from that JSON
 
 
 ## FIXED BUGS

@@ -8,7 +8,7 @@
                 The approaches are equivalent and traverseXML avoids recursion, but for this limited depth it will be Fine
                 v0.5.0 Make fieldDictionary a multi-dimensional array with multiple field values
 */
-import {Actor5e} from "./Actor5e.js";
+import {Actor5eFromMPMB} from "./Actor5e.js";
 
 export const MODULE_NAME = "MPMB-importer";
 
@@ -79,11 +79,12 @@ export class MPMBImporter {
         console.log(MPMB.fieldDictionary);
 
         //Populate the Actor5e structure from the fieldDictionary
-        const importedActor = new Actor5e(MPMB.fieldDictionary);
+        const importedActor = new Actor5eFromMPMB(MPMB.fieldDictionary);
 
-
-        //Now export the importedActor to JSON
+        //Now export the importedActor to JSON - this is the skeleton of the Actor, without any classes, items, etc
         importedActor.exportToJSON();
+        await importedActor.createFoundryActor();
+
 
 
         return importedActor;

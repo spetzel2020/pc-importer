@@ -1,6 +1,6 @@
 {
   "actorJSON": null,
-  "name": "Ellyjobel \"Gravel\" Bilbron",
+  "name": "Ignis Ashwalker",
   "type": "character",
   "flags": {
     "exportSource": {
@@ -17,73 +17,68 @@
   "data": {
     "abilities": {
       "str": {
-        "value": "9",
+        "value": "19",
         "proficient": 0,
-        "mod": "-1",
-        "save": "-1"
+        "mod": "4",
+        "save": "4"
       },
       "dex": {
-        "value": "16",
-        "proficient": 0,
-        "mod": "3",
-        "save": "3"
-      },
-      "con": {
         "value": "12",
         "proficient": 0,
         "mod": "1",
         "save": "1"
       },
-      "int": {
-        "value": "18",
+      "con": {
+        "value": "16",
         "proficient": 1,
-        "mod": "4",
-        "save": "7"
+        "mod": "3",
+        "save": "8"
+      },
+      "int": {
+        "value": "12",
+        "proficient": 0,
+        "mod": "1",
+        "save": "1"
       },
       "wis": {
         "value": "11",
         "proficient": 1,
         "mod": "0",
-        "save": "3"
+        "save": "5"
       },
       "cha": {
-        "value": "11",
-        "proficient": 0,
-        "mod": "0",
-        "save": "0"
+        "value": "20",
+        "proficient": 1,
+        "mod": "5",
+        "save": "10"
       }
     },
     "attributes": {
       "ac": {
-        "value": "16"
+        "value": "14"
       },
       "hp": {
-        "max": "27"
+        "max": "118"
       },
       "init": {},
       "speed": {
-        "value": "25 ft"
+        "value": "30 ft"
       },
       "death": {},
       "encumbrance": {},
       "inspiration": false,
-      "hd": "5",
-      "prof": "3",
-      "spelldc": "15"
+      "hd": "10",
+      "prof": "5",
+      "spelldc": "18"
     },
     "details": {
       "biography": {},
-      "alignment": "CG",
-      "race": "Gnome, Deep (Svirfneblin)",
-      "background": "Anthropologist",
+      "race": "Tiefling",
+      "background": "Outlander",
       "xp": {
-        "value": "12190"
+        "value": "165000"
       },
-      "trait": "When I arrive at a new settlement for the first time, I must learn all its customs. I'm a stickler when it comes to observing proper etiquette and local customs.\nI'm especially interested in local recipes and cooking.",
-      "ideal": "Knowledge: By understanding other races and cultures, we learn to understand ourselves. (Any)",
-      "bond": "I have a trinket (crystal) that I believe is the key to finding a long-lost society.",
-      "flaw": "I've picked up some unpleasant habits living among goblins, like blowing a wad of snot into a stew to improve the flavor.\nTerrified of the \"sea\" (can swim however) - horribly seasick\nBelieve lots of pseudo-science about crystals",
-      "level": "5"
+      "level": "15"
     },
     "traits": {
       "size": "1",
@@ -91,7 +86,9 @@
         "value": []
       },
       "dr": {
-        "value": []
+        "value": [
+          "Fire"
+        ]
       },
       "dv": {
         "value": []
@@ -99,14 +96,14 @@
       "ci": {
         "value": []
       },
-      "senses": "Darkvision 120 ft",
+      "senses": "Darkvision 60 ft",
       "languages": {
         "value": [
           "common",
-          "gnomish",
-          "undercommon",
-          "dwarvish",
-          "goblin"
+          "infernal",
+          "halfling",
+          "giant (3 curses)",
+          "sylvan (friend, help)"
         ]
       },
       "weaponProf": {
@@ -119,11 +116,7 @@
         "value": []
       }
     },
-    "currency": {
-      "gp": "15",
-      "sp": "4",
-      "cp": "5"
-    },
+    "currency": {},
     "skills": {
       "acr": {
         "value": 0
@@ -135,7 +128,7 @@
         "value": 1
       },
       "ath": {
-        "value": 0
+        "value": 1
       },
       "dec": {
         "value": 0
@@ -144,7 +137,7 @@
         "value": 0
       },
       "ins": {
-        "value": 1
+        "value": 0
       },
       "itm": {
         "value": 0
@@ -160,8 +153,8 @@
         "value": 0
       },
       "prc": {
-        "value": 1,
-        "passive": "13"
+        "value": 0,
+        "passive": "10"
       },
       "prf": {
         "value": 0
@@ -170,7 +163,7 @@
         "value": 0
       },
       "rel": {
-        "value": 1
+        "value": 0
       },
       "slt": {
         "value": 0
@@ -179,7 +172,7 @@
         "value": 0
       },
       "sur": {
-        "value": 0
+        "value": 1
       }
     },
     "spells": {
@@ -196,13 +189,13 @@
         "max": "0"
       },
       "spell5": {
-        "max": "0"
+        "max": "2"
       },
       "spell6": {
         "max": "0"
       },
       "spell7": {
-        "max": "1"
+        "max": "0"
       },
       "spell8": {
         "max": "0"

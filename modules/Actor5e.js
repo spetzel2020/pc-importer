@@ -6,10 +6,15 @@
                 Handle: lowercase languages, flags which are True/Off -> 1/0, trim " " to null
                 v0.4.3: Add calculations/functions for Skills. Here value = 0,1, or 2 depending on Not Prof/Prof/Expertise
                 Not implmenting any bonuses or other adjustments, and we're hoping the totals will recalculate automatically
+2-Oct-2020      v0.4.3a: createFoundryActor(): Imports the JSON just created.
 
 
 TO DO:
-    - Perhaps use Object.create to create the skeleton Actor5e and then populate it from the fieldDictionary the other way round
+    - Import the basic JSON into the importer and create the new Actor
+    - THEN, import the Items consisting of Class(es), Inventory etc, either by referencing SRD or just copying directly
+        - suggests a different format for the Item values - not perhaps embedded in the Actor
+    - Do a Regex match on the Spells and Items
+    - Perhaps use Object.create to create the skeleton Actor5eFromMPMB and then populate it from the fieldDictionary the other way round
         using dot or array notation
     - Handle multi-classed characters
     - Import the JSON directly in and then make addition adjustments for Classes
@@ -17,6 +22,7 @@ TO DO:
 */
 
 import {MODULE_NAME, MPMBImporter} from "./MPMBImporter.js";
+import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
 
 const Ability = {
     str : "str",
@@ -28,9 +34,10 @@ const Ability = {
 }
 
 
-export class Actor5e {
+export class Actor5eFromMPMB {
     constructor(importedDictionary) {
         this.fieldDictionary = importedDictionary;
+        this.actorJSON = null;
         //IMPORTING
 
         //See https://stackoverflow.com/questions/8085004/iterate-through-nested-javascript-objects
@@ -66,9 +73,6 @@ export class Actor5e {
             //Not sure this will handle all possibilities
             //Should handle both the empty array [] and also [fieldName1, fieldName2, ....]
             const mappedArray = [];
-
-
-
             entryValue.forEach(elem => {
                 const mappedArrayValue = this.mapToMPMBField(elem);
                 if (mappedArrayValue) {mappedArray.push(mappedArrayValue);}
@@ -96,7 +100,7 @@ export class Actor5e {
         return mappedValue;
     }
 
-    exportToJSON() {
+    exportToJSON(createFile=true) {
         let data = duplicate(this);
         let allData = null;
 
@@ -106,8 +110,22 @@ export class Actor5e {
         const dataAsJSON = JSON.stringify(data, null, 2);
 
         // Trigger file save procedure
-        const filename = `fvtt-${this.name}.json`;
-        saveDataToFile(dataAsJSON, "text/json", filename);
+        if (createFile) {
+            const filename = `fvtt-${this.name}.json`;
+            saveDataToFile(dataAsJSON, "text/json", filename);
+        }
+        this.actorJSON = dataAsJSON;
+        return dataAsJSON;
+    }
+
+    async createFoundryActor() {
+        if (!this.actorJSON) {return false;}
+        let actorData = duplicate(this);
+        delete actorData.actorJSON;
+        const options = {temporary: false, renderSheet: false}
+        const newActor = await Actor5e.create(actorData, options);
+        await newActor.importFromJSON(this.actorJSON);
+        newActor.initialize();
     }
 }
 
@@ -621,8 +639,32 @@ const MPMBtoActor5eMapping = {
           "attribute": ""
         },
         "randomImg": false
-      },
-      "items": [],
-      "_id": null,
-      "img": null
+    },
+    "_id": null,
+    "img": null
+  }
+ const MPMBToItemMapping = {
+     //We add multiple of these to the created Actor
+      "item": {   //Foundry uses this for lots of stuff, including Class levels
+            "name": {default: "Wizard"},
+            "type": {default: "class"},
+            "img": "systems/dnd5e/icons/skills/blue_13.jpg",
+            "data": {
+              "description": {
+                "value": "",
+                "chat": "",
+                "unidentified": ""
+              },
+              "source": "",
+              "levels": "Character Level",
+              "subclass": "Class and Levels",
+              "hitDice": "HD1 Dice",
+              "hitDiceUsed": 0,
+              "skills":{},
+              "spellcasting": "full",
+              "damage": {
+                "parts": []
+              }
+            }
+      }
 }

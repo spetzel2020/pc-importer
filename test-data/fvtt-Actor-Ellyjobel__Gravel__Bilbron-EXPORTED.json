@@ -1,5 +1,5 @@
 {
-  "name": "Gravel",
+  "name": "Ellyjobel \"Gravel\" Bilbron",
   "type": "character",
   "data": {
     "abilities": {
@@ -22,31 +22,31 @@
         "save": 3
       },
       "con": {
-        "value": 11,
+        "value": 12,
         "proficient": 0,
-        "mod": 0,
+        "mod": 1,
         "prof": 0,
         "saveBonus": 0,
         "checkBonus": 0,
-        "save": 0
+        "save": 1
       },
       "int": {
         "value": 18,
-        "proficient": 0,
+        "proficient": 1,
         "mod": 4,
-        "prof": 0,
+        "prof": 3,
         "saveBonus": 0,
         "checkBonus": 0,
-        "save": 4
+        "save": 7
       },
       "wis": {
         "value": 11,
-        "proficient": 0,
+        "proficient": 1,
         "mod": 0,
-        "prof": 0,
+        "prof": 3,
         "saveBonus": 0,
         "checkBonus": 0,
-        "save": 0
+        "save": 3
       },
       "cha": {
         "value": 11,
@@ -60,12 +60,12 @@
     },
     "attributes": {
       "ac": {
-        "value": 10
+        "value": 16
       },
       "hp": {
         "value": 10,
         "min": 0,
-        "max": 10,
+        "max": 27,
         "temp": "",
         "tempmax": ""
       },
@@ -78,7 +78,7 @@
       },
       "spellcasting": "int",
       "speed": {
-        "value": "30 ft",
+        "value": "25 ft",
         "special": ""
       },
       "death": {
@@ -86,9 +86,9 @@
         "failure": 0
       },
       "encumbrance": {
-        "value": 0,
-        "max": 135,
-        "pct": 0,
+        "value": 0.5,
+        "max": 1080,
+        "pct": 0.046296296296296294,
         "encumbered": false
       },
       "exhaustion": 0,
@@ -102,23 +102,23 @@
         "value": "",
         "public": ""
       },
-      "alignment": "",
-      "race": "",
-      "background": "",
+      "alignment": "CG",
+      "race": "Gnome, Deep (Svirfneblin)",
+      "background": "Anthropologist",
       "xp": {
-        "value": 0,
+        "value": 12190,
         "min": 0,
         "max": 14000,
-        "pct": 0
+        "pct": 76
       },
-      "trait": "",
-      "ideal": "",
-      "bond": "",
-      "flaw": "",
+      "trait": "When I arrive at a new settlement for the first time, I must learn all its customs. I'm a stickler when it comes to observing proper etiquette and local customs.\nI'm especially interested in local recipes and cooking.",
+      "ideal": "Knowledge: By understanding other races and cultures, we learn to understand ourselves. (Any)",
+      "bond": "I have a trinket (crystal) that I believe is the key to finding a long-lost society.",
+      "flaw": "I've picked up some unpleasant habits living among goblins, like blowing a wad of snot into a stew to improve the flavor.\nTerrified of the \"sea\" (can swim however) - horribly seasick\nBelieve lots of pseudo-science about crystals",
       "level": 5
     },
     "traits": {
-      "size": "med",
+      "size": "grg",
       "di": {
         "value": [],
         "custom": ""
@@ -135,9 +135,15 @@
         "value": [],
         "custom": ""
       },
-      "senses": "",
+      "senses": "Darkvision 120 ft",
       "languages": {
-        "value": [],
+        "value": [
+          "common",
+          "gnomish",
+          "undercommon",
+          "dwarvish",
+          "goblin"
+        ],
         "custom": ""
       },
       "weaponProf": {
@@ -155,10 +161,10 @@
     },
     "currency": {
       "pp": 0,
-      "gp": 0,
+      "gp": 15,
       "ep": 0,
-      "sp": 0,
-      "cp": 0
+      "sp": 4,
+      "cp": 5
     },
     "skills": {
       "acr": {
@@ -216,13 +222,13 @@
         "passive": 14
       },
       "ins": {
-        "value": 0,
+        "value": 1,
         "ability": "wis",
         "bonus": 0,
         "mod": 0,
-        "prof": 0,
-        "total": 0,
-        "passive": 10
+        "prof": 3,
+        "total": 3,
+        "passive": 13
       },
       "itm": {
         "value": 0,
@@ -288,13 +294,13 @@
         "passive": 10
       },
       "rel": {
-        "value": 0,
+        "value": 1,
         "ability": "int",
         "bonus": 0,
         "mod": 4,
-        "prof": 0,
-        "total": 4,
-        "passive": 14
+        "prof": 3,
+        "total": 7,
+        "passive": 17
       },
       "slt": {
         "value": 0,
@@ -434,7 +440,12 @@
       "system": "dnd5e",
       "coreVersion": "0.6.6",
       "systemVersion": 0.96
-    }
+    },
+    "dnd5e": {},
+    "core": {
+      "sheetClass": {}
+    },
+    "MPMB Importer": "0.4.2"
   },
   "token": {
     "flags": {},
@@ -442,8 +453,8 @@
     "displayName": 0,
     "img": "icons/svg/mystery-man.svg",
     "tint": null,
-    "width": 1,
-    "height": 1,
+    "width": 4,
+    "height": 4,
     "scale": 1,
     "lockRotation": false,
     "rotation": 0,
@@ -455,18 +466,20 @@
     "sightAngle": 360,
     "lightAngle": 360,
     "lightAlpha": 1,
-    "actorId": "Jb7nyb2Jg9JEYHoa",
+    "actorId": "DaJL7NIiThU8jL0B",
     "actorLink": true,
     "actorData": {},
     "disposition": 1,
     "displayBars": 0,
-    "bar1": {},
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
     "bar2": {},
     "randomImg": false
   },
   "items": [
     {
-      "_id": "IGFATLodiVkMLhd1",
+      "_id": "KlalnbJLj0J9Fncc",
       "flags": {},
       "name": "Wizard",
       "type": "class",
@@ -511,6 +524,6 @@
       "toggleTitle": "Not Equipped"
     }
   ],
-  "_id": "Jb7nyb2Jg9JEYHoa",
+  "_id": "DaJL7NIiThU8jL0B",
   "img": "icons/svg/mystery-man.svg"
 }
