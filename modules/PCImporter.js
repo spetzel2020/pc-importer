@@ -6,27 +6,26 @@
                 meaningful dynamic structures
 30-Sep-2020     v0.5.0 Trim the xmlDoc recursively rather than walking the tree to get the components we care about
                 The approaches are equivalent and traverseXML avoids recursion, but for this limited depth it will be Fine
-                v0.5.0 Make fieldDictionary a multi-dimensional array with multiple field values
+                v0.5.0 Make importedFieldToValuesMap a multi-dimensional array with multiple field values
 */
-import {Actor5eFromMPMB} from "./Actor5e.js";
+import {Actor5eFromMPMB} from "./Actor5eFromExt.js";
 
-export const MODULE_NAME = "MPMB-importer";
+export const MODULE_NAME = "pc-importer";
 
 
 
-export class MPMBImporter {
+export class PCImporter {
     constructor() {
-        this.fieldDictionary = new Map();
+        this.importedFieldToValuesMap = new Map();
     }
 
-
     static init() {
-        game.settings.register(MODULE_NAME, "MPMBImporterVersion", {
-          name: "MPMB Importer version",
+        game.settings.register(MODULE_NAME, "PCImporterVersion", {
+          name: "PC Importer version",
           hint: "",
           scope: "system",
           config: false,
-          default: game.i18n.localize("MPMBI.Version"),
+          default: game.i18n.localize("PCI.Version"),
           type: String
         });
     }
@@ -42,7 +41,7 @@ export class MPMBImporter {
             callback: html => {
               const form = html.find("form")[0];
               if ( !form.data.files.length ) return ui.notifications.error("You did not upload a data file!");
-              readTextFromFile(form.data.files[0]).then(xfdf => MPMBImporter.importFromXML(xfdf));
+              readTextFromFile(form.data.files[0]).then(xfdf => PCImporter.importFromXML(xfdf));
             }
           },
           no: {
@@ -59,9 +58,9 @@ export class MPMBImporter {
     static async importFromXML(xfdf) {
         let parser = new DOMParser();
         let xmlDoc = parser.parseFromString(xfdf,"text/xml");
-        let MPMB = new MPMBImporter();
-        const parsedObjectTree = MPMBImporter.trimXML(xmlDoc);
-        if (!parsedObjectTree) return;
+        let pcImporter = new PCImporter();
+        const parsedObjectTree = PCImporter.trimXML(xmlDoc);
+        if (!parsedObjectTree) {return;}
 
         //Now convert this simplified version into an even simpler array of (fieldName, value) pairs
         //If the value is nested in several fields, we dot the fields together
@@ -71,15 +70,15 @@ export class MPMBImporter {
             if (!fieldsSubTree || !fieldsSubTree.childNodes) {return;}
             const childNodes = Object.values(fieldsSubTree.childNodes);
 
-            MPMB.getNestedFields(childNodes, null);
+            pcImporter.getNestedFields(childNodes, null);
 
         } catch {
             return;
         }
-        console.log(MPMB.fieldDictionary);
+        console.log(pcImporter.importedFieldToValuesMap);
 
-        //Populate the Actor5e structure from the fieldDictionary
-        const importedActor = new Actor5eFromMPMB(MPMB.fieldDictionary);
+        //Populate the Actor5e structure from the importedFieldToValuesMap
+        const importedActor = new Actor5eFromMPMB(pcImporter.importedFieldToValuesMap);
 
         //Now export the importedActor to JSON - this is the skeleton of the Actor, without any classes, items, etc
         importedActor.exportToJSON();
@@ -105,7 +104,7 @@ export class MPMBImporter {
                 this.getNestedFields(node.childNodes, dottedFields);
             } else if ((node.nodeName === "value") && node.childNodes && node.childNodes[0]) {
                 const value = node.childNodes[0].nodeValue;
-                this.fieldDictionary.set(dottedFields, value);
+                this.importedFieldToValuesMap.set(dottedFields, value);
             }
         }
     }
@@ -124,7 +123,7 @@ export class MPMBImporter {
 
         let newChildNodes = [];
         trimmedXML.childNodes.forEach((node, i) => {
-            newChildNodes.push(MPMBImporter.trimXML(node));
+            newChildNodes.push(PCImporter.trimXML(node));
         });
         trimmedXML.childNodes = newChildNodes;
         return trimmedXML;
@@ -204,8 +203,8 @@ export class MPMBImporter {
         return objectTree;
     }
 
-    static getValueForFieldName(fieldDictionary, fieldName) {
-        const value = fieldDictionary.get(fieldName);
+    static getValueForFieldName(importedFieldToValuesMap, fieldName) {
+        const value = importedFieldToValuesMap.get(fieldName);
         return value;
     }
 
@@ -219,12 +218,12 @@ export class MPMBImporter {
         if (notesButton && game.user.isGM) {
             notesButton.tools.push({
                 name: "importMPMB",
-                title: game.i18n.localize("MPMBI.BUTTON.ImportXFDF"),
+                title: game.i18n.localize("PCI.BUTTON.ImportXFDF"),
                 icon: "fas fa-file-import",
                 toggle: false,
                 button: true,
                 visible: game.user.isGM,
-                onClick: () => MPMBImporter.importFromXFDFDialog()
+                onClick: () => PCImporter.importFromXFDFDialog()
             });
         }
     }
