@@ -14,8 +14,8 @@ PC Importer imports Player Character sheets from other systems and methods into 
 # Install
 
 1. Go to the "Add-on Modules" tab in Foundry Setup
-2. Click "Install Module" and search for **MPMB Importer** OR paste this link: `https://raw.githubusercontent.com/opus1217/MPMB-importer/v0.5.0/module.json`
-3. Open your world and go to Settings>Manage Modules and enable MPMB Importer
+2. Click "Install Module" and search for **PC Importer** OR paste this link: `https://raw.githubusercontent.com/opus1217/pc-importer/v0.5.0/module.json`
+3. Open your world and go to Settings>Manage Modules and enable PC Importer
 
 # Using PC Importer with MPMB sheets
 1. Open your MPMB character sheet in Acrobat Reader DC or similar.
