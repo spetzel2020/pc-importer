@@ -1,7 +1,7 @@
 {
-  "MPMBI.id": "MPMB-importer",
-  "MPMBI.Version" : "v0.4.3",
-  "MPMBI.Name": "MPMB Importer",
-  "MPMBI.Welcome" : "Welcome to MPMB Importer",
-  "MPMBI.BUTTON.ImportXFDF" : "Import an MPMB character sheet"
+  "PCI.id": "pc-importer",
+  "PCI.Version" : "v0.5.0",
+  "PCI.Name": "PC Importer",
+  "PCI.Welcome" : "Welcome to PC Importer",
+  "PCI.BUTTON.ImportXFDF" : "Import an PC character sheet from another system or character sheet"
 }

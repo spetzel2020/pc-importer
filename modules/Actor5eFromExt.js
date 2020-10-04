@@ -7,21 +7,20 @@
                 v0.4.3: Add calculations/functions for Skills. Here value = 0,1, or 2 depending on Not Prof/Prof/Expertise
                 Not implmenting any bonuses or other adjustments, and we're hoping the totals will recalculate automatically
 2-Oct-2020      v0.4.3a: createFoundryActor(): Imports the JSON just created.
+3-Oct-2020      v0.5.0: Renamed to more generic PC Importer and make Actor5eFromMPMB a subclass of Actor5eFromExt
+                Will need more work to make it more truly object-oriented, including separating out generic
+                input XML and JSON handling 
 
 
 TO DO:
-    - Import the basic JSON into the importer and create the new Actor
+    - Possibly just skip the JSON import since we create the Actor5e.create()
     - THEN, import the Items consisting of Class(es), Inventory etc, either by referencing SRD or just copying directly
         - suggests a different format for the Item values - not perhaps embedded in the Actor
     - Do a Regex match on the Spells and Items
-    - Perhaps use Object.create to create the skeleton Actor5eFromMPMB and then populate it from the fieldDictionary the other way round
-        using dot or array notation
     - Handle multi-classed characters
-    - Import the JSON directly in and then make addition adjustments for Classes
-
 */
 
-import {MODULE_NAME, MPMBImporter} from "./MPMBImporter.js";
+import {MODULE_NAME, PCImporter} from "./PCImporter.js";
 import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
 
 const Ability = {
@@ -34,16 +33,51 @@ const Ability = {
 }
 
 
-export class Actor5eFromMPMB {
+export class Actor5eFromExt {
     constructor(importedDictionary) {
-        this.fieldDictionary = importedDictionary;
+        this.importedFieldToValuesMap = importedDictionary;
         this.actorJSON = null;
+        //IMPORTING
+    }
+
+    exportToJSON(createFile=true) {
+        let data = duplicate(this);
+        let allData = null;
+
+        // Flag some metadata about where the entity was exported some - in case migration is needed later
+        //Redudant since we're storing this on every element
+        //data.flags["exportSource"] = metadata;
+        const dataAsJSON = JSON.stringify(data, null, 2);
+
+        // Trigger file save procedure
+        if (createFile) {
+            const filename = `fvtt-${this.name}.json`;
+            saveDataToFile(dataAsJSON, "text/json", filename);
+        }
+        this.actorJSON = dataAsJSON;
+        return dataAsJSON;
+    }
+
+    async createFoundryActor() {
+        if (!this.actorJSON) {return false;}
+        let actorData = duplicate(this);
+        delete actorData.actorJSON;
+        const options = {temporary: false, renderSheet: false}
+        const newActor = await Actor5e.create(actorData, options);
+        await newActor.importFromJSON(this.actorJSON);
+    }
+}
+
+export class Actor5eFromMPMB extends Actor5eFromExt {
+    /** @override */
+    constructor(importedDictionary) {
+        super(importedDictionary);
         //IMPORTING
 
         //See https://stackoverflow.com/questions/8085004/iterate-through-nested-javascript-objects
         //Use recursion (only 3 levels deep) to walk through the mapping tree and object in parallel
-        this.mapAndIterate(MPMBtoActor5eMapping, this);
-        delete this.fieldDictionary;
+        this.mapAndIterate(Actor5eToMPMBMapping, this);
+        delete this.importedFieldToValuesMap;
     }
 
     mapAndIterate(subMappingTree, subObject) {
@@ -79,10 +113,10 @@ export class Actor5eFromMPMB {
             });
             mappedValue = mappedArray;
         } else if (entryValue.fieldName) {
-            mappedValue = MPMBImporter.getValueForFieldName(this.fieldDictionary, entryValue.fieldName);
+            mappedValue = PCImporter.getValueForFieldName(this.importedFieldToValuesMap, entryValue.fieldName);
             if (!mappedValue) {mappedValue = entryValue.default ? entryValue.default : null}
         } else if (typeof entryValue === 'function') {
-            mappedValue = entryValue(this.fieldDictionary);
+            mappedValue = entryValue(this.importedFieldToValuesMap);
         } else if (entryValue.default) {
             mappedValue = entryValue.default;
         } else if (typeof entryValue === 'object') {
@@ -91,7 +125,7 @@ export class Actor5eFromMPMB {
             mappedValue = this.mapAndIterate(entryValue, subObject);
         } else {
             //Trims spaces from beginning and end (so turns " " into "")
-            mappedValue = MPMBImporter.getValueForFieldName(this.fieldDictionary, entryValue);
+            mappedValue = PCImporter.getValueForFieldName(this.importedFieldToValuesMap, entryValue);
             if (typeof mappedValue === 'string') {mappedValue = mappedValue.trim();}
         }
         //FXIME: Do some clean-up - would be better if this could be done inline
@@ -100,71 +134,11 @@ export class Actor5eFromMPMB {
         return mappedValue;
     }
 
-    exportToJSON(createFile=true) {
-        let data = duplicate(this);
-        let allData = null;
 
-        // Flag some metadata about where the entity was exported some - in case migration is needed later
-        //Redudant since we're storing this on every element
-        //data.flags["exportSource"] = metadata;
-        const dataAsJSON = JSON.stringify(data, null, 2);
-
-        // Trigger file save procedure
-        if (createFile) {
-            const filename = `fvtt-${this.name}.json`;
-            saveDataToFile(dataAsJSON, "text/json", filename);
-        }
-        this.actorJSON = dataAsJSON;
-        return dataAsJSON;
-    }
-
-    async createFoundryActor() {
-        if (!this.actorJSON) {return false;}
-        let actorData = duplicate(this);
-        delete actorData.actorJSON;
-        const options = {temporary: false, renderSheet: false}
-        const newActor = await Actor5e.create(actorData, options);
-        await newActor.importFromJSON(this.actorJSON);
-        newActor.initialize();
-    }
 }
 
-function defaulted(defaultValue) {return defaultValue;}
-
-function lowercaseArray(mappedArray) {
-    mappedArray.forEach((elem,i) => {mappedArray[i] = elem.toLowerCase()});
-    return mappedArray;
-}
-
-function mapArray(dictionary, fieldNames) {
-    const fieldNameArray = Array.from(fieldNames);
-    let mappedArray = [];
-    fieldNameArray.forEach((fieldName, i) => {
-        const mappedValue = MPMBImporter.getValueForFieldName(dictionary, fieldName);
-        if (mappedValue && (mappedValue !== " ")) {mappedArray.push(mappedValue);}
-    });
-    return mappedArray;
-}
-
-function mapAndSwitchToInteger(dictionary,fieldName) {
-    const switchValue = MPMBImporter.getValueForFieldName(dictionary, fieldName);
-    if (switchValue === "Off") {return 0;}
-    else if (switchValue === "True") {return 1;}
-    else {return 0;}
-}
-function mapConvertAndAdd(dictionary,fieldNames) {
-    //Used for turning Proficiency + Expertise -> 0, 1, or 2 (which is what Foundry wants)
-    if (!fieldNames || !fieldNames.length || !Array.isArray(fieldNames)) {return 0;}
-    const converted = fieldNames.map(k => MPMBImporter.getValueForFieldName(dictionary, k));
-    const added = converted.reduce((sum,c) => sum + (c==="True" ? 1 : 0),0);
-    return added;
-}
-
-
-
-
-//Provides the mapping to the field names in the XFDF
-const MPMBtoActor5eMapping = {
+//MPMB mapping Provides the mapping to the field names in the XFDF
+const Actor5eToMPMBMapping = {
       "name": "AdvLog.PC Name",
       "type": () => "character",
       "flags": {
@@ -643,7 +617,7 @@ const MPMBtoActor5eMapping = {
     "_id": null,
     "img": null
   }
- const MPMBToItemMapping = {
+ const ItemToMPMBMapping = {
      //We add multiple of these to the created Actor
       "item": {   //Foundry uses this for lots of stuff, including Class levels
             "name": {default: "Wizard"},
@@ -667,4 +641,36 @@ const MPMBtoActor5eMapping = {
               }
             }
       }
+}
+
+
+function defaulted(defaultValue) {return defaultValue;}
+
+function lowercaseArray(mappedArray) {
+    mappedArray.forEach((elem,i) => {mappedArray[i] = elem.toLowerCase()});
+    return mappedArray;
+}
+
+function mapArray(dictionary, fieldNames) {
+    const fieldNameArray = Array.from(fieldNames);
+    let mappedArray = [];
+    fieldNameArray.forEach((fieldName, i) => {
+        const mappedValue = PCImporter.getValueForFieldName(dictionary, fieldName);
+        if (mappedValue && (mappedValue !== " ")) {mappedArray.push(mappedValue);}
+    });
+    return mappedArray;
+}
+
+function mapAndSwitchToInteger(dictionary,fieldName) {
+    const switchValue = PCImporter.getValueForFieldName(dictionary, fieldName);
+    if (switchValue === "Off") {return 0;}
+    else if (switchValue === "True") {return 1;}
+    else {return 0;}
+}
+function mapConvertAndAdd(dictionary,fieldNames) {
+    //Used for turning Proficiency + Expertise -> 0, 1, or 2 (which is what Foundry wants)
+    if (!fieldNames || !fieldNames.length || !Array.isArray(fieldNames)) {return 0;}
+    const converted = fieldNames.map(k => PCImporter.getValueForFieldName(dictionary, k));
+    const added = converted.reduce((sum,c) => sum + (c==="True" ? 1 : 0),0);
+    return added;
 }
