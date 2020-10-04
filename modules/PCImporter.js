@@ -10,30 +10,33 @@
 */
 import {Actor5eFromMPMB} from "./Actor5eFromExt.js";
 
-export const MODULE_NAME = "pc-importer";
+export var MODULE_NAME;
+export var MODULE_VERSION;
 
-
+function init() {
+    MODULE_VERSION = game.i18n.localize("PCI.Version");
+    MODULE_NAME =  game.i18n.localize("PCI.id");
+    game.settings.register(MODULE_NAME, "PCImporterVersion", {
+      name: "PC Importer version",
+      hint: "",
+      scope: "system",
+      config: false,
+      default: MODULE_VERSION,
+      type: String
+    });
+}
 
 export class PCImporter {
     constructor() {
         this.importedFieldToValuesMap = new Map();
     }
 
-    static init() {
-        game.settings.register(MODULE_NAME, "PCImporterVersion", {
-          name: "PC Importer version",
-          hint: "",
-          scope: "system",
-          config: false,
-          default: game.i18n.localize("PCI.Version"),
-          type: String
-        });
-    }
+
 
     static async importFromXFDFDialog() {
       new Dialog({
         title: `Import MPMB XFDF file`,
-        content: await renderTemplate("modules/MPMB-importer/templates/import-data.html"),
+        content: await renderTemplate("modules/pc-importer/templates/import-data.html"),
         buttons: {
           import: {
             icon: '<i class="fas fa-file-import"></i>',
@@ -233,5 +236,5 @@ export class PCImporter {
 }
 
 
-Hooks.on("init", MPMBImporter.init);
-Hooks.on('getSceneControlButtons', MPMBImporter.getSceneControlButtons);
+Hooks.on("init", init);
+Hooks.on('getSceneControlButtons', PCImporter.getSceneControlButtons);
