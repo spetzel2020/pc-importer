@@ -1,0 +1,18 @@
+{
+    "classes":{
+        "sorcerer":{
+            "subclassfeature1":{"choice":"evil"}, "metamagic":{"extrachoices":["extended spell", "twinned spell"]}
+        },
+        "warlock":{
+            "eldritch invocations":{
+                "extrachoices":["agonizing blast (prereq: eldritch blast cantrip)",
+                                "eldritch sight",
+                                "repelling blast (prereq: eldritch blast cantrip)",
+                                "book of ancient secrets (prereq: pact of the tome)",
+                                "grasp of hadar (prereq: eldritch blast cantrip)"
+                ]
+            },
+            "pact boon":{"choice":"pact of the tome"}
+        }
+    }
+}

@@ -6,7 +6,7 @@
                 meaningful dynamic structures
 30-Sep-2020     v0.5.0 Trim the xmlDoc recursively rather than walking the tree to get the components we care about
                 The approaches are equivalent and traverseXML avoids recursion, but for this limited depth it will be Fine
-                v0.5.0 Make importedFieldToValuesMap a multi-dimensional array with multiple field values
+5-Oct-2020      Use pcImporter instance variable to hold the fieldToValuesDictionary
 */
 import {Actor5eFromMPMB} from "./Actor5eFromExt.js";
 
@@ -81,13 +81,14 @@ export class PCImporter {
         console.log(pcImporter.importedFieldToValuesMap);
 
         //Populate the Actor5e structure from the importedFieldToValuesMap
-        const importedActor = new Actor5eFromMPMB(pcImporter.importedFieldToValuesMap);
-
+        const importedActor = new Actor5eFromMPMB(pcImporter);
+        await importedActor.extractClasses();
         //Now export the importedActor to JSON - this is the skeleton of the Actor, without any classes, items, etc
         importedActor.exportToJSON();
         await importedActor.createFoundryActor();
 
-
+        //TODO: Now match with Compendiums to get Classes, Class Features, Spells etc.
+        //We want that to be non-specific to the specific import (so Actor5eFromExt, rather than a subclass )
 
         return importedActor;
     }
@@ -206,8 +207,8 @@ export class PCImporter {
         return objectTree;
     }
 
-    static getValueForFieldName(importedFieldToValuesMap, fieldName) {
-        const value = importedFieldToValuesMap.get(fieldName);
+    getValueForFieldName(fieldName) {
+        const value = this.importedFieldToValuesMap.get(fieldName);
         return value;
     }
 

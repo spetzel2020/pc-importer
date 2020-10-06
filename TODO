@@ -2,7 +2,7 @@
 - Add additional items consisting of classes, inventory, spells, features etc. by referencing the Compendium
 
 ## BUGS
-
+- When is the earliest you can call the translations? In init() or setup()?
 
 ## FEATURES
 DONE Read an XFDF file

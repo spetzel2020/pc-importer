@@ -519,13 +519,7 @@ Map(3061) {"AC" => "16", "AC Armor Bonus" => "13", "AC Armor Description" => "Ma
 510: {"Extra.Gear Row 3" => "17gp (Me 1/6)"}
 511: {"Extra.Gear Row 4" => "Drow house (1/6)"}
 512: {"Extra.Gear Row 5" => " 30gp+15pp (Me 0; took 30gp)"}
-513: {"Extra.Gear Row 6" => " 200gp ruby (Me 0; took 30gp)"}
-514: {"Extra.Gear Row 7" => "Snail Shell (1/6): 200gp (Me 1/6)"}
-515: {"Extra.Gear Row 8" => "+7gp from Nox for Darkvision"}
-516: {"Extra.Gear Weight 20" => "3"}
-517: {"Extra.Gear Weight 21" => "3"}
-518: {"Extra.Gear Weight Subtotal Right" => "6"}
-519: {"Extra.Magic Item 1" => "Periapt of Health"}
+"}
 520: {"Extra.Magic Item 2" => "Mirror of Spell Reflection"}
 521: {"Extra.Magic Item Attuned 1" => "Off"}
 522: {"Extra.Magic Item Attuned 10" => "Off"}

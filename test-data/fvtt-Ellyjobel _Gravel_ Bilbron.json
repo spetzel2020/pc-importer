@@ -1,4 +1,7 @@
 {
+  "pcImporter": {
+    "importedFieldToValuesMap": {}
+  },
   "actorJSON": null,
   "name": "Ellyjobel \"Gravel\" Bilbron",
   "type": "character",
@@ -12,7 +15,7 @@
     "core": {
       "sheetClass": {}
     },
-    "PCI.id": "PCI.Version"
+    "MPMB Importer": "0.4.2"
   },
   "data": {
     "abilities": {
@@ -232,5 +235,40 @@
       "attribute": "attributes.hp"
     },
     "bar2": {}
-  }
+  },
+  "items": [
+    {
+      "name": "Wizard",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "class",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "MPMB",
+        "levels": 5,
+        "subclass": "School of Evocation",
+        "hitDice": null,
+        "hitDiceUsed": 0,
+        "skills": {
+          "number": 2,
+          "choices": [],
+          "value": []
+        },
+        "spellcasting": null,
+        "damage": {
+          "parts": []
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "systems/dnd5e/icons/skills/blue_13.jpg",
+      "_id": "DbX1kQHovnlDZIwA"
+    }
+  ]
 }

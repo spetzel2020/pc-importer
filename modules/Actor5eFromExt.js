@@ -9,7 +9,11 @@
 2-Oct-2020      v0.4.3a: createFoundryActor(): Imports the JSON just created.
 3-Oct-2020      v0.5.0: Renamed to more generic PC Importer and make Actor5eFromMPMB a subclass of Actor5eFromExt
                 Will need more work to make it more truly object-oriented, including separating out generic
-                input XML and JSON handling 
+                input XML and JSON handling
+5-Oct-2020      v0.5.0b: Extract the Class and Level information from the Class Features tag - initially don't handle multi-class
+                (Actually looked at "Class and Levels" but that occurs TWICE at the root level, and isn't necessarily consistent)
+                Pull all global functions into Actor5eFromMPMB and reference pcImporter mapping function
+
 
 
 TO DO:
@@ -22,6 +26,7 @@ TO DO:
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
 import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
+import Item5e from "/systems/dnd5e/module/item/entity.js";    //default export
 
 const Ability = {
     str : "str",
@@ -34,8 +39,8 @@ const Ability = {
 
 
 export class Actor5eFromExt {
-    constructor(importedDictionary) {
-        this.importedFieldToValuesMap = importedDictionary;
+    constructor(pcImporter) {
+        this.pcImporter = pcImporter;
         this.actorJSON = null;
         //IMPORTING
     }
@@ -44,9 +49,6 @@ export class Actor5eFromExt {
         let data = duplicate(this);
         let allData = null;
 
-        // Flag some metadata about where the entity was exported some - in case migration is needed later
-        //Redudant since we're storing this on every element
-        //data.flags["exportSource"] = metadata;
         const dataAsJSON = JSON.stringify(data, null, 2);
 
         // Trigger file save procedure
@@ -70,14 +72,17 @@ export class Actor5eFromExt {
 
 export class Actor5eFromMPMB extends Actor5eFromExt {
     /** @override */
-    constructor(importedDictionary) {
-        super(importedDictionary);
+    constructor(pcImporter) {
+        super(pcImporter);
         //IMPORTING
 
         //See https://stackoverflow.com/questions/8085004/iterate-through-nested-javascript-objects
         //Use recursion (only 3 levels deep) to walk through the mapping tree and object in parallel
-        this.mapAndIterate(Actor5eToMPMBMapping, this);
-        delete this.importedFieldToValuesMap;
+        this.mapAndIterate(Actor5eToMPMBMapping, this); //create the base Actor
+
+        //Now iterate through available Item-like objects in the input object
+        //Classes - do this more functionally and not declaratively
+
     }
 
     mapAndIterate(subMappingTree, subObject) {
@@ -113,10 +118,11 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
             });
             mappedValue = mappedArray;
         } else if (entryValue.fieldName) {
-            mappedValue = PCImporter.getValueForFieldName(this.importedFieldToValuesMap, entryValue.fieldName);
+            mappedValue = this.pcImporter.getValueForFieldName(entryValue.fieldName);
             if (!mappedValue) {mappedValue = entryValue.default ? entryValue.default : null}
         } else if (typeof entryValue === 'function') {
-            mappedValue = entryValue(this.importedFieldToValuesMap);
+            const f = entryValue.bind(this);
+            mappedValue = f();
         } else if (entryValue.default) {
             mappedValue = entryValue.default;
         } else if (typeof entryValue === 'object') {
@@ -125,7 +131,7 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
             mappedValue = this.mapAndIterate(entryValue, subObject);
         } else {
             //Trims spaces from beginning and end (so turns " " into "")
-            mappedValue = PCImporter.getValueForFieldName(this.importedFieldToValuesMap, entryValue);
+            mappedValue = this.pcImporter.getValueForFieldName(entryValue);
             if (typeof mappedValue === 'string') {mappedValue = mappedValue.trim();}
         }
         //FXIME: Do some clean-up - would be better if this could be done inline
@@ -134,7 +140,59 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
         return mappedValue;
     }
 
+    async extractClasses() {
+        //Unfortunately the base class is not used consistently, but rather the sub-class
+        //So instead we pull the class from the 1st Level feature gained (assuming there always is one)
+        const levelRegExp = /level ([0-9]+):/;  //extract class level in the form "level nn:"
+        const classRegExp = /\(([A-Za-z]+) 1[^0-9]/g;     //extract class name from "(xyz 1"
+        const subClassRegExp = /\(([A-Za-z ]+) \d{1,2}/g;  //extract sub-classes from "(xyz nn"
+        const mappedValue = this.pcImporter.getValueForFieldName("Class Features");
+        //Get first [name][space][number] combination
+        const levelMatches = mappedValue.match(levelRegExp);
+        let match;
+        let classMatches= new Set();
+        while (match = classRegExp.exec(mappedValue)) {
+            classMatches.add(match[1]);
+        }
+        let subClassMatches = new Set();
+        while (match = subClassRegExp.exec(mappedValue)) {
+            //Now remove all matches from classes
+            if (!classMatches.has(match[1])) {
+                subClassMatches.add(match[1]);
+            }
+        }
 
+        let itemData = duplicate(TemplateClassItemData);
+        itemData.name = classMatches.values().next().value;
+        itemData.data.levels = levelMatches[1];
+        itemData.data.subclass = subClassMatches.values().next().value;
+        const newItem = await Item5e.create(itemData);
+        this.items = [newItem];
+    }
+
+    mapArray(fieldNames) {
+        const fieldNameArray = Array.from(fieldNames);
+        let mappedArray = [];
+        fieldNameArray.forEach((fieldName, i) => {
+            const mappedValue = this.pcImporter.getValueForFieldName(fieldName);
+            if (mappedValue && (mappedValue !== " ")) {mappedArray.push(mappedValue);}
+        });
+        return mappedArray;
+    }
+
+    mapAndSwitchToInteger( fieldName) {
+        const switchValue = this.pcImporter.getValueForFieldName(fieldName);
+        if (switchValue === "Off") {return 0;}
+        else if (switchValue === "True") {return 1;}
+        else {return 0;}
+    }
+    mapConvertAndAdd(fieldNames) {
+        //Used for turning Proficiency + Expertise -> 0, 1, or 2 (which is what Foundry wants)
+        if (!fieldNames || !fieldNames.length || !Array.isArray(fieldNames)) {return 0;}
+        const converted = fieldNames.map(k => this.pcImporter.getValueForFieldName(k));
+        const added = converted.reduce((sum,c) => sum + (c==="True" ? 1 : 0),0);
+        return added;
+    }
 }
 
 //MPMB mapping Provides the mapping to the field names in the XFDF
@@ -158,7 +216,7 @@ const Actor5eToMPMBMapping = {
         "abilities": {
           "str": {
             "value": "Str",
-            "proficient":  function(dictionary,fieldName="Str ST Prof") {return mapAndSwitchToInteger(dictionary,fieldName);},
+            "proficient":  function(fieldName="Str ST Prof") {return this.mapAndSwitchToInteger(fieldName);},
             "mod": "Str Mod",
             "prof": 0,      //Don't need to set? Is calculated?
             "saveBonus": 0,     //Only if you have an item (e.g. +1 CLoak of Resistance)
@@ -167,7 +225,7 @@ const Actor5eToMPMBMapping = {
           },
           "dex": {
             "value": "Dex",
-            "proficient": function(dictionary,fieldName="Dex ST Prof") {return mapAndSwitchToInteger(dictionary,fieldName);},
+            "proficient": function(fieldName="Dex ST Prof") {return this.mapAndSwitchToInteger(fieldName);},
             "mod": "Dex Mod",
             "prof": 0,
             "saveBonus": 0,
@@ -176,7 +234,7 @@ const Actor5eToMPMBMapping = {
           },
           "con": {
             "value": "Con",
-            "proficient":  function(dictionary,fieldName="Con ST Prof") {return mapAndSwitchToInteger(dictionary,fieldName);},
+            "proficient":  function(fieldName="Con ST Prof") {return this.mapAndSwitchToInteger(fieldName);},
             "mod": "Con Mod",
             "prof": 0,
             "saveBonus": 0,
@@ -185,7 +243,7 @@ const Actor5eToMPMBMapping = {
           },
           "int": {
             "value": "Int",
-            "proficient":  function(dictionary,fieldName="Int ST Prof") {return mapAndSwitchToInteger(dictionary,fieldName);},
+            "proficient":  function(fieldName="Int ST Prof") {return this.mapAndSwitchToInteger(fieldName);},
             "mod": "Int Mod",
             "prof": 0,
             "saveBonus": 0,
@@ -194,7 +252,7 @@ const Actor5eToMPMBMapping = {
           },
           "wis": {
             "value": "Wis",
-            "proficient":  function(dictionary,fieldName="Wis ST Prof") {return mapAndSwitchToInteger(dictionary,fieldName);},
+            "proficient":  function(fieldName="Wis ST Prof") {return this.mapAndSwitchToInteger(fieldName);},
             "mod": "Wis Mod",
             "prof": 0,
             "saveBonus": 0,
@@ -203,7 +261,7 @@ const Actor5eToMPMBMapping = {
           },
           "cha": {
             "value": "Cha",
-            "proficient": function(dictionary,fieldName="Cha ST Prof") {return mapAndSwitchToInteger(dictionary,fieldName);},
+            "proficient": function(fieldName="Cha ST Prof") {return this.mapAndSwitchToInteger(fieldName);},
             "mod": "Cha Mod",
             "prof": 0,
             "saveBonus": 0,
@@ -277,7 +335,7 @@ const Actor5eToMPMBMapping = {
             "custom": null
           },
           "dr": {
-            "value":  function(dictionary) {return mapArray(dictionary, ["Resistance Damage Type 1","Resistance Damage Type 2","Resistance Damage Type 3","Resistance Damage Type 4","Resistance Damage Type 5"]);},
+            "value":  function() {return this.mapArray( ["Resistance Damage Type 1","Resistance Damage Type 2","Resistance Damage Type 3","Resistance Damage Type 4","Resistance Damage Type 5"]);},
             "custom": null
           },
           "dv": {
@@ -290,7 +348,7 @@ const Actor5eToMPMBMapping = {
           },
           "senses": "Vision",
           "languages": {
-            "value":  function(dictionary) {return lowercaseArray(mapArray(dictionary, ["Language 1","Language 2","Language 3","Language 4","Language 5"]));},
+            "value":  function() {return lowercaseArray(this.mapArray( ["Language 1","Language 2","Language 3","Language 4","Language 5"]));},
             "custom": null
           },
           "weaponProf": {
@@ -315,7 +373,7 @@ const Actor5eToMPMBMapping = {
         },
         "skills": { //"bonus" is global bonus, for example from item, magic or otherwise
           "acr": {  //Acrobatics
-            "value":  function(dictionary,fieldNames=["Acr Exp","Acr Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value":  function(fieldNames=["Acr Exp","Acr Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "dex",
             "bonus": null,
             "mod": null,
@@ -324,7 +382,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "ani": {  //Animal handling
-            "value": function(dictionary,fieldNames=["Ani Exp","Ani Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Ani Exp","Ani Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "wis",
             "bonus": null,
             "mod": null,
@@ -333,7 +391,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "arc": {  //Arcana
-            "value": function(dictionary,fieldNames=["Arc Exp","Arc Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Arc Exp","Arc Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "int",
             "bonus": null,
             "mod": null,
@@ -342,7 +400,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "ath": {  //Athletics
-            "value": function(dictionary,fieldNames=["Ath Exp","Ath Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Ath Exp","Ath Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "str",
             "bonus": null,
             "mod": null,
@@ -351,7 +409,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "dec": {  //Deception
-            "value": function(dictionary,fieldNames=["Dec Exp","Dec Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Dec Exp","Dec Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "cha",
             "bonus": null,
             "mod": null,
@@ -360,7 +418,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "his": {  //History
-            "value": function(dictionary,fieldNames=["His Exp","His Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["His Exp","His Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "int",
             "bonus": null,
             "mod": null,
@@ -369,7 +427,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "ins": {  //Insigh
-            "value": function(dictionary,fieldNames=["Ins Exp","Ins Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Ins Exp","Ins Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "wis",
             "bonus": null,
             "mod": null,
@@ -378,7 +436,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "itm": {
-            "value": function(dictionary,fieldNames=["Acr Exp","Acr Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Acr Exp","Acr Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "cha",
             "bonus": null,
             "mod": null,
@@ -387,7 +445,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "inv": {  //Investigation
-            "value": function(dictionary,fieldNames=["Inv Exp","Inv Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Inv Exp","Inv Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "int",
             "bonus": "Inv Bonus",
             "mod":  null,
@@ -396,7 +454,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "med": {  //Medicine
-            "value": function(dictionary,fieldNames=["Med Exp","Med Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Med Exp","Med Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "wis",
             "bonus": null,
             "mod": null,
@@ -405,7 +463,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "nat": {  //Nature
-            "value": function(dictionary,fieldNames=["Nat Exp","Nat Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Nat Exp","Nat Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "int",
             "bonus": null,
             "mod": null,
@@ -414,7 +472,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "prc": {  //Perception
-            "value": function(dictionary,fieldNames=["Perc Exp","Perc Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Perc Exp","Perc Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "wis",
             "bonus": null,
             "mod": null,
@@ -423,7 +481,7 @@ const Actor5eToMPMBMapping = {
             "passive": "Passive Perception"
           },
           "prf": {  //Performance
-            "value": function(dictionary,fieldNames=["Perf Exp","Perf Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Perf Exp","Perf Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "cha",
             "bonus": null,
             "mod": null,
@@ -432,7 +490,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "per": {  //Persuasion
-            "value": function(dictionary,fieldNames=["Pers Exp","Pers Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Pers Exp","Pers Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "cha",
             "bonus": null,
             "mod": null,
@@ -441,7 +499,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "rel": {  //Religion
-            "value": function(dictionary,fieldNames=["Rel Exp","Rel Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Rel Exp","Rel Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "int",
             "bonus": null,
             "mod": null,
@@ -450,7 +508,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "slt": {  //Sleight of Hand
-            "value": function(dictionary,fieldNames=["Sle Exp","Sle Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Sle Exp","Sle Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "dex",
             "bonus": null,
             "mod": null,
@@ -459,7 +517,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "ste": {  //Stealth
-            "value": function(dictionary,fieldNames=["Ste Exp","Ste Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Ste Exp","Ste Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "dex",
             "bonus": null,
             "mod": null,
@@ -468,7 +526,7 @@ const Actor5eToMPMBMapping = {
             "passive": null
           },
           "sur": {  //Survival
-            "value": function(dictionary,fieldNames=["Sur Exp","Sur Prof"]) {return mapConvertAndAdd(dictionary,fieldNames);},
+            "value": function(fieldNames=["Sur Exp","Sur Prof"]) {return this.mapConvertAndAdd(fieldNames);},
             "ability": "wis",
             "bonus": null,
             "mod": null,
@@ -617,30 +675,28 @@ const Actor5eToMPMBMapping = {
     "_id": null,
     "img": null
   }
- const ItemToMPMBMapping = {
+ const TemplateClassItemData = { //Foundry uses this for lots of stuff, including Class levels
      //We add multiple of these to the created Actor
-      "item": {   //Foundry uses this for lots of stuff, including Class levels
-            "name": {default: "Wizard"},
-            "type": {default: "class"},
-            "img": "systems/dnd5e/icons/skills/blue_13.jpg",
-            "data": {
-              "description": {
-                "value": "",
-                "chat": "",
-                "unidentified": ""
-              },
-              "source": "",
-              "levels": "Character Level",
-              "subclass": "Class and Levels",
-              "hitDice": "HD1 Dice",
-              "hitDiceUsed": 0,
-              "skills":{},
-              "spellcasting": "full",
-              "damage": {
-                "parts": []
-              }
-            }
+    "name": null,
+    "type": "class",
+    "img": "systems/dnd5e/icons/skills/blue_13.jpg",
+    "data": {
+      "description": {
+        "value": "",
+        "chat": "",
+        "unidentified": ""
+      },
+      "source": "MPMB",
+      "levels": null,
+      "subclass": null,
+      "hitDice": null,
+      "hitDiceUsed": 0,
+      "skills":{},
+      "spellcasting": null,
+      "damage": {
+        "parts": []
       }
+    }
 }
 
 
@@ -649,28 +705,4 @@ function defaulted(defaultValue) {return defaultValue;}
 function lowercaseArray(mappedArray) {
     mappedArray.forEach((elem,i) => {mappedArray[i] = elem.toLowerCase()});
     return mappedArray;
-}
-
-function mapArray(dictionary, fieldNames) {
-    const fieldNameArray = Array.from(fieldNames);
-    let mappedArray = [];
-    fieldNameArray.forEach((fieldName, i) => {
-        const mappedValue = PCImporter.getValueForFieldName(dictionary, fieldName);
-        if (mappedValue && (mappedValue !== " ")) {mappedArray.push(mappedValue);}
-    });
-    return mappedArray;
-}
-
-function mapAndSwitchToInteger(dictionary,fieldName) {
-    const switchValue = PCImporter.getValueForFieldName(dictionary, fieldName);
-    if (switchValue === "Off") {return 0;}
-    else if (switchValue === "True") {return 1;}
-    else {return 0;}
-}
-function mapConvertAndAdd(dictionary,fieldNames) {
-    //Used for turning Proficiency + Expertise -> 0, 1, or 2 (which is what Foundry wants)
-    if (!fieldNames || !fieldNames.length || !Array.isArray(fieldNames)) {return 0;}
-    const converted = fieldNames.map(k => PCImporter.getValueForFieldName(dictionary, k));
-    const added = converted.reduce((sum,c) => sum + (c==="True" ? 1 : 0),0);
-    return added;
 }

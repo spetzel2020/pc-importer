@@ -3,7 +3,7 @@
     "importedFieldToValuesMap": {}
   },
   "actorJSON": null,
-  "name": "Ignis Ashwalker",
+  "name": "Pentel Lozredotter",
   "type": "character",
   "flags": {
     "exportSource": {
@@ -20,48 +20,48 @@
   "data": {
     "abilities": {
       "str": {
-        "value": "19",
-        "proficient": 0,
+        "value": "18",
+        "proficient": 1,
         "mod": "4",
-        "save": "4"
+        "save": "10"
       },
       "dex": {
-        "value": "12",
-        "proficient": 0,
-        "mod": "1",
-        "save": "1"
+        "value": "10",
+        "proficient": 1,
+        "mod": "0",
+        "save": "6"
       },
       "con": {
         "value": "16",
         "proficient": 1,
         "mod": "3",
-        "save": "8"
+        "save": "9"
       },
       "int": {
-        "value": "12",
+        "value": "11",
         "proficient": 0,
-        "mod": "1",
+        "mod": "0",
         "save": "1"
       },
       "wis": {
-        "value": "11",
+        "value": "14",
         "proficient": 1,
-        "mod": "0",
-        "save": "5"
+        "mod": "2",
+        "save": "8"
       },
       "cha": {
-        "value": "20",
-        "proficient": 1,
-        "mod": "5",
-        "save": "10"
+        "value": "14",
+        "proficient": 0,
+        "mod": "2",
+        "save": "3"
       }
     },
     "attributes": {
       "ac": {
-        "value": "14"
+        "value": "20"
       },
       "hp": {
-        "max": "118"
+        "max": "139"
       },
       "init": {},
       "speed": {
@@ -70,17 +70,21 @@
       "death": {},
       "encumbrance": {},
       "inspiration": false,
-      "hd": "10",
-      "prof": "5",
-      "spelldc": "18"
+      "hd": "15",
+      "prof": "5"
     },
     "details": {
       "biography": {},
-      "race": "Tiefling",
-      "background": "Outlander",
+      "alignment": "LN",
+      "race": "Human",
+      "background": "Noble",
       "xp": {
-        "value": "165000"
+        "value": "167256"
       },
+      "trait": "My flattery makes those I talk to feel wonderful and important. Also, I don’t like to get dirty, and I won’t be caught dead in unsuitable accommodations.",
+      "ideal": "Responsibility. It’s the duty of a noble to protect the common people, not bully them.",
+      "bond": "My greataxe is a family heirloom, and it’s by far my most precious possession.",
+      "flaw": "I have a hard time resisting the allure of wealth, especially gold. Wealth can help me restore my legacy.",
       "level": "15"
     },
     "traits": {
@@ -89,9 +93,7 @@
         "value": []
       },
       "dr": {
-        "value": [
-          "Fire"
-        ]
+        "value": []
       },
       "dv": {
         "value": []
@@ -99,14 +101,13 @@
       "ci": {
         "value": []
       },
-      "senses": "Darkvision 60 ft",
       "languages": {
         "value": [
           "common",
-          "infernal",
-          "halfling",
-          "giant (3 curses)",
-          "sylvan (friend, help)"
+          "draconic",
+          "dwarvish",
+          "giant - 3 curse words",
+          "sylvan- friend, help"
         ]
       },
       "weaponProf": {
@@ -119,7 +120,12 @@
         "value": []
       }
     },
-    "currency": {},
+    "currency": {
+      "gp": "1833",
+      "ep": "90",
+      "sp": "66",
+      "cp": "52"
+    },
     "skills": {
       "acr": {
         "value": 0
@@ -128,7 +134,7 @@
         "value": 0
       },
       "arc": {
-        "value": 1
+        "value": 0
       },
       "ath": {
         "value": 1
@@ -137,16 +143,16 @@
         "value": 0
       },
       "his": {
-        "value": 0
+        "value": 1
       },
       "ins": {
-        "value": 0
+        "value": 1
       },
       "itm": {
         "value": 0
       },
       "inv": {
-        "value": 1,
+        "value": 0,
         "bonus": "0"
       },
       "med": {
@@ -156,14 +162,14 @@
         "value": 0
       },
       "prc": {
-        "value": 0,
-        "passive": "10"
+        "value": 1,
+        "passive": "17"
       },
       "prf": {
         "value": 0
       },
       "per": {
-        "value": 0
+        "value": 1
       },
       "rel": {
         "value": 0
@@ -175,24 +181,24 @@
         "value": 0
       },
       "sur": {
-        "value": 1
+        "value": 0
       }
     },
     "spells": {
       "spell1": {
-        "max": "4"
+        "max": "0"
       },
       "spell2": {
-        "max": "3"
+        "max": "0"
       },
       "spell3": {
-        "max": "2"
+        "max": "0"
       },
       "spell4": {
         "max": "0"
       },
       "spell5": {
-        "max": "2"
+        "max": "0"
       },
       "spell6": {
         "max": "0"
@@ -231,7 +237,7 @@
   },
   "items": [
     {
-      "name": "Warlock",
+      "name": "Fighter",
       "permission": {
         "default": 0,
         "LocdQGeaUb0CTeEV": 3
@@ -244,8 +250,8 @@
           "unidentified": ""
         },
         "source": "MPMB",
-        "levels": 10,
-        "subclass": "the Fiend",
+        "levels": 15,
+        "subclass": "Samurai",
         "hitDice": null,
         "hitDiceUsed": 0,
         "skills": {
@@ -261,7 +267,7 @@
       "sort": 100001,
       "flags": {},
       "img": "systems/dnd5e/icons/skills/blue_13.jpg",
-      "_id": "H7pHvL7BSVSV4arn"
+      "_id": "qoB7vgYELfJTiIdR"
     }
   ]
 }

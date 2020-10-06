@@ -1,0 +1,10766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdf xmlns="http://ns.adobe.com/xfdf/" xml:space="preserve"
+><f href="/E/Users/Jeffrey/Documents/Dungeons and Dragons/Jeffrey's Campaign/Pentel - 15 MPMBv12.99.pdf"
+/><fields
+><field name="AC"
+><value
+>20</value
+></field
+><field name="AC Armor Bonus"
+><value
+>18</value
+></field
+><field name="AC Armor Description"
+><value
+>Adamantium Plate Mail</value
+></field
+><field name="AC Armor Weight"
+><value
+>65</value
+></field
+><field name="AC Armor Weight Title"
+><value
+>WEIGHT</value
+></field
+><field name="AC Dexterity Modifier"
+><value
+>0</value
+></field
+><field name="AC Magic"
+><value
+>1</value
+></field
+><field name="AC Magic Description"
+><value
+>Ring of Protection</value
+></field
+><field name="AC Misc Mod 1"
+><value
+>1</value
+></field
+><field name="AC Misc Mod 1 Description"
+><value
+>Defense Fighting Style</value
+></field
+><field name="AC Misc Mod 2"
+><value
+/></field
+><field name="AC Misc Mod 2 Description"
+><value
+>11 unarmoured</value
+></field
+><field name="AC Shield Bonus"
+><value
+/></field
+><field name="AC Shield Bonus Description"
+><value
+>(2)Hobgoblin Marshall's</value
+></field
+><field name="AC Shield Weight"
+><value
+>6</value
+></field
+><field name="AC Shield Weight Title"
+><value
+/></field
+><field name="AC Stealth Disadvantage"
+><value
+>True</value
+></field
+><field name="AC Stealth Disadvantage Title"
+><value
+>Stealth Disadvantage</value
+></field
+><field name="Acr"
+><value
+>0</value
+></field
+><field name="Acr Bonus"
+><value
+>0</value
+></field
+><field name="Acr Exp"
+><value
+>Off</value
+></field
+><field name="Acr Prof"
+><value
+>Off</value
+></field
+><field name="Action 1"
+><value
+>Attack (3 attacks per action)</value
+></field
+><field name="Action 10"
+><value
+/></field
+><field name="Action 11"
+><value
+/></field
+><field name="Action 12"
+><value
+/></field
+><field name="Action 2"
+><value
+/></field
+><field name="Action 3"
+><value
+/></field
+><field name="Action 4"
+><value
+/></field
+><field name="Action 5"
+><value
+/></field
+><field name="Action 6"
+><value
+/></field
+><field name="Action 7"
+><value
+/></field
+><field name="Action 8"
+><value
+/></field
+><field name="Action 9"
+><value
+/></field
+><field name="Add Experience"
+><value
+/></field
+><field name="AdvLog"
+><field name="1"
+><field name="adventure"
+><value
+/></field
+><field name="date"
+><value
+/></field
+><field name="dm"
+><value
+/></field
+><field name="downtime"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="gold"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="magicItems"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="notes"
+><value
+/></field
+><field name="renown"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="session"
+><value
+/></field
+><field name="xp"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+></field
+><field name="2"
+><field name="adventure"
+><value
+/></field
+><field name="date"
+><value
+/></field
+><field name="dm"
+><value
+/></field
+><field name="downtime"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="gold"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="magicItems"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="notes"
+><value
+/></field
+><field name="renown"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="session"
+><value
+/></field
+><field name="xp"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+></field
+><field name="3"
+><field name="adventure"
+><value
+/></field
+><field name="date"
+><value
+/></field
+><field name="dm"
+><value
+/></field
+><field name="downtime"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="gold"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="magicItems"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="notes"
+><value
+/></field
+><field name="renown"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="session"
+><value
+/></field
+><field name="xp"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+></field
+><field name="4"
+><field name="adventure"
+><value
+/></field
+><field name="date"
+><value
+/></field
+><field name="dm"
+><value
+/></field
+><field name="downtime"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="gold"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="magicItems"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="notes"
+><value
+/></field
+><field name="renown"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="session"
+><value
+/></field
+><field name="xp"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+></field
+><field name="5"
+><field name="adventure"
+><value
+/></field
+><field name="date"
+><value
+/></field
+><field name="dm"
+><value
+/></field
+><field name="downtime"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="gold"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="magicItems"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="notes"
+><value
+/></field
+><field name="renown"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="session"
+><value
+/></field
+><field name="xp"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+></field
+><field name="6"
+><field name="adventure"
+><value
+/></field
+><field name="date"
+><value
+/></field
+><field name="dm"
+><value
+/></field
+><field name="downtime"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="gold"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="magicItems"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="notes"
+><value
+/></field
+><field name="renown"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+><field name="session"
+><value
+/></field
+><field name="xp"
+><field name="gain"
+><value
+/></field
+><field name="start"
+><value
+/></field
+><field name="total"
+><value
+/></field
+></field
+></field
+><field name="Class and Levels"
+><value
+>Samurai Fighter 15</value
+></field
+><field name="DCI"
+><field name="Text"
+><value
+/></field
+></field
+><field name="PC Name"
+><value
+>Pentel Lozredotter</value
+></field
+><field name="Player Name"
+><value
+>Kathy</value
+></field
+><field name="previous"
+><value
+/></field
+><field name="sheetNumber"
+><value
+>0 of 0</value
+></field
+></field
+><field name="AdvLogS"
+><field name="Background_Faction"
+><field name="Text"
+/></field
+></field
+><field name="Adventuring Gear Amount 1"
+><value
+/></field
+><field name="Adventuring Gear Amount 10"
+><value
+/></field
+><field name="Adventuring Gear Amount 11"
+><value
+/></field
+><field name="Adventuring Gear Amount 12"
+><value
+/></field
+><field name="Adventuring Gear Amount 13"
+><value
+/></field
+><field name="Adventuring Gear Amount 14"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 15"
+><value
+/></field
+><field name="Adventuring Gear Amount 16"
+><value
+/></field
+><field name="Adventuring Gear Amount 17"
+><value
+/></field
+><field name="Adventuring Gear Amount 18"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Amount 19"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 2"
+><value
+/></field
+><field name="Adventuring Gear Amount 20"
+><value
+/></field
+><field name="Adventuring Gear Amount 21"
+><value
+/></field
+><field name="Adventuring Gear Amount 22"
+><value
+/></field
+><field name="Adventuring Gear Amount 23"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 24"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 25"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 26"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 27"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 28"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 29"
+><value
+/></field
+><field name="Adventuring Gear Amount 3"
+><value
+/></field
+><field name="Adventuring Gear Amount 30"
+><value
+>4</value
+></field
+><field name="Adventuring Gear Amount 31"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 32"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 33"
+><value
+/></field
+><field name="Adventuring Gear Amount 34"
+><value
+>0</value
+></field
+><field name="Adventuring Gear Amount 35"
+><value
+>5</value
+></field
+><field name="Adventuring Gear Amount 36"
+><value
+/></field
+><field name="Adventuring Gear Amount 37"
+><value
+/></field
+><field name="Adventuring Gear Amount 38"
+><value
+/></field
+><field name="Adventuring Gear Amount 39"
+><value
+>5</value
+></field
+><field name="Adventuring Gear Amount 4"
+><value
+>20</value
+></field
+><field name="Adventuring Gear Amount 40"
+><value
+/></field
+><field name="Adventuring Gear Amount 41"
+><value
+/></field
+><field name="Adventuring Gear Amount 42"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Amount 43"
+><value
+/></field
+><field name="Adventuring Gear Amount 44"
+><value
+/></field
+><field name="Adventuring Gear Amount 45"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 46"
+><value
+/></field
+><field name="Adventuring Gear Amount 47"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 48"
+><value
+/></field
+><field name="Adventuring Gear Amount 49"
+><value
+/></field
+><field name="Adventuring Gear Amount 5"
+><value
+/></field
+><field name="Adventuring Gear Amount 50"
+><value
+>3</value
+></field
+><field name="Adventuring Gear Amount 51"
+><value
+/></field
+><field name="Adventuring Gear Amount 52"
+><value
+/></field
+><field name="Adventuring Gear Amount 53"
+><value
+/></field
+><field name="Adventuring Gear Amount 54"
+><value
+/></field
+><field name="Adventuring Gear Amount 6"
+><value
+/></field
+><field name="Adventuring Gear Amount 7"
+><value
+/></field
+><field name="Adventuring Gear Amount 8"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Amount 9"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Location"
+><field name="Line"
+><value
+/></field
+><field name="Row 1"
+><value
+/></field
+><field name="Row 10"
+><value
+/></field
+><field name="Row 11"
+><value
+/></field
+><field name="Row 12"
+><value
+/></field
+><field name="Row 13"
+><value
+/></field
+><field name="Row 14"
+><value
+/></field
+><field name="Row 15"
+><value
+/></field
+><field name="Row 16"
+><value
+/></field
+><field name="Row 17"
+><value
+/></field
+><field name="Row 18"
+><value
+/></field
+><field name="Row 19"
+><value
+/></field
+><field name="Row 2"
+><value
+/></field
+><field name="Row 20"
+><value
+/></field
+><field name="Row 21"
+><value
+/></field
+><field name="Row 22"
+><value
+/></field
+><field name="Row 23"
+><value
+/></field
+><field name="Row 24"
+><value
+/></field
+><field name="Row 25"
+><value
+/></field
+><field name="Row 26"
+><value
+/></field
+><field name="Row 27"
+><value
+/></field
+><field name="Row 28"
+><value
+/></field
+><field name="Row 29"
+><value
+/></field
+><field name="Row 3"
+><value
+/></field
+><field name="Row 30"
+><value
+/></field
+><field name="Row 31"
+><value
+/></field
+><field name="Row 32"
+><value
+/></field
+><field name="Row 33"
+><value
+/></field
+><field name="Row 34"
+><value
+/></field
+><field name="Row 35"
+><value
+/></field
+><field name="Row 36"
+><value
+/></field
+><field name="Row 37"
+><value
+/></field
+><field name="Row 38"
+><value
+/></field
+><field name="Row 39"
+><value
+/></field
+><field name="Row 4"
+><value
+/></field
+><field name="Row 40"
+><value
+/></field
+><field name="Row 41"
+><value
+/></field
+><field name="Row 42"
+><value
+/></field
+><field name="Row 43"
+><value
+/></field
+><field name="Row 44"
+><value
+/></field
+><field name="Row 45"
+><value
+/></field
+><field name="Row 46"
+><value
+/></field
+><field name="Row 47"
+><value
+/></field
+><field name="Row 48"
+><value
+/></field
+><field name="Row 49"
+><value
+/></field
+><field name="Row 5"
+><value
+/></field
+><field name="Row 50"
+><value
+/></field
+><field name="Row 51"
+><value
+/></field
+><field name="Row 52"
+><value
+/></field
+><field name="Row 53"
+><value
+/></field
+><field name="Row 54"
+><value
+/></field
+><field name="Row 6"
+><value
+/></field
+><field name="Row 7"
+><value
+/></field
+><field name="Row 8"
+><value
+/></field
+><field name="Row 9"
+><value
+/></field
+><field name="Subtotal 1"
+><value
+/></field
+><field name="Subtotal 2"
+><value
+/></field
+><field name="Subtotal 3"
+><value
+/></field
+><field name="Subtotal 4"
+><value
+/></field
+><field name="Subtotal 5"
+><value
+/></field
+><field name="Subtotal 6"
+><value
+/></field
+><field name="Subtotal 7"
+><value
+/></field
+><field name="Subtotal 8"
+><value
+/></field
+><field name="Subtotal 9"
+><value
+/></field
+><field name="SubtotalName 1"
+><value
+/></field
+><field name="SubtotalName 2"
+><value
+/></field
+><field name="SubtotalName 3"
+><value
+/></field
+><field name="SubtotalName 4"
+><value
+/></field
+><field name="SubtotalName 5"
+><value
+/></field
+><field name="SubtotalName 6"
+><value
+/></field
+><field name="SubtotalName 7"
+><value
+/></field
+><field name="SubtotalName 8"
+><value
+/></field
+><field name="SubtotalName 9"
+><value
+/></field
+><field name="Title"
+><value
+>LOC</value
+></field
+></field
+><field name="Adventuring Gear Remember"
+><value
+>false</value
+></field
+><field name="Adventuring Gear Row 1"
+><value
+>Backpack, with:</value
+></field
+><field name="Adventuring Gear Row 10"
+><value
+>armor polish</value
+></field
+><field name="Adventuring Gear Row 11"
+><value
+>needle and thread</value
+></field
+><field name="Adventuring Gear Row 12"
+><value
+>key to tower of screaming</value
+></field
+><field name="Adventuring Gear Row 13"
+><value
+>history of Neverwinter (book)</value
+></field
+><field name="Adventuring Gear Row 14"
+><value
+>Splendid black cape(250gp)</value
+></field
+><field name="Adventuring Gear Row 15"
+><value
+>Signet ring</value
+></field
+><field name="Adventuring Gear Row 16"
+><value
+>Scroll of pedigree</value
+></field
+><field name="Adventuring Gear Row 17"
+><value
+>favour from Lord's Alliance</value
+></field
+><field name="Adventuring Gear Row 18"
+><value
+>Fine Clothes</value
+></field
+><field name="Adventuring Gear Row 19"
+><value
+>Dagger</value
+></field
+><field name="Adventuring Gear Row 2"
+><value
+>Blanket</value
+></field
+><field name="Adventuring Gear Row 20"
+><value
+>Body Bag</value
+></field
+><field name="Adventuring Gear Row 21"
+><value
+>Down Pillow</value
+></field
+><field name="Adventuring Gear Row 22"
+><value
+/></field
+><field name="Adventuring Gear Row 23"
+><value
+>Splendid black cloak</value
+></field
+><field name="Adventuring Gear Row 24"
+><value
+>fake cloak of eyes</value
+></field
+><field name="Adventuring Gear Row 25"
+><value
+>Cloak of Manta Ray</value
+></field
+><field name="Adventuring Gear Row 26"
+><value
+>Goggles of Night (60')</value
+></field
+><field name="Adventuring Gear Row 27"
+><value
+>Balassar's insect repellent</value
+></field
+><field name="Adventuring Gear Row 28"
+><value
+>Journal (depressing orphan story)</value
+></field
+><field name="Adventuring Gear Row 29"
+><value
+/></field
+><field name="Adventuring Gear Row 3"
+><value
+>Tinderbox</value
+></field
+><field name="Adventuring Gear Row 30"
+><value
+>Oil of Gleaming</value
+></field
+><field name="Adventuring Gear Row 31"
+><value
+>vial of purfume -skreeanna 75gp</value
+></field
+><field name="Adventuring Gear Row 32"
+><value
+>empty potion bottle</value
+></field
+><field name="Adventuring Gear Row 33"
+><value
+/></field
+><field name="Adventuring Gear Row 34"
+><value
+>greater healing potion 4d4 +4</value
+></field
+><field name="Adventuring Gear Row 35"
+><value
+>white copy paper</value
+></field
+><field name="Adventuring Gear Row 36"
+><value
+>key card</value
+></field
+><field name="Adventuring Gear Row 37"
+><value
+>Masterwork plate mail</value
+></field
+><field name="Adventuring Gear Row 38"
+><value
+>Shield (Hobgoblin Marshall)</value
+></field
+><field name="Adventuring Gear Row 39"
+><value
+>Javelin</value
+></field
+><field name="Adventuring Gear Row 4"
+><value
+>- Rations, days of</value
+></field
+><field name="Adventuring Gear Row 40"
+><value
+>Lightbringer Mace +1</value
+></field
+><field name="Adventuring Gear Row 41"
+><value
+>Javelin of Lightning</value
+></field
+><field name="Adventuring Gear Row 42"
+><value
+>grenade</value
+></field
+><field name="Adventuring Gear Row 43"
+><value
+>Belt pouch (with coins)</value
+></field
+><field name="Adventuring Gear Row 44"
+><value
+>pouch</value
+></field
+><field name="Adventuring Gear Row 45"
+><value
+>ring from Vampire</value
+></field
+><field name="Adventuring Gear Row 46"
+><value
+>Platinum ring</value
+></field
+><field name="Adventuring Gear Row 47"
+><value
+>50 gp gem</value
+></field
+><field name="Adventuring Gear Row 48"
+><value
+>250gp bracelet (Kuo-toa)</value
+></field
+><field name="Adventuring Gear Row 49"
+><value
+>Mirna's emerald pendant (200gp)</value
+></field
+><field name="Adventuring Gear Row 5"
+><value
+>- Waterskin</value
+></field
+><field name="Adventuring Gear Row 50"
+><value
+>rings from swamp fingers</value
+></field
+><field name="Adventuring Gear Row 51"
+><value
+/></field
+><field name="Adventuring Gear Row 52"
+><value
+>Ring of Protection (Shaelyn)</value
+></field
+><field name="Adventuring Gear Row 53"
+><value
+>Greataxe of Brutal Cold +1</value
+></field
+><field name="Adventuring Gear Row 54"
+><value
+>Boots of levitation</value
+></field
+><field name="Adventuring Gear Row 6"
+><value
+>Cloak</value
+></field
+><field name="Adventuring Gear Row 7"
+><value
+>bullseye lantern</value
+></field
+><field name="Adventuring Gear Row 8"
+><value
+>Hempen rope  (50')</value
+></field
+><field name="Adventuring Gear Row 9"
+><value
+>oil/leather for maintenance</value
+></field
+><field name="Adventuring Gear Weight 1"
+><value
+>5</value
+></field
+><field name="Adventuring Gear Weight 10"
+><value
+/></field
+><field name="Adventuring Gear Weight 11"
+><value
+>0.02</value
+></field
+><field name="Adventuring Gear Weight 12"
+><value
+/></field
+><field name="Adventuring Gear Weight 13"
+><value
+>5</value
+></field
+><field name="Adventuring Gear Weight 14"
+><value
+>5</value
+></field
+><field name="Adventuring Gear Weight 15"
+><value
+/></field
+><field name="Adventuring Gear Weight 16"
+><value
+/></field
+><field name="Adventuring Gear Weight 17"
+><value
+/></field
+><field name="Adventuring Gear Weight 18"
+><value
+>6</value
+></field
+><field name="Adventuring Gear Weight 19"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Weight 2"
+><value
+>3</value
+></field
+><field name="Adventuring Gear Weight 20"
+><value
+>15</value
+></field
+><field name="Adventuring Gear Weight 21"
+><value
+/></field
+><field name="Adventuring Gear Weight 22"
+><value
+/></field
+><field name="Adventuring Gear Weight 23"
+><value
+>5</value
+></field
+><field name="Adventuring Gear Weight 24"
+><value
+/></field
+><field name="Adventuring Gear Weight 25"
+><value
+/></field
+><field name="Adventuring Gear Weight 26"
+><value
+/></field
+><field name="Adventuring Gear Weight 27"
+><value
+/></field
+><field name="Adventuring Gear Weight 28"
+><value
+/></field
+><field name="Adventuring Gear Weight 29"
+><value
+/></field
+><field name="Adventuring Gear Weight 3"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Weight 30"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Weight 31"
+><value
+/></field
+><field name="Adventuring Gear Weight 32"
+><value
+/></field
+><field name="Adventuring Gear Weight 33"
+><value
+/></field
+><field name="Adventuring Gear Weight 34"
+><value
+/></field
+><field name="Adventuring Gear Weight 35"
+><value
+/></field
+><field name="Adventuring Gear Weight 36"
+><value
+/></field
+><field name="Adventuring Gear Weight 37"
+><value
+>65</value
+></field
+><field name="Adventuring Gear Weight 38"
+><value
+>6</value
+></field
+><field name="Adventuring Gear Weight 39"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Weight 4"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Weight 40"
+><value
+>4</value
+></field
+><field name="Adventuring Gear Weight 41"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Weight 42"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Weight 43"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Weight 44"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Weight 45"
+><value
+/></field
+><field name="Adventuring Gear Weight 46"
+><value
+/></field
+><field name="Adventuring Gear Weight 47"
+><value
+/></field
+><field name="Adventuring Gear Weight 48"
+><value
+/></field
+><field name="Adventuring Gear Weight 49"
+><value
+/></field
+><field name="Adventuring Gear Weight 5"
+><value
+>5</value
+></field
+><field name="Adventuring Gear Weight 50"
+><value
+/></field
+><field name="Adventuring Gear Weight 51"
+><value
+/></field
+><field name="Adventuring Gear Weight 52"
+><value
+/></field
+><field name="Adventuring Gear Weight 53"
+><value
+>7</value
+></field
+><field name="Adventuring Gear Weight 54"
+><value
+/></field
+><field name="Adventuring Gear Weight 6"
+><value
+>1</value
+></field
+><field name="Adventuring Gear Weight 7"
+><value
+>2</value
+></field
+><field name="Adventuring Gear Weight 8"
+><value
+>0.2</value
+></field
+><field name="Adventuring Gear Weight 9"
+><value
+/></field
+><field name="Adventuring Gear Weight Subtotal Left"
+><value
+>79.22</value
+></field
+><field name="Adventuring Gear Weight Subtotal Middle"
+><value
+>25</value
+></field
+><field name="Adventuring Gear Weight Subtotal Right"
+><value
+>100</value
+></field
+><field name="Age"
+><value
+>26</value
+></field
+><field name="Alignment"
+><value
+>LN</value
+></field
+><field name="All ST Bonus"
+><value
+>1</value
+></field
+><field name="All Skills Bonus"
+><value
+>0</value
+></field
+><field name="AmmoLeft"
+><field name="Base"
+><field name="11"
+><value
+>Off</value
+></field
+><field name="12"
+><value
+>Off</value
+></field
+><field name="14"
+><value
+>Off</value
+></field
+><field name="16"
+><value
+>Off</value
+></field
+><field name="18"
+><value
+>Off</value
+></field
+><field name="20"
+><value
+>Off</value
+></field
+><field name="Axe"
+><field name="13"
+><value
+>Off</value
+></field
+><field name="15"
+><value
+>Off</value
+></field
+><field name="17"
+><value
+>Off</value
+></field
+><field name="19"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Bullet"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="10"
+><value
+>Off</value
+></field
+><field name="11"
+><value
+>Off</value
+></field
+><field name="12"
+><value
+>Off</value
+></field
+><field name="13"
+><value
+>Off</value
+></field
+><field name="14"
+><value
+>Off</value
+></field
+><field name="15"
+><value
+>Off</value
+></field
+><field name="16"
+><value
+>Off</value
+></field
+><field name="17"
+><value
+>Off</value
+></field
+><field name="18"
+><value
+>Off</value
+></field
+><field name="19"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+><field name="20"
+><value
+>Off</value
+></field
+><field name="21"
+><value
+>Off</value
+></field
+><field name="22"
+><value
+>Off</value
+></field
+><field name="23"
+><value
+>Off</value
+></field
+><field name="24"
+><value
+>Off</value
+></field
+><field name="25"
+><value
+>Off</value
+></field
+><field name="26"
+><value
+>Off</value
+></field
+><field name="27"
+><value
+>Off</value
+></field
+><field name="28"
+><value
+>Off</value
+></field
+><field name="29"
+><value
+>Off</value
+></field
+><field name="3"
+><value
+>Off</value
+></field
+><field name="30"
+><value
+>Off</value
+></field
+><field name="31"
+><value
+>Off</value
+></field
+><field name="32"
+><value
+>Off</value
+></field
+><field name="33"
+><value
+>Off</value
+></field
+><field name="34"
+><value
+>Off</value
+></field
+><field name="35"
+><value
+>Off</value
+></field
+><field name="36"
+><value
+>Off</value
+></field
+><field name="37"
+><value
+>Off</value
+></field
+><field name="38"
+><value
+>Off</value
+></field
+><field name="39"
+><value
+>Off</value
+></field
+><field name="4"
+><value
+>Off</value
+></field
+><field name="40"
+><value
+>Off</value
+></field
+><field name="41"
+><value
+>Off</value
+></field
+><field name="42"
+><value
+>Off</value
+></field
+><field name="43"
+><value
+>Off</value
+></field
+><field name="44"
+><value
+>Off</value
+></field
+><field name="45"
+><value
+>Off</value
+></field
+><field name="46"
+><value
+>Off</value
+></field
+><field name="47"
+><value
+>Off</value
+></field
+><field name="48"
+><value
+>Off</value
+></field
+><field name="49"
+><value
+>Off</value
+></field
+><field name="5"
+><value
+>Off</value
+></field
+><field name="50"
+><value
+>Off</value
+></field
+><field name="6"
+><value
+>Off</value
+></field
+><field name="7"
+><value
+>Off</value
+></field
+><field name="8"
+><value
+>Off</value
+></field
+><field name="9"
+><value
+>Off</value
+></field
+></field
+><field name="Top"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="10"
+><value
+>Off</value
+></field
+><field name="3"
+><value
+>Off</value
+></field
+><field name="5"
+><value
+>Off</value
+></field
+><field name="7"
+><value
+>Off</value
+></field
+><field name="9"
+><value
+>Off</value
+></field
+><field name="Axe"
+><field name="2"
+><value
+>Off</value
+></field
+><field name="4"
+><value
+>Off</value
+></field
+><field name="6"
+><value
+>Off</value
+></field
+><field name="8"
+><value
+>Off</value
+></field
+></field
+></field
+></field
+><field name="AmmoLeftDisplay"
+><field name="Amount"
+><value
+/></field
+><field name="CurrentAmount"
+><value
+/></field
+><field name="MaxAmount"
+><value
+>20</value
+></field
+><field name="Name"
+/><field name="SaveAmount"
+><value
+/></field
+><field name="Weight"
+><value
+>0</value
+></field
+><field name="WeightText"
+><value
+>Weight per ammo:</value
+></field
+></field
+><field name="AmmoRight"
+><field name="Base"
+><field name="11"
+><value
+>Off</value
+></field
+><field name="12"
+><value
+>Off</value
+></field
+><field name="14"
+><value
+>Off</value
+></field
+><field name="16"
+><value
+>Off</value
+></field
+><field name="18"
+><value
+>Off</value
+></field
+><field name="20"
+><value
+>Off</value
+></field
+><field name="Axe"
+><field name="13"
+><value
+>Off</value
+></field
+><field name="15"
+><value
+>Off</value
+></field
+><field name="17"
+><value
+>Off</value
+></field
+><field name="19"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Bullet"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="10"
+><value
+>Off</value
+></field
+><field name="11"
+><value
+>Off</value
+></field
+><field name="12"
+><value
+>Off</value
+></field
+><field name="13"
+><value
+>Off</value
+></field
+><field name="14"
+><value
+>Off</value
+></field
+><field name="15"
+><value
+>Off</value
+></field
+><field name="16"
+><value
+>Off</value
+></field
+><field name="17"
+><value
+>Off</value
+></field
+><field name="18"
+><value
+>Off</value
+></field
+><field name="19"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+><field name="20"
+><value
+>Off</value
+></field
+><field name="21"
+><value
+>Off</value
+></field
+><field name="22"
+><value
+>Off</value
+></field
+><field name="23"
+><value
+>Off</value
+></field
+><field name="24"
+><value
+>Off</value
+></field
+><field name="25"
+><value
+>Off</value
+></field
+><field name="26"
+><value
+>Off</value
+></field
+><field name="27"
+><value
+>Off</value
+></field
+><field name="28"
+><value
+>Off</value
+></field
+><field name="29"
+><value
+>Off</value
+></field
+><field name="3"
+><value
+>Off</value
+></field
+><field name="30"
+><value
+>Off</value
+></field
+><field name="31"
+><value
+>Off</value
+></field
+><field name="32"
+><value
+>Off</value
+></field
+><field name="33"
+><value
+>Off</value
+></field
+><field name="34"
+><value
+>Off</value
+></field
+><field name="35"
+><value
+>Off</value
+></field
+><field name="36"
+><value
+>Off</value
+></field
+><field name="37"
+><value
+>Off</value
+></field
+><field name="38"
+><value
+>Off</value
+></field
+><field name="39"
+><value
+>Off</value
+></field
+><field name="4"
+><value
+>Off</value
+></field
+><field name="40"
+><value
+>Off</value
+></field
+><field name="41"
+><value
+>Off</value
+></field
+><field name="42"
+><value
+>Off</value
+></field
+><field name="43"
+><value
+>Off</value
+></field
+><field name="44"
+><value
+>Off</value
+></field
+><field name="45"
+><value
+>Off</value
+></field
+><field name="46"
+><value
+>Off</value
+></field
+><field name="47"
+><value
+>Off</value
+></field
+><field name="48"
+><value
+>Off</value
+></field
+><field name="49"
+><value
+>Off</value
+></field
+><field name="5"
+><value
+>Off</value
+></field
+><field name="50"
+><value
+>Off</value
+></field
+><field name="6"
+><value
+>Off</value
+></field
+><field name="7"
+><value
+>Off</value
+></field
+><field name="8"
+><value
+>Off</value
+></field
+><field name="9"
+><value
+>Off</value
+></field
+></field
+><field name="Top"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="10"
+><value
+>Off</value
+></field
+><field name="3"
+><value
+>Off</value
+></field
+><field name="5"
+><value
+>Off</value
+></field
+><field name="7"
+><value
+>Off</value
+></field
+><field name="9"
+><value
+>Off</value
+></field
+><field name="Axe"
+><field name="2"
+><value
+>Off</value
+></field
+><field name="4"
+><value
+>Off</value
+></field
+><field name="6"
+><value
+>Off</value
+></field
+><field name="8"
+><value
+>Off</value
+></field
+></field
+></field
+></field
+><field name="AmmoRightDisplay"
+><field name="Amount"
+><value
+/></field
+><field name="CurrentAmount"
+><value
+/></field
+><field name="MaxAmount"
+><value
+>20</value
+></field
+><field name="Name"
+/><field name="SaveAmount"
+><value
+/></field
+><field name="Weight"
+><value
+>0</value
+></field
+><field name="WeightText"
+><value
+>Weight per ammo:</value
+></field
+></field
+><field name="Ani"
+><value
+>2</value
+></field
+><field name="Ani Bonus"
+><value
+>0</value
+></field
+><field name="Ani Exp"
+><value
+>Off</value
+></field
+><field name="Ani Prof"
+><value
+>Off</value
+></field
+><field name="Arc"
+><value
+>0</value
+></field
+><field name="Arc Bonus"
+><value
+>0</value
+></field
+><field name="Arc Exp"
+><value
+>Off</value
+></field
+><field name="Arc Prof"
+><value
+>Off</value
+></field
+><field name="Ath"
+><value
+>9</value
+></field
+><field name="Ath Bonus"
+><value
+>0</value
+></field
+><field name="Ath Exp"
+><value
+>Off</value
+></field
+><field name="Ath Prof"
+><value
+>True</value
+></field
+><field name="Attack"
+><field name="1"
+><field name="Damage"
+><value
+>1d12+5</value
+></field
+><field name="Damage Type"
+><value
+>Slashing</value
+></field
+><field name="Description"
+><value
+>Heavy, two-handed</value
+></field
+><field name="Mod"
+><value
+>Str Mod</value
+></field
+><field name="Proficiency"
+><value
+>True</value
+></field
+><field name="Range"
+><value
+>Melee</value
+></field
+><field name="To Hit"
+><value
+>+10</value
+></field
+><field name="Weapon"
+><value
+>greataxe of brutal cold +1</value
+></field
+><field name="Weapon Selection"
+><value
+>Greataxe of Brutal Cold +1</value
+></field
+></field
+><field name="2"
+><field name="Damage"
+><value
+>1d6+4</value
+></field
+><field name="Damage Type"
+><value
+>Piercing</value
+></field
+><field name="Description"
+><value
+>Thrown</value
+></field
+><field name="Mod"
+><value
+>Str Mod</value
+></field
+><field name="Proficiency"
+><value
+>True</value
+></field
+><field name="Range"
+><value
+>Melee, 30/120 ft</value
+></field
+><field name="To Hit"
+><value
+>+9</value
+></field
+><field name="Weapon"
+><value
+>javelin</value
+></field
+><field name="Weapon Selection"
+><value
+>Javelin</value
+></field
+></field
+><field name="3"
+><field name="Damage"
+><value
+>1d6+5</value
+></field
+><field name="Damage Type"
+><value
+>Bludgeoning</value
+></field
+><field name="Description"
+><value
+>extra 1d6 radiant damage to undead - bright 20' dim 20', like a torch</value
+></field
+><field name="Mod"
+><value
+>Str Mod</value
+></field
+><field name="Proficiency"
+><value
+>True</value
+></field
+><field name="Range"
+><value
+>Melee</value
+></field
+><field name="To Hit"
+><value
+>+10</value
+></field
+><field name="Weapon"
+><value
+>lightbringer mace +1</value
+></field
+><field name="Weapon Selection"
+><value
+>Lightbringer Mace +1</value
+></field
+></field
+><field name="4"
+><field name="Damage"
+><value
+>1d6+4</value
+></field
+><field name="Damage Type"
+><value
+>Piercing</value
+></field
+><field name="Description"
+><value
+>Thrown</value
+></field
+><field name="Mod"
+><value
+>Str Mod</value
+></field
+><field name="Proficiency"
+><value
+>True</value
+></field
+><field name="Range"
+><value
+>Melee, 30/120 ft</value
+></field
+><field name="To Hit"
+><value
+>+9</value
+></field
+><field name="Weapon"
+><value
+>javelin of lightning dc13</value
+></field
+><field name="Weapon Selection"
+><value
+>Javelin of Lightning DC13</value
+></field
+></field
+><field name="5"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Mod"
+><value
+>empty</value
+></field
+><field name="Proficiency"
+><value
+>Off</value
+></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+><field name="Weapon Selection"
+/></field
+><field name="Titles"
+><value
+>PROF ABILITY</value
+></field
+></field
+><field name="Attuned Magic Items Title"
+><value
+>ATTUNED MAGICAL ITEMS</value
+></field
+><field name="Attuned Magic Items Whiteout"
+><value
+/></field
+><field name="Background"
+><value
+>Noble</value
+></field
+><field name="Background Extra"
+><value
+/></field
+><field name="Background Feature"
+><value
+>Position of Privilege</value
+></field
+><field name="Background Feature Description"
+><value
+>I am welcome in high society, and people assume I have the right to be wherever I am. The common folk make every effort to accommodate me and avoid my displeasure, and other people of high birth treat me as a member of the same social sphere. I can secure an audience with a local noble if I need to.</value
+></field
+><field name="Background_Appearance"
+><value
+/></field
+><field name="Background_Enemies"
+><value
+/></field
+><field name="Background_Faction"
+><field name="Text"
+/></field
+><field name="Background_FactionRank"
+><field name="Text"
+><value
+/></field
+></field
+><field name="Background_History"
+><value
+>Your family is no stranger to wealth, power, and privilege. In the glory days of Neverwinter, your parents were the count and countess of Corlinn Hill, a large estate located in the hills northeast of the city. But Mount Hotenow erupted thirty years ago, devastating Neverwinter and erasing Corlinn Hill from the map. Instead of growing up on an estate, you were raised in a small but comfortable town house in Waterdeep. As an adult, you stand to inherit a meaningless title and little else.&#xD;Personal Goal: Civilize Phandalin. You were meant for more than being a ruler of nothing at all. Rebuilding Corlinn Hill is impractical, thanks to the volcano. But in the last three or four years, hardy settlers have been rebuilding another ruin near the city: the old town of Phandalin, which orcs sacked five centuries ago. Clearly, what Phandalin needs now is a civilizing influence—someone to take the reins and bring law and order. Someone like you. You’re not the only one with such ideas. A knight named Sildar Hallwinter recently set out for Phandalin in the company of a dwarf named Gundren Rockseeker. They plan to reclaim an ancient mine&#xD;and restore Phandalin to a civilized center of wealth and prosperity. Since your goals align, Hallwinter should be willing to assist you.&#xD;Alignment: Lawful Neutral. It’s essential to establish law and order, even if it takes an iron fist to do it. The nobility are bound by honor and tradition to protect their people from both external and internal threats to stability. An organized society leaves no room for evil and chaos to take root.&#xD;&#xD;&#xD;Parents: Lozre Clarizdotter - 2 swords, Maxwell Haftman - greataxe&#xD;Lived on Vhezoar St. just off delzorin St in North Ward near the Ulbrintel Villa&#xD;2 storey townhouse 4 bedrooms upstairs, living quarters downstairs&#xD;1 gp/person/day for upkeep.&#xD;&#xD;&#xD;Pentel:&#xD;army @17&#xD;Waterdeep city watch @22&#xD;adventure/caravans @24&#xD;&#xD;</value
+></field
+><field name="Background_Organisation"
+><field name="Left"
+><value
+>Redknife - renown of 3</value
+></field
+><field name="Right"
+><value
+/></field
+></field
+><field name="Background_Renown"
+><field name="Text"
+><value
+/></field
+><field name="Title"
+><value
+>RENOWN</value
+></field
+></field
+><field name="BlueText"
+><field name="Attack"
+><field name="1"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+>1d12</value
+></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>7</value
+></field
+><field name="Weight Title"
+><value
+>Above weapon's weight:</value
+></field
+></field
+><field name="2"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+>1d6</value
+></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>2</value
+></field
+><field name="Weight Title"
+><value
+>Above weapon's weight:</value
+></field
+></field
+><field name="3"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+>1d6</value
+></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>4</value
+></field
+><field name="Weight Title"
+><value
+>Above weapon's weight:</value
+></field
+></field
+><field name="4"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+>1d6</value
+></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>2</value
+></field
+><field name="Weight Title"
+><value
+>Above weapon's weight:</value
+></field
+></field
+><field name="5"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+/></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>0</value
+></field
+><field name="Weight Title"
+><value
+>Above weapon's weight:</value
+></field
+></field
+><field name="Modifiers Title"
+><value
+>ATTACK MODS</value
+></field
+></field
+><field name="Comp"
+><field name="Use"
+><field name="Ability"
+><field name="All"
+><field name="ST"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+><field name="Cha"
+><field name="ST"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+><field name="Con"
+><field name="ST"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+><field name="Dex"
+><field name="ST"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+><field name="Int"
+><field name="ST"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+><field name="Str"
+><field name="ST"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+><field name="Wis"
+><field name="ST"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+></field
+><field name="Attack"
+><field name="1"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+/></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>0</value
+></field
+><field name="Weight Title"
+><value
+/></field
+></field
+><field name="2"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+/></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>0</value
+></field
+><field name="Weight Title"
+><value
+/></field
+></field
+><field name="3"
+><field name="Damage Bonus"
+><value
+>0</value
+></field
+><field name="Damage Die"
+><value
+/></field
+><field name="To Hit Bonus"
+><value
+>0</value
+></field
+><field name="Weight"
+><value
+>0</value
+></field
+><field name="Weight Title"
+><value
+/></field
+></field
+></field
+><field name="Proficiency Bonus Dice"
+><value
+>Off</value
+></field
+><field name="Skills"
+><field name="Acr"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="All"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Ani"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Arc"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Ath"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Dec"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="His"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Ins"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Inti"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Inv"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Med"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Nat"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Perc"
+><field name="Bonus"
+><value
+>0</value
+></field
+><field name="Pass"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+><field name="Perf"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Pers"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Rel"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Sle"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Ste"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+><field name="Sur"
+><field name="Bonus"
+><value
+>0</value
+></field
+></field
+></field
+></field
+></field
+><field name="Proficiency Bonus Dice Title"
+><value
+>Use Dice</value
+></field
+><field name="Save Modifiers All Text"
+><value
+>to all Saves</value
+></field
+><field name="Save Modifiers Title"
+><value
+>SAVE MODS</value
+></field
+><field name="Skill Modifiers All Text"
+><value
+>to all Skills</value
+></field
+><field name="Skill Modifiers Title"
+><value
+>SKILL MODS</value
+></field
+><field name="spellshead"
+><field name="attack"
+><field name="0"
+><value
+>0</value
+></field
+><field name="1"
+><value
+>0</value
+></field
+><field name="2"
+><value
+>0</value
+></field
+><field name="3"
+><value
+>0</value
+></field
+></field
+><field name="dc"
+><field name="0"
+><value
+>0</value
+></field
+><field name="1"
+><value
+>0</value
+></field
+><field name="2"
+><value
+>0</value
+></field
+><field name="3"
+><value
+>0</value
+></field
+></field
+><field name="prepare"
+><field name="0"
+><value
+>0</value
+></field
+><field name="1"
+><value
+>0</value
+></field
+><field name="2"
+><value
+>0</value
+></field
+><field name="3"
+><value
+>0</value
+></field
+></field
+></field
+></field
+><field name="BlueTextRemember"
+><value
+>No</value
+></field
+><field name="Bond"
+><value
+>My greataxe is a family heirloom, and it’s by far my most precious possession.</value
+></field
+><field name="Bonus Action 1"
+><value
+>Second Wind</value
+></field
+><field name="Bonus Action 10"
+><value
+/></field
+><field name="Bonus Action 11"
+><value
+/></field
+><field name="Bonus Action 12"
+><value
+/></field
+><field name="Bonus Action 2"
+><value
+>Fighting Spirit</value
+></field
+><field name="Bonus Action 3"
+><value
+>extra attack (after crit or take-to 0)</value
+></field
+><field name="Bonus Action 4"
+><value
+>(from Great Weapon Master0</value
+></field
+><field name="Bonus Action 5"
+><value
+/></field
+><field name="Bonus Action 6"
+><value
+/></field
+><field name="Bonus Action 7"
+><value
+/></field
+><field name="Bonus Action 8"
+><value
+/></field
+><field name="Bonus Action 9"
+><value
+/></field
+><field name="BoxesLinesRemember"
+><value
+>calc_boxes</value
+></field
+><field name="Carrying Capacity Multiplier"
+><value
+>1</value
+></field
+><field name="Carrying Capacity Multiplier Title"
+><value
+>Carrying Capacity Multiplier</value
+></field
+><field name="Cha"
+><value
+>14</value
+></field
+><field name="Cha Mod"
+><value
+>2</value
+></field
+><field name="Cha Remember"
+><value
+>13,1,0,0,0,0</value
+></field
+><field name="Cha ST Bonus"
+><value
+>0</value
+></field
+><field name="Cha ST Mod"
+><value
+>3</value
+></field
+><field name="Cha ST Prof"
+><value
+>Off</value
+></field
+><field name="Character Level"
+><value
+>15</value
+></field
+><field name="Class Features"
+><value
+>Samurai, level 15:
+◆ Defense Fighting Style (Fighter 1, PHB 72)
+   +1 bonus to AC when I'm wearing armor
+◆ Second Wind (Fighter 1, PHB 72) [1d10+15, 1× per short rest]
+   As a bonus action, I regain 1d10 + fighter level HP; I can use this once per short rest
+◆ Action Surge (Fighter 2, PHB 72) [1× per short rest]
+   I can take one additional action on my turn on top of my normally allowed actions
+◆ Bonus Proficiency (Samurai 3, XGtE 31)
+   I gain proficiency with History, Insight, Performance, or Persuasion
+   Alternatively, I learn one language; Use the "Choose Feature" button above for this
+◆ Fighting Spirit (Samurai 3, XGtE 31) [8 temp HP at Level 8, 9 at Level 9, etc. thru Level 15,
+    3× per long rest]
+   As a bonus action, I can give myself advantage on weapon attacks and temporary HP
+   This advantage on weapon attack rolls lasts until the end of my current turn
+   Remember that Temp HP do not stack and cannot be healed.
+◆ Elegant Courtier (Samurai 7, XGtE 31)
+   I can add my Wisdom modifier to any Charisma (Persuasion) checks I make
+   I gain proficiency with Wis saves, or if I'm already proficient, either Int or Cha saves
+◆ Indomitable (Fighter 9, PHB 72) [2× per long rest]
+   I can reroll a failed saving throw, but must keep the new result
+◆ Tireless Spirit (Samurai 10, XGtE 31)
+   I regain one use of Fighting Spirit if I have no more remaining when I roll initiative
+◆ Rapid Strike (Samurai 15, XGtE 31)
+   With the Attack action, I can forgo advantage on one attack to make one extra attack
+   This extra attack is part of the same action; I can do this only once per turn
+
+
+◆ Fighting Spirit (Samurai 3, XGtE 31) [15 temporary HP, 3× per long rest]
+   As a bonus action, I can give myself advantage on weapon attacks and temporary HP
+   This advantage on weapon attack rolls lasts until the end of my current turn</value
+></field
+><field name="Class Features Remember"
+><value
+>fighter,fighting style,defense</value
+></field
+><field name="Class and Levels"
+><value
+>Samurai Fighter</value
+></field
+><field name="Cnote"
+><field name="Left"
+><value
+/></field
+><field name="Right"
+><value
+/></field
+></field
+><field name="Comp"
+><field name="Desc"
+><field name="Age"
+><value
+/></field
+><field name="Alignment"
+><value
+/></field
+><field name="Height"
+><value
+/></field
+><field name="MonsterType"
+><value
+/></field
+><field name="Name"
+><value
+/></field
+><field name="Sex"
+><value
+/></field
+><field name="Size"
+><value
+/></field
+><field name="Weight"
+><value
+/></field
+></field
+><field name="Race"
+/><field name="Type"
+><value
+>COMPANION</value
+></field
+><field name="Use"
+><field name="AC"
+><value
+/></field
+><field name="Ability"
+><field name="Cha"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Con"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Dex"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Int"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Str"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Wis"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+></field
+><field name="Attack"
+><field name="1"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Mod"
+><value
+>empty</value
+></field
+><field name="Proficiency"
+><value
+>Off</value
+></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+><field name="Weapon Selection"
+/></field
+><field name="2"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Mod"
+><value
+>empty</value
+></field
+><field name="Proficiency"
+><value
+>Off</value
+></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+><field name="Weapon Selection"
+/></field
+><field name="3"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Mod"
+><value
+>empty</value
+></field
+><field name="Proficiency"
+><value
+>Off</value
+></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+><field name="Weapon Selection"
+/></field
+><field name="perAction"
+><value
+/></field
+></field
+><field name="Combat"
+><field name="Init"
+><field name="Bonus"
+><value
+>0</value
+></field
+><field name="Mod"
+><value
+/></field
+></field
+></field
+><field name="DeathSave"
+><field name="Fail"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+><field name="3"
+><value
+>Off</value
+></field
+></field
+><field name="Success"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+><field name="3"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Features"
+><value
+/></field
+><field name="HD"
+><field name="Die"
+><value
+/></field
+><field name="Level"
+><value
+/></field
+><field name="Used"
+><value
+/></field
+></field
+><field name="HP"
+><field name="Current"
+><value
+/></field
+><field name="Max"
+><value
+/></field
+><field name="Temp"
+><value
+/></field
+></field
+><field name="Proficiency Bonus"
+><value
+/></field
+><field name="Senses"
+><value
+/></field
+><field name="Skills"
+><field name="Acr"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ani"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Arc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ath"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Dec"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="His"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ins"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inti"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inv"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Med"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Nat"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Perc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Pass"
+><field name="Mod"
+><value
+/></field
+></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Perf"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Pers"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Rel"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sle"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ste"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sur"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Speed"
+><value
+/></field
+><field name="Traits"
+><value
+/></field
+></field
+><field name="eqp"
+><field name="Display"
+><field name="Weighttxt"
+><value
+>LB</value
+></field
+></field
+><field name="Gear Amount 1"
+><value
+/></field
+><field name="Gear Amount 10"
+><value
+/></field
+><field name="Gear Amount 11"
+><value
+/></field
+><field name="Gear Amount 12"
+><value
+/></field
+><field name="Gear Amount 13"
+><value
+/></field
+><field name="Gear Amount 14"
+><value
+/></field
+><field name="Gear Amount 15"
+><value
+/></field
+><field name="Gear Amount 16"
+><value
+/></field
+><field name="Gear Amount 17"
+><value
+/></field
+><field name="Gear Amount 2"
+><value
+/></field
+><field name="Gear Amount 3"
+><value
+/></field
+><field name="Gear Amount 4"
+><value
+/></field
+><field name="Gear Amount 5"
+><value
+/></field
+><field name="Gear Amount 6"
+><value
+/></field
+><field name="Gear Amount 7"
+><value
+/></field
+><field name="Gear Amount 8"
+><value
+/></field
+><field name="Gear Amount 9"
+><value
+/></field
+><field name="Gear Row 1"
+><value
+/></field
+><field name="Gear Row 10"
+><value
+/></field
+><field name="Gear Row 11"
+><value
+/></field
+><field name="Gear Row 12"
+><value
+/></field
+><field name="Gear Row 13"
+><value
+/></field
+><field name="Gear Row 14"
+><value
+/></field
+><field name="Gear Row 15"
+><value
+/></field
+><field name="Gear Row 16"
+><value
+/></field
+><field name="Gear Row 17"
+><value
+/></field
+><field name="Gear Row 2"
+><value
+/></field
+><field name="Gear Row 3"
+><value
+/></field
+><field name="Gear Row 4"
+><value
+/></field
+><field name="Gear Row 5"
+><value
+/></field
+><field name="Gear Row 6"
+><value
+/></field
+><field name="Gear Row 7"
+><value
+/></field
+><field name="Gear Row 8"
+><value
+/></field
+><field name="Gear Row 9"
+><value
+/></field
+><field name="Gear Weight 1"
+><value
+/></field
+><field name="Gear Weight 10"
+><value
+/></field
+><field name="Gear Weight 11"
+><value
+/></field
+><field name="Gear Weight 12"
+><value
+/></field
+><field name="Gear Weight 13"
+><value
+/></field
+><field name="Gear Weight 14"
+><value
+/></field
+><field name="Gear Weight 15"
+><value
+/></field
+><field name="Gear Weight 16"
+><value
+/></field
+><field name="Gear Weight 17"
+><value
+/></field
+><field name="Gear Weight 2"
+><value
+/></field
+><field name="Gear Weight 3"
+><value
+/></field
+><field name="Gear Weight 4"
+><value
+/></field
+><field name="Gear Weight 5"
+><value
+/></field
+><field name="Gear Weight 6"
+><value
+/></field
+><field name="Gear Weight 7"
+><value
+/></field
+><field name="Gear Weight 8"
+><value
+/></field
+><field name="Gear Weight 9"
+><value
+/></field
+><field name="Gear Weight Subtotal"
+><value
+/></field
+><field name="Notes"
+><value
+/></field
+></field
+></field
+><field name="Companion"
+><field name="Layers"
+><field name="Remember"
+><value
+>[true,false]</value
+></field
+></field
+><field name="Remember"
+><value
+/></field
+></field
+><field name="Con"
+><value
+>16</value
+></field
+><field name="Con Mod"
+><value
+>3</value
+></field
+><field name="Con Remember"
+><value
+>14,1,1,0,0,0</value
+></field
+><field name="Con ST Bonus"
+><value
+>0</value
+></field
+><field name="Con ST Mod"
+><value
+>9</value
+></field
+><field name="Con ST Prof"
+><value
+>True</value
+></field
+><field name="Copper Pieces"
+><value
+>52</value
+></field
+><field name="CopyrightInformation"
+><value
+>Based on Wizards of the Coast character sheet; Dragon Head design by spikeilustra; made by Joost Wijnen - Flapkan@gmail.com</value
+></field
+><field name="CurrentEvals"
+><field name="Stringified"
+><value
+>({atkCalc:"if (isMeleeWeapon &amp;&amp; (/heavy/i).test(fields.Description) &amp;&amp; (/power.{0,3}attack|great.{0,3}weapon.{0,3}master/i).test(WeaponText)) {output.extraDmg += 10; output.extraHit -= 5;};", atkStr:"\n\n\uD835\uDE42\uD835\uDE67\uD835\uDE5A\uD835\uDE56\uD835\uDE69 \uD835\uDE52\uD835\uDE5A\uD835\uDE56\uD835\uDE65\uD835\uDE64\uD835\uDE63 \uD835\uDE48\uD835\uDE56\uD835\uDE68\uD835\uDE69\uD835\uDE5A\uD835\uDE67 [feat]\n - If I include the words 'Power Attack' or 'Great Weapon Master' in a heavy melee weapon's name or description, the calculation will put a -5 penalty on the attack's To Hit and +10 on its Damage."})</value
+></field
+></field
+><field name="CurrentProfs"
+><field name="Stringified"
+><value
+>({skill:{}, armour:{}, weapon:{}, save:{Str:["Fighter"], Con:["Fighter"], Wis:["Samurai: Elegant Courtier"], Dex:["Resilient [Dexterity]"]}, resistance:{}, language:{common:["Human"], 'Human_#_from Human_#_1':{source:"Human", entries:["Human_#_from Human_#_1-1"], choices:["from Human"]}, 'Noble_#_from Noble_#_1':{source:"Noble", entries:["Noble_#_from Noble_#_1-1"], choices:["from Noble"]}}, tool:{'Noble_#_Gaming set_#_1':{source:"Noble", entries:["Noble_#_Gaming set_#_1-1"], choices:["Gaming set"]}}, savetxt:{}, vision:{}, speed:{allModes:{}, walk:{spd:{Human:30}, enc:{Human:20}}, borrow:{spd:{}, enc:{}}, climb:{spd:{}, enc:{}}, fly:{spd:{}, enc:{}}, swim:{spd:{}, enc:{}}}})</value
+></field
+></field
+><field name="CurrentSources"
+><field name="Stringified"
+><value
+>({firstTime:false, globalExcl:["UA:E", "UA:MC", "UA:WA", "UA:MM", "UA:R", "UA:PCRM", "UA:LDU", "UA:TOBM", "UA:KoO", "UA:GH", "UA:F", "UA:TF", "UA:RR", "UA:BPP", "UA:BC", "UA:CDD", "UA:DC", "UA:FMA", "UA:MMT", "UA:PSO", "UA:A", "UA:RnR", "UA:SO", "UA:WnW", "UA:TMC", "UA:WR", "UA:AToS", "UA:SS", "UA:FS", "UA:FR", "UA:RS", "UA:RCO", "UA:EnG", "UA:FO", "UA:ES", "UA:TS", "UA:OD", "UA:CnM", "UA:GSS", "UA:RoE", "UA:RoR", "UA:R", "UA:FR", "UA:RS", "UA:RCO", "UA:EnG", "UA:FO", "UA:ES", "UA:TS", "UA:OD", "UA:CnM", "UA:GSS", "UA:RoE", "UA:RoR"], ammoExcl:["renaissance bullet", "renaissance bullet", "modern bullet", "modern bullet", "modern bullet", "modern bullet", "modern bullet", "energy cell", "energy cell", "energy cell"], weapExcl:["pistol", "musket", "pistol automatic", "revolver", "rifle hunting", "rifle automatic", "shotgun", "laser pistol", "antimatter rifle", "laser rifle"], globalKnown:["SRD", "DMguild", "HB", "P", "ALbackground", "HotDQ", "M", "D", "AL:EE", "E", "AL:RoD", "OotA", "S", "CoS", "AL:CoS", "SKT", "V", "TotYP", "TP", "ToA", "X", "MToF", "WGtE", "UA:E", "UA:MC", "UA:WA", "UA:MM", "UA:R", "UA:PCRM", "UA:LDU", "UA:TOBM", "UA:KoO", "UA:GH", "UA:F", "UA:TF", "UA:RR", "UA:BPP", "UA:BC", "UA:CDD", "UA:DC", "UA:FMA", "UA:MMT", "UA:PSO", "UA:A", "UA:RnR", "UA:SO", "UA:WnW", "UA:TMC", "UA:WR", "UA:AToS", "UA:SS", "UA:FS", "UA:FR", "UA:RS", "UA:RCO", "UA:EnG", "UA:FO", "UA:ES", "UA:TS", "UA:OD", "UA:CnM", "UA:GSS", "UA:RoE", "UA:RoR"]})</value
+></field
+></field
+><field name="CurrentSpells"
+><field name="Stringified"
+><value
+>({})##########({excl:[], incl:[], glossary:true})</value
+></field
+></field
+><field name="DCI"
+><field name="Text"
+><value
+/></field
+><field name="Title"
+><value
+>DCI</value
+></field
+></field
+><field name="DateFormat_Remember"
+><value
+>d mmm yyyy</value
+></field
+><field name="Death Save Fail1"
+><value
+>Off</value
+></field
+><field name="Death Save Fail2"
+><value
+>Off</value
+></field
+><field name="Death Save Fail3"
+><value
+>Off</value
+></field
+><field name="Death Save Success1"
+><value
+>Off</value
+></field
+><field name="Death Save Success2"
+><value
+>Off</value
+></field
+><field name="Death Save Success3"
+><value
+>Off</value
+></field
+><field name="Dec"
+><value
+>2</value
+></field
+><field name="Dec Bonus"
+><value
+>0</value
+></field
+><field name="Dec Exp"
+><value
+>Off</value
+></field
+><field name="Dec Prof"
+><value
+>Off</value
+></field
+><field name="Decimal Separator"
+><value
+>dot</value
+></field
+><field name="Delimiter"
+><value
+>, </value
+></field
+><field name="Dex"
+><value
+>10</value
+></field
+><field name="Dex Mod"
+><value
+>0</value
+></field
+><field name="Dex Remember"
+><value
+>8,1,0,0,0,1</value
+></field
+><field name="Dex ST Bonus"
+><value
+>0</value
+></field
+><field name="Dex ST Mod"
+><value
+>6</value
+></field
+><field name="Dex ST Prof"
+><value
+>True</value
+></field
+><field name="Display"
+><field name="Weighttxt"
+><field name="LbKg"
+><value
+>LB</value
+></field
+></field
+></field
+><field name="Electrum Pieces"
+><value
+>90</value
+></field
+><field name="Extra Class Feature Remember"
+><value
+/></field
+><field name="Extra"
+><field name="Gear Amount 1"
+><value
+/></field
+><field name="Gear Amount 10"
+><value
+>6</value
+></field
+><field name="Gear Amount 11"
+><value
+/></field
+><field name="Gear Amount 12"
+><value
+>2</value
+></field
+><field name="Gear Amount 13"
+><value
+/></field
+><field name="Gear Amount 14"
+><value
+/></field
+><field name="Gear Amount 15"
+><value
+/></field
+><field name="Gear Amount 16"
+><value
+/></field
+><field name="Gear Amount 17"
+><value
+/></field
+><field name="Gear Amount 18"
+><value
+/></field
+><field name="Gear Amount 19"
+><value
+/></field
+><field name="Gear Amount 2"
+><value
+/></field
+><field name="Gear Amount 20"
+><value
+/></field
+><field name="Gear Amount 21"
+><value
+/></field
+><field name="Gear Amount 22"
+><value
+/></field
+><field name="Gear Amount 23"
+><value
+/></field
+><field name="Gear Amount 24"
+><value
+/></field
+><field name="Gear Amount 25"
+><value
+/></field
+><field name="Gear Amount 26"
+><value
+/></field
+><field name="Gear Amount 27"
+><value
+>5</value
+></field
+><field name="Gear Amount 28"
+><value
+>4</value
+></field
+><field name="Gear Amount 29"
+><value
+/></field
+><field name="Gear Amount 3"
+><value
+/></field
+><field name="Gear Amount 30"
+><value
+/></field
+><field name="Gear Amount 31"
+><value
+/></field
+><field name="Gear Amount 32"
+><value
+/></field
+><field name="Gear Amount 33"
+><value
+/></field
+><field name="Gear Amount 34"
+><value
+/></field
+><field name="Gear Amount 35"
+><value
+/></field
+><field name="Gear Amount 36"
+><value
+/></field
+><field name="Gear Amount 4"
+><value
+/></field
+><field name="Gear Amount 5"
+><value
+/></field
+><field name="Gear Amount 6"
+><value
+/></field
+><field name="Gear Amount 7"
+><value
+/></field
+><field name="Gear Amount 8"
+><value
+>1</value
+></field
+><field name="Gear Amount 9"
+><value
+>3</value
+></field
+><field name="Gear Location"
+><field name="Line"
+><value
+/></field
+><field name="Row 1"
+><value
+/></field
+><field name="Row 10"
+><value
+/></field
+><field name="Row 11"
+><value
+/></field
+><field name="Row 12"
+><value
+/></field
+><field name="Row 13"
+><value
+/></field
+><field name="Row 14"
+><value
+/></field
+><field name="Row 15"
+><value
+/></field
+><field name="Row 16"
+><value
+/></field
+><field name="Row 17"
+><value
+/></field
+><field name="Row 18"
+><value
+/></field
+><field name="Row 19"
+><value
+/></field
+><field name="Row 2"
+><value
+/></field
+><field name="Row 20"
+><value
+/></field
+><field name="Row 21"
+><value
+/></field
+><field name="Row 22"
+><value
+/></field
+><field name="Row 23"
+><value
+/></field
+><field name="Row 24"
+><value
+/></field
+><field name="Row 25"
+><value
+/></field
+><field name="Row 26"
+><value
+/></field
+><field name="Row 27"
+><value
+/></field
+><field name="Row 28"
+><value
+/></field
+><field name="Row 29"
+><value
+/></field
+><field name="Row 3"
+><value
+/></field
+><field name="Row 30"
+><value
+/></field
+><field name="Row 31"
+><value
+/></field
+><field name="Row 32"
+><value
+/></field
+><field name="Row 33"
+><value
+/></field
+><field name="Row 34"
+><value
+/></field
+><field name="Row 35"
+><value
+/></field
+><field name="Row 36"
+><value
+/></field
+><field name="Row 4"
+><value
+/></field
+><field name="Row 5"
+><value
+/></field
+><field name="Row 6"
+><value
+/></field
+><field name="Row 7"
+><value
+/></field
+><field name="Row 8"
+><value
+/></field
+><field name="Row 9"
+><value
+/></field
+><field name="Subtotal 1"
+><value
+/></field
+><field name="Subtotal 2"
+><value
+/></field
+><field name="Subtotal 3"
+><value
+/></field
+><field name="Subtotal 4"
+><value
+/></field
+><field name="Subtotal 5"
+><value
+/></field
+><field name="Subtotal 6"
+><value
+/></field
+><field name="SubtotalName 1"
+><value
+/></field
+><field name="SubtotalName 2"
+><value
+/></field
+><field name="SubtotalName 3"
+><value
+/></field
+><field name="SubtotalName 4"
+><value
+/></field
+><field name="SubtotalName 5"
+><value
+/></field
+><field name="SubtotalName 6"
+><value
+/></field
+><field name="Title"
+><value
+>LOC</value
+></field
+></field
+><field name="Gear Row 1"
+><value
+>Chain mail (with armorers)</value
+></field
+><field name="Gear Row 10"
+><value
+>Javelins</value
+></field
+><field name="Gear Row 11"
+><value
+>LA ring of protection</value
+></field
+><field name="Gear Row 12"
+><value
+>large furs</value
+></field
+><field name="Gear Row 13"
+><value
+/></field
+><field name="Gear Row 14"
+><value
+>With PyraTechnics:</value
+></field
+><field name="Gear Row 15"
+><value
+>chunk of stone golem</value
+></field
+><field name="Gear Row 16"
+><value
+>green dragon scale</value
+></field
+><field name="Gear Row 17"
+><value
+>500gp credit</value
+></field
+><field name="Gear Row 18"
+><value
+/></field
+><field name="Gear Row 19"
+><value
+/></field
+><field name="Gear Row 2"
+><value
+/></field
+><field name="Gear Row 20"
+><value
+/></field
+><field name="Gear Row 21"
+><value
+/></field
+><field name="Gear Row 22"
+><value
+/></field
+><field name="Gear Row 23"
+><value
+/></field
+><field name="Gear Row 24"
+><value
+/></field
+><field name="Gear Row 25"
+><value
+>crystal wand </value
+></field
+><field name="Gear Row 26"
+><value
+>moving photo of Jim from Yarrik</value
+></field
+><field name="Gear Row 27"
+><value
+>scimitars</value
+></field
+><field name="Gear Row 28"
+><value
+>dagger</value
+></field
+><field name="Gear Row 29"
+><value
+>silver short sword</value
+></field
+><field name="Gear Row 3"
+><value
+/></field
+><field name="Gear Row 30"
+><value
+>great sword</value
+></field
+><field name="Gear Row 31"
+><value
+/></field
+><field name="Gear Row 32"
+><value
+/></field
+><field name="Gear Row 33"
+><value
+>300 to transfer enchantment</value
+></field
+><field name="Gear Row 34"
+><value
+>more (~500) to transfer + extra</value
+></field
+><field name="Gear Row 35"
+><value
+>uncommon -50 days maybe, 25 here</value
+></field
+><field name="Gear Row 36"
+><value
+/></field
+><field name="Gear Row 4"
+><value
+/></field
+><field name="Gear Row 5"
+><value
+/></field
+><field name="Gear Row 6"
+><value
+/></field
+><field name="Gear Row 7"
+><value
+>In bag of holding:</value
+></field
+><field name="Gear Row 8"
+><value
+>silk sheets, monogrammed</value
+></field
+><field name="Gear Row 9"
+><value
+>long sharpened sticks (for Javelins)</value
+></field
+><field name="Gear Weight 1"
+><value
+>1</value
+></field
+><field name="Gear Weight 10"
+><value
+>2</value
+></field
+><field name="Gear Weight 11"
+><value
+/></field
+><field name="Gear Weight 12"
+><value
+/></field
+><field name="Gear Weight 13"
+><value
+/></field
+><field name="Gear Weight 14"
+><value
+/></field
+><field name="Gear Weight 15"
+><value
+>30</value
+></field
+><field name="Gear Weight 16"
+><value
+/></field
+><field name="Gear Weight 17"
+><value
+/></field
+><field name="Gear Weight 18"
+><value
+/></field
+><field name="Gear Weight 19"
+><value
+/></field
+><field name="Gear Weight 2"
+><value
+/></field
+><field name="Gear Weight 20"
+><value
+/></field
+><field name="Gear Weight 21"
+><value
+/></field
+><field name="Gear Weight 22"
+><value
+/></field
+><field name="Gear Weight 23"
+><value
+/></field
+><field name="Gear Weight 24"
+><value
+/></field
+><field name="Gear Weight 25"
+><value
+/></field
+><field name="Gear Weight 26"
+><value
+/></field
+><field name="Gear Weight 27"
+><value
+>3</value
+></field
+><field name="Gear Weight 28"
+><value
+>1</value
+></field
+><field name="Gear Weight 29"
+><value
+>2</value
+></field
+><field name="Gear Weight 3"
+><value
+/></field
+><field name="Gear Weight 30"
+><value
+>6</value
+></field
+><field name="Gear Weight 31"
+><value
+/></field
+><field name="Gear Weight 32"
+><value
+/></field
+><field name="Gear Weight 33"
+><value
+/></field
+><field name="Gear Weight 34"
+><value
+/></field
+><field name="Gear Weight 35"
+><value
+/></field
+><field name="Gear Weight 36"
+><value
+/></field
+><field name="Gear Weight 4"
+><value
+/></field
+><field name="Gear Weight 5"
+><value
+/></field
+><field name="Gear Weight 6"
+><value
+/></field
+><field name="Gear Weight 7"
+><value
+/></field
+><field name="Gear Weight 8"
+><value
+/></field
+><field name="Gear Weight 9"
+><value
+>2</value
+></field
+><field name="Gear Weight Subtotal Left"
+><value
+>49</value
+></field
+><field name="Gear Weight Subtotal Right"
+><value
+>27</value
+></field
+><field name="Magic Item 1"
+><value
+>Ring of Protection (Shaelynn)</value
+></field
+><field name="Magic Item 10"
+><value
+/></field
+><field name="Magic Item 11"
+><value
+/></field
+><field name="Magic Item 12"
+><value
+/></field
+><field name="Magic Item 2"
+><value
+>Javelin of Lightning</value
+></field
+><field name="Magic Item 3"
+><value
+>continued</value
+></field
+><field name="Magic Item 4"
+><value
+>Boots of Levitation</value
+></field
+><field name="Magic Item 5"
+><value
+>Greataxe of Brutal Cold +1</value
+></field
+><field name="Magic Item 6"
+><value
+/></field
+><field name="Magic Item 7"
+><value
+/></field
+><field name="Magic Item 8"
+><value
+/></field
+><field name="Magic Item 9"
+><value
+/></field
+><field name="Magic Item Attuned 1"
+><value
+>True</value
+></field
+><field name="Magic Item Attuned 10"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 11"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 12"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 2"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 3"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 4"
+><value
+>True</value
+></field
+><field name="Magic Item Attuned 5"
+><value
+>True</value
+></field
+><field name="Magic Item Attuned 6"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 7"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 8"
+><value
+>Off</value
+></field
+><field name="Magic Item Attuned 9"
+><value
+>Off</value
+></field
+><field name="Magic Item Description 1"
+><value
+>Ring of Protection
+Lightbringer Mace +1
+extra 1d6 radiant damage to undead when lit
+bright 20', dim 20' like torch</value
+></field
+><field name="Magic Item Description 10"
+><value
+/></field
+><field name="Magic Item Description 11"
+><value
+/></field
+><field name="Magic Item Description 12"
+><value
+/></field
+><field name="Magic Item Description 2"
+><value
+>Magic weapon. Speak word-it transforms into bolt of lightning, forming a line 5' wide extending from you to target within 120'. Each creature in line excluding you &amp;  target must make DC13 Dexterity save-4D6 lightning damage on a failed save, halved if save. Lightning bolt is javelin when reaches target. On a hit, the target takes javelin damage plus 4d6 lightning damage.
+The javelin's property can't be used again until the next dawn. In the meantime, the javelin can still be used as a magic weapon.</value
+></field
+><field name="Magic Item Description 3"
+><value
+>save. Lightning bolt is javelin when reaches target. On a hit, the target takes javelin damage plus 4d6 lightning damage.
+Magic can't be used again until next dawn-still can be used as a magic weapon. </value
+></field
+><field name="Magic Item Description 4"
+><value
+>Use action to cast Levitate on self at will. Can change altitude vertically, up to 20 feet up or down on turn, as part of move. Stay suspended up to 10 min (conc). Up to 500 pounds. Move by pushing/pulling. Float gently to ground when spell ends.</value
+></field
+><field name="Magic Item Description 5"
+><value
+>When roll a crit, inflicts crit damage+1d10 cold damage and target's speed is reduced by 10' until the start of their next turn
+Vibrates violently giving disadvantage on 1st attack when huge wealth present. Desire to amass wealth is amplified; miserly. LA</value
+></field
+><field name="Magic Item Description 6"
+><value
+/></field
+><field name="Magic Item Description 7"
+><value
+/></field
+><field name="Magic Item Description 8"
+><value
+/></field
+><field name="Magic Item Description 9"
+><value
+/></field
+><field name="Magic Item Weight 1"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 10"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 11"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 12"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 2"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 3"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 4"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 5"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 6"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 7"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 8"
+><value
+>0</value
+></field
+><field name="Magic Item Weight 9"
+><value
+>0</value
+></field
+><field name="Magic Item Weight Title"
+><value
+>WEIGHT</value
+></field
+><field name="Notes"
+><value
+>clothes of mending:
+xge pg 137
+This elegant outfit of traveler's clothes magically mends itself to counteract daily wear and tear. Pieces of the outfit that are destroyed can't be repaired in this way.
+
+
+Cloak of Manta Ray:
+60' swimming speed
+breathe underwater with hood up
+fight without disadvantage
+
+
+
+
+Splendid long black cloak with silver weblike embroidery and a silver spider clasp
+250 gp, 5 lbs
+
+
+
+
+
+
+</value
+></field
+><field name="Other Holdings"
+><value
+>Tower of Screaming deed
+Bank Account (Lord's Alliance)  3 614gp
+for parents from Ignis 100gp - included in total on person</value
+></field
+></field
+><field name="Eyes colour"
+><value
+>green</value
+></field
+><field name="Faith/Deity"
+><value
+/></field
+><field name="Feat Description 1"
+><value
+>I gain proficiency with Dexterity saving throws. [+1 Dexterity]</value
+></field
+><field name="Feat Description 2"
+><value
+>If I score a critical hit or reduce a creature to 0 hit points with a melee weapon in my turn, I can make one melee weapon attack as a bonus action. With a heavy melee weapon, I can choose to take a -5 penalty on the attack roll for +10 on the attack's damage.</value
+></field
+><field name="Feat Description 3"
+><value
+>Once per turn, when I roll damage for a melee weapon attack, I can reroll the weapon's damage dice and use either total.</value
+></field
+><field name="Feat Description 4"
+><value
+/></field
+><field name="Feat Description 5"
+><value
+/></field
+><field name="Feat Description 6"
+><value
+/></field
+><field name="Feat Description 7"
+><value
+/></field
+><field name="Feat Description 8"
+><value
+/></field
+><field name="Feat Name 1"
+><value
+>Resilient [Dexterity]</value
+></field
+><field name="Feat Name 2"
+><value
+>Great Weapon Master</value
+></field
+><field name="Feat Name 3"
+><value
+>Savage Attacker</value
+></field
+><field name="Feat Name 4"
+/><field name="Feat Name 5"
+/><field name="Feat Name 6"
+/><field name="Feat Name 7"
+/><field name="Feat Name 8"
+/><field name="Feat Note 1"
+><value
+>PHB, page 168</value
+></field
+><field name="Feat Note 2"
+><value
+>PHB, page 167</value
+></field
+><field name="Feat Note 3"
+><value
+>PHB, page 169</value
+></field
+><field name="Feat Note 4"
+><value
+/></field
+><field name="Feat Note 5"
+><value
+/></field
+><field name="Feat Note 6"
+><value
+/></field
+><field name="Feat Note 7"
+><value
+/></field
+><field name="Feat Note 8"
+><value
+/></field
+><field name="Flaw"
+><value
+>I have a hard time resisting the allure of wealth, especially gold. Wealth can help me restore my legacy.</value
+></field
+><field name="FontSize Remember"
+><value
+>7</value
+></field
+><field name="Gear Location Remember"
+><value
+>false,false</value
+></field
+><field name="Gold Pieces"
+><value
+>1833</value
+></field
+><field name="HD1 Die"
+><value
+>10</value
+></field
+><field name="HD1 Level"
+><value
+>15</value
+></field
+><field name="HD1 Used"
+><value
+/></field
+><field name="HD2 Die"
+><value
+/></field
+><field name="HD2 Level"
+><value
+/></field
+><field name="HD2 Used"
+><value
+/></field
+><field name="HD3 Die"
+><value
+/></field
+><field name="HD3 Level"
+><value
+/></field
+><field name="HD3 Used"
+><value
+/></field
+><field name="HP Current"
+><value
+/></field
+><field name="HP Max"
+><value
+>139</value
+></field
+><field name="HP Temp"
+><value
+/></field
+><field name="Hair colour"
+><value
+>auburn</value
+></field
+><field name="Heavy Armor"
+><value
+>True</value
+></field
+><field name="Height"
+><value
+>5'4"</value
+></field
+><field name="Highlighting"
+><value
+>true</value
+></field
+><field name="His"
+><value
+>5</value
+></field
+><field name="His Bonus"
+><value
+>0</value
+></field
+><field name="His Exp"
+><value
+>Off</value
+></field
+><field name="His Prof"
+><value
+>True</value
+></field
+><field name="HoS"
+><value
+/></field
+><field name="HoS Mod"
+><value
+/></field
+><field name="HoS Remember"
+><value
+>8,0,0,0</value
+></field
+><field name="HoS ST Bonus"
+><value
+>0</value
+></field
+><field name="HoS ST Mod"
+><value
+/></field
+><field name="HoS ST Prof"
+><value
+>Off</value
+></field
+><field name="HoSRememberState"
+><value
+/></field
+><field name="Ideal"
+><value
+>Responsibility. It’s the duty of a noble to protect the common people, not bully them.</value
+></field
+><field name="Init Bonus"
+><value
+>0</value
+></field
+><field name="Initiative bonus"
+><value
+>0</value
+></field
+><field name="Ins"
+><value
+>7</value
+></field
+><field name="Ins Bonus"
+><value
+>0</value
+></field
+><field name="Ins Exp"
+><value
+>Off</value
+></field
+><field name="Ins Prof"
+><value
+>True</value
+></field
+><field name="Inspiration"
+><value
+>Off</value
+></field
+><field name="Int"
+><value
+>11</value
+></field
+><field name="Int Mod"
+><value
+>0</value
+></field
+><field name="Int Remember"
+><value
+>10,1,0,0,0,0</value
+></field
+><field name="Int ST Bonus"
+><value
+>0</value
+></field
+><field name="Int ST Mod"
+><value
+>1</value
+></field
+><field name="Int ST Prof"
+><value
+>Off</value
+></field
+><field name="Inti"
+><value
+>2</value
+></field
+><field name="Inti Bonus"
+><value
+>0</value
+></field
+><field name="Inti Exp"
+><value
+>Off</value
+></field
+><field name="Inti Prof"
+><value
+>Off</value
+></field
+><field name="Inv"
+><value
+>0</value
+></field
+><field name="Inv Bonus"
+><value
+>0</value
+></field
+><field name="Inv Exp"
+><value
+>Off</value
+></field
+><field name="Inv Prof"
+><value
+>Off</value
+></field
+><field name="Jack of All Trades"
+><value
+>Off</value
+></field
+><field name="Jack of All Trades Title"
+><value
+>Jack of All Trades</value
+></field
+><field name="Language 1"
+><value
+>Common</value
+></field
+><field name="Language 2"
+><value
+>Draconic</value
+></field
+><field name="Language 3"
+><value
+>Dwarvish</value
+></field
+><field name="Language 4"
+><value
+>Giant - 3 curse words</value
+></field
+><field name="Language 5"
+><value
+>Sylvan- friend, help</value
+></field
+><field name="Language 6"
+><value
+/></field
+><field name="League Remember"
+><value
+>({})</value
+></field
+><field name="Lifestyle"
+><value
+>   Wealthy</value
+></field
+><field name="Lifestyle daily cost"
+><value
+>4 gp</value
+></field
+><field name="Limited Feature 1"
+><value
+>Second Wind (1d10+15)</value
+></field
+><field name="Limited Feature 10"
+><value
+/></field
+><field name="Limited Feature 11"
+><value
+/></field
+><field name="Limited Feature 12"
+><value
+/></field
+><field name="Limited Feature 13"
+><value
+/></field
+><field name="Limited Feature 14"
+><value
+/></field
+><field name="Limited Feature 15"
+><value
+/></field
+><field name="Limited Feature 16"
+><value
+/></field
+><field name="Limited Feature 2"
+><value
+>Action Surge</value
+></field
+><field name="Limited Feature 3"
+><value
+>Fighting Spirit (15 temporary HP)</value
+></field
+><field name="Limited Feature 4"
+><value
+>Indomitable</value
+></field
+><field name="Limited Feature 5"
+><value
+>Tireless spirit</value
+></field
+><field name="Limited Feature 6"
+><value
+/></field
+><field name="Limited Feature 7"
+><value
+>Advantage on history/survival in Waterdeep</value
+></field
+><field name="Limited Feature 8"
+><value
+/></field
+><field name="Limited Feature 9"
+><value
+/></field
+><field name="Limited Feature Max Usages 1"
+><value
+>1</value
+></field
+><field name="Limited Feature Max Usages 10"
+><value
+/></field
+><field name="Limited Feature Max Usages 11"
+><value
+/></field
+><field name="Limited Feature Max Usages 12"
+><value
+/></field
+><field name="Limited Feature Max Usages 13"
+><value
+/></field
+><field name="Limited Feature Max Usages 14"
+><value
+/></field
+><field name="Limited Feature Max Usages 15"
+><value
+/></field
+><field name="Limited Feature Max Usages 16"
+><value
+/></field
+><field name="Limited Feature Max Usages 2"
+><value
+>1</value
+></field
+><field name="Limited Feature Max Usages 3"
+><value
+>3</value
+></field
+><field name="Limited Feature Max Usages 4"
+><value
+>2</value
+></field
+><field name="Limited Feature Max Usages 5"
+><value
+/></field
+><field name="Limited Feature Max Usages 6"
+><value
+/></field
+><field name="Limited Feature Max Usages 7"
+><value
+/></field
+><field name="Limited Feature Max Usages 8"
+><value
+/></field
+><field name="Limited Feature Max Usages 9"
+><value
+/></field
+><field name="Limited Feature Recovery 1"
+><value
+>short rest</value
+></field
+><field name="Limited Feature Recovery 10"
+/><field name="Limited Feature Recovery 11"
+/><field name="Limited Feature Recovery 12"
+/><field name="Limited Feature Recovery 13"
+/><field name="Limited Feature Recovery 14"
+/><field name="Limited Feature Recovery 15"
+/><field name="Limited Feature Recovery 16"
+/><field name="Limited Feature Recovery 2"
+><value
+>short rest</value
+></field
+><field name="Limited Feature Recovery 3"
+><value
+>long rest</value
+></field
+><field name="Limited Feature Recovery 4"
+><value
+>long rest</value
+></field
+><field name="Limited Feature Recovery 5"
+/><field name="Limited Feature Recovery 6"
+/><field name="Limited Feature Recovery 7"
+/><field name="Limited Feature Recovery 8"
+/><field name="Limited Feature Recovery 9"
+/><field name="Limited Feature Used 1"
+><value
+/></field
+><field name="Limited Feature Used 10"
+><value
+/></field
+><field name="Limited Feature Used 11"
+><value
+/></field
+><field name="Limited Feature Used 12"
+><value
+/></field
+><field name="Limited Feature Used 13"
+><value
+/></field
+><field name="Limited Feature Used 14"
+><value
+/></field
+><field name="Limited Feature Used 15"
+><value
+/></field
+><field name="Limited Feature Used 16"
+><value
+/></field
+><field name="Limited Feature Used 2"
+><value
+/></field
+><field name="Limited Feature Used 3"
+><value
+/></field
+><field name="Limited Feature Used 4"
+><value
+/></field
+><field name="Limited Feature Used 5"
+><value
+/></field
+><field name="Limited Feature Used 6"
+><value
+/></field
+><field name="Limited Feature Used 7"
+><value
+/></field
+><field name="Limited Feature Used 8"
+><value
+/></field
+><field name="Limited Feature Used 9"
+><value
+/></field
+><field name="MakeMobileReady Remember"
+><value
+/></field
+><field name="Manual Attack Remember"
+><value
+>No</value
+></field
+><field name="Manual Background Remember"
+><value
+>No</value
+></field
+><field name="Manual Class Remember"
+><value
+>No</value
+></field
+><field name="Manual Feat Remember"
+><value
+>No</value
+></field
+><field name="Manual Race Remember"
+><value
+>No</value
+></field
+><field name="Med"
+><value
+>2</value
+></field
+><field name="Med Bonus"
+><value
+>0</value
+></field
+><field name="Med Exp"
+><value
+>Off</value
+></field
+><field name="Med Prof"
+><value
+>Off</value
+></field
+><field name="Medium Armor"
+><value
+>Off</value
+></field
+><field name="Medium Armor Max Mod"
+><value
+>2</value
+></field
+><field name="MoreProficiencies"
+><value
+/></field
+><field name="Nat"
+><value
+>0</value
+></field
+><field name="Nat Bonus"
+><value
+>0</value
+></field
+><field name="Nat Exp"
+><value
+>Off</value
+></field
+><field name="Nat Prof"
+><value
+>Off</value
+></field
+><field name="Next level"
+><value
+>195000</value
+></field
+><field name="Notes"
+><field name="Left"
+><value
+/></field
+><field name="Right"
+><value
+/></field
+></field
+><field name="Opening Remember"
+><value
+>Yes</value
+></field
+><field name="Other Weapon Proficiencies Remember"
+><value
+/></field
+><field name="PC Name"
+><value
+>Pentel Lozredotter</value
+></field
+><field name="PRsheet"
+><field name="toFocus"
+><value
+/></field
+></field
+><field name="Passive Perception"
+><value
+>17</value
+></field
+><field name="Passive Perception Bonus"
+><value
+>0</value
+></field
+><field name="Perc"
+><value
+>7</value
+></field
+><field name="Perc Bonus"
+><value
+>0</value
+></field
+><field name="Perc Exp"
+><value
+>Off</value
+></field
+><field name="Perc Prof"
+><value
+>True</value
+></field
+><field name="Perf"
+><value
+>2</value
+></field
+><field name="Perf Bonus"
+><value
+>0</value
+></field
+><field name="Perf Exp"
+><value
+>Off</value
+></field
+><field name="Perf Prof"
+><value
+>Off</value
+></field
+><field name="Pers"
+><value
+>9</value
+></field
+><field name="Pers Bonus"
+><value
+>Wis</value
+></field
+><field name="Pers Exp"
+><value
+>Off</value
+></field
+><field name="Pers Prof"
+><value
+>True</value
+></field
+><field name="Personality Trait"
+><value
+>My flattery makes those I talk to feel wonderful and important. Also, I don’t like to get dirty, and I won’t be caught dead in unsuitable accommodations.</value
+></field
+><field name="Platinum Pieces"
+><value
+/></field
+><field name="Player Name"
+><value
+>Kathy</value
+></field
+><field name="Print Remember"
+><value
+>true!#TheListSeparator#!0,CSfront,CSback</value
+></field
+><field name="Proficiencies Remember"
+><value
+/></field
+><field name="Proficiency Armor Heavy"
+><value
+>True</value
+></field
+><field name="Proficiency Armor Light"
+><value
+>True</value
+></field
+><field name="Proficiency Armor Medium"
+><value
+>True</value
+></field
+><field name="Proficiency Bonus"
+><value
+>5</value
+></field
+><field name="Proficiency Bonus Dice"
+><value
+>Off</value
+></field
+><field name="Proficiency Bonus Dice Title"
+><value
+>Use Dice</value
+></field
+><field name="Proficiency Bonus Modifier"
+><value
+>0</value
+></field
+><field name="Proficiency Bonus Modifiers Title"
+><value
+>Modifier</value
+></field
+><field name="Proficiency Shields"
+><value
+>True</value
+></field
+><field name="Proficiency Weapon Martial"
+><value
+>True</value
+></field
+><field name="Proficiency Weapon Other"
+><value
+>Off</value
+></field
+><field name="Proficiency Weapon Other Description"
+><value
+/></field
+><field name="Proficiency Weapon Simple"
+><value
+>True</value
+></field
+><field name="Race"
+><value
+>Human</value
+></field
+><field name="Race Remember"
+><value
+>human-</value
+></field
+><field name="Racial Traits"
+><value
+>Human (+1 to all ability scores)</value
+></field
+><field name="Reaction 1"
+><value
+>Hit Dice:</value
+></field
+><field name="Reaction 10"
+><value
+/></field
+><field name="Reaction 11"
+><value
+/></field
+><field name="Reaction 12"
+><value
+/></field
+><field name="Reaction 2"
+><value
+>Use after short rest, </value
+></field
+><field name="Reaction 3"
+><value
+>1/2 come back after long rest</value
+></field
+><field name="Reaction 4"
+><value
+>Sleep in armour, </value
+></field
+><field name="Reaction 5"
+><value
+>1/4 hit die regenerate</value
+></field
+><field name="Reaction 6"
+><value
+/></field
+><field name="Reaction 7"
+><value
+/></field
+><field name="Reaction 8"
+><value
+/></field
+><field name="Reaction 9"
+><value
+/></field
+><field name="Rel"
+><value
+>0</value
+></field
+><field name="Rel Bonus"
+><value
+>0</value
+></field
+><field name="Rel Exp"
+><value
+>Off</value
+></field
+><field name="Rel Prof"
+><value
+>Off</value
+></field
+><field name="Remarkable Athlete"
+><value
+>Off</value
+></field
+><field name="Remarkable Athlete Title"
+><value
+>Remarkable Athlete</value
+></field
+><field name="Resistance Damage Type 1"
+><value
+> </value
+></field
+><field name="Resistance Damage Type 2"
+><value
+> </value
+></field
+><field name="Resistance Damage Type 3"
+><value
+> </value
+></field
+><field name="Resistance Damage Type 4"
+><value
+> </value
+></field
+><field name="Resistance Damage Type 5"
+><value
+> </value
+></field
+><field name="Resistance Damage Type 6"
+><value
+> </value
+></field
+><field name="Save Modifiers All Text"
+><value
+>to all Saves</value
+></field
+><field name="Save Modifiers Title"
+><value
+>SAVE MODS</value
+></field
+><field name="Saving Throw advantages / disadvantages"
+><value
+>
+10' of Rion: +3 to saves always
+
+Bardic Inspiration: +1d8 to attack, save, or ability check 1x in 10 mins
+Bless: +1d4 to attacks, saves</value
+></field
+><field name="SelectFile"
+><value
+/></field
+><field name="Sex"
+><value
+>Female</value
+></field
+><field name="SheetInformation"
+><value
+>MorePurpleMoreBetter's D&amp;D 5th edition Character Record Sheet v12.999 (Printer Friendly - Redesign)</value
+></field
+><field name="Silver Pieces"
+><value
+>66</value
+></field
+><field name="Size Category"
+><value
+>1</value
+></field
+><field name="Skill Modifiers All Text"
+><value
+>to all Skills</value
+></field
+><field name="Skill Modifiers Title"
+><value
+>SKILL MODS</value
+></field
+><field name="Skin colour"
+><value
+>light brown</value
+></field
+><field name="Sle"
+><value
+>0</value
+></field
+><field name="Sle Bonus"
+><value
+>0</value
+></field
+><field name="Sle Exp"
+><value
+>Off</value
+></field
+><field name="Sle Prof"
+><value
+>Off</value
+></field
+><field name="Speed"
+><value
+>30 ft</value
+></field
+><field name="Speed encumbered"
+><value
+>20 ft</value
+></field
+><field name="Spell DC 1 Bonus"
+><value
+>0</value
+></field
+><field name="Spell DC 1 Mod"
+/><field name="Spell DC 2 Bonus"
+><value
+>0</value
+></field
+><field name="Spell DC 2 Mod"
+><value
+>Con Mod</value
+></field
+><field name="Spell save DC 1"
+><value
+/></field
+><field name="Spell save DC 2"
+><value
+>16</value
+></field
+><field name="SpellSheetInformation"
+><value
+>MorePurpleMoreBetter's D&amp;D 5th edition Character Record Sheet v12.999 (Printer Friendly - Redesign); Spell Sheet 0/0</value
+></field
+><field name="SpellSheetUpdate"
+><field name="Remember"
+><value
+>false</value
+></field
+></field
+><field name="SpellSlots"
+><field name="Checkboxes"
+><field name="SpellPoints"
+><field name="lvl6"
+><value
+>Off</value
+></field
+><field name="lvl7"
+><value
+>Off</value
+></field
+><field name="lvl8"
+><value
+>Off</value
+></field
+><field name="lvl9"
+><value
+>Off</value
+></field
+></field
+><field name="lvl1"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl2"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl3"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl4"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl5"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl6"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl7"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl8"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="lvl9"
+><field name="bottom1"
+><value
+>Off</value
+></field
+><field name="bottom2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+><field name="mid"
+><value
+>Off</value
+></field
+><field name="top1"
+><value
+>Off</value
+></field
+><field name="top2"
+><field name="1"
+><value
+>Off</value
+></field
+><field name="2"
+><value
+>Off</value
+></field
+></field
+></field
+></field
+><field name="CheckboxesSet"
+><field name="lvl1"
+><value
+>0</value
+></field
+><field name="lvl2"
+><value
+>0</value
+></field
+><field name="lvl3"
+><value
+>0</value
+></field
+><field name="lvl4"
+><value
+>0</value
+></field
+><field name="lvl5"
+><value
+>0</value
+></field
+><field name="lvl6"
+><value
+>0</value
+></field
+><field name="lvl7"
+><value
+>0</value
+></field
+><field name="lvl8"
+><value
+>0</value
+></field
+><field name="lvl9"
+><value
+>0</value
+></field
+></field
+><field name="Extra"
+><field name="lvl1"
+><value
+/></field
+><field name="lvl2"
+><value
+/></field
+><field name="lvl3"
+><value
+/></field
+><field name="lvl4"
+><value
+/></field
+><field name="lvl5"
+><value
+/></field
+><field name="lvl6"
+><value
+/></field
+><field name="lvl7"
+><value
+/></field
+><field name="lvl8"
+><value
+/></field
+><field name="lvl9"
+><value
+/></field
+></field
+></field
+><field name="SpellSlotsRemember"
+><value
+>[true,true]</value
+></field
+><field name="Ste"
+><value
+>0</value
+></field
+><field name="Ste Bonus"
+><value
+>0</value
+></field
+><field name="Ste Exp"
+><value
+>Off</value
+></field
+><field name="Ste Prof"
+><value
+>Off</value
+></field
+><field name="Stealth Disadv"
+><field name="abilities"
+><value
+> [disadv.]</value
+></field
+><field name="alphabeta"
+><value
+> [disadv.]</value
+></field
+></field
+><field name="Str"
+><value
+>18</value
+></field
+><field name="Str Mod"
+><value
+>4</value
+></field
+><field name="Str Remember"
+><value
+>15,1,2,0,0,0</value
+></field
+><field name="Str ST Bonus"
+><value
+>0</value
+></field
+><field name="Str ST Mod"
+><value
+>10</value
+></field
+><field name="Str ST Prof"
+><value
+>True</value
+></field
+><field name="SubClass Remember"
+><value
+/></field
+><field name="Sur"
+><value
+>2</value
+></field
+><field name="Sur Bonus"
+><value
+>0</value
+></field
+><field name="Sur Exp"
+><value
+>Off</value
+></field
+><field name="Sur Prof"
+><value
+>Off</value
+></field
+><field name="Template"
+><field name="extras"
+><field name="ALlog"
+><value
+/></field
+><field name="AScomp"
+><value
+/></field
+><field name="ASnotes"
+><value
+/></field
+><field name="SSfront"
+><value
+/></field
+><field name="SSmore"
+><value
+/></field
+><field name="WSfront"
+><value
+/></field
+></field
+></field
+><field name="Text"
+><field name="AdvLog"
+><field name="1"
+><value
+>LOGSHEET ENTRY 1</value
+></field
+><field name="2"
+><value
+>LOGSHEET ENTRY 2</value
+></field
+><field name="3"
+><value
+>LOGSHEET ENTRY 3</value
+></field
+><field name="4"
+><value
+>LOGSHEET ENTRY 4</value
+></field
+><field name="5"
+><value
+>LOGSHEET ENTRY 5</value
+></field
+><field name="6"
+><value
+>LOGSHEET ENTRY 6</value
+></field
+></field
+><field name="HoS"
+><field name="Ability"
+><value
+/></field
+><field name="Save"
+><value
+/></field
+></field
+><field name="PRsheet"
+><field name="AL"
+><field name="asterisk"
+><value
+>*</value
+></field
+><field name="explanation"
+><value
+>* This action is an optional rule introduced in the Dungeon Master Guide (and is therefore not eligible in Adventurer’s League play).</value
+></field
+></field
+></field
+><field name="SkillsNames"
+><value-richtext
+><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:20.12.0" xfa:spec="2.0.2" style="font-size:7.0pt;text-align:left;color:#000000;font-weight:normal;font-style:normal;font-family:ScalaSans,sans-serif;font-stretch:normal"
+><p
+>Acrobatics <span style="color:#A7A7A6"
+>(Dex)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Animal Handling <span style="color:#A7A7A6"
+>(Wis)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Arcana <span style="color:#A7A7A6"
+>(Int)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Athletics <span style="color:#A7A7A6"
+>(Str)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Deception <span style="color:#A7A7A6"
+>(Cha)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>History <span style="color:#A7A7A6"
+>(Int)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Insight <span style="color:#A7A7A6"
+>(Wis)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Intimidation <span style="color:#A7A7A6"
+>(Cha)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Investigation <span style="color:#A7A7A6"
+>(Int)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Medicine <span style="color:#A7A7A6"
+>(Wis)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Nature <span style="color:#A7A7A6"
+>(Int)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Perception <span style="color:#A7A7A6"
+>(Wis)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Performance <span style="color:#A7A7A6"
+>(Cha)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Persuasion <span style="color:#A7A7A6"
+>(Cha)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Religion <span style="color:#A7A7A6"
+>(Int)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Sleight of Hand <span style="color:#A7A7A6"
+>(Dex)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Stealth <span style="color:#A7A7A6"
+>(Dex)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+>Survival <span style="color:#A7A7A6"
+>(Wis)
+</span
+><span style="font-size:6.0pt"
+>
+</span
+></p
+></body
+></value-richtext
+></field
+></field
+><field name="Too"
+><value
+/></field
+><field name="Too Bonus"
+><value
+>0</value
+></field
+><field name="Too Exp"
+><value
+>Off</value
+></field
+><field name="Too Prof"
+><value
+>Off</value
+></field
+><field name="Too Text"
+><value
+>Tool</value
+></field
+><field name="Tool 1"
+><value
+>Playing cards</value
+></field
+><field name="Tool 2"
+><value
+/></field
+><field name="Tool 3"
+><value
+/></field
+><field name="Tool 4"
+><value
+/></field
+><field name="Tool 5"
+><value
+/></field
+><field name="Tool 6"
+><value
+/></field
+><field name="Total Experience"
+><value
+>167256</value
+></field
+><field name="Unit System"
+><value
+>imperial</value
+></field
+><field name="User Script"
+><value
+/></field
+><field name="User_Imported_Files"
+><field name="Stringified"
+/></field
+><field name="Vision"
+><value
+/></field
+><field name="Weight"
+><value
+>150</value
+></field
+><field name="Weight Carried"
+><value
+>245.01999999999998</value
+></field
+><field name="Weight Carrying Capacity"
+><field name="Field"
+><value
+>270 lb</value
+></field
+></field
+><field name="Weight Encumbered"
+><value
+>91 - 180 lb</value
+></field
+><field name="Weight Heavily Encumbered"
+><value
+>181 - 270 lb</value
+></field
+><field name="Weight Push/Drag/Lift"
+><value
+>271 - 540 lb</value
+></field
+><field name="Weight Remember Ammo Left"
+><value
+>No</value
+></field
+><field name="Weight Remember Ammo Right"
+><value
+>No</value
+></field
+><field name="Weight Remember Armor"
+><value
+>No</value
+></field
+><field name="Weight Remember Coins"
+><value
+>Yes</value
+></field
+><field name="Weight Remember Coins Total"
+><value
+>2041</value
+></field
+><field name="Weight Remember Magic Items"
+><value
+>No</value
+></field
+><field name="Weight Remember Magic Items Total"
+><value
+>0</value
+></field
+><field name="Weight Remember Page2 Left"
+><value
+>Yes</value
+></field
+><field name="Weight Remember Page2 Middle"
+><value
+>Yes</value
+></field
+><field name="Weight Remember Page2 Right"
+><value
+>Yes</value
+></field
+><field name="Weight Remember Page3 Left"
+><value
+>No</value
+></field
+><field name="Weight Remember Page3 Right"
+><value
+>No</value
+></field
+><field name="Weight Remember Shield"
+><value
+>No</value
+></field
+><field name="Weight Remember Weapons"
+><value
+>No</value
+></field
+><field name="Whiteout"
+><field name="Notes"
+><field name="Left"
+><value
+/></field
+><field name="Right"
+><value
+/></field
+></field
+><field name="Standard"
+><value
+/></field
+></field
+><field name="WhiteoutRemember"
+><value
+>false</value
+></field
+><field name="Wildshape"
+><field name="1"
+><field name="AC"
+><value
+/></field
+><field name="Ability"
+><field name="Cha"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Con"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Dex"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Int"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Str"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Wis"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+></field
+><field name="Attack"
+><field name="1"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+><field name="2"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+></field
+><field name="CR"
+><value
+/></field
+><field name="HD"
+><value
+/></field
+><field name="HP Current"
+><value
+/></field
+><field name="HP Max"
+><value
+/></field
+><field name="HP Temp"
+><value
+/></field
+><field name="Initiative Bonus"
+><value
+/></field
+><field name="MonsterType"
+><value
+/></field
+><field name="Proficiency Bonus"
+><value
+/></field
+><field name="Size"
+><value
+/></field
+><field name="Skills"
+><field name="Acr"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ani"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Arc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ath"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Dec"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="His"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ins"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inti"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inv"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Med"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Nat"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="PassPerc"
+><value
+/></field
+><field name="Perc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Perf"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Pers"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Rel"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sle"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ste"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sur"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Speed"
+><value
+/></field
+><field name="Traits"
+><value
+/></field
+></field
+><field name="2"
+><field name="AC"
+><value
+/></field
+><field name="Ability"
+><field name="Cha"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Con"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Dex"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Int"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Str"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Wis"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+></field
+><field name="Attack"
+><field name="1"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+><field name="2"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+></field
+><field name="CR"
+><value
+/></field
+><field name="HD"
+><value
+/></field
+><field name="HP Current"
+><value
+/></field
+><field name="HP Max"
+><value
+/></field
+><field name="HP Temp"
+><value
+/></field
+><field name="Initiative Bonus"
+><value
+/></field
+><field name="MonsterType"
+><value
+/></field
+><field name="Proficiency Bonus"
+><value
+/></field
+><field name="Size"
+><value
+/></field
+><field name="Skills"
+><field name="Acr"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ani"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Arc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ath"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Dec"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="His"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ins"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inti"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inv"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Med"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Nat"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="PassPerc"
+><value
+/></field
+><field name="Perc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Perf"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Pers"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Rel"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sle"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ste"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sur"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Speed"
+><value
+/></field
+><field name="Traits"
+><value
+/></field
+></field
+><field name="3"
+><field name="AC"
+><value
+/></field
+><field name="Ability"
+><field name="Cha"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Con"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Dex"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Int"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Str"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Wis"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+></field
+><field name="Attack"
+><field name="1"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+><field name="2"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+></field
+><field name="CR"
+><value
+/></field
+><field name="HD"
+><value
+/></field
+><field name="HP Current"
+><value
+/></field
+><field name="HP Max"
+><value
+/></field
+><field name="HP Temp"
+><value
+/></field
+><field name="Initiative Bonus"
+><value
+/></field
+><field name="MonsterType"
+><value
+/></field
+><field name="Proficiency Bonus"
+><value
+/></field
+><field name="Size"
+><value
+/></field
+><field name="Skills"
+><field name="Acr"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ani"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Arc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ath"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Dec"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="His"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ins"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inti"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inv"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Med"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Nat"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="PassPerc"
+><value
+/></field
+><field name="Perc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Perf"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Pers"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Rel"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sle"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ste"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sur"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Speed"
+><value
+/></field
+><field name="Traits"
+><value
+/></field
+></field
+><field name="4"
+><field name="AC"
+><value
+/></field
+><field name="Ability"
+><field name="Cha"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Con"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Dex"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Int"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Str"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+><field name="Wis"
+><field name="Mod"
+><value
+/></field
+><field name="ST"
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Score"
+><value
+/></field
+></field
+></field
+><field name="Attack"
+><field name="1"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+><field name="2"
+><field name="Damage"
+><value
+/></field
+><field name="Damage Type"
+><value
+> </value
+></field
+><field name="Description"
+><value
+/></field
+><field name="Range"
+><value
+/></field
+><field name="To Hit"
+><value
+/></field
+><field name="Weapon"
+><value
+/></field
+></field
+></field
+><field name="CR"
+><value
+/></field
+><field name="HD"
+><value
+/></field
+><field name="HP Current"
+><value
+/></field
+><field name="HP Max"
+><value
+/></field
+><field name="HP Temp"
+><value
+/></field
+><field name="Initiative Bonus"
+><value
+/></field
+><field name="MonsterType"
+><value
+/></field
+><field name="Proficiency Bonus"
+><value
+/></field
+><field name="Size"
+><value
+/></field
+><field name="Skills"
+><field name="Acr"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ani"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Arc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ath"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Dec"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="His"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ins"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inti"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Inv"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Med"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Nat"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="PassPerc"
+><value
+/></field
+><field name="Perc"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Perf"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Pers"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Rel"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sle"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Ste"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+><field name="Sur"
+><field name="Exp"
+><value
+>Off</value
+></field
+><field name="Mod"
+><value
+/></field
+><field name="Prof"
+><value
+>Off</value
+></field
+></field
+></field
+><field name="Speed"
+><value
+/></field
+><field name="Traits"
+><value
+/></field
+></field
+><field name="Race"
+><field name="1"
+/><field name="2"
+/><field name="3"
+/><field name="4"
+/></field
+></field
+><field name="Wildshapes"
+><field name="Info"
+><field name="Duration"
+><value
+/></field
+><field name="Limitations"
+><value
+/></field
+><field name="Uses"
+><value
+/></field
+></field
+><field name="Remember"
+><value
+>default!#TheListSeparator#!nothing</value
+></field
+></field
+><field name="Wis"
+><value
+>14</value
+></field
+><field name="Wis Mod"
+><value
+>2</value
+></field
+><field name="Wis Remember"
+><value
+>12,1,1,0,0,0</value
+></field
+><field name="Wis ST Bonus"
+><value
+>0</value
+></field
+><field name="Wis ST Mod"
+><value
+>8</value
+></field
+><field name="Wis ST Prof"
+><value
+>True</value
+></field
+><field name="spells"
+><field name="book"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="check"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="components"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="description"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="duration"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="name"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="page"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="range"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="remember"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="save"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="school"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+><field name="time"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="10"
+><value
+/></field
+><field name="11"
+><value
+/></field
+><field name="12"
+><value
+/></field
+><field name="13"
+><value
+/></field
+><field name="14"
+><value
+/></field
+><field name="15"
+><value
+/></field
+><field name="16"
+><value
+/></field
+><field name="17"
+><value
+/></field
+><field name="18"
+><value
+/></field
+><field name="19"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="20"
+><value
+/></field
+><field name="21"
+><value
+/></field
+><field name="22"
+><value
+/></field
+><field name="23"
+><value
+/></field
+><field name="24"
+><value
+/></field
+><field name="25"
+><value
+/></field
+><field name="26"
+><value
+/></field
+><field name="27"
+><value
+/></field
+><field name="28"
+><value
+/></field
+><field name="29"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="30"
+><value
+/></field
+><field name="31"
+><value
+/></field
+><field name="32"
+><value
+/></field
+><field name="33"
+><value
+/></field
+><field name="34"
+><value
+/></field
+><field name="35"
+><value
+/></field
+><field name="36"
+><value
+/></field
+><field name="37"
+><value
+/></field
+><field name="38"
+><value
+/></field
+><field name="39"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="40"
+><value
+/></field
+><field name="41"
+><value
+/></field
+><field name="42"
+><value
+/></field
+><field name="43"
+><value
+/></field
+><field name="44"
+><value
+/></field
+><field name="45"
+><value
+/></field
+><field name="46"
+><value
+/></field
+><field name="47"
+><value
+/></field
+><field name="48"
+><value
+/></field
+><field name="49"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="50"
+><value
+/></field
+><field name="51"
+><value
+/></field
+><field name="52"
+><value
+/></field
+><field name="53"
+><value
+/></field
+><field name="54"
+><value
+/></field
+><field name="55"
+><value
+/></field
+><field name="56"
+><value
+/></field
+><field name="57"
+><value
+/></field
+><field name="58"
+><value
+/></field
+><field name="59"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="60"
+><value
+/></field
+><field name="61"
+><value
+/></field
+><field name="62"
+><value
+/></field
+><field name="63"
+><value
+/></field
+><field name="64"
+><value
+/></field
+><field name="65"
+><value
+/></field
+><field name="66"
+><value
+/></field
+><field name="67"
+><value
+/></field
+><field name="68"
+><value
+/></field
+><field name="69"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="70"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+></field
+><field name="spellsdiv"
+><field name="Text"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="3"
+><value
+/></field
+><field name="4"
+><value
+/></field
+><field name="5"
+><value
+/></field
+><field name="6"
+><value
+/></field
+><field name="7"
+><value
+/></field
+><field name="8"
+><value
+/></field
+><field name="9"
+><value
+/></field
+></field
+></field
+><field name="spellshead"
+><field name="Text"
+><field name="header"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="3"
+><value
+/></field
+></field
+></field
+><field name="ability"
+><field name="0"
+><value
+>nothing</value
+></field
+><field name="1"
+><value
+>nothing</value
+></field
+><field name="2"
+><value
+>nothing</value
+></field
+><field name="3"
+><value
+>nothing</value
+></field
+></field
+><field name="attack"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="3"
+><value
+/></field
+></field
+><field name="class"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="3"
+><value
+/></field
+></field
+><field name="dc"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="3"
+><value
+/></field
+></field
+><field name="prepare"
+><field name="0"
+><value
+/></field
+><field name="1"
+><value
+/></field
+><field name="2"
+><value
+/></field
+><field name="3"
+><value
+/></field
+></field
+></field
+><field name="zAdvLog"
+><field name="PC Name"
+><value
+>Pentel Lozredotter</value
+></field
+></field
+></fields
+><ids original="366EFC390DFB8E438C1D1AC12B48F47F" modified="248287C168E20348A1D540296EFAA4D6"
+/></xfdf
+>
