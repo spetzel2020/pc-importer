@@ -7,15 +7,14 @@
 30-Sep-2020     v0.5.0 Trim the xmlDoc recursively rather than walking the tree to get the components we care about
                 The approaches are equivalent and traverseXML avoids recursion, but for this limited depth it will be Fine
 5-Oct-2020      Use pcImporter instance variable to hold the fieldToValuesDictionary
+6-Oct-2020      Add getValuesForPattern for fuzzy match (e.g. for spells)
 */
 import {Actor5eFromMPMB} from "./Actor5eFromExt.js";
 
-export var MODULE_NAME;
-export var MODULE_VERSION;
+export var MODULE_NAME="pc-importer";
+export var MODULE_VERSION="0.5.1";
 
 function init() {
-    MODULE_VERSION = game.i18n.localize("PCI.Version");
-    MODULE_NAME =  game.i18n.localize("PCI.id");
     game.settings.register(MODULE_NAME, "PCImporterVersion", {
       name: "PC Importer version",
       hint: "",
@@ -83,6 +82,7 @@ export class PCImporter {
         //Populate the Actor5e structure from the importedFieldToValuesMap
         const importedActor = new Actor5eFromMPMB(pcImporter);
         await importedActor.extractClasses();
+        await importedActor.extractSpells();
         //Now export the importedActor to JSON - this is the skeleton of the Actor, without any classes, items, etc
         importedActor.exportToJSON();
         await importedActor.createFoundryActor();
@@ -210,6 +210,15 @@ export class PCImporter {
     getValueForFieldName(fieldName) {
         const value = this.importedFieldToValuesMap.get(fieldName);
         return value;
+    }
+    getValuesForPattern(fieldNamePattern) {
+        let iterator = this.importedFieldToValuesMap.entries();
+        let values = [];
+        for (let nextEntry=iterator.next(); !nextEntry.done; nextEntry=iterator.next()) {
+            const [key,value] = nextEntry.value;
+            if (key.match(fieldNamePattern)) {values.push(value);}
+        }
+        return values;
     }
 
 

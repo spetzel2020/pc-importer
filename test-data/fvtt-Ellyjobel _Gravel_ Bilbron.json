@@ -268,7 +268,7487 @@
       "sort": 100001,
       "flags": {},
       "img": "systems/dnd5e/icons/skills/blue_13.jpg",
-      "_id": "DbX1kQHovnlDZIwA"
+      "_id": "OYNsxI8ELaQw302T"
+    },
+    {
+      "name": "SPELL",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "aoA8Rv4oDnot8n4M"
+    },
+    {
+      "name": "Mage Hand",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "FrUC5DlePFwetebB"
+    },
+    {
+      "name": "Alarm (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "DengzatbSqWiO7Xx"
+    },
+    {
+      "name": "Detect Magic (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "8afIljhWyy1cbBck"
+    },
+    {
+      "name": "Find Familiar (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "yZxchkGxf2sTahaN"
+    },
+    {
+      "name": "Unseen Servant (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "VwdcoQPwpTC5C11s"
+    },
+    {
+      "name": "Tenser's Floating Disk (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "n1vaBo5hH5x5s9xg"
+    },
+    {
+      "name": "Identify (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "b3SYmFtj6EubVIM3"
+    },
+    {
+      "name": "Comp. Languages (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "JGYbMTol3EFA5ihm"
+    },
+    {
+      "name": "Gentle Repose (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "yKjPmejKTW6rjBS6"
+    },
+    {
+      "name": "Mage Armor",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "u8N5nmSXnr7sQrFK"
+    },
+    {
+      "name": "Fire Bolt",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "jjqeq2bYmwaUMPna"
+    },
+    {
+      "name": "Toll the Dead",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "XJ86RICdCNHZtZYJ"
+    },
+    {
+      "name": "Shocking Grasp",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "mXuTW6n8a3FygYLh"
+    },
+    {
+      "name": "Magic Missile",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "z6CyHKdvxxcFEcZM"
+    },
+    {
+      "name": "Scorching Ray",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "FS5pjDyzM5568psF"
+    },
+    {
+      "name": "Chromatic Orb",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "OatSFmEpATHVsp40"
+    },
+    {
+      "name": "Feather Fall",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "l74pBz4sv3YFeiMk"
+    },
+    {
+      "name": "Thunderwave",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "AsUAYMRlK0wO0F8g"
+    },
+    {
+      "name": "Rockslide",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "XFBvfX0Ks5mH9FIx"
+    },
+    {
+      "name": "Dragon's Breath",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "CcFwWYHwMa3jZu1x"
+    },
+    {
+      "name": "Web",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "dseJrLSXLZW8vu0J"
+    },
+    {
+      "name": "Slow",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "8SBp29c3KNDltkkL"
+    },
+    {
+      "name": "Shield",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "c0mAORZ2imIKPdFr"
+    },
+    {
+      "name": "Sleep",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "ARScyK4EFItCd2S7"
+    },
+    {
+      "name": "Hold Person",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "vPJxira4ZzTmDuSd"
+    },
+    {
+      "name": "Levitate",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "W8NZo6zMVtJshdvf"
+    },
+    {
+      "name": "Disguise Self",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "dJGmFeQZ0KQTDAfS"
+    },
+    {
+      "name": "Darkvision",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "qN4SoYEeZTui7YCY"
+    },
+    {
+      "name": "Sending",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "fuUfY6Y1oZ82oh21"
+    },
+    {
+      "name": "Rope Trick",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "dBNctUVzQgKuZXZH"
+    },
+    {
+      "name": "Witch Bolt",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "ybGJWFu9XqJXI9En"
+    },
+    {
+      "name": "Burning Hands",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "liJVYIaasUkOqDA8"
+    },
+    {
+      "name": "Absorb Elements",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "ICo3jcbKughqGAMH"
+    },
+    {
+      "name": "Illusory Script (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "qgvWJZMl5jQC0Eu5"
+    },
+    {
+      "name": "Gust of Wind",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "N55luVyTtdyK7mdm"
+    },
+    {
+      "name": "Suggestion",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "yWt1w8A7NFsxW1AW"
+    },
+    {
+      "name": "See Invisibility",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "JUC7u4qFcYbgmeC8"
+    },
+    {
+      "name": "Magic Weapon",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "OxxTSxrD9ElGy6mQ"
+    },
+    {
+      "name": "Magic Mouth (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "ti6QAL1IYnmUitpy"
+    },
+    {
+      "name": "Hypnotic Pattern",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "xYXoQxTHw1Ijor50"
+    },
+    {
+      "name": "Counterspell",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "GWJHdJCny1syRMUr"
+    },
+    {
+      "name": "Dispel Magic",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "qbmR84q1AKj8IR7Q"
+    },
+    {
+      "name": "Tongues",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "0aQcnkcjHMZ1nxAG"
+    },
+    {
+      "name": "Clairvoyance",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "MkAkjGmugSG81Ya1"
+    },
+    {
+      "name": "Fly",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "4rs8QNhf541ZgRKb"
+    },
+    {
+      "name": "Fear",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "TOWFRbviiT43Xc97"
+    },
+    {
+      "name": "Enemies Abound",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "WnZo2jGKBzPzOXPD"
+    },
+    {
+      "name": "Bestow Curse",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "h9XBe0OLnhvYBNz4"
+    },
+    {
+      "name": "Water Breathing (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "CuVRxZdDoexRbyo7"
+    },
+    {
+      "name": "Phantom Steed (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "KpnPg6b2KXn46gz9"
+    },
+    {
+      "name": "Leomund's Tiny Hut (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "rlx5lKd9H1sqHmMN"
+    },
+    {
+      "name": "Mending",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "U9cgFzNXJ6Iam6rE"
+    },
+    {
+      "name": "Message",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "uVylYewt9ZvGHo8e"
+    },
+    {
+      "name": "Dawn",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "OKvDnUHNMSbDdvKd"
+    },
+    {
+      "name": "Bigby's Hand",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "EXCyP1toP0vmLCA7"
+    },
+    {
+      "name": "Wall of Force",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "7Fm907tfnhzqcsGk"
+    },
+    {
+      "name": "Otiluke's Resilient Sphere",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "fLuz1AEb59z2CBGp"
+    },
+    {
+      "name": "Wall of Light",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "WeMEvrIgkZUcLYZK"
+    },
+    {
+      "name": "Cone of Cold",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "3doUYHVTnCslcxde"
+    },
+    {
+      "name": "Synaptic Static",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "JPP0tloAtptWz8Wr"
+    },
+    {
+      "name": "Enervation",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "eG3LanjOvjxGJtyU"
+    },
+    {
+      "name": "Animate Objects",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "vhYeumiGQZ2Be5HO"
+    },
+    {
+      "name": "Rary's Telepath. Bond (R)",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "v66JkeQyIQImnVz7"
+    },
+    {
+      "name": "Chain Lightning",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "AneJ5CB6oanIT868"
+    },
+    {
+      "name": "Sunbeam",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "yCMFnKfS96YOfjmI"
+    },
+    {
+      "name": "Disintegrate",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "MSogeS23TthBFSRY"
+    },
+    {
+      "name": "Storm Sphere",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "i5FXK0o93l9Ra2uP"
+    },
+    {
+      "name": "Crown of Stars",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "iu2mKHy2GmEpo3W6"
+    },
+    {
+      "name": "Forcecage",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "rRb9ZtdTz9BABY29"
+    },
+    {
+      "name": "Delayed Blast Fireball",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "P1D5lQQLI7DGOXM3"
+    },
+    {
+      "name": "Simulacrum",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "JNqjVHKyEDGdZjQh"
+    },
+    {
+      "name": "Mor. Magni. Mansion",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "3gjJzPRvVcFN2buE"
+    },
+    {
+      "name": "Teleport",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "PStp1LOp2wOcnsyX"
+    },
+    {
+      "name": "Plane Shift",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "eCWMwmiqXHGOe9aC"
+    },
+    {
+      "name": "Sickening Radiance",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "ecC07TAu55J3NtVo"
+    },
+    {
+      "name": "Sunburst",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "Ss3eVLartYNvyM3q"
+    },
+    {
+      "name": "Illusory Dragon",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "EQ8ZlyE2M21Oj6Dx"
+    },
+    {
+      "name": "Incendiary Cloud",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "KInMoWYuwroSz5Fq"
+    },
+    {
+      "name": "Wall of Fire",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "QCjdQUMjv4DVqaE6"
+    },
+    {
+      "name": "Catapult",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "0cnuGMCeC7YPYjFP"
+    },
+    {
+      "name": "Snare",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "TdRaaPBuY50Ornmj"
+    },
+    {
+      "name": "Dimension Door",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "aAX4msKk8k6iIsXg"
+    },
+    {
+      "name": "Alter Self",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "iyNsaL0UdeAr8a0H"
+    },
+    {
+      "name": "Arcane Eye",
+      "permission": {
+        "default": 0,
+        "LocdQGeaUb0CTeEV": 3
+      },
+      "type": "spell",
+      "data": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": null,
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "level": 1,
+        "school": "",
+        "components": {
+          "value": "",
+          "vocal": false,
+          "somatic": false,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": null,
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": null
+        }
+      },
+      "sort": 100001,
+      "flags": {},
+      "img": "icons/svg/mystery-man.svg",
+      "_id": "Piw3UnYDtOdS2lFa"
     }
   ]
 }

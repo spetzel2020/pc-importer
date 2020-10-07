@@ -7,55 +7,55 @@
         "value": 9,
         "proficient": 0,
         "mod": -1,
+        "save": -1,
         "prof": 0,
         "saveBonus": 0,
-        "checkBonus": 0,
-        "save": -1
+        "checkBonus": 0
       },
       "dex": {
         "value": 16,
         "proficient": 0,
         "mod": 3,
+        "save": 3,
         "prof": 0,
         "saveBonus": 0,
-        "checkBonus": 0,
-        "save": 3
+        "checkBonus": 0
       },
       "con": {
         "value": 12,
         "proficient": 0,
         "mod": 1,
+        "save": 1,
         "prof": 0,
         "saveBonus": 0,
-        "checkBonus": 0,
-        "save": 1
+        "checkBonus": 0
       },
       "int": {
         "value": 18,
         "proficient": 1,
         "mod": 4,
+        "save": 7,
         "prof": 3,
         "saveBonus": 0,
-        "checkBonus": 0,
-        "save": 7
+        "checkBonus": 0
       },
       "wis": {
         "value": 11,
         "proficient": 1,
         "mod": 0,
+        "save": 3,
         "prof": 3,
         "saveBonus": 0,
-        "checkBonus": 0,
-        "save": 3
+        "checkBonus": 0
       },
       "cha": {
         "value": 11,
         "proficient": 0,
         "mod": 0,
+        "save": 0,
         "prof": 0,
         "saveBonus": 0,
-        "checkBonus": 0,
-        "save": 0
+        "checkBonus": 0
       }
     },
     "attributes": {
@@ -269,11 +269,11 @@
       "prc": {
         "value": 1,
         "ability": "wis",
+        "passive": 13,
         "bonus": 0,
         "mod": 0,
         "prof": 3,
-        "total": 3,
-        "passive": 13
+        "total": 3
       },
       "prf": {
         "value": 0,
@@ -433,7 +433,7 @@
       }
     }
   },
-  "sort": 600000,
+  "sort": 100001,
   "flags": {
     "exportSource": {
       "world": "Ghost-Warriors",
@@ -449,7 +449,7 @@
   },
   "token": {
     "flags": {},
-    "name": "Gravel",
+    "name": "Ellyjobel \"Gravel\" Bilbron",
     "displayName": 0,
     "img": "icons/svg/mystery-man.svg",
     "tint": null,
@@ -466,7 +466,7 @@
     "sightAngle": 360,
     "lightAngle": 360,
     "lightAlpha": 1,
-    "actorId": "DaJL7NIiThU8jL0B",
+    "actorId": "We6IgSF7WkHL80Q2",
     "actorLink": true,
     "actorData": {},
     "disposition": 1,
@@ -479,7 +479,7 @@
   },
   "items": [
     {
-      "_id": "KlalnbJLj0J9Fncc",
+      "_id": "15jb8BfHbSdROW0O",
       "flags": {},
       "name": "Wizard",
       "type": "class",
@@ -492,7 +492,7 @@
         },
         "source": "",
         "levels": 5,
-        "subclass": "Evoker",
+        "subclass": "School of Evocation",
         "hitDice": "d6",
         "hitDiceUsed": 0,
         "skills": {
@@ -505,25 +505,805 @@
             "med",
             "rel"
           ],
-          "value": [
-            "arc",
-            "inv"
-          ],
-          "custom": ""
+          "value": []
         },
         "spellcasting": "full",
         "damage": {
           "parts": []
         }
       },
-      "sort": 100000,
+      "sort": 400001,
       "labels": {},
       "isStack": false,
       "hasTarget": false,
       "toggleClass": "",
       "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "8WXkrPC8WVRgLvZF",
+      "flags": {
+        "entityorder": {
+          "order": 45
+        }
+      },
+      "name": "Arcane Recovery",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/green_11.jpg",
+      "data": {
+        "description": {
+          "value": "<p>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.</p><p>For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 115",
+        "activation": {
+          "type": "special",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": null,
+          "type": "self"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": 1,
+          "max": 1,
+          "per": "lr",
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "The wizard can recover this number worth of spells slots (of 5th-level or lower):",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "ceil(@classes.wizard.levels/2)",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Wizard 1",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "sort": 500001,
+      "labels": {
+        "featType": "Action",
+        "activation": "Special",
+        "target": "Self",
+        "range": "Self",
+        "duration": "",
+        "recharge": "Recharge [null]",
+        "save": "",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": true,
+      "isOnCooldown": false,
+      "isDepleted": false,
+      "hasTarget": true,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "vxM6qHtKOmBHQ9YD",
+      "flags": {
+        "entityorder": {
+          "order": 49
+        }
+      },
+      "name": "Arcane Tradition",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/blue_08.jpg",
+      "data": {
+        "description": {
+          "value": "<p>When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation.&nbsp;</p>\n<p>Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 115",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Wizard 2",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "sort": 600001,
+      "labels": {
+        "featType": "Passive",
+        "activation": "",
+        "target": "",
+        "range": "",
+        "duration": "",
+        "recharge": "Recharge [null]",
+        "save": "",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": false,
+      "isOnCooldown": false,
+      "isDepleted": false,
+      "hasTarget": false,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "OFichqnjoxd32KIK",
+      "flags": {
+        "entityorder": {
+          "order": 51
+        }
+      },
+      "name": "Evocation Savant",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/yellow_15.jpg",
+      "data": {
+        "description": {
+          "value": "<p>Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 117",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "School of Evocation 2",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "sort": 700001,
+      "labels": {
+        "featType": "Passive",
+        "activation": "",
+        "target": "",
+        "range": "",
+        "duration": "",
+        "recharge": "Recharge [null]",
+        "save": "",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": false,
+      "isOnCooldown": false,
+      "isDepleted": false,
+      "hasTarget": false,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "iCx2gtrzd1yKaegn",
+      "flags": {
+        "entityorder": {
+          "order": 63
+        }
+      },
+      "name": "Sculpt Spells",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/green_08.jpg",
+      "data": {
+        "description": {
+          "value": "<p>Beginning at 2nd level, you can create pockets of relative safety within the effects of your evocation spells. When you cast an evocation spell that affects other creatures that you can see, you can choose a number of them equal to 1 + the spell's level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 117",
+        "activation": {
+          "type": "special",
+          "cost": null,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": "",
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "School of Evocation 2",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "sort": 800001,
+      "labels": {
+        "featType": "Action",
+        "activation": "Special",
+        "target": "",
+        "range": "",
+        "duration": "",
+        "recharge": "Recharge [null]",
+        "save": "",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": false,
+      "isOnCooldown": false,
+      "isDepleted": false,
+      "hasTarget": false,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "pKBy0taoSwIRBBZI",
+      "flags": {
+        "entityorder": {
+          "order": 61
+        }
+      },
+      "name": "Potent Cantrip",
+      "type": "feat",
+      "img": "systems/dnd5e/icons/skills/fire_09.jpg",
+      "data": {
+        "description": {
+          "value": "<p>Starting at 6th level, your damaging cantrips affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip's damage (if any) but suffers no additional effect from the cantrip.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 117",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "School of Evocation 6",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "sort": 900001,
+      "labels": {
+        "featType": "Passive",
+        "activation": "",
+        "target": "",
+        "range": "",
+        "duration": "",
+        "recharge": "Recharge [null]",
+        "save": "",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": false,
+      "isOnCooldown": false,
+      "isDepleted": false,
+      "hasTarget": false,
+      "toggleClass": "",
+      "toggleTitle": "Not Equipped"
+    },
+    {
+      "_id": "06EhEGuM9MRdypzy",
+      "flags": {},
+      "name": "Alarm",
+      "type": "spell",
+      "img": "systems/dnd5e/icons/spells/runes-royal-1.jpg",
+      "data": {
+        "description": {
+          "value": "<p>You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a Tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won't set off the alarm. You also choose whether the alarm is mental or audible.</p><p>A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.</p><p>An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 211",
+        "activation": {
+          "type": "minute",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 8,
+          "units": "hour"
+        },
+        "target": {
+          "value": 20,
+          "units": "ft",
+          "type": "cube"
+        },
+        "range": {
+          "value": 30,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 1,
+        "school": "abj",
+        "components": {
+          "value": "",
+          "vocal": true,
+          "somatic": true,
+          "material": true,
+          "ritual": true,
+          "concentration": false
+        },
+        "materials": {
+          "value": "A tiny bell and a piece of fine silver wire.",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 100001,
+      "labels": {
+        "level": "1st Level",
+        "school": "Abjuration",
+        "components": [
+          "V",
+          "S",
+          "M",
+          "R"
+        ],
+        "materials": "A tiny bell and a piece of fine silver wire.",
+        "activation": "1 Minutes",
+        "target": "20 Feet Cube",
+        "range": "30 Feet",
+        "duration": "8 Hours",
+        "recharge": "Recharge [undefined]",
+        "save": "",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": false,
+      "hasTarget": true,
+      "toggleClass": "",
+      "toggleTitle": "Unprepared"
+    },
+    {
+      "_id": "tCYoWLBgN3TNo8ut",
+      "flags": {},
+      "name": "Fire Bolt",
+      "type": "spell",
+      "img": "systems/dnd5e/icons/spells/fireball-red-1.jpg",
+      "data": {
+        "description": {
+          "value": "<p>You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn't being worn or carried.</p>\n<p>This spell's damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 242",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": "inst"
+        },
+        "target": {
+          "value": 1,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": 120,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "rsak",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [
+            [
+              "1d10",
+              "fire"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 0,
+        "school": "evo",
+        "components": {
+          "value": "",
+          "vocal": true,
+          "somatic": true,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "cantrip",
+          "formula": ""
+        }
+      },
+      "sort": 100001,
+      "labels": {
+        "level": "Cantrip",
+        "school": "Evocation",
+        "components": [
+          "V",
+          "S"
+        ],
+        "materials": "",
+        "activation": "1 Action",
+        "target": "1 Creature",
+        "range": "120 Feet",
+        "duration": "Instantaneous",
+        "recharge": "Recharge [undefined]",
+        "save": "",
+        "damage": "1d10",
+        "damageTypes": "Fire"
+      },
+      "isStack": false,
+      "hasUses": false,
+      "hasTarget": true,
+      "toggleClass": "",
+      "toggleTitle": "Unprepared"
+    },
+    {
+      "_id": "B31u9h1AZei0WJpF",
+      "flags": {},
+      "name": "Slow",
+      "type": "spell",
+      "img": "systems/dnd5e/icons/spells/fog-magenta-2.jpg",
+      "data": {
+        "description": {
+          "value": "<p>You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.</p>\n<p>An affected target’s speed is halved, it takes a -2 penalty to AC and Dexterity saving throws, and it can’t use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature’s abilities or magic items, it can’t make more than one melee or ranged attack during its turn.</p>\n<p>If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn’t take effect until the creature’s next turn, and the creature must use its action on that turn to complete the spell. If it can’t, the spell is wasted.</p>\n<p>A creature affected by this spell makes another Wisdom saving throw at the end of its turn. On a successful save, the effect ends for it.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 277",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "target": {
+          "value": 40,
+          "units": "ft",
+          "type": "cube"
+        },
+        "range": {
+          "value": 120,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": null,
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "1d20",
+        "save": {
+          "ability": "wis",
+          "dc": 15,
+          "scaling": "spell"
+        },
+        "level": 3,
+        "school": "trs",
+        "components": {
+          "value": "",
+          "vocal": true,
+          "somatic": true,
+          "material": true,
+          "ritual": false,
+          "concentration": true
+        },
+        "materials": {
+          "value": "A drop of molasses.",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        }
+      },
+      "sort": 100001,
+      "labels": {
+        "level": "3rd Level",
+        "school": "Transmutation",
+        "components": [
+          "V",
+          "S",
+          "M",
+          "C"
+        ],
+        "materials": "A drop of molasses.",
+        "activation": "1 Action",
+        "target": "40 Feet Cube",
+        "range": "120 Feet",
+        "duration": "1 Minutes",
+        "recharge": "Recharge [undefined]",
+        "save": "DC 15 Wisdom",
+        "damage": "",
+        "damageTypes": ""
+      },
+      "isStack": false,
+      "hasUses": false,
+      "hasTarget": true,
+      "toggleClass": "",
+      "toggleTitle": "Unprepared"
     }
   ],
-  "_id": "DaJL7NIiThU8jL0B",
-  "img": "icons/svg/mystery-man.svg"
+  "_id": "We6IgSF7WkHL80Q2",
+  "img": "icons/svg/mystery-man.svg",
+  "pcImporter": {
+    "importedFieldToValuesMap": {}
+  }
 }

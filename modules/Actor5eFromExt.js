@@ -13,6 +13,7 @@
 5-Oct-2020      v0.5.0b: Extract the Class and Level information from the Class Features tag - initially don't handle multi-class
                 (Actually looked at "Class and Levels" but that occurs TWICE at the root level, and isn't necessarily consistent)
                 Pull all global functions into Actor5eFromMPMB and reference pcImporter mapping function
+6-Oct-2020      v0.5.1: Extract the Spell information
 
 
 
@@ -162,12 +163,27 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
             }
         }
 
-        let itemData = duplicate(TemplateClassItemData);
-        itemData.name = classMatches.values().next().value;
-        itemData.data.levels = levelMatches[1];
-        itemData.data.subclass = subClassMatches.values().next().value;
-        const newItem = await Item5e.create(itemData);
-        this.items = [newItem];
+        let classItemData = duplicate(TemplateClassItemData);
+        classItemData.name = classMatches.values().next().value;
+        classItemData.data.levels = levelMatches[1];
+        classItemData.data.subclass = subClassMatches.values().next().value;
+        const newClassItem = await Item5e.create(classItemData);
+        this.items = [newClassItem];
+    }
+
+    async extractSpells() {
+        //const frontSpells = this.pcImporter.getValuesForPattern("P[0-9].SSfront.spells.name");
+        //const moreSpells = this.pcImporter.getValuesForPattern("P[0-9].SSmore.spells.name");
+        const allSpells = this.pcImporter.getValuesForPattern(".SS[a-zA-Z]+.spells.name");
+        //Get all unique values
+        const allUniqueSpells = [...(new Set(allSpells))];
+        //FIXME we'd like to get level as well to improve the chance of a match later
+        for (const spellName of allUniqueSpells) {
+            let spellItemData = duplicate(TemplateSpellItemData);
+            spellItemData.name = spellName;
+            const newSpellItem = await Item5e.create(spellItemData);
+            this.items.push(newSpellItem);
+        }
     }
 
     mapArray(fieldNames) {
@@ -697,6 +713,13 @@ const Actor5eToMPMBMapping = {
         "parts": []
       }
     }
+}
+const TemplateSpellItemData = {
+  "flags": {},
+  "name": null,
+  "type": "spell",
+  "img": null,
+  "data": {}
 }
 
 
