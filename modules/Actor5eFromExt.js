@@ -13,7 +13,8 @@
 5-Oct-2020      v0.5.0b: Extract the Class and Level information from the Class Features tag - initially don't handle multi-class
                 (Actually looked at "Class and Levels" but that occurs TWICE at the root level, and isn't necessarily consistent)
                 Pull all global functions into Actor5eFromMPMB and reference pcImporter mapping function
-6-Oct-2020      v0.5.1: Extract the Spell information
+6-Oct-2020      v0.5.1: Extract the Spell information - add TemplateSpellItemData
+                Move all of the calls to Actor5eFromMPMB in here and use this.actorData rather than this
 
 
 
@@ -29,21 +30,13 @@ import {MODULE_NAME, PCImporter} from "./PCImporter.js";
 import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
 import Item5e from "/systems/dnd5e/module/item/entity.js";    //default export
 
-const Ability = {
-    str : "str",
-    dex : "dex",
-    con : "con",
-    int : "int",
-    wis : "wis",
-    cha : "cha"
-}
-
-
 export class Actor5eFromExt {
+    //Contains the Actor5e data and eventually the created Foundry object
     constructor(pcImporter) {
         this.pcImporter = pcImporter;
-        this.actorJSON = null;
-        //IMPORTING
+        this.actor = null;      //Foundry created Actor
+        this.actorData = {};       //actor data used to create/update Actor
+        this.itemData = {};         //Keep this separate for subsequent matching and creation - might be able to re-integrate
     }
 
     exportToJSON(createFile=true) {
@@ -54,20 +47,73 @@ export class Actor5eFromExt {
 
         // Trigger file save procedure
         if (createFile) {
-            const filename = `fvtt-${this.name}.json`;
+            const filename = `fvtt-${this.actorData.name}.json`;
             saveDataToFile(dataAsJSON, "text/json", filename);
         }
-        this.actorJSON = dataAsJSON;
         return dataAsJSON;
     }
 
     async createFoundryActor() {
-        if (!this.actorJSON) {return false;}
-        let actorData = duplicate(this);
-        delete actorData.actorJSON;
+        let actorData = duplicate(this.actorData);
         const options = {temporary: false, renderSheet: false}
-        const newActor = await Actor5e.create(actorData, options);
-        await newActor.importFromJSON(this.actorJSON);
+//FIXME: Do an update if this actor already exists?? Should always be starting the import on an existing Actor for safety
+        this.actor = await Actor5e.create(actorData, options);
+
+        //Now do the matching - do this on the created Actor so that we pull Items from the Compendium directly into the
+        //Actor rather than having to create intermediate values
+//FIXME: Would like to move this before Actor creation and reference spells etc. - look at JSON import?
+        await this.matchItems();
+    }
+
+    async matchItems() {
+        //Prototype match spells
+//FIXME: The name of the Compendium used should be changeable through the config options
+//Should just loop through ALL items here and match with different compendiums
+        const spellPack = game.packs.get("dnd5e.spells");
+        let spellPackIndex;
+        if (spellPack) {
+            spellPackIndex = await spellPack.getIndex();
+        }
+        let classPackIndex;
+        const classPack = game.packs.get("dnd5e.classes");
+        if (classPack) {
+            classPackIndex = await classPack.getIndex();
+        }
+
+        for (let i=0; i < this.itemData.items.length; i++) {
+            const item = this.itemData.items[i];
+            if (spellPackIndex && item.type === "spell") {
+                const foundSpell = spellPackIndex.find(e => Actor5eFromExt.isFuzzyMatch(e.name,item.name));
+                //FIXME: Probably want to make this looking up asynchronous
+                if (foundSpell && foundSpell._id) {
+                    const fullSpell = await spellPack.getEntity(foundSpell._id);
+                    //Now replace in the Actor using the same logic as Actor5e/base.js/_onDropItemCreate
+                    if (fullSpell && fullSpell.data) {
+                        this.actor.createEmbeddedEntity("OwnedItem", fullSpell.data);
+                    }
+                }
+            } else if (classPackIndex && item.type === "class") {
+                const foundClass = classPackIndex.find(e => Actor5eFromExt.isFuzzyMatch(e.name,item.name));
+                //FIXME: Probably want to make this looking up asynchronous
+                if (foundClass && foundClass._id) {
+                    const fullClass = await classPack.getEntity(foundClass._id);
+                    //Now replace in the Actor using the same logic as Actor5e/base.js/_onDropItemCreate
+                    if (fullClass && fullClass.data) {
+                        //For classes, we augment with our knowledge of subclass and level
+                        fullClass.data.data.levels = item.data.levels;
+                        fullClass.data.data.subclass = item.data.subclass;
+                        this.actor.createEmbeddedEntity("OwnedItem", fullClass.data);
+                    }
+                }
+            }
+        }//end for actor.items
+    }//end matchItems()
+
+    static isFuzzyMatch(referenceString, stringToMatch) {
+        //For now, just check if it starts with the string - but we need to be more sophisticated
+        //for examples like "Floating Disk" vs "Tenser's Floating Disk"
+        //but we don't want to match "Magic Missile" with "Jim's Magic Missile"
+        return referenceString.startsWith(stringToMatch);
     }
 }
 
@@ -79,11 +125,19 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 
         //See https://stackoverflow.com/questions/8085004/iterate-through-nested-javascript-objects
         //Use recursion (only 3 levels deep) to walk through the mapping tree and object in parallel
-        this.mapAndIterate(Actor5eToMPMBMapping, this); //create the base Actor
+        this.mapAndIterate(Actor5eToMPMBMapping, this.actorData); //create the base Actor
 
         //Now iterate through available Item-like objects in the input object
         //Classes - do this more functionally and not declaratively
 
+    }
+
+    static async create(pcImporter) {
+        //Populate the Actor5e structure from the importedFieldToValuesMap
+        const importedActor = new Actor5eFromMPMB(pcImporter);
+        await importedActor.extractClasses();
+        await importedActor.extractSpells();
+        return importedActor;
     }
 
     mapAndIterate(subMappingTree, subObject) {
@@ -167,8 +221,9 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
         classItemData.name = classMatches.values().next().value;
         classItemData.data.levels = levelMatches[1];
         classItemData.data.subclass = subClassMatches.values().next().value;
-        const newClassItem = await Item5e.create(classItemData);
-        this.items = [newClassItem];
+        //0.5.2 Don't create a new item here - wait until we see if we can match a compendium
+        //const newClassItem = await Item5e.create(classItemData);
+        this.itemData.items = [classItemData];
     }
 
     async extractSpells() {
@@ -181,8 +236,8 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
         for (const spellName of allUniqueSpells) {
             let spellItemData = duplicate(TemplateSpellItemData);
             spellItemData.name = spellName;
-            const newSpellItem = await Item5e.create(spellItemData);
-            this.items.push(newSpellItem);
+            //const newSpellItem = await Item5e.create(spellItemData);
+            this.itemData.items.push(spellItemData);
         }
     }
 
