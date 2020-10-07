@@ -67,8 +67,7 @@ export class Actor5eFromExt {
 
     async matchItems() {
         //Prototype match spells
-//FIXME: The name of the Compendium used should be changeable through the config options
-//Should just loop through ALL items here and match with different compendiums
+//Should just loop through ALL items here and match with different licensed Compendiums (dnd5e, DDB, others?)
         const spellPack = game.packs.get("dnd5e.spells");
         let spellPackIndex;
         if (spellPack) {
