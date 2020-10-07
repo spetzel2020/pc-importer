@@ -23,7 +23,7 @@ PC Importer imports Player Character sheets from other systems and methods into 
 3. Pick the **Import/Export using files>Export .xfdf file>Export .xfdf file of all fields** option
 4. Wait between 15s and several minutes depending on the complexity of your sheet. A new dialog will appear with XFDF output; select all the output in the window, and copy-and-paste into a new file with the XFDF extension
 5. From the Foundry Actors tab, create a new Actor with your character name and type "character"
-6. Right-click on the new character and pick the PC Import option; select "Import from MPMB" when prompted
+6. Click the "Import a PC character sheet" control in the left control set (Tokens)
 7. Browse to the location of the XFDF file created in Step 3 above and select that
 8. Click Import
 9. PC Importer will import recognized content into your character and provide a summary of what content was successfully imported and matched
