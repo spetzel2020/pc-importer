@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.2
+- Prototype Matching in Foundry on Class and Spell names
+
+## 0.5.1
+- Extract Spell and Class information as plugs to be later matched in Foundry
+
 ## 0.5.0a
 - Changed repo and module names to pc-importer with the expectation that we might support importing PCs from other sources,
     e.g. MPMB, Fantasy Grounds, Roll 20, D&D Beyond

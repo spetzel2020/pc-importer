@@ -7,7 +7,8 @@
 30-Sep-2020     v0.5.0 Trim the xmlDoc recursively rather than walking the tree to get the components we care about
                 The approaches are equivalent and traverseXML avoids recursion, but for this limited depth it will be Fine
 5-Oct-2020      Use pcImporter instance variable to hold the fieldToValuesDictionary
-6-Oct-2020      Add getValuesForPattern for fuzzy match (e.g. for spells)
+6-Oct-2020      v0.5.1: Add getValuesForPattern for fuzzy match (e.g. for spells)
+7-Oct-2020      v0.5.2: Prototype matching in Foundry with Spells, Classes, and Features
 */
 import {Actor5eFromMPMB} from "./Actor5eFromExt.js";
 
@@ -78,17 +79,17 @@ export class PCImporter {
             return;
         }
         console.log(pcImporter.importedFieldToValuesMap);
+        //MPMB specific
+        const importedActor = await Actor5eFromMPMB.create(pcImporter);
 
-        //Populate the Actor5e structure from the importedFieldToValuesMap
-        const importedActor = new Actor5eFromMPMB(pcImporter);
-        await importedActor.extractClasses();
-        await importedActor.extractSpells();
-        //Now export the importedActor to JSON - this is the skeleton of the Actor, without any classes, items, etc
-        importedActor.exportToJSON();
+        // Uses the actorData to create the Foundry Actor and then do the matching
+        //Now match with Compendiums to get Classes, Class Features, Spells etc.
+        //We want that to be non-specific to the specific import (so Actor5eFromExt, rather than a subclass )
         await importedActor.createFoundryActor();
 
-        //TODO: Now match with Compendiums to get Classes, Class Features, Spells etc.
-        //We want that to be non-specific to the specific import (so Actor5eFromExt, rather than a subclass )
+        //Now export the importedActor to JSON for posterity
+        //Shouldn't be input method-specific
+        importedActor.exportToJSON();
 
         return importedActor;
     }

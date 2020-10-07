@@ -3,17 +3,25 @@
 
 ## BUGS
 - When is the earliest you can call the translations? In init() or setup()?
+- Shouldn't create a new Actor if it already exists - just do an update using the data or the JSON
+
 
 ## FEATURES
-DONE Read an XFDF file
-DONE Parse into internal data structure
-DONE Create internal JSON representation
-DONE Create Actor from that JSON
-- Pass only the mapping functions, not the whole importer
+- Will need a progress indicator because importing/matching can take a while
 >>>Needs to be a whole matching step where we look at exist Compendiums or Actors/Spells etc.
     - seems like those should be settings to determine where to look
+
+
+
+
+
+
 
 ## FIXED BUGS
 
 
 ## COMPLETED FEATURES
+DONE Read an XFDF file
+DONE Parse into internal data structure
+DONE Create internal JSON representation
+DONE Create Actor from that JSON

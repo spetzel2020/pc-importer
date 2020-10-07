@@ -1,7 +1,7 @@
 {
   "PCI.id": "pc-importer",
-  "PCI.Version" : "v0.5.0",
+  "PCI.Version" : "v0.5.2",
   "PCI.Name": "PC Importer",
   "PCI.Welcome" : "Welcome to PC Importer",
-  "PCI.BUTTON.ImportXFDF" : "Import an PC character sheet from another system or character sheet"
+  "PCI.BUTTON.ImportXFDF" : "Import a PC character sheet from another system or character sheet"
 }
