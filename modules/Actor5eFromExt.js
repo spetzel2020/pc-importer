@@ -146,9 +146,14 @@ export class Actor5eFromExt {
     }
 
     async matchItems() {
+<<<<<<< HEAD
         if (!this.itemData || !this.itemData.items) {return;}
         //Match spells and classes
 //FIXME: loop through ALL items here and match with different licensed compendiums
+=======
+        //Prototype match spells
+//Should just loop through ALL items here and match with different licensed Compendiums (dnd5e, DDB, others?)
+>>>>>>> a21b4fd6c490eb355929bbad0051c5ba7b35a9c6
         const spellPack = game.packs.get("dnd5e.spells");
         let spellPackIndex;
         if (spellPack) {
