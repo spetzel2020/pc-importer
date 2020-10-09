@@ -1,7 +1,9 @@
 {
   "PCI.id": "pc-importer",
-  "PCI.Version" : "v0.5.2",
+  "PCI.Version" : "v0.6.0",
   "PCI.Name": "PC Importer",
   "PCI.Welcome" : "Welcome to PC Importer",
-  "PCI.BUTTON.ImportXFDF" : "Import a PC character sheet from another system or character sheet"
+  "PCI.ImportDialog.TITLE" : "Import PC",
+  "PCI.ImportDialog.CONTENT" : "You may import data for this Actor from an XML or JSON export created from a different system.<br>This operation will update the data for the Actor and cannot be un-done.",
+  "PCI.Import.BUTTON" : "Import a PC character sheet from another system or character sheet"
 }

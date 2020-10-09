@@ -4,13 +4,13 @@
 ## BUGS
 - When is the earliest you can call the translations? In init() or setup()?
 - Shouldn't create a new Actor if it already exists - just do an update using the data or the JSON
-
+- There are a number of places where this can fail - should use try/catch and throw errors throughout
 
 ## FEATURES
 - Will need a progress indicator because importing/matching can take a while
 >>>Needs to be a whole matching step where we look at exist Compendiums or Actors/Spells etc.
     - seems like those should be settings to determine where to look
-
+- Probably should push the logic around which constructor to use into Actor5eExt based on the importType passed
 
 
 

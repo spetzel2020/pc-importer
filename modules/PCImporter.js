@@ -9,33 +9,40 @@
 5-Oct-2020      Use pcImporter instance variable to hold the fieldToValuesDictionary
 6-Oct-2020      v0.5.1: Add getValuesForPattern for fuzzy match (e.g. for spells)
 7-Oct-2020      v0.5.2: Prototype matching in Foundry with Spells, Classes, and Features
+8-Oct-2020      v0.6.0: Add basic Fantasy Grounds import from XML
 */
-import {Actor5eFromMPMB} from "./Actor5eFromExt.js";
+import {Actor5eFromMPMB,Actor5eFromFG} from "./Actor5eFromExt.js";
 
 export var MODULE_NAME="pc-importer";
 export var MODULE_VERSION="0.5.1";
 
-function init() {
-    game.settings.register(MODULE_NAME, "PCImporterVersion", {
-      name: "PC Importer version",
-      hint: "",
-      scope: "system",
-      config: false,
-      default: MODULE_VERSION,
-      type: String
-    });
+const ImportType = {
+    fantasyGrounds : "Fantasy Grounds",
+    MPMB : "MPMB",
+    roll20 : "Roll20"
 }
+
 
 export class PCImporter {
     constructor() {
         this.importedFieldToValuesMap = new Map();
+        this.importType = null;
     }
 
+    static init() {
+        game.settings.register(MODULE_NAME, "PCImporterVersion", {
+          name: "PC Importer version",
+          hint: "",
+          scope: "system",
+          config: false,
+          default: MODULE_VERSION,
+          type: String
+        });
+    }
 
-
-    static async importFromXFDFDialog() {
+    static async importFromFileDialog() {
       new Dialog({
-        title: `Import MPMB XFDF file`,
+        title: game.i18n.localize("PCI.ImportDialog.TITLE"),
         content: await renderTemplate("modules/pc-importer/templates/import-data.html"),
         buttons: {
           import: {
@@ -44,7 +51,7 @@ export class PCImporter {
             callback: html => {
               const form = html.find("form")[0];
               if ( !form.data.files.length ) return ui.notifications.error("You did not upload a data file!");
-              readTextFromFile(form.data.files[0]).then(xfdf => PCImporter.importFromXML(xfdf));
+              readTextFromFile(form.data.files[0]).then(fileContent => PCImporter.parseContent(fileContent));
             }
           },
           no: {
@@ -58,20 +65,33 @@ export class PCImporter {
       }).render(true);
     }
 
-    static async importFromXML(xfdf) {
+    static async parseContent(fileContent) {
         let parser = new DOMParser();
-        let xmlDoc = parser.parseFromString(xfdf,"text/xml");
+        let xmlDoc = parser.parseFromString(fileContent,"text/xml");
         let pcImporter = new PCImporter();
         const parsedObjectTree = PCImporter.trimXML(xmlDoc);
-        if (!parsedObjectTree) {return;}
+        if (!parsedObjectTree || !parsedObjectTree.childNodes) {return;}
+
+        //0.6: Try to automatically categorize the source of this
+        try {
+            if (parsedObjectTree.childNodes[0].attributes[1].nodeValue === "8|CoreRPG:4") {
+                pcImporter.importType = ImportType.fantasyGrounds;
+            } else {
+//FIXME: Replace with specific test based on xfdf tag
+                pcImporter.importType = ImportType.MPMB;
+            }
+        } catch {
+            //Couldn't recognize or retrieve flags indicating any known system
+        }
+
 
         //Now convert this simplified version into an even simpler array of (fieldName, value) pairs
         //If the value is nested in several fields, we dot the fields together
-        let fieldsSubTree;
+        let subTree;
         try {
-            fieldsSubTree = parsedObjectTree.childNodes[0].childNodes[1];   //the fields structure from xfdf - should probably check
-            if (!fieldsSubTree || !fieldsSubTree.childNodes) {return;}
-            const childNodes = Object.values(fieldsSubTree.childNodes);
+            subTree = parsedObjectTree.childNodes[0].childNodes[1];
+            if (!subTree || !subTree.childNodes) {return;}
+            const childNodes = Object.values(subTree.childNodes);
 
             pcImporter.getNestedFields(childNodes, null);
 
@@ -79,8 +99,14 @@ export class PCImporter {
             return;
         }
         console.log(pcImporter.importedFieldToValuesMap);
-        //MPMB specific
-        const importedActor = await Actor5eFromMPMB.create(pcImporter);
+
+
+        let importedActor;
+        if (pcImporter.importType === ImportType.fantasyGrounds) {
+            importedActor = await Actor5eFromFG.create(pcImporter);
+        } else if (pcImporter.importType === ImportType.MPMB) {
+            importedActor = await Actor5eFromMPMB.create(pcImporter);
+        }
 
         // Uses the actorData to create the Foundry Actor and then do the matching
         //Now match with Compendiums to get Classes, Class Features, Spells etc.
@@ -98,19 +124,40 @@ export class PCImporter {
         let dottedFields;
         for (const node of childNodes) {
             dottedFields = dottedFieldPrefix ? dottedFieldPrefix : "";
-            if (node.nodeName === "field") {
-                if (node.attributes && node.attributes.name) {
-                    if (dottedFields === "") {
-                        dottedFields = node.attributes.name.nodeValue;
-                    } else {
-                        dottedFields = dottedFields + "." + node.attributes.name.nodeValue;
+
+            if (this.importType === ImportType.MPMB) {
+                if ((node.nodeName === "value") && node.childNodes && node.childNodes[0]) {
+                   const value = node.childNodes[0].nodeValue;
+                   this.importedFieldToValuesMap.set(dottedFields, value);
+               } else if (node.nodeName === "field") {
+                   //Field names are in the attributes of a node named "field"
+                    if (node.attributes && node.attributes.name) {
+                        if (dottedFields === "") {
+                            dottedFields = node.attributes.name.nodeValue;
+                        } else {
+                            dottedFields = dottedFields + "." + node.attributes.name.nodeValue;
+                        }
                     }
+                    this.getNestedFields(node.childNodes, dottedFields);
                 }
-                this.getNestedFields(node.childNodes, dottedFields);
-            } else if ((node.nodeName === "value") && node.childNodes && node.childNodes[0]) {
-                const value = node.childNodes[0].nodeValue;
-                this.importedFieldToValuesMap.set(dottedFields, value);
+            } else if (this.importType === ImportType.fantasyGrounds) {
+                //Field names here are actual nodeNames, and values are their nested value under #text
+                if (node.nodeName === "#text") {
+                    const value = node.nodeValue.trim();
+                    if (value !== "") {this.importedFieldToValuesMap.set(dottedFields, value);}
+               } else {
+                   //Field names are the nodeName
+                    if (dottedFields === "") {
+                        dottedFields = node.nodeName;
+                    } else {
+                        dottedFields = dottedFields + "." + node.nodeName;
+                    }
+                    this.getNestedFields(node.childNodes, dottedFields);
+                }
             }
+
+
+
         }
     }
 
@@ -231,13 +278,13 @@ export class PCImporter {
 
         if (notesButton && game.user.isGM) {
             notesButton.tools.push({
-                name: "importMPMB",
-                title: game.i18n.localize("PCI.BUTTON.ImportXFDF"),
+                name: "importPC",
+                title: game.i18n.localize("PCI.Import.BUTTON"),
                 icon: "fas fa-file-import",
                 toggle: false,
                 button: true,
                 visible: game.user.isGM,
-                onClick: () => PCImporter.importFromXFDFDialog()
+                onClick: () => PCImporter.importFromFileDialog()
             });
         }
     }
@@ -247,5 +294,5 @@ export class PCImporter {
 }
 
 
-Hooks.on("init", init);
+Hooks.on("init", PCImporter.init);
 Hooks.on('getSceneControlButtons', PCImporter.getSceneControlButtons);

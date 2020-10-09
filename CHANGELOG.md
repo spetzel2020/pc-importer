@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.0
+- Prototype importing from Fantasy Grounds
+
 ## 0.5.2
 - Prototype Matching in Foundry on Class and Spell names
 
