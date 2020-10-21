@@ -10,6 +10,7 @@
 6-Oct-2020      v0.5.1: Add getValuesForPattern for fuzzy match (e.g. for spells)
 7-Oct-2020      v0.5.2: Prototype matching in Foundry with Spells, Classes, and Features
 8-Oct-2020      v0.6.0: Add basic Fantasy Grounds import from XML
+
 */
 import {Actor5eFromMPMB,Actor5eFromFG} from "./Actor5eFromExt.js";
 

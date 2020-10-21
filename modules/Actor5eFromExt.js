@@ -16,6 +16,10 @@
 6-Oct-2020      v0.5.1: Extract the Spell information - add TemplateSpellItemData
                 Move all of the calls to Actor5eFromMPMB in here and use this.actorData rather than this
 8-Oct-2020      v0.6.0: Add Actor5eFromFG
+19-Oct-2020     v0.6.1: Fix size setting from MPMB (number) to Foundry (code) - added mapAndLookup
+20-Oct-2020     v0.6.1: MPMB: Switch to using AdvLog.Class and Levels for multi-classes
+                (will also need to add a mapper from MPMB subclass names to standard D&D - we do that internally
+                  for known ones but then allow for homebrew/custom)
 
 
 
@@ -117,6 +121,15 @@ export class Actor5eFromExt {
         const converted = fieldNames.map(k => this.pcImporter.getValueForFieldName(k));
         const added = converted.reduce((sum,c) => sum + (c==="True" ? 1 : 0),0);
         return added;
+    }
+
+    mapAndLookup(fieldName, lookupTable) {
+      //Map the fieldName to a result in the dictionary and then lookup that result to convert
+      //it to the equivalent Foundry value (for example, size)
+      if (!fieldName || !lookupTable) return null;
+      const dictionaryVal = this.pcImporter.getValueForFieldName(fieldName);
+      const convertedVal = lookupTable.get(dictionaryVal);
+      return convertedVal;
     }
 
     exportToJSON(createFile=true) {
@@ -262,42 +275,51 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 
     async extractClasses() {
         /** @override */
-        //Unfortunately the base class is not used consistently, but rather the sub-class
-        //So instead we pull the class from the 1st Level feature gained (assuming there always is one)
-        const levelRegExp = /level ([0-9]+):/;  //extract class level in the form "level nn:"
-        const classRegExp = /\(([A-Za-z]+) 1[^0-9]/g;     //extract class name from "(xyz 1"
-        const subClassRegExp = /\(([A-Za-z ]+) \d{1,2}/g;  //extract sub-classes from "(xyz nn"
-        const mappedValue = this.pcImporter.getValueForFieldName("Class Features");
-
-        if (!mappedValue) {return;}
-        //Get first [name][space][number] combination
-        const levelMatches = mappedValue.match(levelRegExp);
         let match;
-        let classMatches= new Set();
-        while (match = classRegExp.exec(mappedValue)) {
-            classMatches.add(match[1]);
-        }
-        let subClassMatches = new Set();
-        while (match = subClassRegExp.exec(mappedValue)) {
-            //Now remove all matches from classes
-            if (!classMatches.has(match[1])) {
-                subClassMatches.add(match[1]);
-            }
-        }
+        let classLevelMatches = new Set(); 
+        this.itemData.items = [];
+        //v0.6.1: Try using "Class and Levels" to get the overall class/subclass and level
+        //which appears in the form "subclass1 n1,subclass2 n2"
+        //subclass can contain () and spaces, but we don't capture them at the beginning or end
+        //The problem is that we end up with two unrecognizable strings without further processing
+/*        
+        const classAndLevelRegExp = /((?:[A-Za-z()]+\s?)+)\s(\d{1,2})(?:,|$)/g;
 
-        let classItemData = duplicate(TemplateClassItemData);
-        classItemData.name = classMatches.values().next().value;
-        classItemData.data.levels = levelMatches[1];
-        classItemData.data.subclass = subClassMatches.values().next().value;
-        //0.5.2 Don't create a new item here - wait until we see if we can match a compendium
-        //const newClassItem = await Item5e.create(classItemData);
-        this.itemData.items = [classItemData];
+       const mappedValue = this.pcImporter.getValueForFieldName("Class and Levels");
+        if (!mappedValue) {return;}
+
+        while (match = classAndLevelRegExp.exec(mappedValue)) {
+          classLevelMatches.add([match[1], match[2]]);
+          let classItemData = duplicate(TemplateClassItemData);
+          classItemData.name = match[1];
+          classItemData.data.levels = match[2];
+          classItemData.data.subclass = match[1];
+          this.itemData.items.push(classItemData);
+        }
+*/
+        //Unfortunately the base class is not used consistently, but rather the sub-class
+        //<v0.6.0 approach: So instead we pull the class from the 1st Level feature gained (assuming there always is one)
+        //v0.6.1: However we use the learning from above "Class and Levels extraction"
+        const mappedValue = this.pcImporter.getValueForFieldName("Class Features");
+        if (!mappedValue) {return;}
+        //Get overall class level from the header line but ignore the class name which is not useful
+        //Then get class name from "(xyz 1" and sub-classes from "(xyz nn" programattically
+        //Use the lazy match to match on the first class name (otherwise it will match to the end)
+        const classLevelAndSubclassesRegExp = /level ([0-9]+):[\s\S]+?\(([A-Za-z]+) 1[^0-9]/g; //.*\(([A-Za-z ]+) \d{1,2}\)/g
+      
+        while (match = classLevelAndSubclassesRegExp.exec(mappedValue)) {
+            let classItemData = duplicate(TemplateClassItemData);
+            classItemData.name = match[2];
+            classItemData.data.levels = match[1];
+            //classItemData.data.subclass = match[3];
+            this.itemData.items.push(classItemData);
+        }        
     }
 
     async extractSpells() {
         //const frontSpells = this.pcImporter.getValuesForPattern("P[0-9].SSfront.spells.name");
         //const moreSpells = this.pcImporter.getValuesForPattern("P[0-9].SSmore.spells.name");
-        const allSpells = this.pcImporter.getValuesForPattern(".SS[a-zA-Z]+.spells.name");
+        const allSpells = this.pcImporter.getValuesForPattern(".SS(?:front|more)+.spells.name");
         //Get all unique values
         const allUniqueSpells = [...(new Set(allSpells))];
         //FIXME we'd like to get level as well to improve the chance of a match later
@@ -446,13 +468,13 @@ const Actor5eToMPMBMapping = {
           "level": "Character Level"
         },
         "traits": {
-          "size": "Size Category",
+          "size": function(fieldName="Size Category") {return this.mapAndLookup(fieldName,sizeMap);},
           "di": {
             "value": [],
             "custom": null
           },
           "dr": {
-            "value":  function() {return this.mapArray( ["Resistance Damage Type 1","Resistance Damage Type 2","Resistance Damage Type 3","Resistance Damage Type 4","Resistance Damage Type 5"]);},
+            "value":  function() {return lowercaseArray(this.mapArray( ["Resistance Damage Type 1","Resistance Damage Type 2","Resistance Damage Type 3","Resistance Damage Type 4","Resistance Damage Type 5"]));},
             "custom": null
           },
           "dv": {
@@ -791,6 +813,9 @@ const Actor5eToMPMBMapping = {
     "_id": null,
     "img": null
   }
+
+const sizeMap = new Map([["0.5", "tiny"], ["1", "sm"],["2","med"],["3","lg"]]);
+
 //FG Mapping to Fantasy Grounds
 const Actor5eToFGMapping = {
       "name": "name",
