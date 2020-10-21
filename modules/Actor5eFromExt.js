@@ -20,6 +20,8 @@
 20-Oct-2020     v0.6.1: MPMB: Switch to using AdvLog.Class and Levels for multi-classes
                 (will also need to add a mapper from MPMB subclass names to standard D&D - we do that internally
                   for known ones but then allow for homebrew/custom)
+                Switch back to Class Features, but now extract blocks for each class
+                and then loop through the block to find the subclass  
 
 
 
@@ -28,7 +30,6 @@ TO DO:
     - THEN, import the Items consisting of Class(es), Inventory etc, either by referencing SRD or just copying directly
         - suggests a different format for the Item values - not perhaps embedded in the Actor
     - Do a Regex match on the Spells and Items
-    - Handle multi-classed characters
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
@@ -305,15 +306,28 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
         //Get overall class level from the header line but ignore the class name which is not useful
         //Then get class name from "(xyz 1" and sub-classes from "(xyz nn" programattically
         //Use the lazy match to match on the first class name (otherwise it will match to the end)
-        const classLevelAndSubclassesRegExp = /level ([0-9]+):[\s\S]+?\(([A-Za-z]+) 1[^0-9]/g; //.*\(([A-Za-z ]+) \d{1,2}\)/g
-      
+        const classLevelAndSubclassesRegExp = /level ([0-9]+):[\s\S]+?\(([A-Za-z]+) 1[^0-9](?:(?!,\slevel)[\s\S])*/g;
+        const subClassRegExp = /\(([A-Za-z ]+) \d{1,2}/g;  //extract sub-classes from "(xyz nn"
+
         while (match = classLevelAndSubclassesRegExp.exec(mappedValue)) {
             let classItemData = duplicate(TemplateClassItemData);
+            classItemData.fullMatch = match[0];
             classItemData.name = match[2];
             classItemData.data.levels = match[1];
-            //classItemData.data.subclass = match[3];
             this.itemData.items.push(classItemData);
-        }        
+        }  
+        //Now we reprocess these segments to get the subclass name
+        this.itemData.items.forEach((classItemData,i) => {
+            //Get first [name][space][number] combination that doesn't match the previously extracted class name
+            while (match = subClassRegExp.exec(classItemData.fullMatch)) {
+                //Now find the subclass which doesn't match the class name
+                if (match[1] !== classItemData.name)  {
+                    classItemData.data.subclass = match[1];
+                    break;
+                }
+            }
+            delete this.itemData.items[i].fullMatch;    
+        }); 
     }
 
     async extractSpells() {
