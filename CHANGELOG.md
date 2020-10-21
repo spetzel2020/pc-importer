@@ -2,7 +2,8 @@
 
 ## 0.6.1
 - MPMB: Corrently handle multi-classing
-- MPMB: Prototype item importing
+- MPMB: Item importing: match if you can, or import the name into the Loot category
+        - changed to batch Item update
 
 ## 0.6.0
 - Prototype importing from Fantasy Grounds

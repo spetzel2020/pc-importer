@@ -24,12 +24,27 @@
 				and then loop through the block to find the subclass  
 21-Oct-2020		v0.6.1c: MPMB: Create items - simple match or create the item as Loot
 				(We will want to add other known details such as # and weight for later manual matching)
-
+				v0.6.1d: MPMB - Extract feats and features from "Class Features"
+						Change createEmbeddedEntity to batch update
+						Switch/simplift lookup and ordering of matchItems
+						Include (partial) Feature description if you don't match
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
 import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
 import Item5e from "/systems/dnd5e/module/item/entity.js";    //default export
+
+
+const dnd5ePackNames = ["dnd5e.spells","dnd5e.tradegoods","dnd5e.classes","dnd5e.classfeatures",
+						"dnd5e.items"];
+//Internal name for what we should check against (so item is checked against tradegoods and items)
+const packTypes = {
+	"dnd5e.spells":"spell",
+	"dnd5e.tradegoods":"loot",
+	"dnd5e.classes":"class",
+	"dnd5e.classfeatures":"feat",
+	"dnd5e.items":"loot"
+}
 
 export class Actor5eFromExt {
 	//Contains the Actor5e data and eventually the created Foundry object
@@ -158,61 +173,43 @@ export class Actor5eFromExt {
 
 	async matchItems() {
 		if (!this.itemData || !this.itemData.items) {return;}
-		//Match spells, classes, items
-		for (let packType of ["spell","class","item"]) {
-			const packName = dnd5ePacks[packType];
+		//Match spells, classes, items, feats
+		let allItemsData = [];
+		for (let packName of dnd5ePackNames) {
+			const packType = packTypes[packName];
 			let pack = game.packs.get(packName);
 			let packIndex;
 			if (pack) {packIndex = await pack.getIndex();}
-			if (!packIndex) {continue;}
+			if (!packIndex || !packType) {continue;}
 
-//FIXME: Use filter to get only correct items			
+//FIXME: Use filter to get only correct items	
+
 			for (let i=0; i < this.itemData.items.length; i++) {
 				const item = this.itemData.items[i];
 				if (item.type !== packType) {continue;}
-				if (item.type === "spell") {
-					const foundSpell = packIndex.find(e => Actor5eFromExt.isFuzzyMatch(e.name,item.name));
-					//FIXME: Probably want to make this looking up asynchronous
-					if (foundSpell && foundSpell._id) {
-						const fullSpell = await pack.getEntity(foundSpell._id);
-						//Now replace in the Actor using the same logic as Actor5e/base.js/_onDropItemCreate
-						if (fullSpell && fullSpell.data) {
-							this.actor.createEmbeddedEntity("OwnedItem", fullSpell.data);
-						}
-					}
-				} else if (item.type === "class") {
-					const foundClass = packIndex.find(e => Actor5eFromExt.isFuzzyMatch(e.name,item.name));
-					//FIXME: Probably want to make this looking up asynchronous
-					if (foundClass && foundClass._id) {
-						const fullClass = await pack.getEntity(foundClass._id);
-						//Now replace in the Actor using the same logic as Actor5e/base.js/_onDropItemCreate
-						if (fullClass && fullClass.data) {
+				//FuzzyMatch not so good for things like "Spell Casting (class)"
+				const foundItemIndex = packIndex.find(e => Actor5eFromExt.isFuzzyMatch(e.name,item.name));
+				let fullItem = {};
+				if (foundItemIndex && foundItemIndex._id) {
+					fullItem = await pack.getEntity(foundItemIndex._id);
+					if (fullItem && fullItem.data) {
+						//Nothing extra to do if it's a known spell
+						if (item.type === "class") {
 							//For classes, we augment with our knowledge of subclass and level
-							fullClass.data.data.levels = item.data.levels;
-							fullClass.data.data.subclass = item.data.subclass;
-							this.actor.createEmbeddedEntity("OwnedItem", fullClass.data);
+							fullItem.data.data.levels = item.data.levels;
+							fullItem.data.data.subclass = item.data.subclass;
 						}
 					}
-				} else if (item.type === "item") {
-					//Here we create an item even if we don't match it
-					const foundItemIndex = packIndex.find(e => Actor5eFromExt.isFuzzyMatch(e.name,item.name));
-					//FIXME: Probably want to make this looking up asynchronous
-					if (foundItemIndex && foundItemIndex._id) {
-						const fullItem = await pack.getEntity(foundItemIndex._id);
-						if (fullItem && fullItem.data) {
-							this.actor.createEmbeddedEntity("OwnedItem", fullItem.data);
-						}
-					} else {
-						const fullItemData = simpleTemplateItemData;
-						fullItemData.name = item.name;
-						fullItemData.type = "loot";
-						this.actor.createEmbeddedEntity("OwnedItem", fullItemData);
-					}
-					//Now replace in the Actor using the same logic as Actor5e/base.js/_onDropItemCreate
-
+				} else  {
+					//Especially for items, but also for other types, make a copy for manual matching
+					fullItem.data = duplicate(item);
+	//FIXME: Will want to add additional known info in flags
 				}
+				if (fullItem && fullItem.data) {allItemsData.push(fullItem.data);}
 			}//end for actor.items
-		}//end for packTypes
+		}//end for packNames
+		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
+		await this.actor.createEmbeddedEntity("OwnedItem", allItemsData);
 	}//end matchItems()
 
 	static isFuzzyMatch(referenceString, stringToMatch) {
@@ -263,11 +260,6 @@ export class Actor5eFromFG extends Actor5eFromExt {
 }
 
 
-const dnd5ePacks = {
-	spell : "dnd5e.spells",
-	class : "dnd5e.classes"	,
-	item : "dnd5e.items"
-}
 export class Actor5eFromMPMB extends Actor5eFromExt {
 	/** @override */
 	constructor(pcImporter) {
@@ -325,25 +317,36 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		//Get overall class level from the header line but ignore the class name which is not useful
 		//Then get class name from "(xyz 1" and sub-classes from "(xyz nn" programattically
 		//Use the lazy match to match on the first class name (otherwise it will match to the end)
-		const classLevelAndSubclassesRegExp = /level ([0-9]+):[\s\S]+?\(([A-Za-z]+) 1[^0-9](?:(?!,\slevel)[\s\S])*/g;
-		const subClassRegExp = /\(([A-Za-z ]+) \d{1,2}/g;  //extract sub-classes from "(xyz nn"
+		const levelsAndClassesRegExp = /level ([0-9]+):[\s\S]+?\(([A-Za-z]+) 1[^0-9](?:(?!,\slevel)[\s\S])*/g;
 
-		while (match = classLevelAndSubclassesRegExp.exec(mappedValue)) {
+		while (match = levelsAndClassesRegExp.exec(mappedValue)) {
 			let classItemData = duplicate(TemplateClassItemData);
 			classItemData.fullMatch = match[0];
 			classItemData.name = match[2];
 			classItemData.data.levels = match[1];
 			this.itemData.items.push(classItemData);
 		}  
-		//Now we reprocess these segments to get the subclass name
+
+		//Now we reprocess these segments to get the features and the subclass name
+		//The subclass can be stored with the class name, but we create additional items for the features
+		//Get <new line><bullet etc>Feature Name<space>(subclass-name nn)
+		const featuresAndSubClassRegExp = /^(?:[^A-Za-z])*([A-Za-z ]+) \(([A-Za-z ]+) \d{1,2}/gm;  //extract sub-classes from "(xyz nn"
+
 		this.itemData.items.forEach((classItemData,i) => {
 			//Get first [name][space][number] combination that doesn't match the previously extracted class name
-			while (match = subClassRegExp.exec(classItemData.fullMatch)) {
+			while (match = featuresAndSubClassRegExp.exec(classItemData.fullMatch)) {
 				//Now find the subclass which doesn't match the class name
-				if (match[1] !== classItemData.name)  {
-					classItemData.data.subclass = match[1];
-					break;
+				if (match[2] !== classItemData.name)  {
+					classItemData.data.subclass = match[2];
+					//Don't break here because we want to store the features
 				}
+				//And store the separate features
+				const featureItemData = duplicate(simpleTemplateItemData);
+				featureItemData.name = match[1];
+				featureItemData.type = "feat";
+//FIXME: Change the match to get all the text up to the next match				
+				featureItemData.data.description.value = match[0];
+				this.itemData.items.push(featureItemData);
 			}
 			delete this.itemData.items[i].fullMatch;    
 		}); 
@@ -468,7 +471,7 @@ const Actor5eToMPMBMapping = {
 			"prof": 0,
 			"total": "Initiative bonus"
 		  },
-		  "spellcasting": "int",
+		  "spellcasting": null,
 		  "speed": {
 			"value": "Speed",
 			"special": null
@@ -1372,20 +1375,29 @@ const TemplateSpellItemData = {
 	"data": {}
 }
 
-
 const simpleTemplateItemData = {
 	"name" : "simple",
-	"type" : "weapon"
+	"type" : "loot",
+	"data": {
+		"description": {
+			"value": null,
+			"chat": "",
+			"unidentified": "",
+			"type": "String",
+			"label": "Description"
+		},
+		"source": "PC Importer"
+	}
 }
 
 const TemplateItemData = {
 	"flags": {},
 	"name": null,
-	"type": "item",
+	"type": "loot",		//Use this default if we can't find a match on name (until we can do something more accurate)
 	"img": null,
 	"data": {
 		"description": {
-			"value": "<p>This armor is reinforced with adamantine, one of the hardest substances in existence.</p>\n<p>While you're wearing it, any critical hit against you becomes a normal hit.</p>",
+			"value": null,
 			"chat": "",
 			"unidentified": "",
 			"type": "String",

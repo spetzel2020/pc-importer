@@ -11,7 +11,8 @@
 7-Oct-2020      v0.5.2: Prototype matching in Foundry with Spells, Classes, and Features
 8-Oct-2020      v0.6.0: Add basic Fantasy Grounds import from XML
 20-Oct-2020     v0.6.1: Add basic item importing
-21-Oct-2020     v0.6.c: Also remove JSON export for now
+21-Oct-2020     v0.6.1c: Also remove JSON export for now
+                v0.6.1d: importFromFileDialog: Change to show creating new Actor using side button
 
 */
 import {Actor5eFromMPMB,Actor5eFromFG} from "./Actor5eFromExt.js";
@@ -44,28 +45,30 @@ export class PCImporter {
     }
 
     static async importFromFileDialog() {
-      new Dialog({
-        title: game.i18n.localize("PCI.ImportDialog.TITLE"),
-        content: await renderTemplate("modules/pc-importer/templates/import-data.html"),
-        buttons: {
-          import: {
-            icon: '<i class="fas fa-file-import"></i>',
-            label: "Import",
-            callback: html => {
-              const form = html.find("form")[0];
-              if ( !form.data.files.length ) return ui.notifications.error("You did not upload a data file!");
-              readTextFromFile(form.data.files[0]).then(fileContent => PCImporter.parseContent(fileContent));
+//FIXME: for now this is started from the button which alway creates a new Actor        
+        const dialogContent = game.i18n.localize("PCI.ImportDialog.CONTENT") + game.i18n.localize("PCI.ImportDialog.Create.CONTENT");
+        new Dialog({
+            title: game.i18n.localize("PCI.ImportDialog.TITLE"),
+            content: await renderTemplate("modules/pc-importer/templates/import-data.html",{dialogContent: dialogContent}),
+            buttons: {
+            import: {
+                icon: '<i class="fas fa-file-import"></i>',
+                label: "Import",
+                callback: html => {
+                const form = html.find("form")[0];
+                if ( !form.data.files.length ) return ui.notifications.error("You did not upload a data file!");
+                readTextFromFile(form.data.files[0]).then(fileContent => PCImporter.parseContent(fileContent));
+                }
+            },
+            no: {
+                icon: '<i class="fas fa-times"></i>',
+                label: "Cancel"
             }
-          },
-          no: {
-            icon: '<i class="fas fa-times"></i>',
-            label: "Cancel"
-          }
-        },
-        default: "import"
-      }, {
-        width: 400
-      }).render(true);
+            },
+            default: "import"
+        }, {
+            width: 400
+        }).render(true);
     }
 
     static async parseContent(fileContent) {

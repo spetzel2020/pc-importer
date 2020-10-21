@@ -1,10 +1,11 @@
 # TO DO
-- Add additional items consisting of classes, inventory, spells, features etc. by referencing the Compendium
+>>> Add Features and then try to match them with the previously added Class
 
 ## BUGS
 - When is the earliest you can call the translations? In init() or setup()?
 - Shouldn't create a new Actor if it already exists - just do an update using the data or the JSON
 - There are a number of places where this can fail - should use try/catch and throw errors throughout
+
 
 ## FEATURES
 - Will need a progress indicator because importing/matching can take a while
@@ -22,3 +23,4 @@ DONE Read an XFDF file
 DONE Parse into internal data structure
 DONE Create internal JSON representation
 DONE Create Actor from that JSON
+DONE Item creation can and should be batched
