@@ -8,11 +8,8 @@
 
 ## FEATURES
 - Will need a progress indicator because importing/matching can take a while
->>>Needs to be a whole matching step where we look at exist Compendiums or Actors/Spells etc.
-    - seems like those should be settings to determine where to look
-- Probably should push the logic around which constructor to use into Actor5eExt based on the importType passed
-
-
+>>> Add in Items or Features by name/description if not recognized and allow for manual matching 
+    - Have a custom Item sheet that presents possible matches, and then replaces with the found match 
 
 
 

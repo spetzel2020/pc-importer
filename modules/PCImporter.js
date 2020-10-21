@@ -10,12 +10,14 @@
 6-Oct-2020      v0.5.1: Add getValuesForPattern for fuzzy match (e.g. for spells)
 7-Oct-2020      v0.5.2: Prototype matching in Foundry with Spells, Classes, and Features
 8-Oct-2020      v0.6.0: Add basic Fantasy Grounds import from XML
+20-Oct-2020     v0.6.1: Add basic item importing
+21-Oct-2020     v0.6.c: Also remove JSON export for now
 
 */
 import {Actor5eFromMPMB,Actor5eFromFG} from "./Actor5eFromExt.js";
 
 export var MODULE_NAME="pc-importer";
-export var MODULE_VERSION="0.5.1";
+export var MODULE_VERSION="0.6.1";
 
 const ImportType = {
     fantasyGrounds : "Fantasy Grounds",
@@ -116,7 +118,8 @@ export class PCImporter {
 
         //Now export the importedActor to JSON for posterity
         //Shouldn't be input method-specific
-        importedActor.exportToJSON();
+        //v0.6.1c: Skip exporting for now since we are creating the Actor
+        //importedActor.exportToJSON();
 
         return importedActor;
     }

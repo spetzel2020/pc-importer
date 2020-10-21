@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1
+- MPMB: Corrently handle multi-classing
+- MPMB: Prototype item importing
+
 ## 0.6.0
 - Prototype importing from Fantasy Grounds
 

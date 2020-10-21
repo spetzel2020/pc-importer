@@ -1,0 +1,36 @@
+{
+  "name": "Abacus",
+  "type": "loot",
+  "data": {
+    "description": {
+      "value": "<p>The abacus, also called a counting frame, is a calculating tool.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "PHB pg. 150",
+    "quantity": 1,
+    "weight": 2,
+    "price": 2,
+    "attuned": false,
+    "equipped": false,
+    "rarity": "Common",
+    "identified": true,
+    "attributes": {
+      "spelldc": 10
+    },
+    "damage": {
+      "parts": []
+    }
+  },
+  "sort": 100000,
+  "flags": {
+    "exportSource": {
+      "world": "Ghost-Warriors",
+      "system": "dnd5e",
+      "coreVersion": "0.6.6",
+      "systemVersion": 0.98
+    }
+  },
+  "img": "systems/dnd5e/icons/items/inventory/trinket-loop.jpg",
+  "_id": "DBluvn42IeYFfWnt"
+}

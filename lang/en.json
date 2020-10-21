@@ -1,6 +1,6 @@
 {
   "PCI.id": "pc-importer",
-  "PCI.Version" : "v0.6.0",
+  "PCI.Version" : "v0.6.1",
   "PCI.Name": "PC Importer",
   "PCI.Welcome" : "Welcome to PC Importer",
   "PCI.ImportDialog.TITLE" : "Import PC",
