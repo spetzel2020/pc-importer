@@ -5,6 +5,12 @@
 - When is the earliest you can call the translations? In init() or setup()?
 - Shouldn't create a new Actor if it already exists - just do an update using the data or the JSON
 - There are a number of places where this can fail - should use try/catch and throw errors throughout
+- Leo.xfdf:
+    DONE: Intimidation proficiency not recognized
+    - Dueling Fighting Style needs to be matched by words
+Bug: Need to remove :'s and also store what the original match was
+Bug: Items are being duplicated because of tradegoods and items
+    - need to reverse the iteration 
 
 
 ## FEATURES

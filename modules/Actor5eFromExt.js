@@ -28,6 +28,12 @@
 						Change createEmbeddedEntity to batch update
 						Switch/simplift lookup and ordering of matchItems
 						Include (partial) Feature description if you don't match
+21-Oct-2020		v0.6.1e: Bug fixes: Intimidation proficiency missing
+						fuzzyMatch -> findBestMatch scoring by word matches
+						This seems at least as good as the previous method although it is giving some false positives
+						Bug: Need to remove :'s and also store what the original match was
+						Bug: Items are being duplicated because of tradegoods and items
+						- need to reverse the iteration 
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
@@ -187,8 +193,8 @@ export class Actor5eFromExt {
 			for (let i=0; i < this.itemData.items.length; i++) {
 				const item = this.itemData.items[i];
 				if (item.type !== packType) {continue;}
-				//FuzzyMatch not so good for things like "Spell Casting (class)"
-				const foundItemIndex = packIndex.find(e => Actor5eFromExt.isFuzzyMatch(e.name,item.name));
+				//findBestMatch scores best with all words matching and none extra
+				const foundItemIndex = Actor5eFromExt.findBestMatch(packIndex,item.name);
 				let fullItem = {};
 				if (foundItemIndex && foundItemIndex._id) {
 					fullItem = await pack.getEntity(foundItemIndex._id);
@@ -212,11 +218,30 @@ export class Actor5eFromExt {
 		await this.actor.createEmbeddedEntity("OwnedItem", allItemsData);
 	}//end matchItems()
 
-	static isFuzzyMatch(referenceString, stringToMatch) {
-		//For now, just check if it starts with the string - but we need to be more sophisticated
-		//for examples like "Floating Disk" vs "Tenser's Floating Disk"
-		//but we don't want to match "Magic Missile" with "Jim's Magic Missile"
-		return referenceString.startsWith(stringToMatch);
+	static findBestMatch(stringIndex, stringToMatch) {
+		if (!stringIndex || !stringToMatch) {return null;}
+		//Ranks matches by word , with 1 for all words matches and 0 for none
+		//Still probably won't be able to distinguish that Tenser's Floating Disk === Floating Disk
+		//but Magic Missiile != Jim's Magic Missile 
+		//Try to short-circuit with full name match
+		let foundIndex = stringIndex.find(s => s.name === stringToMatch);
+		if (!foundIndex) {
+			//Break the stringToMatch into words which we will then search for
+			const wordArray = stringToMatch.trim().split(" ");
+			let numberOfWords = wordArray.length;
+			let maxMatches = 0;
+			stringIndex.forEach(e => {
+				const eArray = e.name.split(" ");
+				const numMatches = eArray.filter(elem => wordArray.includes(elem)).length;
+				const nonMatches = eArray.length - numMatches;
+				const adjMatches = numMatches - nonMatches;
+				if (adjMatches > maxMatches) {
+					maxMatches = adjMatches;
+					foundIndex = e;
+				}
+			});
+		}
+		return foundIndex;
 	}
 }
 
@@ -610,7 +635,7 @@ const Actor5eToMPMBMapping = {
 			"total": null,
 			"passive": null
 		  },
-		  "ins": {  //Insigh
+		  "ins": {  //Insight
 			"value": function(fieldNames=["Ins Exp","Ins Prof"]) {return this.mapConvertAndAdd(fieldNames);},
 			"ability": "wis",
 			"bonus": null,
@@ -619,8 +644,8 @@ const Actor5eToMPMBMapping = {
 			"total": null,
 			"passive": null
 		  },
-		  "itm": {
-			"value": function(fieldNames=["Acr Exp","Acr Prof"]) {return this.mapConvertAndAdd(fieldNames);},
+		  "itm": {	//Intimidation
+			"value": function(fieldNames=["Inti Exp","Inti Prof"]) {return this.mapConvertAndAdd(fieldNames);},
 			"ability": "cha",
 			"bonus": null,
 			"mod": null,
