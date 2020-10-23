@@ -5,6 +5,9 @@
 - When is the earliest you can call the translations? In init() or setup()?
 - Shouldn't create a new Actor if it already exists - just do an update using the data or the JSON
 - There are a number of places where this can fail - should use try/catch and throw errors throughout
+- Convert all numbers to actual numbers rather than strings; init.value is particularly intolerant
+    - base this on the template string somehow (if the default value is a number use that as default and template)
+    - or allow a format modifier somehow
 
 ## FEATURES
 - Will need a progress indicator because importing/matching can take a while
