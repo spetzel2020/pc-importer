@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.1
+- MPMB: Corrently handle multi-classing
+- MPMB: Item importing: match if you can, or import the name into the Loot category
+        - changed to batch Item update
+        - improved matching to find best match by intersecting words
+
 ## 0.6.0
 - Prototype importing from Fantasy Grounds
 
