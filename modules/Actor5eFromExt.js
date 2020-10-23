@@ -33,24 +33,15 @@
 						This seems at least as good as the previous method although it is giving some false positives
 						Bug: Need to remove :'s and also store what the original match was
 						Bug: Items are being duplicated because of tradegoods and items
-						- need to reverse the iteration 
+22-Oct-2020	v0.6.1f: matchItems(): Loop over itemType, item, and then pack that might match
+					Add extractFeats()
+					findBestMatch(): Subtract non-matches in both target and comparison
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
 import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
 import Item5e from "/systems/dnd5e/module/item/entity.js";    //default export
 
-
-const dnd5ePackNames = ["dnd5e.spells","dnd5e.tradegoods","dnd5e.classes","dnd5e.classfeatures",
-						"dnd5e.items"];
-//Internal name for what we should check against (so item is checked against tradegoods and items)
-const packTypes = {
-	"dnd5e.spells":"spell",
-	"dnd5e.tradegoods":"loot",
-	"dnd5e.classes":"class",
-	"dnd5e.classfeatures":"feat",
-	"dnd5e.items":"loot"
-}
 
 export class Actor5eFromExt {
 	//Contains the Actor5e data and eventually the created Foundry object
@@ -181,39 +172,41 @@ export class Actor5eFromExt {
 		if (!this.itemData || !this.itemData.items) {return;}
 		//Match spells, classes, items, feats
 		let allItemsData = [];
-		for (let packName of dnd5ePackNames) {
-			const packType = packTypes[packName];
-			let pack = game.packs.get(packName);
-			let packIndex;
-			if (pack) {packIndex = await pack.getIndex();}
-			if (!packIndex || !packType) {continue;}
-
-//FIXME: Use filter to get only correct items	
-
-			for (let i=0; i < this.itemData.items.length; i++) {
-				const item = this.itemData.items[i];
-				if (item.type !== packType) {continue;}
-				//findBestMatch scores best with all words matching and none extra
-				const foundItemIndex = Actor5eFromExt.findBestMatch(packIndex,item.name);
-				let fullItem = {};
-				if (foundItemIndex && foundItemIndex._id) {
-					fullItem = await pack.getEntity(foundItemIndex._id);
-					if (fullItem && fullItem.data) {
-						//Nothing extra to do if it's a known spell
-						if (item.type === "class") {
-							//For classes, we augment with our knowledge of subclass and level
-							fullItem.data.data.levels = item.data.levels;
-							fullItem.data.data.subclass = item.data.subclass;
+		for (const [itemType, packNames] of Object.entries(itemTypeToPackNames)) {
+			
+			//Note that item.type for "item" is actually defaulted to "loot"
+			for (const item of this.itemData.items.filter(item => item.type === itemType)) {
+				let fullItem = null;	//a match in the packs, or just record as is
+				for (const packName of packNames) {
+					let pack = game.packs.get(packName);
+					let packIndex;
+					if (pack) {packIndex = await pack.getIndex();}
+					if (!packIndex ) {continue;}
+					
+					//findBestMatch scores best with all words matching and none extra
+					const foundItemIndex = Actor5eFromExt.findBestMatch(packIndex,item.name);
+					if (foundItemIndex && foundItemIndex._id) {
+						fullItem = await pack.getEntity(foundItemIndex._id);
+						if (fullItem && fullItem.data) {
+							//Nothing extra to do if it's a known spell or item
+							if (item.type === "class") {
+								//For classes, we augment with our knowledge of subclass and level
+								fullItem.data.data.levels = item.data.levels;
+								fullItem.data.data.subclass = item.data.subclass;
+							}
+							break;	//We found a good match, so skip searching any other packs
 						}
 					}
-				} else  {
+				}//end for packNames
+//FIXME: Will want to add additional known info in flags
+				if (!fullItem) {
+					fullItem = {};
 					//Especially for items, but also for other types, make a copy for manual matching
 					fullItem.data = duplicate(item);
-	//FIXME: Will want to add additional known info in flags
 				}
 				if (fullItem && fullItem.data) {allItemsData.push(fullItem.data);}
-			}//end for actor.items
-		}//end for packNames
+			}//end for items
+		}//end for itemTypes
 		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
 		await this.actor.createEmbeddedEntity("OwnedItem", allItemsData);
 	}//end matchItems()
@@ -226,15 +219,18 @@ export class Actor5eFromExt {
 		//Try to short-circuit with full name match
 		let foundIndex = stringIndex.find(s => s.name === stringToMatch);
 		if (!foundIndex) {
+			const splitRegEx = /[^A-Za-z0-9]/;
 			//Break the stringToMatch into words which we will then search for
-			const wordArray = stringToMatch.trim().split(" ");
+			const mixedWordArray = stringToMatch.trim().split(splitRegEx).filter(s => s !== "");
+			const wordArray = mixedWordArray.map(w => w.toLowerCase());
 			let numberOfWords = wordArray.length;
 			let maxMatches = 0;
+
 			stringIndex.forEach(e => {
-				const eArray = e.name.split(" ");
-				const numMatches = eArray.filter(elem => wordArray.includes(elem)).length;
-				const nonMatches = eArray.length - numMatches;
-				const adjMatches = numMatches - nonMatches;
+				const eArray = e.name.split(splitRegEx).filter(s => s !== "");
+				const numMatches = eArray.filter(elem => wordArray.includes(elem.toLowerCase())).length;
+				const nonMatches = (eArray.length - numMatches) + (wordArray.length - numMatches);
+				const adjMatches = numMatches - nonMatches;	//reduce match if there were words left over
 				if (adjMatches > maxMatches) {
 					maxMatches = adjMatches;
 					foundIndex = e;
@@ -285,6 +281,14 @@ export class Actor5eFromFG extends Actor5eFromExt {
 }
 
 
+//The item types coming from MPMB -> the dnd5e pack(s) to use -> what we should label unknown items
+const itemTypeToPackNames = {
+	"spell" : ["dnd5e.spells"],
+	"loot" : ["dnd5e.tradegoods", "dnd5e.items"], 	//"loot" will be the default type if not found
+	"class" : ["dnd5e.classes"],
+	"feat" : ["dnd5e.classfeatures"]
+}
+
 export class Actor5eFromMPMB extends Actor5eFromExt {
 	/** @override */
 	constructor(pcImporter) {
@@ -302,7 +306,9 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 
 		//Now iterate through available Item-like objects in the input object
 		//Classes - do this more functionally and not declaratively
+//FIXME: Kick these off asynchronously and then wait for them all to finish		
 		await importedActor.extractClasses();
+		await importedActor.extractFeats();
 		await importedActor.extractSpells();
 		await importedActor.extractItems();
 		return importedActor;
@@ -366,9 +372,8 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 					//Don't break here because we want to store the features
 				}
 				//And store the separate features
-				const featureItemData = duplicate(simpleTemplateItemData);
+				const featureItemData = duplicate(TemplateFeatData);
 				featureItemData.name = match[1];
-				featureItemData.type = "feat";
 //FIXME: Change the match to get all the text up to the next match				
 				featureItemData.data.description.value = match[0];
 				this.itemData.items.push(featureItemData);
@@ -392,8 +397,18 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		}
 	}
 
+
+	async extractFeats() {
+		const extractedFeats = this.pcImporter.getValuesForPattern(/Feat Name [1-9]/);
+		for (const featName of extractedFeats) {
+		  let featData = duplicate(TemplateFeatData);
+		  featData.name = featName;
+		  this.itemData.items.push(featData);
+		}
+	  }
+
 	async extractItems() {
-	  const allItems = this.pcImporter.getValuesForPattern("Adventuring Gear Row");
+	  const allItems = this.pcImporter.getValuesForPattern(/Adventuring Gear Row \d{1,2}/);
 	  for (const itemName of allItems) {
 		let itemData = duplicate(TemplateItemData);
 		itemData.name = itemName;
@@ -1403,6 +1418,21 @@ const TemplateSpellItemData = {
 const simpleTemplateItemData = {
 	"name" : "simple",
 	"type" : "loot",
+	"data": {
+		"description": {
+			"value": null,
+			"chat": "",
+			"unidentified": "",
+			"type": "String",
+			"label": "Description"
+		},
+		"source": "PC Importer"
+	}
+}
+
+const TemplateFeatData = {
+	"name" : "simple",
+	"type" : "feat",
 	"data": {
 		"description": {
 			"value": null,
