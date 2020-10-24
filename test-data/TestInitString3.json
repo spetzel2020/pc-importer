@@ -1,5 +1,5 @@
 {
-  "name": "Gravel-L11",
+  "name": "TestInitString3",
   "type": "character",
   "data": {
     "abilities": {
@@ -46,7 +46,7 @@
         "tempmax": 0
       },
       "init": {
-        "value": 3
+        "value": "3"
       },
       "spellcasting": "int",
       "speed": {

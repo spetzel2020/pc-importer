@@ -1,4 +1,492 @@
 {
+  "name": "Gravel-L11",
+  "type": "character",
+  "data": {
+    "abilities": {
+      "str": {
+        "value": 9,
+        "proficient": 0,
+        "mod": -1,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": -1
+      },
+      "dex": {
+        "value": 16,
+        "proficient": 0,
+        "mod": 3,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 3
+      },
+      "con": {
+        "value": 13,
+        "proficient": 0,
+        "mod": 1,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 1
+      },
+      "int": {
+        "value": 18,
+        "proficient": 1,
+        "mod": 4,
+        "prof": 1,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 5
+      },
+      "wis": {
+        "value": 11,
+        "proficient": 1,
+        "mod": 0,
+        "prof": 1,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 1
+      },
+      "cha": {
+        "value": 11,
+        "proficient": 0,
+        "mod": 0,
+        "prof": 0,
+        "saveBonus": 0,
+        "checkBonus": 0,
+        "save": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "value": 13
+      },
+      "hp": {
+        "value": 77,
+        "min": 0,
+        "max": 77,
+        "temp": "0",
+        "tempmax": ""
+      },
+      "init": {
+        "value": 3,
+        "bonus": 3,
+        "mod": 3,
+        "prof": 0,
+        "total": 6
+      },
+      "spellcasting": "int",
+      "speed": {
+        "value": "25",
+        "special": ""
+      },
+      "death": {
+        "success": 0,
+        "failure": 0
+      },
+      "encumbrance": {
+        "value": 0,
+        "max": 1080,
+        "pct": 0,
+        "encumbered": false
+      },
+      "exhaustion": 0,
+      "inspiration": true,
+      "hd": 0,
+      "prof": 1,
+      "spelldc": 13
+    },
+    "details": {
+      "biography": {
+        "value": "",
+        "public": ""
+      },
+      "alignment": "",
+      "race": "Deep Gnome",
+      "background": "Anthropologist",
+      "xp": {
+        "value": 91390,
+        "min": 0,
+        "max": 300,
+        "pct": null
+      },
+      "trait": "",
+      "ideal": "",
+      "bond": "",
+      "flaw": "",
+      "level": 0
+    },
+    "traits": {
+      "size": "grg",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "senses": "Darkvision 120'",
+      "languages": {
+        "value": [
+          "common",
+          "gnomish",
+          "undercommon",
+          "dwarvish",
+          "goblin",
+          "abyssal"
+        ],
+        "custom": ""
+      },
+      "weaponProf": {
+        "value": [
+          "Weapon: Daggers, darts, slings, quarterstaffs, light crossbows"
+        ],
+        "custom": ""
+      },
+      "armorProf": {
+        "value": [],
+        "custom": ""
+      },
+      "toolProf": {
+        "value": [],
+        "custom": ""
+      }
+    },
+    "currency": {
+      "pp": 0,
+      "gp": 0,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 3,
+        "prof": 0,
+        "total": 3,
+        "passive": 13
+      },
+      "ani": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonus": 0,
+        "mod": -1,
+        "prof": 0,
+        "total": -1,
+        "passive": 9
+      },
+      "dec": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "ins": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "inv": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "prc": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonus": 0,
+        "mod": 4,
+        "prof": 0,
+        "total": 4,
+        "passive": 14
+      },
+      "slt": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 3,
+        "prof": 0,
+        "total": 3,
+        "passive": 13
+      },
+      "ste": {
+        "value": 0,
+        "ability": "dex",
+        "bonus": 0,
+        "mod": 3,
+        "prof": 0,
+        "total": 3,
+        "passive": 13
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonus": 0,
+        "mod": 0,
+        "prof": 0,
+        "total": 0,
+        "passive": 10
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "max": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "max": 0,
+        "override": null,
+        "level": 0
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "primary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "secondary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      },
+      "tertiary": {
+        "value": null,
+        "max": null,
+        "sr": false,
+        "lr": false,
+        "label": ""
+      }
+    }
+  },
+  "sort": 100001,
+  "flags": {
+    "exportSource": {
+      "world": "Ghost-Warriors",
+      "system": "dnd5e",
+      "coreVersion": "0.6.6",
+      "systemVersion": 0.96
+    },
+    "dnd5e": {},
+    "core": {
+      "sheetClass": {}
+    },
+    "PC Importer": "0.6.0"
+  },
+  "token": {
+    "flags": {},
+    "name": "Gravel-L11",
+    "displayName": 0,
+    "img": "icons/svg/mystery-man.svg",
+    "tint": null,
+    "width": 4,
+    "height": 4,
+    "scale": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "vision": true,
+    "dimSight": 30,
+    "brightSight": 0,
+    "dimLight": 0,
+    "brightLight": 0,
+    "sightAngle": 360,
+    "lightAngle": 360,
+    "lightAlpha": 1,
+    "actorId": "ceujwNpS5JrrnQIQ",
+    "actorLink": true,
+    "actorData": {},
+    "disposition": 1,
+    "displayBars": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {},
+    "randomImg": false
+  },
+  "items": [],
+  "_id": "ceujwNpS5JrrnQIQ",
+  "img": "icons/svg/mystery-man.svg",
+  "pcImporter": {
+    "importedFieldToValuesMap": {},
+    "importType": "Fantasy Grounds"
+  },
   "actor": {
     "name": "Gravel-L11",
     "permission": {
