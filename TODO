@@ -12,10 +12,13 @@
 
 ## FEATURES
 - Will need a progress indicator because importing/matching can take a while
->>> Add in Items or Features by name/description if not recognized and allow for manual matching 
-    - Have a custom Item sheet that presents possible matches, and then replaces with the found match 
+>>> Add in Items or Features by name/description if not recognized and allow for manual matching
+    - Include info in the Description or the flags of what it originally had
+- Have a custom Item sheet that presents possible matches, and then replaces with the found match
+    - this is also a standalone module for other Imports
 - Invocations
 >>> Racial Features (extract from Race entry?)
+- Include DDB packs and a way of adding your own (in Settings)
 
 
 
@@ -24,7 +27,7 @@
     DONE: Intimidation proficiency not recognized
     DONE - Dueling Fighting Style needs to be matched by words
 FIXED: Bug: Need to remove :'s and also store what the original match was
-FIXED: Bug: Items are being duplicated because of tradegoods and items - need to reverse the iteration 
+FIXED: Bug: Items are being duplicated because of tradegoods and items - need to reverse the iteration
 
 ## COMPLETED FEATURES
 DONE Read an XFDF file
