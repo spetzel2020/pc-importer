@@ -2,7 +2,7 @@
 
 * **Author**: Spetzel#0103
 * **Version**: 0.6.1
-* **Foundry VTT Compatibility**: 0.6.5-0.7.2
+* **Foundry VTT Compatibility**: 0.6.5-0.7.5
 * **System Compatibility (If applicable)**: dnd5e
 * **Translation Support**: en
 
@@ -21,10 +21,10 @@ PC Importer imports Player Character sheets from other systems and methods into 
 1. Open your MPMB character sheet in Acrobat Reader DC or similar.
 2. Enable the **Show extra features** tool bar, and click the Import/Export button
 3. Pick the **Import/Export using files>Export .xfdf file>Export .xfdf file of all fields** option
-4. Wait between 15s and several minutes depending on the complexity of your sheet. A new dialog will appear with XFDF output; select all the output in the window, and copy-and-paste into a new file with the XFDF extension
-5. From the Foundry Actors tab, create a new Actor with your character name and type "character"
-6. Click the "Import a PC character sheet" control in the left control set (Tokens)
-7. Browse to the location of the XFDF file created in Step 3 above and select that
-8. Click Import
-9. PC Importer will import recognized content into your character and provide a summary of what content was successfully imported and matched
-    - unrecognized content is imported but not matched
+4. Wait between 15s and several minutes depending on the complexity of your sheet. A new dialog will appear with XFDF output.
+5. Select all the output in the window, and copy-and-paste and save into a new file with the XFDF extension. **WARNING**: The default text selected is not all of the file you need; make sure to Ctrl-A, Ctrl-C (or the equivalent on your platform) to get all the text
+6. On Foundry, select the Token's control ribbon on the left (the top-left option)
+7. In that control ribbon, click the "Import a PC character sheet" control 
+8. When the dialog opens, click the Choose File button, and browse to the location of the XFDF file created in Step 3 above and select that
+9. Click Import
+10. PC Importer will import recognized content into a new Actor (type character) and add unmatched content for the remaining classes, class features, feats, inventory, and spells.
