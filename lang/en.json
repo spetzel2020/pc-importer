@@ -1,11 +1,24 @@
 {
   "PCI.id": "pc-importer",
-  "PCI.Version" : "v0.6.1",
+  "PCI.Version" : "v0.6.2",
   "PCI.Name": "PC Importer",
   "PCI.Welcome" : "Welcome to PC Importer",
   "PCI.ImportDialog.TITLE" : "Import PC",
-  "PCI.ImportDialog.CONTENT" : "You may import data for this Actor from an XML or JSON export created from a different system.<br>",
-  "PCI.ImportDialog.Update.CONTENT" : "This operation will update the data for the Actor and cannot be un-done.",
-  "PCI.ImportDialog.Create.CONTENT" : "This operation will create a new Actor.",
-  "PCI.Import.BUTTON" : "Import a PC character sheet from another system or character sheet"
+  "PCI.ImportDialog.CONTENT" : "PC Importer imports characters using XML or JSON export created from a different system. This version works primarily with MPMB sheets.<br>",
+  "PCI.ImportDialog.Update.CONTENT" : "Consider exporting or duplicating your character first. This import  will update the data for this Actor and cannot be un-done.",
+  "PCI.ImportDialog.Create.CONTENT" : "This import will create a new character Actor, even if you already have one by the imported name.",
+  "PCI.ImportDialog.Import.BUTTON" : "Import",
+  "PCI.ImportDialog.Cancel.BUTTON": "Cancel",
+  "PCI.Import.BUTTON" : "Import a Player Character (PC) from another system or character sheet",
+  "PCI.Compendia.Races.Setting.NAME": "Race Compendiums",
+  "PCI.Compendia.Races.Setting.HINT": "Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Classes.Setting.NAME" : "Class Compendiums",
+  "PCI.Compendia.Classes.Setting.HINT": "Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Features.Setting.NAME": "Feature Compendiums",
+  "PCI.Compendia.Features.Setting.HINT":"Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Items.Setting.NAME": "Item Compendiums",
+  "PCI.Compendia.Items.Setting.HINT": "Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Spells.Setting.NAME": "Spell Compendiums",
+  "PCI.Compendia.Spells.Setting.HINT" : "Compendiums to search in order (quoted and comma-separated)"
+
 }

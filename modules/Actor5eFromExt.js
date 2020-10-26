@@ -36,6 +36,8 @@
 22-Oct-2020	v0.6.1f: matchItems(): Loop over itemType, item, and then pack that might match
 					Add extractFeats()
 					findBestMatch(): Subtract non-matches in both target and comparison
+25-Oct-2020	v0.6.2b: Pull pack names from settings and override if non-null; this allows you to change matching order and add new compendiums
+					Add "race" match
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
@@ -172,8 +174,13 @@ export class Actor5eFromExt {
 		if (!this.itemData || !this.itemData.items) {return;}
 		//Match spells, classes, items, feats
 		let allItemsData = [];
-		for (const [itemType, packNames] of Object.entries(itemTypeToPackNames)) {
-			
+		for (let [itemType, packNames] of Object.entries(itemTypeToPackNames)) {
+			//Now override the packNames if something is specified in the settings (but we'll ignore blanks)
+			const settingsPackNames = game.settings.get(MODULE_NAME,itemType);
+			if (settingsPackNames && settingsPackNames.length) {
+				//settingsPackNames will be a comma-separated list of names which we need to separate into string
+				packNames = settingsPackNames.split(",");
+			}
 			//Note that item.type for "item" is actually defaulted to "loot"
 			for (const item of this.itemData.items.filter(item => item.type === itemType)) {
 				let fullItem = null;	//a match in the packs, or just record as is
@@ -282,11 +289,12 @@ export class Actor5eFromFG extends Actor5eFromExt {
 
 
 //The item types coming from MPMB -> the dnd5e pack(s) to use -> what we should label unknown items
-const itemTypeToPackNames = {
+export const itemTypeToPackNames = {
 	"spell" : ["dnd5e.spells"],
 	"loot" : ["dnd5e.tradegoods", "dnd5e.items"], 	//"loot" will be the default type if not found
 	"class" : ["dnd5e.classes"],
-	"feat" : ["dnd5e.classfeatures"]
+	"feat" : ["dnd5e.classfeatures"],
+	"race": ["dnd5e.races"]
 }
 
 export class Actor5eFromMPMB extends Actor5eFromExt {

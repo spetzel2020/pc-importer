@@ -13,9 +13,13 @@
 20-Oct-2020     v0.6.1: Add basic item importing
 21-Oct-2020     v0.6.1c: Also remove JSON export for now
                 v0.6.1d: importFromFileDialog: Change to show creating new Actor using side button
+24-Oct-2020     v0.6.2: i18n buttons on import dialog  
+25-Oct-2020     v0.6.2: Change import button to Person+
+                Add Settings for default Compendiums to search for classes etc.
+
 
 */
-import {Actor5eFromMPMB,Actor5eFromFG} from "./Actor5eFromExt.js";
+import {Actor5eFromMPMB,Actor5eFromFG, itemTypeToPackNames} from "./Actor5eFromExt.js";
 
 export var MODULE_NAME="pc-importer";
 export var MODULE_VERSION="0.6.1";
@@ -42,6 +46,46 @@ export class PCImporter {
           default: MODULE_VERSION,
           type: String
         });
+        game.settings.register(MODULE_NAME, "race", {
+            name: "PCI.Compendia.Races.Setting.NAME",
+            hint: "PCI.Compendia.Races.Setting.HINT",
+            scope: "world",
+            config: true,
+            default: itemTypeToPackNames["race"],
+            type: String
+        });
+        game.settings.register(MODULE_NAME, "class", {
+            name: "PCI.Compendia.Classes.Setting.NAME" ,
+            hint: "PCI.Compendia.Classes.Setting.HINT",
+            scope: "world",
+            config: true,
+            default: itemTypeToPackNames["class"],
+            type: String
+        });
+        game.settings.register(MODULE_NAME, "feat", {
+            name: "PCI.Compendia.Features.Setting.NAME",
+            hint: "PCI.Compendia.Features.Setting.HINT",
+            scope: "world",
+            config: true,
+            default: itemTypeToPackNames["feat"],
+            type: String
+        });
+        game.settings.register(MODULE_NAME, "loot", {
+            name: "PCI.Compendia.Items.Setting.NAME",
+            hint: "PCI.Compendia.Items.Setting.HINT",
+            scope: "world",
+            config: true,
+            default: itemTypeToPackNames["loot"],
+            type: String
+        });
+        game.settings.register(MODULE_NAME, "spell", {
+            name: "PCI.Compendia.Spells.Setting.NAME",
+            hint: "PCI.Compendia.Spells.Setting.HINT",
+            scope: "world",
+            config: true,
+            default: itemTypeToPackNames["spell"],
+            type: String
+        });
     }
 
     static async importFromFileDialog() {
@@ -53,7 +97,7 @@ export class PCImporter {
             buttons: {
             import: {
                 icon: '<i class="fas fa-file-import"></i>',
-                label: "Import",
+                    label: game.i18n.localize("PCI.ImportDialog.Import.BUTTON"),
                 callback: html => {
                 const form = html.find("form")[0];
                 if ( !form.data.files.length ) return ui.notifications.error("You did not upload a data file!");
@@ -62,7 +106,7 @@ export class PCImporter {
             },
             no: {
                 icon: '<i class="fas fa-times"></i>',
-                label: "Cancel"
+                label: game.i18n.localize("PCI.ImportDialog.Cancel.BUTTON")
             }
             },
             default: "import"
@@ -286,8 +330,8 @@ export class PCImporter {
         if (notesButton && game.user.isGM) {
             notesButton.tools.push({
                 name: "importPC",
-                title: game.i18n.localize("PCI.Import.BUTTON"),
-                icon: "fas fa-file-import",
+                title: "PCI.Import.BUTTON",
+                icon: "fas fa-user-plus",
                 toggle: false,
                 button: true,
                 visible: game.user.isGM,

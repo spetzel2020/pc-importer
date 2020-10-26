@@ -7,7 +7,7 @@
 - Convert all numbers to actual numbers rather than strings; init.value is particularly intolerant
     - base this on the template string somehow (if the default value is a number use that as default and template)
     - or allow a format modifier somehow
-
+- Size not being handled correctly
 
 
 ## FEATURES
