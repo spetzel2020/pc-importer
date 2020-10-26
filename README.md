@@ -27,7 +27,7 @@ PC Importer imports Player Character sheets from other systems and methods into 
 ### On Foundry
 6. On Foundry, select the Token's control palette on the left (the top-left option)
 7. In that control ribbon, click the **Import a PC character sheet** control (the person-plus option)
-![The Import a PC option](https://github.com/opus1217/pc-importer/blob/master/img/import-pc-control.png?raw=true)
+![The Import a PC option](https://github.com/opus1217/pc-importer/blob/master/img/import-pc-control.PNG?raw=true)
 8. When the dialog opens, click the **Choose File** button, and browse to the location of the XFDF file created in Step 3 above and select that
 9. Click **Import**
 10. PC Importer will import recognized content into a newly created Actor (type character) and add unmatched content for the remaining classes, class features, feats, inventory, and spells.
