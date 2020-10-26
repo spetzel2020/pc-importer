@@ -3,7 +3,7 @@
     "title": "PC Importer",
     "description": "<p>Import your PC character sheet to Foundry and match to SRD or other licensed content</p>Supported methods:<ol><li>MPMB (More Purple More Better)</li></ol>",
     "author" : "Spetzel",
-    "version": "0.6.1",
+    "version": "0.6.2",
     "minimumCoreVersion": "0.6.5",
     "compatibleCoreVersion": "0.7.2",
     "languages": [{
@@ -21,10 +21,10 @@
         }
     ],
     "system": "dnd5e",
-    "readme": "https://github.com/opus1217/pc-importer/blob/v0.6.1/README.md",
+    "readme": "https://github.com/opus1217/pc-importer/blob/v0.6.2/README.md",
     "bugs": "https://github.com/opus1217/pc-importer/issues",
     "changelog": "https://github.com/opus1217/pc-importer/blob/master/CHANGELOG.md",
-    "manifest": "https://raw.githubusercontent.com/opus1217/pc-importer/v0.6.1/module.json",
-    "download": "https://github.com/opus1217/pc-importer/archive/v0.6.1.zip",
+    "manifest": "https://raw.githubusercontent.com/opus1217/pc-importer/v0.6.2/module.json",
+    "download": "https://github.com/opus1217/pc-importer/archive/v0.6.2.zip",
     "url": "https://github.com/opus1217/pc-importer"
 }
