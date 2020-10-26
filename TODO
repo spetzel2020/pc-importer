@@ -8,17 +8,21 @@
     - base this on the template string somehow (if the default value is a number use that as default and template)
     - or allow a format modifier somehow
 - Size not being handled correctly
+>>> Shouldn't include ALL the test data in the release
 
 
 ## FEATURES
 - Will need a progress indicator because importing/matching can take a while
+    - Not really; seems to be done pretty quickly
+    - However, sometimes the PC is created quickly and then the rest of things get filled in afterwards
+    - need a dialog that summarizes it's ready
 >>> Add in Items or Features by name/description if not recognized and allow for manual matching
     - Include info in the Description or the flags of what it originally had
-- Have a custom Item sheet that presents possible matches, and then replaces with the found match
-    - this is also a standalone module for other Imports
-- Invocations
->>> Racial Features (extract from Race entry?)
-- Include DDB packs and a way of adding your own (in Settings)
+    - Also have a matching table MPMB->Foundry for common ones
+    - Have a custom Item sheet that presents possible matches, and then replaces with the found match
+        - this is also a standalone module for other Imports
+>>> Invocations
+
 
 
 
@@ -37,3 +41,6 @@ DONE Create Actor from that JSON
 DONE Item creation can and should be batched
 DONE Class Features matched
 DONE Need to loop through Feats for reference "Feat Name ?"
+DONE Racial Features (extract from Race entry?)
+DONE Include DDB packs and a way of adding your own (in Settings)
+     - fill in the field; eventually a checkbox? Or just include them all
