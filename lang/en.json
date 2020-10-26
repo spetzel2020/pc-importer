@@ -19,6 +19,7 @@
   "PCI.Compendia.Items.Setting.NAME": "Item Compendiums",
   "PCI.Compendia.Items.Setting.HINT": "Compendiums to search in order (unquoted and comma-separated)",
   "PCI.Compendia.Spells.Setting.NAME": "Spell Compendiums",
-  "PCI.Compendia.Spells.Setting.HINT" : "Compendiums to search in order (unquoted and comma-separated)"
+  "PCI.Compendia.Spells.Setting.HINT" : "Compendiums to search in order (unquoted and comma-separated)",
+  "PCI.LoadingMessage" : "...LOADING"
 
 }

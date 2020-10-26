@@ -3,8 +3,11 @@
 ## 0.6.2
  - Change import button to Person+
  - i18n button names on import dialog
- - Add ability to specify additional compendiums or re-order them
- - Add race compendium - not used yet
+ - Add ability to specify additional compendiums or re-order them (although you have to know their filenames)
+ - Add race compendium and match Racial Features
+ - Show LOADING on Actor name until it's done importing and matching	
+- Fix up languages; move those not found in DND5E.languages into custom
+- Default added weapons to Proficient
 
 ## 0.6.1
 - MPMB: Correctly handle multi-classing

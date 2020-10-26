@@ -39,10 +39,13 @@
 25-Oct-2020	v0.6.2b: Pull pack names from settings and override if non-null; this allows you to change matching order and add new compendiums
 					Add "race" match
 					Add details.biography.value - append all Background elements
+			v0.6.2c	Show LOADING on Actor name until it's done importing and matching	
+26-Oct-2020	v0.6.2c	Fix up languages; move those not found into custom							
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
 import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
+import {DND5E} from "/systems/dnd5e/module/config.js";
 import Item5e from "/systems/dnd5e/module/item/entity.js";    //default export
 
 
@@ -158,17 +161,39 @@ export class Actor5eFromExt {
 	}
 
 	async createFoundryActor() {
+		//Do fix-ups which can't be done inline easily
+		this.fixFoundryActor();
+
 		let actorData = duplicate(this.actorData);
 		const options = {temporary: false, renderSheet: false}
 //FIXME: Do an update if this actor already exists?? Should always be starting the import on an existing Actor for safety
+		//v0.6.2: Since this actor will show up in the Actors list, we change the name to show that it's still loading
+		this.name = actorData.name;
+		actorData.name = this.name + game.i18n.localize("PCI.LoadingMessage");
 		this.actor = await Actor5e.create(actorData, options);
 
 		//Now do the matching - do this on the created Actor so that we pull Items from the Compendium directly into the
 		//Actor rather than having to create intermediate values
-//FIXME: Would like to move this before Actor creation and reference spells etc. - look at JSON import?
 		await this.matchItems();
 	}
 
+	fixFoundryActor() {
+		//LANGUAGES: Check that they are in the known set of DND5E languages
+		let unknownLanguages = [];
+		this.actorData.data.traits.languages.value.forEach(lang => {
+			if (!(lang in DND5E.languages)) {unknownLanguages.push(lang);}
+		});
+		//Filter out the unknown languages
+		this.actorData.data.traits.languages.value = this.actorData.data.traits.languages.value.filter(lang => lang in DND5E.languages);
+		//And add them to custom
+		if (!this.actorData.data.traits.languages.custom) {this.actorData.data.traits.languages.custom = "";}
+		if (unknownLanguages.length) {
+			this.actorData.data.traits.languages.custom = unknownLanguages.reduce((accum, lang) => {
+				if (accum.length === 0) {return lang;}
+				else {return accum+";"+lang;}
+			}, this.actorData.data.traits.languages.custom);
+		}
+	}
 
 
 	async matchItems() {
@@ -202,6 +227,9 @@ export class Actor5eFromExt {
 								//For classes, we augment with our knowledge of subclass and level
 								fullItem.data.data.levels = item.data.levels;
 								fullItem.data.data.subclass = item.data.subclass;
+							} else if (fullItem.data.type === "weapon") {
+								//default added weapons to proficiency
+								fullItem.data.data.proficient = true;
 							}
 							break;	//We found a good match, so skip searching any other packs
 						}
@@ -218,6 +246,9 @@ export class Actor5eFromExt {
 		}//end for itemTypes
 		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
 		await this.actor.createEmbeddedEntity("OwnedItem", allItemsData);
+
+		//Now update the actor name to indicate we're done
+		await this.actor.update({name: this.name});
 	}//end matchItems()
 
 	static findBestMatch(stringIndex, stringToMatch) {
@@ -600,8 +631,8 @@ const Actor5eToMPMBMapping = {
 		  },
 		  "senses": "Vision",
 		  "languages": {
-			"value":  function() {return lowercaseArray(this.mapArray( ["Language 1","Language 2","Language 3","Language 4","Language 5"]));},
-			"custom": null
+			  "value": function () { return lowercaseArray(this.mapArray(["Language 1", "Language 2", "Language 3", "Language 4", "Language 5", "Language 6"]));},
+			"custom": ""
 		  },
 		  "weaponProf": {
 			"value": [],
