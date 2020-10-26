@@ -16,6 +16,7 @@
 24-Oct-2020     v0.6.2: i18n buttons on import dialog  
 25-Oct-2020     v0.6.2: Change import button to Person+
                 Add Settings for default Compendiums to search for classes etc.
+26-Oct-2020     v0.6.3: getEntriesForPattern() returns both key and value                
 
 
 */
@@ -318,6 +319,16 @@ export class PCImporter {
             if (key.match(fieldNamePattern)) {values.push(value);}
         }
         return values;
+    }
+    getEntriesForPattern(fieldNamePattern) {
+        //Returns both the key and the value so we can match Gear Name, Weight, Amount (for example)
+        let iterator = this.importedFieldToValuesMap.entries();
+        let entries = new Map();
+        for (let nextEntry = iterator.next(); !nextEntry.done; nextEntry = iterator.next()) {
+            const [key, value] = nextEntry.value;
+            if (key.match(fieldNamePattern)) { entries.set(key, value); }
+        }
+        return entries;
     }
 
 

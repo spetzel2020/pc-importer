@@ -40,7 +40,8 @@
 					Add "race" match
 					Add details.biography.value - append all Background elements
 			v0.6.2c	Show LOADING on Actor name until it's done importing and matching	
-26-Oct-2020	v0.6.2c	Fix up languages; move those not found into custom							
+26-Oct-2020	v0.6.2c	Fix up languages; move those not found into custom
+26-Oct-2020	v0.6.3:	Add weight and quantities for items							
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
@@ -230,6 +231,10 @@ export class Actor5eFromExt {
 							} else if (fullItem.data.type === "weapon") {
 								//default added weapons to proficiency
 								fullItem.data.data.proficient = true;
+							} else if (item.type === "loot") {
+								//Copy over the quantity and weight if specified
+								fullItem.data.data.quantity = item.data.quantity;
+								fullItem.data.data.weight = item.data.weight;
 							}
 							break;	//We found a good match, so skip searching any other packs
 						}
@@ -467,12 +472,19 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 	}
 
 	async extractItems() {
-	  const allItems = this.pcImporter.getValuesForPattern(/Adventuring Gear Row \d{1,2}/);
-	  for (const itemName of allItems) {
-		let itemData = duplicate(TemplateItemData);
-		itemData.name = itemName;
-		this.itemData.items.push(itemData);
-	  }
+	  	const allItems = this.pcImporter.getEntriesForPattern(/Adventuring Gear Row \d{1,2}/);
+		const allWeights = this.pcImporter.getEntriesForPattern(/Adventuring Gear Weight \d{1,2}/);
+		const allAmounts = this.pcImporter.getEntriesForPattern(/Adventuring Gear Amount \d{1,2}/);
+		for (const item of allItems) {
+			let itemData = duplicate(TemplateItemData);
+			itemData.name = item[1];
+			//Find weight and quantity if they exist
+			const weightKey = item[0].replace("Row","Weight");
+			itemData.data.weight = allWeights.get(weightKey);
+			const amountKey = item[0].replace("Row","Amount");
+			itemData.data.quantity = allAmounts.get(amountKey);
+			this.itemData.items.push(itemData);
+		}
 	}
 
 
