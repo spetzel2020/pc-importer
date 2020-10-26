@@ -38,6 +38,7 @@
 					findBestMatch(): Subtract non-matches in both target and comparison
 25-Oct-2020	v0.6.2b: Pull pack names from settings and override if non-null; this allows you to change matching order and add new compendiums
 					Add "race" match
+					Add details.biography.value - append all Background elements
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
@@ -171,8 +172,9 @@ export class Actor5eFromExt {
 
 
 	async matchItems() {
+//FIXME: Probably should split this into matchSPells, matchItems etc. and parallelize		
 		if (!this.itemData || !this.itemData.items) {return;}
-		//Match spells, classes, items, feats
+		//Match spells, classes, items, feats, races
 		let allItemsData = [];
 		for (let [itemType, packNames] of Object.entries(itemTypeToPackNames)) {
 			//Now override the packNames if something is specified in the settings (but we'll ignore blanks)
@@ -293,8 +295,7 @@ export const itemTypeToPackNames = {
 	"spell" : ["dnd5e.spells"],
 	"loot" : ["dnd5e.tradegoods", "dnd5e.items"], 	//"loot" will be the default type if not found
 	"class" : ["dnd5e.classes"],
-	"feat" : ["dnd5e.classfeatures"],
-	"race": ["dnd5e.races"]
+	"feat" : ["dnd5e.races","dnd5e.classfeatures"]
 }
 
 export class Actor5eFromMPMB extends Actor5eFromExt {
@@ -314,11 +315,16 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 
 		//Now iterate through available Item-like objects in the input object
 		//Classes - do this more functionally and not declaratively
-//FIXME: Kick these off asynchronously and then wait for them all to finish		
-		await importedActor.extractClasses();
-		await importedActor.extractFeats();
-		await importedActor.extractSpells();
-		await importedActor.extractItems();
+
+		const extractions = [];
+		extractions.push(importedActor.extractClasses());
+		extractions.push(importedActor.extractFeats());
+		extractions.push(importedActor.extractSpells());
+		extractions.push(importedActor.extractItems());
+		extractions.push(importedActor.extractRacialFeatures());
+//FIXME: Don't want this to fail if one fails	
+		//Do extractions in parallel - this will be of limited benefit
+		await Promise.all(extractions);
 		return importedActor;
 	}
 
@@ -396,7 +402,7 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		const allSpells = this.pcImporter.getValuesForPattern(".SS(?:front|more)+.spells.name");
 		//Get all unique values
 		const allUniqueSpells = [...(new Set(allSpells))];
-		//FIXME we'd like to get level as well to improve the chance of a match later
+//FIXME we'd like to get level as well to improve the chance of a match later
 		for (const spellName of allUniqueSpells) {
 			let spellItemData = duplicate(TemplateSpellItemData);
 			spellItemData.name = spellName;
@@ -413,7 +419,21 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		  featData.name = featName;
 		  this.itemData.items.push(featData);
 		}
-	  }
+	}
+
+	async extractRacialFeatures() {
+		//Got Race earlier, but it's also listed as a Feat
+		let featData = duplicate(TemplateFeatData);
+		featData.name = this.actorData.data.details.race;
+		this.itemData.items.push(featData);
+		//Plus Race itself is listed as a Feat
+		const extractedFeats = this.pcImporter.getValuesForPattern(/Racial Traits/);
+		for (const featName of extractedFeats) {
+			featData = duplicate(TemplateFeatData);
+			featData.name = featName;
+			this.itemData.items.push(featData);
+		}
+	}
 
 	async extractItems() {
 	  const allItems = this.pcImporter.getValuesForPattern(/Adventuring Gear Row \d{1,2}/);
@@ -542,7 +562,7 @@ const Actor5eToMPMBMapping = {
 		},
 		"details": {
 		  "biography": {
-			"value": null,
+			"value": function () {return appendArrayElements(this.mapArray(["Background Feature", "Background Feature Description", "Background_Appearance","Background_Enemies","Background_Faction.Text","Background_History","Background_Organization.Left"])); },
 			"public": "Background History"
 		  },
 		  "alignment": "Alignment",
@@ -1569,9 +1589,13 @@ const TemplateItemData = {
 }
 
 
-function defaulted(defaultValue) {return defaultValue;}
-
 function lowercaseArray(mappedArray) {
 	mappedArray.forEach((elem,i) => {mappedArray[i] = elem.toLowerCase()});
 	return mappedArray;
+}
+
+function appendArrayElements(mappedArray) {
+	let appended = "";
+	mappedArray.forEach((elem, i) => {appended += ("<p>"+elem+"</p>"); });
+	return appended;
 }

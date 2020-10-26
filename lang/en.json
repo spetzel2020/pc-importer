@@ -11,14 +11,14 @@
   "PCI.ImportDialog.Cancel.BUTTON": "Cancel",
   "PCI.Import.BUTTON" : "Import a Player Character (PC) from another system or character sheet",
   "PCI.Compendia.Races.Setting.NAME": "Race Compendiums",
-  "PCI.Compendia.Races.Setting.HINT": "Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Races.Setting.HINT": "Compendiums to search in order (unquoted and comma-separated)",
   "PCI.Compendia.Classes.Setting.NAME" : "Class Compendiums",
-  "PCI.Compendia.Classes.Setting.HINT": "Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Classes.Setting.HINT": "Compendiums to search in order (unquoted and comma-separated)",
   "PCI.Compendia.Features.Setting.NAME": "Feature Compendiums",
-  "PCI.Compendia.Features.Setting.HINT":"Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Features.Setting.HINT":"Compendiums to search in order (unquoted and comma-separated)",
   "PCI.Compendia.Items.Setting.NAME": "Item Compendiums",
-  "PCI.Compendia.Items.Setting.HINT": "Compendiums to search in order (quoted and comma-separated)",
+  "PCI.Compendia.Items.Setting.HINT": "Compendiums to search in order (unquoted and comma-separated)",
   "PCI.Compendia.Spells.Setting.NAME": "Spell Compendiums",
-  "PCI.Compendia.Spells.Setting.HINT" : "Compendiums to search in order (quoted and comma-separated)"
+  "PCI.Compendia.Spells.Setting.HINT" : "Compendiums to search in order (unquoted and comma-separated)"
 
 }
