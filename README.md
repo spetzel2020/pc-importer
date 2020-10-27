@@ -31,3 +31,13 @@ PC Importer imports Player Character sheets from other systems and methods into 
 8. When the dialog opens, click the **Choose File** button, and browse to the location of the XFDF file created in Step 3 above and select that
 9. Click **Import**
 10. PC Importer will import recognized content into a newly created Actor (type character) and add unmatched content for the remaining classes, class features, feats, inventory, and spells. The name will show "...LOADING" after the Actor has been created, but while remaining content is being processed.
+
+## Contribution
+*Coming soon!*
+
+## License
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">PC Importer for Foundry -</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/syl3r86?tab=repositories" property="cc:attributionName" rel="cc:attributionURL">Jeffrey Pugh</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+Portions incorporated from [Favourites Tab](https://github.com/syl3r86/favtab/blob/master/README.md)
+
+This work is licensed under Foundry Virtual Tabletop [EULA - Limited License Agreement for module development v 0.1.6](http://foundryvtt.com/pages/license.html).
