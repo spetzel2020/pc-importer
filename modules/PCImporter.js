@@ -16,11 +16,12 @@
 24-Oct-2020     v0.6.2: i18n buttons on import dialog  
 25-Oct-2020     v0.6.2: Change import button to Person+
                 Add Settings for default Compendiums to search for classes etc.
-26-Oct-2020     v0.6.3: getEntriesForPattern() returns both key and value                
+26-Oct-2020     v0.6.3: getEntriesForPattern() returns both key and value   
+27-Oct-2020     v0.6.3b: Removed "race" setting since Racial Features are actually in with Class Features(?)            
 
 
 */
-import {Actor5eFromMPMB,Actor5eFromFG, itemTypeToPackNames} from "./Actor5eFromExt.js";
+import {Actor5eFromMPMB,Actor5eFromFG, defaultItemTypeToPackNames} from "./Actor5eFromExt.js";
 
 export var MODULE_NAME="pc-importer";
 export var MODULE_VERSION="0.6.1";
@@ -47,20 +48,12 @@ export class PCImporter {
           default: MODULE_VERSION,
           type: String
         });
-        game.settings.register(MODULE_NAME, "race", {
-            name: "PCI.Compendia.Races.Setting.NAME",
-            hint: "PCI.Compendia.Races.Setting.HINT",
-            scope: "world",
-            config: true,
-            default: itemTypeToPackNames["race"],
-            type: String
-        });
         game.settings.register(MODULE_NAME, "class", {
             name: "PCI.Compendia.Classes.Setting.NAME" ,
             hint: "PCI.Compendia.Classes.Setting.HINT",
             scope: "world",
             config: true,
-            default: itemTypeToPackNames["class"],
+            default: defaultItemTypeToPackNames["class"],
             type: String
         });
         game.settings.register(MODULE_NAME, "feat", {
@@ -68,7 +61,7 @@ export class PCImporter {
             hint: "PCI.Compendia.Features.Setting.HINT",
             scope: "world",
             config: true,
-            default: itemTypeToPackNames["feat"],
+            default: defaultItemTypeToPackNames["feat"],
             type: String
         });
         game.settings.register(MODULE_NAME, "loot", {
@@ -76,7 +69,7 @@ export class PCImporter {
             hint: "PCI.Compendia.Items.Setting.HINT",
             scope: "world",
             config: true,
-            default: itemTypeToPackNames["loot"],
+            default: defaultItemTypeToPackNames["loot"],
             type: String
         });
         game.settings.register(MODULE_NAME, "spell", {
@@ -84,7 +77,7 @@ export class PCImporter {
             hint: "PCI.Compendia.Spells.Setting.HINT",
             scope: "world",
             config: true,
-            default: itemTypeToPackNames["spell"],
+            default: defaultItemTypeToPackNames["spell"],
             type: String
         });
     }

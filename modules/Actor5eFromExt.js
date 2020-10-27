@@ -41,7 +41,9 @@
 					Add details.biography.value - append all Background elements
 			v0.6.2c	Show LOADING on Actor name until it's done importing and matching	
 26-Oct-2020	v0.6.2c	Fix up languages; move those not found into custom
-26-Oct-2020	v0.6.3:	Add weight and quantities for items							
+26-Oct-2020	v0.6.3:	Add weight and quantities for items		
+27-Oct-2020 v0.6.3b:	Parallelize matchItems
+						getItemTypePackNames(): ADDED - also used by MatchItem.js
 */
 
 import {MODULE_NAME, PCImporter} from "./PCImporter.js";
@@ -49,6 +51,14 @@ import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
 import {DND5E} from "/systems/dnd5e/module/config.js";
 import Item5e from "/systems/dnd5e/module/item/entity.js";    //default export
 
+
+//The item types coming from MPMB (and FG?) -> the dnd5e pack(s) to use -> what we should label unknown items
+export const defaultItemTypeToPackNames = {
+	"spell": ["dnd5e.spells"],
+	"loot": ["dnd5e.tradegoods", "dnd5e.items"], 	//"loot" will be the default type if not found
+	"class": ["dnd5e.classes"],
+	"feat": ["dnd5e.races", "dnd5e.classfeatures"]
+}
 
 export class Actor5eFromExt {
 	//Contains the Actor5e data and eventually the created Foundry object
@@ -198,63 +208,79 @@ export class Actor5eFromExt {
 
 
 	async matchItems() {
-//FIXME: Probably should split this into matchSPells, matchItems etc. and parallelize		
 		if (!this.itemData || !this.itemData.items) {return;}
 		//Match spells, classes, items, feats, races
-		let allItemsData = [];
-		for (let [itemType, packNames] of Object.entries(itemTypeToPackNames)) {
-			//Now override the packNames if something is specified in the settings (but we'll ignore blanks)
-			const settingsPackNames = game.settings.get(MODULE_NAME,itemType);
-			if (settingsPackNames && settingsPackNames.length) {
-				//settingsPackNames will be a comma-separated list of names which we need to separate into string
-				packNames = settingsPackNames.split(",");
-			}
-			//Note that item.type for "item" is actually defaulted to "loot"
-			for (const item of this.itemData.items.filter(item => item.type === itemType)) {
-				let fullItem = null;	//a match in the packs, or just record as is
-				for (const packName of packNames) {
-					let pack = game.packs.get(packName);
-					let packIndex;
-					if (pack) {packIndex = await pack.getIndex();}
-					if (!packIndex ) {continue;}
-					
-					//findBestMatch scores best with all words matching and none extra
-					const foundItemIndex = Actor5eFromExt.findBestMatch(packIndex,item.name);
-					if (foundItemIndex && foundItemIndex._id) {
-						fullItem = await pack.getEntity(foundItemIndex._id);
-						if (fullItem && fullItem.data) {
-							//Nothing extra to do if it's a known spell or item
-							if (item.type === "class") {
-								//For classes, we augment with our knowledge of subclass and level
-								fullItem.data.data.levels = item.data.levels;
-								fullItem.data.data.subclass = item.data.subclass;
-							} else if (fullItem.data.type === "weapon") {
-								//default added weapons to proficiency
-								fullItem.data.data.proficient = true;
-							} else if (item.type === "loot") {
-								//Copy over the quantity and weight if specified
-								fullItem.data.data.quantity = item.data.quantity;
-								fullItem.data.data.weight = item.data.weight;
-							}
-							break;	//We found a good match, so skip searching any other packs
-						}
-					}
-				}//end for packNames
-//FIXME: Will want to add additional known info in flags
-				if (!fullItem) {
-					fullItem = {};
-					//Especially for items, but also for other types, make a copy for manual matching
-					fullItem.data = duplicate(item);
-				}
-				if (fullItem && fullItem.data) {allItemsData.push(fullItem.data);}
-			}//end for items
+
+		let matchItemPromises = [];
+		//Get the default dnd5e list, or the changed list from settings
+		for (let [itemType, packNames] of Object.entries(Actor5eFromExt.getItemTypePackNames())) {
+			matchItemPromises.push(this.matchForItemType(itemType,packNames));
 		}//end for itemTypes
-		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
-		await this.actor.createEmbeddedEntity("OwnedItem", allItemsData);
+
+		await Promise.all(matchItemPromises);
 
 		//Now update the actor name to indicate we're done
 		await this.actor.update({name: this.name});
 	}//end matchItems()
+
+	async matchForItemType(itemType, packNames) {
+		let allItemsData = [];
+		//Note that item.type for "item" is actually defaulted to "loot"
+		for (const item of this.itemData.items.filter(item => item.type === itemType)) {
+			let fullItem = null;	//a match in the packs, or just record as is
+			for (const packName of packNames) {
+				let pack = game.packs.get(packName);
+				let packIndex;
+				if (pack) { packIndex = await pack.getIndex(); }
+				if (!packIndex) { continue; }
+
+				//findBestMatch scores best with all words matching and none extra
+				const foundItemIndex = Actor5eFromExt.findBestMatch(packIndex, item.name);
+				if (foundItemIndex && foundItemIndex._id) {
+					fullItem = await pack.getEntity(foundItemIndex._id);
+					if (fullItem && fullItem.data) {
+						//Nothing extra to do if it's a known spell or item
+						if (item.type === "class") {
+							//For classes, we augment with our knowledge of subclass and level
+							fullItem.data.data.levels = item.data.levels;
+							fullItem.data.data.subclass = item.data.subclass;
+						} else if (fullItem.data.type === "weapon") {
+							//default added weapons to proficiency
+							fullItem.data.data.proficient = true;
+						} else if (item.type === "loot") {
+							//Copy over the quantity and weight if specified
+							fullItem.data.data.quantity = item.data.quantity;
+							fullItem.data.data.weight = item.data.weight;
+						}
+						break;	//We found a good match, so skip searching any other packs
+					}
+				}
+			}//end for packNames
+			//FIXME: Will want to add additional known info in flags
+			if (!fullItem) {
+				fullItem = {};
+				//Especially for items, but also for other types, make a copy for manual matching
+				fullItem.data = duplicate(item);
+			}
+			if (fullItem && fullItem.data) { allItemsData.push(fullItem.data); }
+		}//end for items
+		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
+		await this.actor.createEmbeddedEntity("OwnedItem", allItemsData);
+	}
+
+	static getItemTypePackNames() {
+		let itemTypeToPackNames = {};
+		for (let [itemType, packNames] of Object.entries(defaultItemTypeToPackNames)) {
+			//Now override the packNames if something is specified in the settings (but we'll ignore blanks)
+			const settingsPackNames = game.settings.get(MODULE_NAME, itemType);
+			if (settingsPackNames && settingsPackNames.length) {
+				//settingsPackNames will be a comma-separated list of names which we need to separate into string
+				packNames = settingsPackNames.split(",");
+			}
+			itemTypeToPackNames[itemType] = packNames;
+		}
+		return itemTypeToPackNames;
+	}
 
 	static findBestMatch(stringIndex, stringToMatch) {
 		if (!stringIndex || !stringToMatch) {return null;}
@@ -326,13 +352,6 @@ export class Actor5eFromFG extends Actor5eFromExt {
 }
 
 
-//The item types coming from MPMB -> the dnd5e pack(s) to use -> what we should label unknown items
-export const itemTypeToPackNames = {
-	"spell" : ["dnd5e.spells"],
-	"loot" : ["dnd5e.tradegoods", "dnd5e.items"], 	//"loot" will be the default type if not found
-	"class" : ["dnd5e.classes"],
-	"feat" : ["dnd5e.races","dnd5e.classfeatures"]
-}
 
 export class Actor5eFromMPMB extends Actor5eFromExt {
 	/** @override */
