@@ -36,7 +36,7 @@ PC Importer imports Player Character sheets from other systems and methods into 
 *Coming soon!*
 
 ## License
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">PC Importer for Foundry -</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/syl3r86?tab=repositories" property="cc:attributionName" rel="cc:attributionURL">Jeffrey Pugh</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+**PC Importer for Foundry** by Jeffrey Pugh is licensed under a [GNU General Public License v3.0](https://github.com/opus1217/pc-importer/edit/master/LICENSE.md)
 
 Portions incorporated from [Favourites Tab](https://github.com/syl3r86/favtab/blob/master/README.md)
 
