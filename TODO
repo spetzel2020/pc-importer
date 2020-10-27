@@ -2,7 +2,6 @@
 
 ## BUGS
 - When is the earliest you can call the translations? In init() or setup()?
-- Shouldn't create a new Actor if it already exists - just do an update using the data or the JSON
 - There are a number of places where this can fail - should use try/catch and throw errors throughout
 - Convert all numbers to actual numbers rather than strings; init.value is particularly intolerant
     - base this on the template string somehow (if the default value is a number use that as default and template)
@@ -11,6 +10,8 @@
 >>> Shouldn't include ALL the test data in the release
 >>> Better way of specifying appropriate Compendiums to match against
     - can you also use Item lists if you've already imported
+- Racial Traits and Race are duplicating - need to parse the actual racial trait apart
+
 
 ## FEATURES
 >>> Add in Items or Features by name/description if not recognized and allow for manual matching
@@ -18,9 +19,12 @@
     - Also have a matching table MPMB->Foundry for common ones
     - Have a custom Item sheet that presents possible matches, and then replaces with the found match
         - this is also a standalone module for other Imports
->>> Invocations - should be handled as Class Feature 
+>>> Invocations, Monk Features - should be handled as Class Feature 
+    - Look like it's over-flowing into Extra.Notes
+    - Should be parsed very much like or maybe just appended?
+        - but appears with (Eldritch Invocation, or (Ki Feature, instead of <words> nn
 >>> Add more information for unrecognized Spells (e.g. Level)
->>>Inventory - include quantity and weights
+- Parallelize the item matching
 
 
 ## FIXED BUGS
@@ -43,3 +47,4 @@ DONE Include DDB packs and a way of adding your own (in Settings)
      - fill in the field; eventually a checkbox? Or just include them all
 DONE - Will need a progress indicator because importing/matching can take a while
     - For now, just added LOADING indicator on the name which goes away when done
+DONE Inventory - include quantity and weights

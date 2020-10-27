@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.3
+- Added Quantity and Weight to items
+- Add Item matcher skeleton (in any Item character sheet)
+
 ## 0.6.2
  - Change import button to Person+
  - i18n button names on import dialog

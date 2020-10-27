@@ -442,7 +442,6 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		for (const spellName of allUniqueSpells) {
 			let spellItemData = duplicate(TemplateSpellItemData);
 			spellItemData.name = spellName;
-			//const newSpellItem = await Item5e.create(spellItemData);
 			this.itemData.items.push(spellItemData);
 		}
 	}
