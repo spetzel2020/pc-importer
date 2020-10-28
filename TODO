@@ -7,6 +7,7 @@
     - base this on the template string somehow (if the default value is a number use that as default and template)
     - or allow a format modifier somehow
 - Size not being handled correctly
+
 >>> Shouldn't include ALL the test data in the release
 >>> Better way of specifying appropriate Compendiums to match against
     - can you also use Item lists if you've already imported
@@ -17,14 +18,11 @@
 >>> Add in Items or Features by name/description if not recognized and allow for manual matching
     - Include info in the Description or the flags of what it originally had
     - Also have a matching table MPMB->Foundry for common ones
-    - Have a custom Item sheet that presents possible matches, and then replaces with the found match
-        - this is also a standalone module for other Imports
+    - Add more information for unrecognized Spells (e.g. Level)
 >>> Invocations, Monk Features - should be handled as Class Feature 
     - Look like it's over-flowing into Extra.Notes
     - Should be parsed very much like or maybe just appended?
         - but appears with (Eldritch Invocation, or (Ki Feature, instead of <words> nn
->>> Add more information for unrecognized Spells (e.g. Level)
-- Parallelize the item matching
 
 
 ## FIXED BUGS
@@ -48,3 +46,6 @@ DONE Include DDB packs and a way of adding your own (in Settings)
 DONE - Will need a progress indicator because importing/matching can take a while
     - For now, just added LOADING indicator on the name which goes away when done
 DONE Inventory - include quantity and weights
+DONE Parallelize the item matching
+PARTIAL - Have a custom Item sheet that presents possible matches, and then replaces with the found match
+        - this is also a standalone module for other Imports

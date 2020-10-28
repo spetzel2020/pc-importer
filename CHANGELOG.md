@@ -2,7 +2,10 @@
 
 ## 0.6.3
 - Added Quantity and Weight to items
-- Add Item matcher skeleton (in any Item character sheet)
+- Item matcher: use (+) icon to pop up comparison sheet; if you pick one it will be added to the Actor sheet
+    (will need to add a better workflow)
+
+- Speed up Foundry matching of spells, classes, items
 
 ## 0.6.2
  - Change import button to Person+
