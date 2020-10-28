@@ -1,14 +1,17 @@
-<form onsubmit="event.preventDefault()">
-    <div id="PIContainers">
-        <fieldset class="group-container item-container">
-            <legend class='group-legend'>{{itemTypeLocalized}}</legend>
-            <div class="group-field ally-field">
-                <ul class="item-list">
-                    {{#each items}}
-                    <li>{{this.name}}</li>
-                    {{/each}}
-                </ul>
-            </div>
-        </fieldset>
-    </div>
-</form>
+<div class="sidebar-tab compendium flexcol select-list">
+    <header class="directory-header list-header flexrow">
+        <div class="header-search flexrow">
+            <i class="fas fa-search"></i>
+            <input type="text" name="search" value="" placeholder="Search" autocomplete="off" />
+        </div>
+    </header>
+
+    <ol class="directory-list item-list">
+        {{#each items}}
+            <li class="directory-item item flexrow {{../cssClass}}" data-entry-id="{{this._id}}">
+                <img data-src="{{this.img}}" title="{{this.name}}" />
+                <h4 class="item-name entry-name"><a>{{this.name}}</a></h4>
+            </li>
+        {{/each}}
+    </ol>
+</div>

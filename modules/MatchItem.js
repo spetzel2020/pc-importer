@@ -8,10 +8,16 @@
 import {Actor5eFromExt} from "./Actor5eFromExt.js";
 
 let itemPackIndexesByType = {};
+const titleForItemType = {
+    "loot": "PCI.SelectList.Item.TITLE",
+    "spell" : "PCI.SelectList.Spell.TITLE",
+    "feature": "PCI.SelectList.Feature.TITLE"
+}
 
-class MatchItem extends Application {
+class MatchItem extends Compendium {
     constructor(data, options) {
-        super(options);
+        if (data) {data.entity =  "Item";}
+        super(data, options);
         this.data = data;
     }
 
@@ -22,9 +28,7 @@ class MatchItem extends Application {
         return mergeObject(super.defaultOptions, {
             template: "modules/pc-importer/templates/item-picker.html",
             id: "PIContainers",
-            classes: ["item-list","group-legend"],
-            width: 400,
-            jQuery: true
+            dragDrop: []
         });
     }
 
@@ -32,7 +36,8 @@ class MatchItem extends Application {
 
     /** @override */
     get title() {
-        return this.data.title || "Items";
+        const titleKey = titleForItemType[this.data.item.type];
+        return game.i18n.localize(titleKey) || "Select a matching Item";
     }
 
 
@@ -43,13 +48,24 @@ class MatchItem extends Application {
         };
     }
 
+    /** @override */
+    //Normal search escapes everything - we want to use a more sophisticated search that allows ORs
+    _onSearchFilter(event, query, html) {
+        const rgx = new RegExp(query, "i");
+        for (let li of html.children) {
+            const name = li.querySelector(".entry-name").textContent;
+            li.style.display = rgx.test(name) ? "flex" : "none";
+        }
+    }
+
+
 
 
     //Add the magnifying glass icon to all icon instances
     static addMatchControl(app, html, data) {
         for (const item of data.actor.items) {
             if (app.options.editable) {
-                let matchButton = $(`<a class="item-control item-match" data-match=true title="match with compendium"}"><i class="fas fa-search-plus"></i></a>`);
+                let matchButton = $(`<a class="item-control item-match" data-match=true title="${game.i18n.localize("PCI.ActorSheet.Match.HOVER")}"><i class="fas fa-search-plus"></i></a>`);
                 matchButton.click(ev => {
                     MatchItem.openMatcher(item);
                 });
@@ -74,7 +90,8 @@ class MatchItem extends Application {
 //FIXME: Should check if there are any new ones and get them now
         let concatenatedPackEntries = [];
         for (const packIndex of itemPackIndexesByType[itemType]) {
-            const filteredPackIndex = packIndex.map(i => {return {_id : i._id, name : i.name};});
+            const filteredPackIndex = packIndex;    //now includes .img
+            //const filteredPackIndex = packIndex.map(i => {return {_id : i._id, name : i.name};});
             concatenatedPackEntries = concatenatedPackEntries.concat(filteredPackIndex);
         }
         //Now create the matcher dialog
@@ -82,8 +99,6 @@ class MatchItem extends Application {
         matcherDialog.render(true);
 
     }
-
-
 
 
 }
