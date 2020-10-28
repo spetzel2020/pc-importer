@@ -2,18 +2,51 @@
 26-Oct-2020     Created - based off https://github.com/syl3r86/favtab (button to add to Favourite tab)
 27-Oct-2020     v0.6.3b: In the ready Hook preload the item pack indexes by different categories, so depending on tab we ony bring one up
                 May have to load the packs themselves for searching by more than name
-
+                v0.6.3c: MatchItem dialog to allow searching, filtering, and selecting - skeleton
 
 */         
 import {Actor5eFromExt} from "./Actor5eFromExt.js";
 
 let itemPackIndexesByType = {};
 
-class MatchItem {
+class MatchItem extends Application {
+    constructor(data, options) {
+        super(options);
+        this.data = data;
+    }
+
+    /* -------------------------------------------- */
+
+    /** @override */
+    static get defaultOptions() {
+        return mergeObject(super.defaultOptions, {
+            template: "modules/pc-importer/templates/item-picker.html",
+            id: "PIContainers",
+            classes: ["item-list","group-legend"],
+            width: 400,
+            jQuery: true
+        });
+    }
+
+    /* -------------------------------------------- */
+
+    /** @override */
+    get title() {
+        return this.data.title || "Items";
+    }
+
+
+    async getData() {
+        return {
+            items: this.data.packEntries,
+            itemTypeLocalized: this.data.item.type
+        };
+    }
+
+
+
+    //Add the magnifying glass icon to all icon instances
     static addMatchControl(app, html, data) {
-
-
-
         for (const item of data.actor.items) {
             if (app.options.editable) {
                 let matchButton = $(`<a class="item-control item-match" data-match=true title="match with compendium"}"><i class="fas fa-search-plus"></i></a>`);
@@ -44,8 +77,12 @@ class MatchItem {
             const filteredPackIndex = packIndex.map(i => {return {_id : i._id, name : i.name};});
             concatenatedPackEntries = concatenatedPackEntries.concat(filteredPackIndex);
         }
+        //Now create the matcher dialog
+        const matcherDialog = new MatchItem({item: item, packEntries: concatenatedPackEntries});
+        matcherDialog.render(true);
 
     }
+
 
 
 

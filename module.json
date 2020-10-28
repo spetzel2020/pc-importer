@@ -13,7 +13,7 @@
     }],
     "esmodules" : ["modules/PCImporter.js","modules/Actor5eFromExt.js","modules/MatchItem.js"
     ],
-    "styles": ["css/style.css"],
+    "styles": ["css/pc-importer.css"],
     "dependencies": [
         {
             "name": "dnd5e",

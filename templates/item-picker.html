@@ -1,0 +1,14 @@
+<form onsubmit="event.preventDefault()">
+    <div id="PIContainers">
+        <fieldset class="group-container item-container">
+            <legend class='group-legend'>{{itemTypeLocalized}}</legend>
+            <div class="group-field ally-field">
+                <ul class="item-list">
+                    {{#each items}}
+                    <li>{{this.name}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </fieldset>
+    </div>
+</form>
