@@ -23,6 +23,9 @@
     - Look like it's over-flowing into Extra.Notes
     - Should be parsed very much like or maybe just appended?
         - but appears with (Eldritch Invocation, or (Ki Feature, instead of <words> nn
+>>> Improve the Item sheet matcher: 
+    - Add a button to the Item sheet to say "Replace this into the Actor" (delete the old one)
+    - Way of improving the search based on the info we have (maybe have some search fields at the top, including level)        
 
 
 ## FIXED BUGS

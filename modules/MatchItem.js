@@ -145,7 +145,6 @@ Hooks.on("ready", async () => {
     const itemTypeToPackNames = Actor5eFromExt.getItemTypePackNames();
 
     //Preload the Item pack indexes
-    const itemPacks = game.packs.filter(p => p.metadata.entity === "Item");
     itemPackIndexesByType = {};
     for (const [itemType,packNames] of Object.entries(itemTypeToPackNames)) {
         itemPackIndexesByType[itemType] = [];

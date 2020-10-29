@@ -46,10 +46,9 @@
 						getItemTypePackNames(): ADDED - also used by MatchItem.js
 */
 
-import {MODULE_NAME, PCImporter} from "./PCImporter.js";
+import {MODULE_NAME} from "./PCImporter.js";
 import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
 import {DND5E} from "/systems/dnd5e/module/config.js";
-import Item5e from "/systems/dnd5e/module/item/entity.js";    //default export
 
 
 //The item types coming from MPMB (and FG?) -> the dnd5e pack(s) to use -> what we should label unknown items
@@ -91,7 +90,7 @@ export class Actor5eFromExt {
 		// Empty object - will probably become null
 		let mappedValue;
 		if (!entryValue) {
-			mappedValue = mappedValue;  //Works if the default is null or 0
+			mappedValue = null;  //Works if the default is null or 0
 		} else if (Array.isArray(entryValue)) {
 			//Not sure this will handle all possibilities
 			//Should handle both the empty array [] and also [fieldName1, fieldName2, ....]
@@ -127,7 +126,7 @@ export class Actor5eFromExt {
 	mapArray(fieldNames) {
 		const fieldNameArray = Array.from(fieldNames);
 		let mappedArray = [];
-		fieldNameArray.forEach((fieldName, i) => {
+		fieldNameArray.forEach((fieldName) => {
 			const mappedValue = this.pcImporter.getValueForFieldName(fieldName);
 			if (mappedValue && (mappedValue !== " ")) {mappedArray.push(mappedValue);}
 		});
@@ -159,7 +158,6 @@ export class Actor5eFromExt {
 
 	exportToJSON(createFile=true) {
 		let data = duplicate(this);
-		let allData = null;
 
 		const dataAsJSON = JSON.stringify(data, null, 2);
 
@@ -294,7 +292,6 @@ export class Actor5eFromExt {
 			//Break the stringToMatch into words which we will then search for
 			const mixedWordArray = stringToMatch.trim().split(splitRegEx).filter(s => s !== "");
 			const wordArray = mixedWordArray.map(w => w.toLowerCase());
-			let numberOfWords = wordArray.length;
 			let maxMatches = 0;
 
 			stringIndex.forEach(e => {
@@ -388,13 +385,13 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 	async extractClasses() {
 		/** @override */
 		let match;
-		let classLevelMatches = new Set(); 
 		this.itemData.items = [];
 		//v0.6.1: Try using "Class and Levels" to get the overall class/subclass and level
 		//which appears in the form "subclass1 n1,subclass2 n2"
 		//subclass can contain () and spaces, but we don't capture them at the beginning or end
 		//The problem is that we end up with two unrecognizable strings without further processing
 /*        
+		let classLevelMatches = new Set();
 		const classAndLevelRegExp = /((?:[A-Za-z()]+\s?)+)\s(\d{1,2})(?:,|$)/g;
 
 	   const mappedValue = this.pcImporter.getValueForFieldName("Class and Levels");
@@ -1504,20 +1501,6 @@ const TemplateSpellItemData = {
 	"data": {}
 }
 
-const simpleTemplateItemData = {
-	"name" : "simple",
-	"type" : "loot",
-	"data": {
-		"description": {
-			"value": null,
-			"chat": "",
-			"unidentified": "",
-			"type": "String",
-			"label": "Description"
-		},
-		"source": "PC Importer"
-	}
-}
 
 const TemplateFeatData = {
 	"name" : "simple",
@@ -1657,6 +1640,6 @@ function lowercaseArray(mappedArray) {
 
 function appendArrayElements(mappedArray) {
 	let appended = "";
-	mappedArray.forEach((elem, i) => {appended += ("<p>"+elem+"</p>"); });
+	mappedArray.forEach(elem => {appended += ("<p>"+elem+"</p>"); });
 	return appended;
 }

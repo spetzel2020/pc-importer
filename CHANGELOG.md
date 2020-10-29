@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.4
+
+
 ## 0.6.3
 - Added Quantity and Weight to items
 - Item matcher: use (+) icon to pop up comparison sheet; if you pick one it will be added to the Actor sheet
