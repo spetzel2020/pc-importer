@@ -11,7 +11,7 @@
         "name": "English",
         "path": "lang/en.json"
     }],
-    "esmodules" : ["modules/PCImporter.js","modules/Actor5eFromExt.js","modules/MatchItem.js"
+    "esmodules" : ["modules/PCImporter.js","modules/Actor5eFromExt.js","modules/MatchItem.js","modules/PCISettings.js"
     ],
     "styles": ["css/pc-importer.css"],
     "dependencies": [

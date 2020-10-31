@@ -44,6 +44,7 @@
 26-Oct-2020	v0.6.3:	Add weight and quantities for items		
 27-Oct-2020 v0.6.3b:	Parallelize matchItems
 						getItemTypePackNames(): ADDED - also used by MatchItem.js
+29-Oct-2020 v0.6.4	Change Promise.all to .alLSettled (because if one fails that's ok)						
 */
 
 import {MODULE_NAME} from "./PCImporter.js";
@@ -215,7 +216,7 @@ export class Actor5eFromExt {
 			matchItemPromises.push(this.matchForItemType(itemType,packNames));
 		}//end for itemTypes
 
-		await Promise.all(matchItemPromises);
+		await Promise.allSettled(matchItemPromises);
 
 		//Now update the actor name to indicate we're done
 		await this.actor.update({name: this.name});
@@ -374,9 +375,8 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		extractions.push(importedActor.extractSpells());
 		extractions.push(importedActor.extractItems());
 		extractions.push(importedActor.extractRacialFeatures());
-//FIXME: Don't want this to fail if one fails	
 		//Do extractions in parallel - this will be of limited benefit
-		await Promise.all(extractions);
+		await Promise.allSettled(extractions);
 		return importedActor;
 	}
 
