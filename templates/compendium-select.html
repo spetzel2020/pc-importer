@@ -7,6 +7,10 @@
             {{/each}}
         </select>
     </div>
+    <div class="text-field">
+        <label for="selected-compendiums">{{localize "PCI.Compendia.CurrentValues.HINT"}} {{default}})</label>
+        <input id="selected-compendiums" type="text" name="selected-compendiums" value={{selectedCompendiums}}>
+    </div>
     <button type="submit" name="submit">
         <i class="far fa-save"></i> {{localize "PCI.Compendia.SubMenu.SUBMIT"}}
     </button>

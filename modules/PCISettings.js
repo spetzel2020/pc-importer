@@ -2,23 +2,26 @@
 29-Oct-2020     Created
 30-Oct-2020     v0.6.4  Filter the presented compendiums to just those for the Item entity (includes spells, classes etc)
 31-Oct-2020     v0.6.5b Add a submenu and a displayed (not editable) field for the list of compendiums
+                Remove displayed field (can't keep it in sync in the static config form)
+                Create subclasses of the submenu for each different Item type
 
 
 */
 import {MODULE_NAME, MODULE_VERSION} from "./PCImporter.js";
 import {defaultItemTypeToPackNames} from "./Actor5eFromExt.js";
 
+
+
+
 class PCISettings extends FormApplication {
-    constructor(itemType, options) {
-//FIXME: itemType (e.g. spell, class) needs to be passed somehow
-        const tempItemType = "class";
-        super(tempItemType, options);
+    constructor(itemType, options={}) {
+        super(itemType, options);
     }
 
     /** @override */
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            title: game.i18n.localize("PCI.Compendia.SubMenu.NAME"),
+            title: game.i18n.localize("PCI.Compendia.SubMenu.LABEL"),
             id: "pc-importer",
             template: "modules/pc-importer/templates/compendium-select.html",
             top: 300,
@@ -80,7 +83,7 @@ class PCISettings extends FormApplication {
             label: "PCI.Compendia.SubMenu.LABEL",
             hint: "PCI.Compendia.CurrentValues.HINT",
             icon: "fas fa-th-list",
-            type: PCISettings,
+            type: PCISettingsClass,
             restricted: true
         });
         game.settings.registerMenu(MODULE_NAME, "featCompendiumsSubMenu", {
@@ -88,7 +91,7 @@ class PCISettings extends FormApplication {
             label: "PCI.Compendia.SubMenu.LABEL",
             hint: "PCI.Compendia.CurrentValues.HINT",
             icon: "fas fa-th-list",
-            type: PCISettings,
+            type: PCISettingsFeature,
             restricted: true
         });
         game.settings.registerMenu(MODULE_NAME, "lootCompendiumsSubMenu", {
@@ -96,7 +99,7 @@ class PCISettings extends FormApplication {
             label: "PCI.Compendia.SubMenu.LABEL",
             hint: "PCI.Compendia.CurrentValues.HINT",
             icon: "fas fa-th-list",
-            type: PCISettings,
+            type: PCISettingsItem,
             restricted: true
         });
         game.settings.registerMenu(MODULE_NAME, "spellCompendiumsSubMenu", {
@@ -104,7 +107,7 @@ class PCISettings extends FormApplication {
             label: "PCI.Compendia.SubMenu.LABEL",
             hint: "PCI.Compendia.CurrentValues.HINT",
             icon: "fas fa-th-list",
-            type: PCISettings,
+            type: PCISettingsSpell,
             restricted: true
         });
 
@@ -119,6 +122,7 @@ class PCISettings extends FormApplication {
         return {
             compendiums: compendiums,
             itemType: this.object,
+            default: defaultItemTypeToPackNames[this.object],
             listLength : compendiums.length
         };
     }
@@ -130,6 +134,27 @@ class PCISettings extends FormApplication {
         await game.settings.set(MODULE_NAME, this.object, concatCompendiums);
     }
 
+}
+
+class PCISettingsClass extends PCISettings {
+    constructor() {
+        super("class");
+    }
+}
+class PCISettingsItem extends PCISettings {
+    constructor() {
+        super("loot");
+    }
+}
+class PCISettingsSpell extends PCISettings {
+    constructor() {
+        super("spell");
+    }
+}
+class PCISettingsFeature extends PCISettings {
+    constructor() {
+        super("feat");
+    }
 }
 
 Hooks.on("init", PCISettings.init);
