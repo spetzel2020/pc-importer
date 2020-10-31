@@ -1,6 +1,7 @@
 # Changelog
 
-## 0.6.4
+## 0.6.5
+- Settings configuration sub-menu for choosing which Compendia are used
 
 
 ## 0.6.3

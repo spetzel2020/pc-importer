@@ -1,6 +1,6 @@
 {
   "PCI.id": "pc-importer",
-  "PCI.Version" : "v0.6.4",
+  "PCI.Version" : "v0.6.5",
   "PCI.Name": "PC Importer",
   "PCI.Welcome" : "Welcome to PC Importer",
   "PCI.ImportDialog.TITLE" : "Import PC",
@@ -24,6 +24,7 @@
   "PCI.Compendia.Items.Setting.HINT": "Compendiums to search in order (unquoted and comma-separated)",
   "PCI.Compendia.Spells.Setting.NAME": "Spell Compendiums",
   "PCI.Compendia.Spells.Setting.HINT" : "Compendiums to search in order (unquoted and comma-separated)",
+  "PCI.Compendia.CurrentValues.HINT" : "Select and order compendiums searched",
   "PCI.LoadingMessage" : "...LOADING",
   "PCI.SelectList.Item.TITLE" : "Select a matching Item",
   "PCI.SelectList.Spell.TITLE": "Select a matching Spell",

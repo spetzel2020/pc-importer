@@ -1,9 +1,9 @@
 <form>
     <div class="sidebar-tab compendium flexcol select-list">
-        <label for="PCICompendium">{{localize "PCI.Compendia.SubMenu.NAME"}}{{itemType}}</label>
-        <select id="PCICompendium" label="Compendiums" class="compendium-list flexrow {{../cssClass}}" multiple size={{listLength}}>
+        <label for="select-compendiums">{{localize "PCI.Compendia.SubMenu.NAME"}}{{itemType}}</label>
+        <select id="select-compendiums" label="Compendiums" class="compendium-list flexrow {{../cssClass}}" multiple size={{listLength}}>
             {{#each compendiums}}
-                <option class="compendium-name entry-name" data-entry-id="{{this.collection}}" value={{this.collection}}>{{this.collection}} | {{this.metadata.label}}</option>
+                <option class="compendium-name entry-name" data-entry-id="{{this.collection}}" value={{this.collection}}>[{{this.collection}}] {{this.metadata.label}}</option>
             {{/each}}
         </select>
     </div>

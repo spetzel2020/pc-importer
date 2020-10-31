@@ -9,7 +9,7 @@
 - Size not being handled correctly
 
 >>> Shouldn't include ALL the test data in the release
->>> Better way of specifying appropriate Compendiums to match against
+IN PROGRESS Better way of specifying appropriate Compendiums to match against
     - can you also use Item lists if you've already imported
 - Racial Traits and Race are duplicating - need to parse the actual racial trait apart
 
@@ -19,13 +19,17 @@
     - Include info in the Description or the flags of what it originally had
     - Also have a matching table MPMB->Foundry for common ones
     - Add more information for unrecognized Spells (e.g. Level)
->>> Invocations, Monk Features - should be handled as Class Feature 
+>>> Invocations, Monk Features, Horizon Walker features - should be handled as Class Feature 
     - Look like it's over-flowing into Extra.Notes
     - Should be parsed very much like or maybe just appended?
         - but appears with (Eldritch Invocation, or (Ki Feature, instead of <words> nn
 >>> Improve the Item sheet matcher: 
     - Add a button to the Item sheet to say "Replace this into the Actor" (delete the old one)
     - Way of improving the search based on the info we have (maybe have some search fields at the top, including level)        
+- Import "weapons" from the Attacks portion if they don't appear in Inventory
+- Some way of specifying that you want to pull/parse different sections of the sheet for information
+
+
 
 
 ## FIXED BUGS

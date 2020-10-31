@@ -1,7 +1,7 @@
 # PC Importer
 
 * **Author**: Spetzel#0103
-* **Version**: 0.6.4
+* **Version**: 0.6.5
 * **Foundry VTT Compatibility**: 0.6.5-0.7.5
 * **System Compatibility (If applicable)**: dnd5e
 * **Translation Support**: en
@@ -14,7 +14,7 @@ PC Importer imports Player Character sheets from other systems and methods into 
 # Install
 
 1. Go to the "Add-on Modules" tab in Foundry Setup
-2. Click "Install Module" and paste this link in the field at the bottom: `https://raw.githubusercontent.com/opus1217/pc-importer/v0.6.4/module.json`
+2. Click "Install Module" and paste this link in the field at the bottom: `https://raw.githubusercontent.com/opus1217/pc-importer/v0.6.5/module.json`
 3. Open your world and go to Settings>Manage Modules and enable **PC Importer**
 
 ## Using PC Importer with MPMB sheets

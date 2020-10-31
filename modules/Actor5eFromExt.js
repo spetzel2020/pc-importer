@@ -91,7 +91,9 @@ export class Actor5eFromExt {
 		// Empty object - will probably become null
 		let mappedValue;
 		if (!entryValue) {
-			mappedValue = null;  //Works if the default is null or 0
+			//v0.6.5: Do not change this line without changing the way defaults are set
+//FIXME: really need to duplicate the template to the mappedValue to pick up defaults - then if it doesn't fit, we just keep the value
+			mappedValue = entryValue;  //Works if the default is null or 0
 		} else if (Array.isArray(entryValue)) {
 			//Not sure this will handle all possibilities
 			//Should handle both the empty array [] and also [fieldName1, fieldName2, ....]
@@ -514,13 +516,13 @@ const Actor5eToMPMBMapping = {
 		  "world": null,
 		  "system": {default: "dnd5e"},
 		  "coreVersion": {default: "0.6.6"},
-		  "systemVersion": {default: "0.96"}
+		  "systemVersion": {default: "0.98"}
 		},
 		"dnd5e": {},
 		"core": {
 		  "sheetClass": {default: ""}
 		},
-		"PC Importer" : {default: "0.6.0"}
+		"PC Importer" : {default: "0.6.5"}
 	  },
 	  "data": {
 		"abilities": {
@@ -951,18 +953,19 @@ const Actor5eToMPMBMapping = {
 	  "sort": null,
 	  "token": {
 		"flags": {},
-		"name": null,
-		"displayName": null,
+		"name": "AdvLog.PC Name",
+		"displayName": {default: "0"},
 		"img": "icons/svg/mystery-man.svg",
 		"tint": null,
 		"width": 1,
 		"height": 1,
 		"scale": 1,
 		"lockRotation": false,
-		"rotation": null,
+		"rotation": 0,
 		"vision": true,
-		"dimSight": 60,
-		"brightSight": null,
+		"dimSight": {default: 60},
+		"brightSight": 0,
+/*		
 		"dimLight": null,
 		"brightLight": null,
 		"sightAngle": 360,
@@ -971,8 +974,9 @@ const Actor5eToMPMBMapping = {
 		"actorId": null,
 		"actorLink": true,
 		"actorData": null,
-		"disposition": 1,
-		"displayBars": null,
+*/		
+		"disposition": 1,	//FRIENDLY
+		"displayBars": 0,
 		"bar1": {
 		  "attribute": {default: "attributes.hp"}
 		},
@@ -1437,7 +1441,7 @@ const Actor5eToFGMapping = {
 	  "token": {
 		"flags": {},
 		"name": null,
-		"displayName": null,
+		"displayName": {default: "0"},
 		"img": "icons/svg/mystery-man.svg",
 		"tint": null,
 		"width": 1,
