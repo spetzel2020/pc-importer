@@ -110,9 +110,9 @@ class MatchItem extends Compendium {
 
         // Change the css in the sheet (whosever it is) to accommodate the match button
         if (app.options.editable) {
-            html.find('.spellbook .item-controls').css('flex', '0 0 88px');
-            html.find('.inventory .item-controls').css('flex', '0 0 88px');
-            html.find('.features .item-controls').css('flex', '0 0 66px');
+            html.find('.spellbook .item-controls').css('flex', '0 0 110px');
+            html.find('.inventory .item-controls').css('flex', '0 0 110px');
+            html.find('.features .item-controls').css('flex', '0 0 100px');
         }
     }
 
@@ -136,28 +136,28 @@ class MatchItem extends Compendium {
         matcherDialog.render(true);
 
     }
-
-
 }
 
-Hooks.on("ready", async () => {
+export async function buildItemPackIndexesByType() {
     //Get the relevant mappings (spell, class, etc.)
     const itemTypeToPackNames = Actor5eFromExt.getItemTypePackNames();
 
     //Preload the Item pack indexes
     itemPackIndexesByType = {};
-    for (const [itemType,packNames] of Object.entries(itemTypeToPackNames)) {
+    for (const [itemType, packNames] of Object.entries(itemTypeToPackNames)) {
         itemPackIndexesByType[itemType] = [];
         for (const packName of packNames) {
             const pack = game.packs.get(packName);
             if (pack) {
                 pack.getIndex().then(packIndex => {
-                    if (packIndex) { itemPackIndexesByType[itemType].push({packIndex: packIndex, pack: pack}); }
+                    if (packIndex) { itemPackIndexesByType[itemType].push({ packIndex: packIndex, pack: pack }); }
                 });
             }
         }//end for packName
     }
-});
+}
+
+Hooks.on("ready", buildItemPackIndexesByType);
 
 Hooks.on(`renderActorSheet`, (app, html, data) => {
     MatchItem.addMatchControl(app, html, data);

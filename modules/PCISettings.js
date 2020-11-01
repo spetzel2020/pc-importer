@@ -9,6 +9,7 @@
 */
 import {MODULE_NAME, MODULE_VERSION} from "./PCImporter.js";
 import {defaultItemTypeToPackNames} from "./Actor5eFromExt.js";
+import {buildItemPackIndexesByType} from "./MatchItem.js";
 
 
 
@@ -81,7 +82,7 @@ class PCISettings extends FormApplication {
         game.settings.registerMenu(MODULE_NAME, "classCompendiumsSubMenu", {
             name: "PCI.Compendia.Classes.Setting.NAME",
             label: "PCI.Compendia.SubMenu.LABEL",
-            hint: "PCI.Compendia.CurrentValues.HINT",
+            hint: "PCI.Compendia.SubMenu.HINT",
             icon: "fas fa-th-list",
             type: PCISettingsClass,
             restricted: true
@@ -89,7 +90,7 @@ class PCISettings extends FormApplication {
         game.settings.registerMenu(MODULE_NAME, "featCompendiumsSubMenu", {
             name: "PCI.Compendia.Features.Setting.NAME",
             label: "PCI.Compendia.SubMenu.LABEL",
-            hint: "PCI.Compendia.CurrentValues.HINT",
+            hint: "PCI.Compendia.SubMenu.HINT",
             icon: "fas fa-th-list",
             type: PCISettingsFeature,
             restricted: true
@@ -97,7 +98,7 @@ class PCISettings extends FormApplication {
         game.settings.registerMenu(MODULE_NAME, "lootCompendiumsSubMenu", {
             name: "PCI.Compendia.Items.Setting.NAME",
             label: "PCI.Compendia.SubMenu.LABEL",
-            hint: "PCI.Compendia.CurrentValues.HINT",
+            hint: "PCI.Compendia.SubMenu.HINT",
             icon: "fas fa-th-list",
             type: PCISettingsItem,
             restricted: true
@@ -105,7 +106,7 @@ class PCISettings extends FormApplication {
         game.settings.registerMenu(MODULE_NAME, "spellCompendiumsSubMenu", {
             name: "PCI.Compendia.Spells.Setting.NAME",
             label: "PCI.Compendia.SubMenu.LABEL",
-            hint: "PCI.Compendia.CurrentValues.HINT",
+            hint: "PCI.Compendia.SubMenu.HINT",
             icon: "fas fa-th-list",
             type: PCISettingsSpell,
             restricted: true
@@ -116,23 +117,43 @@ class PCISettings extends FormApplication {
     /** @override */
     async getData() {
         const entity = "Item";
+        const currentlySelectedCompendiums = game.settings.get(MODULE_NAME, this.object);
+        const currentCompendiumsArray = currentlySelectedCompendiums.split(",");
         //Convert game.packs from Map to Array
         const packsForEntity = game.packs.filter(v => v.metadata.entity === entity);
-        const compendiums = packsForEntity;
+        const compendiumsWithSelectionFlag = packsForEntity.map(p => {
+            const name = p.collection;
+            const isSelected = currentCompendiumsArray.includes(name);
+            return {compendium : p, isSelected}
+        });
         return {
-            compendiums: compendiums,
             itemType: this.object,
+            compendiums: compendiumsWithSelectionFlag,
+            listLength: compendiumsWithSelectionFlag.length,
             default: defaultItemTypeToPackNames[this.object],
-            listLength : compendiums.length
+            selectedCompendiums : currentlySelectedCompendiums
         };
     }
     
     async _updateObject(event, formData) {
         //Update the hidden values of compendiums
+        //Use formData because a Close does not set the form value properly
+        const selectedCompendiums = formData["selected-compendiums"];
+        await game.settings.set(MODULE_NAME, this.object, selectedCompendiums);
+        //Rebuild the indexes for the item matching in the actor form
+        buildItemPackIndexesByType();
+    }
+
+    _onChangeInput(event) {
+        //Update the hidden values of compendiums
         const selectedCompendiums = $("#select-compendiums").val();
         const concatCompendiums = selectedCompendiums.join();
-        await game.settings.set(MODULE_NAME, this.object, concatCompendiums);
+        //Set the text in the "selected-compendiums" field
+        let concatField = document.getElementById("selected-compendiums");
+        if (concatField) concatField.value = concatCompendiums;
+
     }
+
 
 }
 
