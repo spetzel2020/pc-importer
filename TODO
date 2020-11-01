@@ -18,17 +18,18 @@ IN PROGRESS Better way of specifying appropriate Compendiums to match against
 >>> Add in Items or Features by name/description if not recognized and allow for manual matching
     - Include info in the Description or the flags of what it originally had
     - Also have a matching table MPMB->Foundry for common ones
-    - Add more information for unrecognized Spells (e.g. Level)
+    >>> Add more information for unrecognized Spells (e.g. Level)
 >>> Invocations, Monk Features, Horizon Walker features - should be handled as Class Feature 
     - Look like it's over-flowing into Extra.Notes
     - Should be parsed very much like or maybe just appended?
         - but appears with (Eldritch Invocation, or (Ki Feature, instead of <words> nn
 >>> Improve the Item sheet matcher: 
-    - Add a button to the Item sheet to say "Replace this into the Actor" (delete the old one)
     - Way of improving the search based on the info we have (maybe have some search fields at the top, including level)        
     - Have the different Compendiums in different collapsible sections- right-click context-menu to replace 
+    - Arrange unknown spells by level (should be automatic)
 - Import "weapons" from the Attacks portion if they don't appear in Inventory
 - Some way of specifying that you want to pull/parse different sections of the sheet for information
+    - when you start the imprort it gives you another dialog with different parts of the sheet
 
 
 
@@ -55,5 +56,5 @@ DONE - Will need a progress indicator because importing/matching can take a whil
     - For now, just added LOADING indicator on the name which goes away when done
 DONE Inventory - include quantity and weights
 DONE Parallelize the item matching
-PARTIAL - Have a custom Item sheet that presents possible matches, and then replaces with the found match
-        - this is also a standalone module for other Imports
+DONE - Have a custom Item sheet that presents possible matches, and then replaces with the found match
+    - Right-click option to Replace or Add

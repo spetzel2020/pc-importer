@@ -2,6 +2,7 @@
 
 ## 0.6.5
 - Settings configuration sub-menu for choosing which Compendia are used
+- Right-click option in Spell/Feature/Item matcher in Actor sheet: choose to Add or Replace
 
 
 ## 0.6.3
