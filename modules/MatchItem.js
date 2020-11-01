@@ -4,7 +4,8 @@
                 May have to load the packs themselves for searching by more than name
                 v0.6.3c: MatchItem dialog to allow searching, filtering, and selecting - skeleton
 28-Oct-2020     v0.6.3d: Prefill the search box
-                Fetch the referenced item from the pack  and create it in the Actor              
+                Fetch the referenced item from the pack  and create it in the Actor        
+31-Oct-2020     v0.6.5f: Right-click context menu let syou replace or add the found item                      
 
 */         
 import {Actor5eFromExt} from "./Actor5eFromExt.js";
@@ -68,8 +69,6 @@ class MatchItem extends Compendium {
     }
 
     /** @override */
-    //Instead of opening the entity, we will replace the current item with the picked one
-    //We may (a) leave the old one and (b) open the sheet first and then have a further step to replace it
     async _onEntry(entryId) {
         //Because we maybe smushed together multiple packs, look it up in the relevant index
         const packEntry = this.metadata.packEntries.find(p => p._id === entryId);
@@ -77,14 +76,6 @@ class MatchItem extends Compendium {
 
         const entity = await packEntry.pack.getEntity(entryId);
         if (!entity) {return;}
-        //Insert the found value (better on a button) and also show the sheet
-//FIXME: Will make a better workflow
-        const actor = this.metadata.actor;
-        if (actor) {
-            const newItemData = duplicate(entity.data);
-            actor.createOwnedItem(newItemData);
-        }
-
 
         let sheet = entity.sheet;
         sheet = Object.values(ui.windows).find(app => app.id === sheet.id) ?? sheet;
@@ -92,7 +83,48 @@ class MatchItem extends Compendium {
         sheet.render(true);
     }
 
+    /** Render the ContextMenu which applies to each compendium entry
+     * @private
+     */
+    _contextMenu(html) {
+        const cm = new ContextMenu(html, ".directory-item", [
+            {
+                name: "PCI.ActorSheet.MatchDialog.ADD",
+                icon: '<i class="fas fa-download"></i>',
+                callback: li => {
+                    const entryId = li.attr('data-entry-id');
+                    this.importOwnedItem(entryId);
+  
+                }
+            },
+            {
+                name: "PCI.ActorSheet.MatchDialog.REPLACE",
+                icon: '<i class="fas fa-trash"></i>',
+                callback: li => {
+                    let entryId = li.attr('data-entry-id');
+                    this.importOwnedItem(entryId).then(() => {
+                        //delete the previous one (saved in this.metadata.item)
+                        const actor = this.metadata.actor;
+                        if (actor) {actor.deleteOwnedItem(this.metadata.item._id)}
+                    });
+                }
+            }
+        ]);
+    }
 
+    async importOwnedItem(entryId) {
+        //Because we maybe smushed together multiple packs, look it up in the relevant index
+        const packEntry = this.metadata.packEntries.find(p => p._id === entryId);
+        if (!packEntry || !packEntry.pack) { return; }
+        const entity = await packEntry.pack.getEntity(entryId);
+        const actor = this.metadata.actor;
+
+        if (actor && entity) {
+            const newItemData = duplicate(entity.data);
+            actor.createOwnedItem(newItemData);
+        }
+    }
+    
 
     //Add the magnifying glass icon to all icon instances
     static addMatchControl(app, html, data) {
@@ -102,7 +134,7 @@ class MatchItem extends Compendium {
                 let matchButton = $(`<a class="item-control item-match" data-match=true title="${game.i18n.localize("PCI.ActorSheet.Match.HOVER")}"><i class="fas fa-search-plus"></i></a>`);
                 matchButton.click(ev => {
                     MatchItem.openMatcher(item, actor);
-                    //Would like to bold or otherwise indicate which one we picked
+//FIXME : Would like to bold or otherwise indicate which one we picked
                 });
                 html.find(`.item[data-item-id="${item._id}"]`).find('.item-controls').prepend(matchButton);
             }
@@ -122,7 +154,7 @@ class MatchItem extends Compendium {
         const itemType = ["spell","feat","class","loot"].includes(item.type) ? item.type : "loot"
 
         //We got all the then-defined item pack indexes in the ready step
-//FIXME: Should check if there are any new ones and get them now
+        //v0.6.5: and they are rebuilt if we change the Compendiums used
 //FIXME: Should build this list once for each tab so that we don't need to redo
         let concatenatedPackEntries = [];
         for (const entry of itemPackIndexesByType[itemType]) {

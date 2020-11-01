@@ -29,5 +29,7 @@
   "PCI.SelectList.Item.TITLE" : "Select a matching Item",
   "PCI.SelectList.Spell.TITLE": "Select a matching Spell",
   "PCI.SelectList.Feature.TITLE": "Select a matching Feature",
-  "PCI.ActorSheet.Match.HOVER" : "Match with Compendium(s)"
+  "PCI.ActorSheet.Match.HOVER" : "Match with Compendium(s)",
+  "PCI.ActorSheet.MatchDialog.REPLACE" : "Replace the old entry with this one",
+  "PCI.ActorSheet.MatchDialog.ADD": "Keep the old entry and add this one"
 }

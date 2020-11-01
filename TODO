@@ -26,6 +26,7 @@ IN PROGRESS Better way of specifying appropriate Compendiums to match against
 >>> Improve the Item sheet matcher: 
     - Add a button to the Item sheet to say "Replace this into the Actor" (delete the old one)
     - Way of improving the search based on the info we have (maybe have some search fields at the top, including level)        
+    - Have the different Compendiums in different collapsible sections- right-click context-menu to replace 
 - Import "weapons" from the Attacks portion if they don't appear in Inventory
 - Some way of specifying that you want to pull/parse different sections of the sheet for information
 

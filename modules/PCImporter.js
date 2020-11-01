@@ -40,10 +40,6 @@ export class PCImporter {
         this.importType = null;
     }
 
-    static init() {
-
-    }
-
     static async importFromFileDialog() {
 //FIXME: for now this is started from the button which alway creates a new Actor        
         const dialogContent = game.i18n.localize("PCI.ImportDialog.CONTENT") + game.i18n.localize("PCI.ImportDialog.Create.CONTENT");
@@ -311,5 +307,4 @@ export class PCImporter {
 }
 
 
-Hooks.on("init", PCImporter.init);
 Hooks.on('getSceneControlButtons', PCImporter.getSceneControlButtons);
