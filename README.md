@@ -31,6 +31,7 @@ PC Importer imports Player Character sheets from other systems and methods into 
 8. When the dialog opens, click the **Choose File** button, and browse to the location of the XFDF file created in Step 3 above and select that
 9. Click **Import**
 10. PC Importer will import recognized content into a newly created Actor (type character) and add unmatched content for the remaining classes, class features, feats, inventory, and spells. The name will show "...LOADING" after the Actor has been created, but while remaining content is being processed.
+11. Open the character sheet for your new Actor; click the magnifying-glass icon to show matching options - you can right-click a match to either Add or Replace it in the sheet
 
 ## Contribution
 *Coming soon!*
