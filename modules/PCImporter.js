@@ -18,14 +18,14 @@
                 Add Settings for default Compendiums to search for classes etc.
 26-Oct-2020     v0.6.3: getEntriesForPattern() returns both key and value   
 27-Oct-2020     v0.6.3b: Removed "race" setting since Racial Features are actually in with Class Features(?)          
-31-Oct-2020     v0.6.5b: Move settings config in init to PCISettings.js  
+31-Oct-2020     v0.6.6b: Move settings config in init to PCISettings.js  
 
 
 */
 import {Actor5eFromMPMB,Actor5eFromFG} from "./Actor5eFromExt.js";
 
 export var MODULE_NAME="pc-importer";
-export var MODULE_VERSION="0.6.5";
+export var MODULE_VERSION="0.6.6";
 
 const ImportType = {
     fantasyGrounds : "Fantasy Grounds",
