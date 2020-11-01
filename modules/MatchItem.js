@@ -150,7 +150,7 @@ export async function buildItemPackIndexesByType() {
             const pack = game.packs.get(packName);
             if (pack) {
                 pack.getIndex().then(packIndex => {
-                    if (packIndex) { itemPackIndexesByType[itemType].push({ packIndex: packIndex, pack: pack }); }
+                    if (packIndex) { itemPackIndexesByType[itemType].push({packIndex: packIndex, pack: pack}); }
                 });
             }
         }//end for packName

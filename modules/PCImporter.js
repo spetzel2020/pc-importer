@@ -22,7 +22,7 @@
 
 
 */
-import {Actor5eFromMPMB,Actor5eFromFG, defaultItemTypeToPackNames} from "./Actor5eFromExt.js";
+import {Actor5eFromMPMB,Actor5eFromFG} from "./Actor5eFromExt.js";
 
 export var MODULE_NAME="pc-importer";
 export var MODULE_VERSION="0.6.5";
