@@ -8,8 +8,8 @@ on:
         description: 'Log level'     
         required: true
         default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
+      tag:
+        description: "Tag to archive"
 jobs:
   build:
     runs-on: master
