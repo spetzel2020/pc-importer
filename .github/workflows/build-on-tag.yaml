@@ -16,7 +16,9 @@ jobs:
         with:
           node-version: '12.x'
 
-
+      # run our gulp build action
+      - name: Build dist directory
+        run: npm run build
 
       # create a zip file with all files required by the module to add to the release
       - name: Zip Files
