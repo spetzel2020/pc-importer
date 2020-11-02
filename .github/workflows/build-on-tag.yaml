@@ -11,25 +11,24 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
+      - name: Get the version from Tag
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
-      # run our gulp build action
-      - name: Build dist directory
-        run: npm run build
+      #Substitute the Download URL in the module.json
+      - name: Substitute Manifest Link For Versioned One
+        id: sub_manifest_link_version
+        uses: microsoft/variable-substitution@v1
+        with:
+          files: 'module.json'
+        env:
+          version: ${{ steps.get_version.outputs.VERSION }}
+          manifest: https://github.com/${{github.repository}}/releases/download/latest/module.json
+          download: https://github.com/${{github.repository}}/releases/download/${{ steps.get_version.outputs.VERSION }}/module.zip
 
       # create a zip file with all files required by the module to add to the release
       - name: Zip Files
-        working-directory: ./dist
         run: zip -r ./module.zip module.json css/ lang/ modules/ templates/
-
-      # Get the version from 'module.json'
-      - name: Get Version
-        shell: bash
-        id: get-version
-        run: echo "::set-output name=version::$(node ./.github/workflows/get-version.js)"
 
       # Generate changelog for release body
       - name: Changelog
@@ -44,14 +43,14 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true # set this to false if you want to prevent updating existing releases
-          name: ${{ steps.get-version.outputs.version }}
+          name: ${{ steps.get_version.outputs.VERSION }}
           body: |
             ${{ steps.Changelog.outputs.changelog }}
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './dist/module.json,./dist/module.zip'
-          tag_name: ${{ steps.get-version.outputs.version }}
+          tag_name: ${{ steps.get_version.outputs.VERSION }}
 
       # Update the 'latest' release
       - name: Create Release
