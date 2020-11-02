@@ -30,12 +30,6 @@ jobs:
       - name: Zip Files
         run: zip -r ./module.zip module.json css/ lang/ modules/ templates/
 
-      # Generate changelog for release body
-      - name: Changelog
-        id: Changelog
-        uses: scottbrenner/generate-changelog-action@master
-        env:
-          REPO: ${{ github.repository }}
 
       # Create a release for this specific version
       - name: Create Release
@@ -50,7 +44,7 @@ jobs:
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: './dist/module.json,./dist/module.zip'
-          tag_name: ${{ steps.get_version.outputs.VERSION }}
+          tag: ${{ steps.get_version.outputs.VERSION }}
 
       # Update the 'latest' release
       - name: Create Release
