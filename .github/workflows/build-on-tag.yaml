@@ -43,7 +43,7 @@ jobs:
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './dist/module.json,./dist/module.zip'
+          artifacts: './module.json,./module.zip'
           tag: ${{ steps.get_version.outputs.VERSION }}
 
       # Update the 'latest' release
@@ -57,5 +57,5 @@ jobs:
           draft: false
           prerelease: false
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: './dist/module.json, ./dist/module.zip'
+          artifacts: './module.json,./module.zip'
           tag: latest
