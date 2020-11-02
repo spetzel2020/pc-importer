@@ -17,6 +17,7 @@ IN PROGRESS Better way of specifying appropriate Compendiums to match against
 ## FEATURES
 >>> Unrecognized Features and Items:
     - Include info in the Description or the flags of what it originally had
+    - Already have what is available for Items (Row, Weight, Amount)
     - Also have a matching table MPMB->Foundry for common ones
 
 

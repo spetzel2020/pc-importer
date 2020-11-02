@@ -45,7 +45,9 @@
 27-Oct-2020 v0.6.3b:	Parallelize matchItems
 						getItemTypePackNames(): ADDED - also used by MatchItem.js
 29-Oct-2020 v0.6.4	Change Promise.all to .alLSettled (because if one fails that's ok)	
-1-Nov-2020	v0.6.6	Extend extractClasses to pick up features in Extra.Notes					
+1-Nov-2020	v0.6.6	Extend extractClasses to pick up features in Extra.Notes	
+					For matched items, copy over quantity but not weight
+					Tweak extractClasses regex to remove unneeded capture groups ()
 */
 
 import {MODULE_NAME} from "./PCImporter.js";
@@ -250,9 +252,8 @@ export class Actor5eFromExt {
 							//default added weapons to proficiency
 							fullItem.data.data.proficient = true;
 						} else if (item.type === "loot") {
-							//Copy over the quantity and weight if specified
+							//Copy over the quantity (but not the weight) if specified
 							fullItem.data.data.quantity = item.data.quantity;
-							fullItem.data.data.weight = item.data.weight;
 						}
 						break;	//We found a good match, so skip searching any other packs
 					}
@@ -456,14 +457,32 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		mappedValue = this.pcImporter.getValueForFieldName("Extra.Notes");
 		if (!mappedValue) { return; }
 		//The Feature name is [start of line] words (words, word number)
-		const extraNoteFeaturesRegExp = /^(?:[^A-Za-z])*([A-Za-z ]+) \(([A-Za-z ]+), PHB|XGtE \d{2,3}\)/gm;  //extract sub-classes from "(xyz nn"
+		const extraNoteFeaturesRegExp = /^[^A-Za-z]*([A-Za-z ]+) \(([A-Za-z ]+), (?:PHB|XGtE) \d{2,3}\)/gm;  //extract sub-classes from "(xyz nn"
 		while (match = extraNoteFeaturesRegExp.exec(mappedValue)) {
 			let featureItemData = duplicate(TemplateFeatData);
 			featureItemData.fullMatch = match[0];
+			//Remember where the match started and finished 
+			featureItemData.startIndex = match.index;
+			featureItemData.endIndex = extraNoteFeaturesRegExp.lastIndex;
 			featureItemData.name = match[1];
 			featureItemData.flags.featureType = match[2];
 			this.itemData.items.push(featureItemData);
 		}  
+		//Now add the text between the nth and n+1th capture 
+		let nextStartIndex;
+		let thisEndIndex;
+		let descriptiveText;
+		for (const [i,item] of this.itemData.items.entries()) {
+			thisEndIndex = item.endIndex;
+			if (i+1 < this.itemData.items.length) {
+				nextStartIndex = this.itemData.items[i+1].startIndex;
+			} else {
+				//Final item
+				nextStartIndex = mappedValue.length-1;
+			}
+			descriptiveText = mappedValue.substring(thisEndIndex, nextStartIndex);
+			this.itemData.items[i].data.description.value = descriptiveText;
+		}
 	}
 
 	async extractSpells() {
