@@ -444,6 +444,9 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 				}
 				//And store the separate features
 				const featureItemData = duplicate(TemplateFeatData);
+				//Remember where the match started and finished 
+				featureItemData.startIndex = match.index;
+				featureItemData.endIndex = featuresAndSubClassRegExp.lastIndex;
 				featureItemData.name = match[1];
 //FIXME: Change the match to get all the text up to the next match				
 				featureItemData.data.description.value = match[0];
@@ -452,6 +455,8 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 			delete this.itemData.items[i].fullMatch;    
 		}); 
 
+		//Keep this separate so we can loop it below for descriptive text
+		let tempExtraFeatureItemData = [];
 		//Now do something very similar with Monk and Warlock choices in Extra.Notes
 		//(we may want to check against the classes to only do this for certain classes)
 		mappedValue = this.pcImporter.getValueForFieldName("Extra.Notes");
@@ -466,22 +471,29 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 			featureItemData.endIndex = extraNoteFeaturesRegExp.lastIndex;
 			featureItemData.name = match[1];
 			featureItemData.flags.featureType = match[2];
-			this.itemData.items.push(featureItemData);
+			tempExtraFeatureItemData.push(featureItemData);
 		}  
+		this.extractDescription(mappedValue, tempExtraFeatureItemData);
+
+		this.itemData.items = [].concat(this.itemData.items, tempExtraFeatureItemData);
+	}
+
+	extractDescription(mappedValue, tempItemData) {
+		//Assuming you've saved the start and endIndex of the matches
 		//Now add the text between the nth and n+1th capture 
 		let nextStartIndex;
 		let thisEndIndex;
 		let descriptiveText;
-		for (const [i,item] of this.itemData.items.entries()) {
+		for (const [i, item] of tempItemData.entries()) {
 			thisEndIndex = item.endIndex;
-			if (i+1 < this.itemData.items.length) {
-				nextStartIndex = this.itemData.items[i+1].startIndex;
+			if (i + 1 < tempItemData.length) {
+				nextStartIndex = tempItemData[i + 1].startIndex;
 			} else {
 				//Final item
-				nextStartIndex = mappedValue.length-1;
+				nextStartIndex = mappedValue.length - 1;
 			}
 			descriptiveText = mappedValue.substring(thisEndIndex, nextStartIndex);
-			this.itemData.items[i].data.description.value = descriptiveText;
+			tempItemData[i].data.description.value = descriptiveText;
 		}
 	}
 
