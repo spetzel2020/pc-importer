@@ -19,6 +19,6 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           filename: 'v0.6.6.zip'
-          exclusions: './test-data'
+          exclusions: 'test-data'
 
 
