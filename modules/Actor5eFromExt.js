@@ -44,7 +44,8 @@
 26-Oct-2020	v0.6.3:	Add weight and quantities for items		
 27-Oct-2020 v0.6.3b:	Parallelize matchItems
 						getItemTypePackNames(): ADDED - also used by MatchItem.js
-29-Oct-2020 v0.6.4	Change Promise.all to .alLSettled (because if one fails that's ok)						
+29-Oct-2020 v0.6.4	Change Promise.all to .alLSettled (because if one fails that's ok)	
+1-Nov-2020	v0.6.6	Extend extractClasses to pick up features in Extra.Notes					
 */
 
 import {MODULE_NAME} from "./PCImporter.js";
@@ -411,7 +412,8 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		//Unfortunately the base class is not used consistently, but rather the sub-class
 		//<v0.6.0 approach: So instead we pull the class from the 1st Level feature gained (assuming there always is one)
 		//v0.6.1: However we use the learning from above "Class and Levels extraction"
-		const mappedValue = this.pcImporter.getValueForFieldName("Class Features");
+		//Class Features
+		let mappedValue = this.pcImporter.getValueForFieldName("Class Features");
 		if (!mappedValue) {return;}
 		//Get overall class level from the header line but ignore the class name which is not useful
 		//Then get class name from "(xyz 1" and sub-classes from "(xyz nn" programattically
@@ -448,6 +450,20 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 			}
 			delete this.itemData.items[i].fullMatch;    
 		}); 
+
+		//Now do something very similar with Monk and Warlock choices in Extra.Notes
+		//(we may want to check against the classes to only do this for certain classes)
+		mappedValue = this.pcImporter.getValueForFieldName("Extra.Notes");
+		if (!mappedValue) { return; }
+		//The Feature name is [start of line] words (words, word number)
+		const extraNoteFeaturesRegExp = /^(?:[^A-Za-z])*([A-Za-z ]+) \(([A-Za-z ]+), PHB|XGtE \d{2,3}\)/gm;  //extract sub-classes from "(xyz nn"
+		while (match = extraNoteFeaturesRegExp.exec(mappedValue)) {
+			let featureItemData = duplicate(TemplateFeatData);
+			featureItemData.fullMatch = match[0];
+			featureItemData.name = match[1];
+			featureItemData.flags.featureType = match[2];
+			this.itemData.items.push(featureItemData);
+		}  
 	}
 
 	async extractSpells() {
@@ -456,7 +472,8 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		const allSpells = this.pcImporter.getValuesForPattern(".SS(?:front|more)+.spells.name");
 		//Get all unique values
 		const allUniqueSpells = [...(new Set(allSpells))];
-//FIXME we'd like to get level as well to improve the chance of a match later
+		//We'd love to get spell level, but it doesn't seem to be stored for a spell
+		//(although must be available in the code somewhere)
 		for (const spellName of allUniqueSpells) {
 			let spellItemData = duplicate(TemplateSpellItemData);
 			spellItemData.name = spellName;
@@ -1518,7 +1535,8 @@ const TemplateFeatData = {
 			"label": "Description"
 		},
 		"source": "PC Importer"
-	}
+	},
+	"flags" : {}
 }
 
 const TemplateItemData = {

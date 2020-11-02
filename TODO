@@ -15,14 +15,11 @@ IN PROGRESS Better way of specifying appropriate Compendiums to match against
 
 
 ## FEATURES
->>> Add in Items or Features by name/description if not recognized and allow for manual matching
+>>> Unrecognized Features and Items:
     - Include info in the Description or the flags of what it originally had
     - Also have a matching table MPMB->Foundry for common ones
-    >>> Add more information for unrecognized Spells (e.g. Level)
->>> Invocations, Monk Features, Horizon Walker features - should be handled as Class Feature 
-    - Look like it's over-flowing into Extra.Notes
-    - Should be parsed very much like or maybe just appended?
-        - but appears with (Eldritch Invocation, or (Ki Feature, instead of <words> nn
+
+
 >>> Improve the Item sheet matcher: 
     - Way of improving the search based on the info we have (maybe have some search fields at the top, including level)        
     - Have the different Compendiums in different collapsible sections- right-click context-menu to replace 
@@ -58,3 +55,9 @@ DONE Inventory - include quantity and weights
 DONE Parallelize the item matching
 DONE - Have a custom Item sheet that presents possible matches, and then replaces with the found match
     - Right-click option to Replace or Add
+NOT DONE: Add more information for unrecognized Spells (e.g. Level) 
+    - Doesn't seem possible (not stored with the spell name or description)
+DONE Invocations, Monk Features, Horizon Walker features - should be handled as Class Feature 
+    - Look like it's over-flowing into Extra.Notes
+    - Should be parsed very much like or maybe just appended?
+        - but appears with (Eldritch Invocation, or (Ki Feature, instead of <words> nn
