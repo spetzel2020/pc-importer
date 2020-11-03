@@ -1,6 +1,6 @@
 {
   "PCI.id": "pc-importer",
-  "PCI.Version" : "v0.6.8",
+  "PCI.Version" : "v0.6.9",
   "PCI.Name": "PC Importer",
   "PCI.Welcome" : "Welcome to PC Importer",
   "PCI.ImportDialog.TITLE" : "Import PC",
@@ -29,6 +29,7 @@
   "PCI.SelectList.Item.TITLE" : "Select a matching Item",
   "PCI.SelectList.Spell.TITLE": "Select a matching Spell",
   "PCI.SelectList.Feature.TITLE": "Select a matching Feature",
+  "PCI.SelectList.ShowCandidate.LABEL" : "Show candidate ",
   "PCI.ActorSheet.Match.HOVER" : "Match with Compendium(s)",
   "PCI.ActorSheet.MatchDialog.REPLACE" : "Replace the old entry with this one",
   "PCI.ActorSheet.MatchDialog.ADD": "Keep the old entry and add this one"

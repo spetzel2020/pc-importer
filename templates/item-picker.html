@@ -1,17 +1,29 @@
-<div class="sidebar-tab compendium flexcol select-list">
-    <header class="directory-header list-header flexrow">
+<div class="sidebar-tab compendium flexcol">
+    <!-- We use the same css as for Compendium lists-->
+    <header class="directory-header flexcol">
+        <div class="select-list">
+            <label for="list-type">{{localize "PCI.SelectList.ShowCandidate.LABEL"}}</label>
+            <select id="list-type" label="list-type">
+                {{#each listTypes}}
+                <option class="compendium-name entry-name" data-entry-id="{{this.type}}" value={{this.type}}
+                    {{#if this.isSelected}}selected{{/if}}>
+                    {{this.type}}
+                </option>
+                {{/each}}
+            </select>
+        </div>
         <div class="header-search flexrow">
             <i class="fas fa-search"></i>
-            <input type="text" name="search" value="" placeholder="Suggested search: {{defaultSearch}}" autocomplete="off" />
+            <input type="text" name="search" value="" placeholder="Suggested search: {{defaultSearch}}"
+                autocomplete="off" />
         </div>
     </header>
-
     <ol class="directory-list item-list">
         {{#each items}}
-            <li class="directory-item item flexrow {{../cssClass}}" data-entry-id="{{this._id}}">
-                <img data-src="{{this.img}}" title="{{this.name}}" />
-                <h4 class="item-name entry-name"><a>{{this.name}}</a></h4>
-            </li>
+        <li class="directory-item item flexrow {{../cssClass}}" data-entry-id="{{this._id}}">
+            <img data-src="{{this.img}}" title="{{this.name}}" />
+            <h4 class="item-name entry-name"><a>{{this.name}}</a></h4>
+        </li>
         {{/each}}
     </ol>
 </div>

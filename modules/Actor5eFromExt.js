@@ -132,7 +132,7 @@ export class Actor5eFromExt {
 	mapArray(fieldNames) {
 		const fieldNameArray = Array.from(fieldNames);
 		let mappedArray = [];
-		fieldNameArray.forEach((fieldName) => {
+		fieldNameArray.forEach(fieldName => {
 			const mappedValue = this.pcImporter.getValueForFieldName(fieldName);
 			if (mappedValue && (mappedValue !== " ")) {mappedArray.push(mappedValue);}
 		});
@@ -413,7 +413,7 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		//Unfortunately the base class is not used consistently, but rather the sub-class
 		//<v0.6.0 approach: So instead we pull the class from the 1st Level feature gained (assuming there always is one)
 		//v0.6.1: However we use the learning from above "Class and Levels extraction"
-		//Class Features
+		//FEATURES: In "Class Features"
 		let mappedValue = this.pcImporter.getValueForFieldName("Class Features");
 		if (!mappedValue) {return;}
 		//Get overall class level from the header line but ignore the class name which is not useful
@@ -435,6 +435,7 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 		const featuresAndSubClassRegExp = /^(?:[^A-Za-z])*([A-Za-z ]+) \(([A-Za-z ]+) \d{1,2}/gm;  //extract sub-classes from "(xyz nn"
 
 		this.itemData.items.forEach((classItemData,i) => {
+//FIXME:Use tempFeatureItemData to record feature and extractDescription(classItemData.fullMatch)
 			//Get first [name][space][number] combination that doesn't match the previously extracted class name
 			while (match = featuresAndSubClassRegExp.exec(classItemData.fullMatch)) {
 				//Now find the subclass which doesn't match the class name
@@ -455,6 +456,7 @@ export class Actor5eFromMPMB extends Actor5eFromExt {
 			delete this.itemData.items[i].fullMatch;    
 		}); 
 
+		//MORE FEATURES: In "Extra.Notes"
 		//Keep this separate so we can loop it below for descriptive text
 		let tempExtraFeatureItemData = [];
 		//Now do something very similar with Monk and Warlock choices in Extra.Notes

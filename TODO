@@ -9,25 +9,26 @@
 - Size not being handled correctly
 
 >>> Shouldn't include ALL the test data in the release
-IN PROGRESS Better way of specifying appropriate Compendiums to match against
-    - can you also use Item lists if you've already imported
+>>> Use Item lists for matching if you've imported stuff into them
 - Racial Traits and Race are duplicating - need to parse the actual racial trait apart
 
 
 ## FEATURES
+- Import "weapons" from the Attacks portion if they don't appear in Inventory
+- Some way of specifying that you want to pull/parse different sections of the sheet for information
+    - when you start the import it gives you another dialog with different parts of the sheet
+    - because now Extra.Notes is pulling weapons in as Features
 >>> Unrecognized Features and Items:
     - Include info in the Description or the flags of what it originally had
     - Already have what is available for Items (Row, Weight, Amount)
     - Also have a matching table MPMB->Foundry for common ones
 
-
 >>> Improve the Item sheet matcher: 
     - Way of improving the search based on the info we have (maybe have some search fields at the top, including level)        
     - Have the different Compendiums in different collapsible sections- right-click context-menu to replace 
-    - Arrange unknown spells by level (should be automatic)
-- Import "weapons" from the Attacks portion if they don't appear in Inventory
-- Some way of specifying that you want to pull/parse different sections of the sheet for information
-    - when you start the imprort it gives you another dialog with different parts of the sheet
+    - and have search fields that default to the expected values but allow searching for Items when you're looking at Features 
+
+
 
 
 

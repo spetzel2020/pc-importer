@@ -5,21 +5,22 @@
                 v0.6.3c: MatchItem dialog to allow searching, filtering, and selecting - skeleton
 28-Oct-2020     v0.6.3d: Prefill the search box
                 Fetch the referenced item from the pack  and create it in the Actor        
-31-Oct-2020     v0.6.5f: Right-click context menu let syou replace or add the found item                      
+31-Oct-2020     v0.6.5f: Right-click context menu let syou replace or add the found item      
+2-Nov-2020      v0.6.9: getData(): Return a select-list with the default item (that is being shown) picked                
 
-*/         
+*/
 import {Actor5eFromExt} from "./Actor5eFromExt.js";
 
 let itemPackIndexesByType = {};
 const titleForItemType = {
     "loot": "PCI.SelectList.Item.TITLE",
-    "spell" : "PCI.SelectList.Spell.TITLE",
+    "spell": "PCI.SelectList.Spell.TITLE",
     "feature": "PCI.SelectList.Feature.TITLE"
 }
 
 class MatchItem extends Compendium {
-    constructor(metadata, actor,  options) {
-        if (metadata) {metadata.entity =  "Item";}
+    constructor(metadata, actor, options) {
+        if (metadata) { metadata.entity = "Item"; }
         super(metadata, options);
         //data is stored in this.metadata
         this.metadata.actor = actor;    //the owner actor
@@ -46,15 +47,28 @@ class MatchItem extends Compendium {
 
     /** @override */
     async getData() {
+        //Different list types
+        let itemTypeLocalized = this.metadata.item.type;
+        let listTypes = [
+            {type: "loot", isSelected: false},
+            {type: "spell", isSelected: false},
+            {type: "feature", isSelected: false}
+        ]
+        listTypes.forEach((element, i) => {
+            listTypes[i].isSelected = (element.type === itemTypeLocalized)
+        });
+
+        //Suggested search terms
         const words = this.metadata.item.name.split(" ");
         let defaultSearch = "";
-        words.forEach((w,i) => {
-            defaultSearch += (i===0) ? w : "|"+w;
+        words.forEach((w, i) => {
+            defaultSearch += (i === 0) ? w : "|" + w;
         });
         return {
             items: this.metadata.packEntries,
-            itemTypeLocalized: this.metadata.item.type,
-            defaultSearch: defaultSearch
+            itemTypeLocalized: itemTypeLocalized,
+            defaultSearch: defaultSearch,
+            listTypes: listTypes
         };
     }
 
@@ -72,10 +86,10 @@ class MatchItem extends Compendium {
     async _onEntry(entryId) {
         //Because we maybe smushed together multiple packs, look it up in the relevant index
         const packEntry = this.metadata.packEntries.find(p => p._id === entryId);
-        if (!packEntry || !packEntry.pack) {return;}
+        if (!packEntry || !packEntry.pack) { return; }
 
         const entity = await packEntry.pack.getEntity(entryId);
-        if (!entity) {return;}
+        if (!entity) { return; }
 
         let sheet = entity.sheet;
         sheet = Object.values(ui.windows).find(app => app.id === sheet.id) ?? sheet;
@@ -94,7 +108,7 @@ class MatchItem extends Compendium {
                 callback: li => {
                     const entryId = li.attr('data-entry-id');
                     this.importOwnedItem(entryId);
-  
+
                 }
             },
             {
@@ -105,7 +119,7 @@ class MatchItem extends Compendium {
                     this.importOwnedItem(entryId).then(() => {
                         //delete the previous one (saved in this.metadata.item)
                         const actor = this.metadata.actor;
-                        if (actor) {actor.deleteOwnedItem(this.metadata.item._id)}
+                        if (actor) { actor.deleteOwnedItem(this.metadata.item._id) }
                     });
                 }
             }
@@ -124,7 +138,7 @@ class MatchItem extends Compendium {
             actor.createOwnedItem(newItemData);
         }
     }
-    
+
 
     //Add the magnifying glass icon to all icon instances
     static addMatchControl(app, html, data) {
@@ -134,7 +148,7 @@ class MatchItem extends Compendium {
                 let matchButton = $(`<a class="item-control item-match" data-match=true title="${game.i18n.localize("PCI.ActorSheet.Match.HOVER")}"><i class="fas fa-search-plus"></i></a>`);
                 matchButton.click(ev => {
                     MatchItem.openMatcher(item, actor);
-//FIXME : Would like to bold or otherwise indicate which one we picked
+                    //FIXME : Would like to bold or otherwise indicate which one we picked
                 });
                 html.find(`.item[data-item-id="${item._id}"]`).find('.item-controls').prepend(matchButton);
             }
@@ -149,18 +163,18 @@ class MatchItem extends Compendium {
     }
 
     static async openMatcher(item, actor) {
-        if (!item || !actor) {return;}
+        if (!item || !actor) { return; }
         //Get all the data packs of this type (for sub-item types, we look just for "loot")
-        const itemType = ["spell","feat","class","loot"].includes(item.type) ? item.type : "loot"
+        const itemType = ["spell", "feat", "class", "loot"].includes(item.type) ? item.type : "loot"
 
         //We got all the then-defined item pack indexes in the ready step
         //v0.6.5: and they are rebuilt if we change the Compendiums used
-//FIXME: Should build this list once for each tab so that we don't need to redo
+        //FIXME: Should build this list once for each tab so that we don't need to redo
         let concatenatedPackEntries = [];
         for (const entry of itemPackIndexesByType[itemType]) {
             const packIndex = entry.packIndex;
             const pack = entry.pack;
-            const filteredPackIndex = packIndex.map(i => {return {pack: pack, _id : i._id, name : i.name, img: i.img};});
+            const filteredPackIndex = packIndex.map(i => { return {pack: pack, _id: i._id, name: i.name, img: i.img}; });
             concatenatedPackEntries = concatenatedPackEntries.concat(filteredPackIndex);
         }
         //Now create the matcher dialog
