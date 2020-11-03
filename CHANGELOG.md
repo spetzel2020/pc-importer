@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.6.8
+- Versioning and building artifacts
+
 ## 0.6.6
 - Pick up Class Features in Extra.Notes
 
