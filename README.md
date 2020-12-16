@@ -34,7 +34,7 @@ PC Importer imports Player Character sheets from other systems and methods into 
 11. Open the character sheet for your new Actor; click the magnifying-glass icon to show matching options - you can right-click a match to either Add or Replace it in the sheet
 
 ## Contribution
-*Coming soon!*
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T82XFQD)
 
 ## License
 **PC Importer for Foundry** by Jeffrey Pugh is licensed under a [GNU General Public License v3.0](https://github.com/spetzel2020/pc-importer/edit/master/LICENSE.md)
