@@ -1,7 +1,11 @@
 # PC Importer
 
+**IMPORTANT** 
+* For Foundry 0.8.x use ![PC Importer v0.7.0](https://github.com/spetzel2020/pc-importer/releases/latest/download/module.json)
+* For Foundry 0.7.x and earlier use ![PC Importer v0.6.8](https://github.com/spetzel2020/pc-importer/releases/v0.6.8/module.json)
+
 * **Author**: Spetzel#0103
-* **Version**: 0.6.8
+* **Version**: 0.7.0
 * **Foundry VTT Compatibility**: 0.6.5-0.8.8
 * **System Compatibility (If applicable)**: dnd5e
 * **Translation Support**: en
