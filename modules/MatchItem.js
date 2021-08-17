@@ -6,7 +6,7 @@
 28-Oct-2020     v0.6.3d: Prefill the search box
                 Fetch the referenced item from the pack  and create it in the Actor        
 31-Oct-2020     v0.6.5f: Right-click context menu let syou replace or add the found item      
-2-Nov-2020      v0.6.9: getData(): Return a select-list with the default item (that is being shown) picked                
+2-Nov-2020      v0.6.9: getData(): Return a select-list with the default item (that is being shown) picked
 
 */
 import {Actor5eFromExt} from "./Actor5eFromExt.js";

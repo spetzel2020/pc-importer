@@ -49,6 +49,7 @@
 					For matched items, copy over quantity but not weight
 					Tweak extractClasses regex to remove unneeded capture groups ()
 16-Aug-2020 v0.7.0	Support Foundry v0.8.x; Issue #2 No actor is created when uploading xfdf file
+17-Aug-2020 v0.7.0b: matchForItemType(): Replace "OwnedItem" with "Item" because of new document naming convention in Foundry 0.8.x
 
 */
 
@@ -270,7 +271,7 @@ export class Actor5eFromExt {
 			if (fullItem && fullItem.data) { allItemsData.push(fullItem.data); }
 		}//end for items
 		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
-		await this.actor.createEmbeddedEntity("OwnedItem", allItemsData);
+		await this.actor.createEmbeddedEntity("Item", allItemsData);
 	}
 
 	static getItemTypePackNames() {
