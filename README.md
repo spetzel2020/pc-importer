@@ -8,7 +8,7 @@
 
 **Version**: 0.7.0
 
-**Foundry VTT Compatibility**: 0.6.5-0.8.8
+**Foundry VTT Compatibility**: 0.8.x (for Foundry 0.7.x and earlier, use the link above)
 
 **System Compatibility (If applicable)**: dnd5e
 
