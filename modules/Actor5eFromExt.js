@@ -48,6 +48,8 @@
 1-Nov-2020	v0.6.6	Extend extractClasses to pick up features in Extra.Notes	
 					For matched items, copy over quantity but not weight
 					Tweak extractClasses regex to remove unneeded capture groups ()
+16-Aug-2020 v0.7.0	Support Foundry v0.8.x; Issue #2 No actor is created when uploading xfdf file
+
 */
 
 import {MODULE_NAME} from "./PCImporter.js";
@@ -1004,7 +1006,7 @@ const Actor5eToMPMBMapping = {
 	  "token": {
 		"flags": {},
 		"name": "AdvLog.PC Name",
-		"displayName": {default: "0"},
+		"displayName": 0,
 		"img": "icons/svg/mystery-man.svg",
 		"tint": null,
 		"width": 1,
@@ -1491,7 +1493,7 @@ const Actor5eToFGMapping = {
 	  "token": {
 		"flags": {},
 		"name": null,
-		"displayName": {default: "0"},
+		"displayName": 0,
 		"img": "icons/svg/mystery-man.svg",
 		"tint": null,
 		"width": 1,
