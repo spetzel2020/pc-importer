@@ -2,19 +2,17 @@
 
 * **Author**: Spetzel#0103
 * **Version**: 0.6.8
-* **Foundry VTT Compatibility**: 0.6.5-0.7.5
+* **Foundry VTT Compatibility**: 0.6.5-0.8.8
 * **System Compatibility (If applicable)**: dnd5e
 * **Translation Support**: en
 
 
 # Description
-
 PC Importer imports Player Character sheets from other systems and methods into Foundry VTT Actors, matching to SRD or other Compendiums you have created manually or through importers such as D&D Beyond.
 
 # Install
-
 1. Go to the "Add-on Modules" tab in Foundry Setup
-2. Click "Install Module" and paste this link in the field at the bottom: `https://raw.githubusercontent.com/spetzel2020/pc-importer/v0.6.8/module.json`
+2. Click "Install Module" and paste this link in the field at the bottom: `https://github.com/spetzel2020/pc-importer/releases/latest/download/module.json`
 3. Open your world and go to Settings>Manage Modules and enable **PC Importer**
 
 ## Using PC Importer with MPMB sheets
