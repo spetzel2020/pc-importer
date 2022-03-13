@@ -50,6 +50,7 @@
 					Tweak extractClasses regex to remove unneeded capture groups ()
 16-Aug-2020 v0.7.0	Support Foundry v0.8.x; Issue #2 No actor is created when uploading xfdf file
 17-Aug-2020 v0.7.0b: matchForItemType(): Replace "OwnedItem" with "Item" because of new document naming convention in Foundry 0.8.x
+12-Mar-2022	v0.8.0a: Fixed: Issue #3: Failed silently with Foundry 9 because of use of getEntity (deprecated)
 
 */
 
@@ -244,7 +245,7 @@ export class Actor5eFromExt {
 				//findBestMatch scores best with all words matching and none extra
 				const foundItemIndex = Actor5eFromExt.findBestMatch(packIndex, item.name);
 				if (foundItemIndex && foundItemIndex._id) {
-					fullItem = await pack.getEntity(foundItemIndex._id);
+					fullItem = await pack.getDocument(foundItemIndex._id);
 					if (fullItem && fullItem.data) {
 						//Nothing extra to do if it's a known spell or item
 						if (item.type === "class") {
@@ -271,7 +272,7 @@ export class Actor5eFromExt {
 			if (fullItem && fullItem.data) { allItemsData.push(fullItem.data); }
 		}//end for items
 		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
-		await this.actor.createEmbeddedEntity("Item", allItemsData);
+		await this.actor.createEmbeddedDocuments("Item", allItemsData);
 	}
 
 	static getItemTypePackNames() {

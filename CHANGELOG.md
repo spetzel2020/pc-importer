@@ -1,4 +1,6 @@
 # Changelog
+## 0.8.0
+- Fixed: Issue [#3](https://github.com/spetzel2020/pc-importer/issues/3)
 
 ## 0.6.8
 - Versioning and building artifacts
