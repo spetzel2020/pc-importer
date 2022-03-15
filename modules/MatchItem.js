@@ -88,7 +88,7 @@ class MatchItem extends Compendium {
         const packEntry = this.metadata.packEntries.find(p => p._id === entryId);
         if (!packEntry || !packEntry.pack) { return; }
 
-        const entity = await packEntry.pack.getEntity(entryId);
+        const entity = await packEntry.pack.getDocument(entryId);
         if (!entity) { return; }
 
         let sheet = entity.sheet;
@@ -130,7 +130,7 @@ class MatchItem extends Compendium {
         //Because we maybe smushed together multiple packs, look it up in the relevant index
         const packEntry = this.metadata.packEntries.find(p => p._id === entryId);
         if (!packEntry || !packEntry.pack) { return; }
-        const entity = await packEntry.pack.getEntity(entryId);
+        const entity = await packEntry.pack.getDocument(entryId);
         const actor = this.metadata.actor;
 
         if (actor && entity) {

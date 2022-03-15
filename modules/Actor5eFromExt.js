@@ -51,6 +51,10 @@
 16-Aug-2020 v0.7.0	Support Foundry v0.8.x; Issue #2 No actor is created when uploading xfdf file
 17-Aug-2020 v0.7.0b: matchForItemType(): Replace "OwnedItem" with "Item" because of new document naming convention in Foundry 0.8.x
 12-Mar-2022	v0.8.0a: Fixed: Issue #3: Failed silently with Foundry 9 because of use of getEntity (deprecated)
+13-Mar-2022	v0.8.0b: matchForItemType(): Convert levels to Int (previously Foundry seemed flexible about receiving a string, but no more?)
+14-Mar-2022			Problem is related to the way Foundry 9 uses default values rather than actual values - I don't know why this is so
+					matchForItemType(): Simplify by using just matchedItem and fullItemData; convert ItemData to raw values
+
 
 */
 
@@ -235,7 +239,8 @@ export class Actor5eFromExt {
 		let allItemsData = [];
 		//Note that item.type for "item" is actually defaulted to "loot"
 		for (const item of this.itemData.items.filter(item => item.type === itemType)) {
-			let fullItem = null;	//a match in the packs, or just record as is
+			let matchedItem = null;	//a match in the packs, or just record as is
+			let fullItemData = null;
 			for (const packName of packNames) {
 				let pack = game.packs.get(packName);
 				let packIndex;
@@ -245,33 +250,37 @@ export class Actor5eFromExt {
 				//findBestMatch scores best with all words matching and none extra
 				const foundItemIndex = Actor5eFromExt.findBestMatch(packIndex, item.name);
 				if (foundItemIndex && foundItemIndex._id) {
-					fullItem = await pack.getDocument(foundItemIndex._id);
-					if (fullItem && fullItem.data) {
+					matchedItem = await pack.getDocument(foundItemIndex._id);
+					fullItemData = matchedItem?.data;
+					if (fullItemData) {
 						//Nothing extra to do if it's a known spell or item
 						if (item.type === "class") {
 							//For classes, we augment with our knowledge of subclass and level
-							fullItem.data.data.levels = item.data.levels;
-							fullItem.data.data.subclass = item.data.subclass;
-						} else if (fullItem.data.type === "weapon") {
+							//0.8.0b: Foundry 9 seems stricter about requiring a number (we were passing a string)
+							fullItemData.data.levels = parseInt(item.data.levels);
+							fullItemData.data.subclass = item.data.subclass;
+						} else if (matchedItem.data.type === "weapon") {
 							//default added weapons to proficiency
-							fullItem.data.data.proficient = true;
+							fullItemData.data.proficient = true;
 						} else if (item.type === "loot") {
 							//Copy over the quantity (but not the weight) if specified
-							fullItem.data.data.quantity = item.data.quantity;
+							fullItemData.data.quantity = item.data.quantity;
 						}
 						break;	//We found a good match, so skip searching any other packs
 					}
 				}
 			}//end for packNames
 			//FIXME: Will want to add additional known info in flags
-			if (!fullItem) {
-				fullItem = {};
+			if (!fullItemData) {
 				//Especially for items, but also for other types, make a copy for manual matching
-				fullItem.data = duplicate(item);
+				fullItemData = duplicate(item);
 			}
-			if (fullItem && fullItem.data) { allItemsData.push(fullItem.data); }
+			//0.8.0b: To ensure we don't pick up default data from an Item definition, we convert to raw data instead of an Item - for those that are already Items
+			if (fullItemData instanceof foundry.data.ItemData) {fullItemData = fullItemData.toObject(false);}
+			if (fullItemData) { allItemsData.push(fullItemData); }
 		}//end for items
 		//Create all items in batch - using the same logic as Actor5e/base.js/_onDropItemCreate
+		//0.8.0b: Convert each element of allItemData ahead of time so they are preserved (as per suggestion from @Atropos)
 		await this.actor.createEmbeddedDocuments("Item", allItemsData);
 	}
 
