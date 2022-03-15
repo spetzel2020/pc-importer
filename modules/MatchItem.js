@@ -7,7 +7,7 @@
                 Fetch the referenced item from the pack  and create it in the Actor        
 31-Oct-2020     v0.6.5f: Right-click context menu let syou replace or add the found item      
 2-Nov-2020      v0.6.9: getData(): Return a select-list with the default item (that is being shown) picked
-
+14-Mar-2020     v0.8.1a: addMatchControl(): app.entity --> app.document
 */
 import {Actor5eFromExt} from "./Actor5eFromExt.js";
 
@@ -19,11 +19,11 @@ const titleForItemType = {
 }
 
 class MatchItem extends Compendium {
-    constructor(metadata, actor, options) {
-        if (metadata) { metadata.entity = "Item"; }
-        super(metadata, options);
-        //data is stored in this.metadata
-        this.metadata.actor = actor;    //the owner actor
+    constructor(collection, actor, options) {
+        if (collection) { collection.entity = "Item"; }
+        super(collection, options);
+        //data is stored in this.collection
+        this.collection.actor = actor;    //the owner actor
     }
 
     /* -------------------------------------------- */
@@ -41,14 +41,14 @@ class MatchItem extends Compendium {
 
     /** @override */
     get title() {
-        const titleKey = titleForItemType[this.metadata.item.type];
+        const titleKey = titleForItemType[this.collection.item.type];
         return game.i18n.localize(titleKey) || "Select a matching Item";
     }
 
     /** @override */
     async getData() {
         //Different list types
-        let itemTypeLocalized = this.metadata.item.type;
+        let itemTypeLocalized = this.collection.item.type;
         let listTypes = [
             {type: "loot", isSelected: false},
             {type: "spell", isSelected: false},
@@ -59,13 +59,13 @@ class MatchItem extends Compendium {
         });
 
         //Suggested search terms
-        const words = this.metadata.item.name.split(" ");
+        const words = this.collection.item.name.split(" ");
         let defaultSearch = "";
         words.forEach((w, i) => {
             defaultSearch += (i === 0) ? w : "|" + w;
         });
         return {
-            items: this.metadata.packEntries,
+            items: this.collection.packEntries,
             itemTypeLocalized: itemTypeLocalized,
             defaultSearch: defaultSearch,
             listTypes: listTypes
@@ -74,18 +74,18 @@ class MatchItem extends Compendium {
 
     /** @override */
     //Normal search escapes everything - we want to use a more sophisticated search that allows ORs
-    _onSearchFilter(event, query, html) {
-        const rgx = new RegExp(query, "i"); //Remove RefExp.escape so we can include | (OR) symbol
+    _onSearchFilter(event, query, rgx, html) {
+        const newRgx = new RegExp(query, "i"); //Remove RegExp.escape so we can include | (OR) symbol
         for (let li of html.children) {
             const name = li.querySelector(".entry-name").textContent;
-            li.style.display = rgx.test(name) ? "flex" : "none";
+            li.style.display = newRgx.test(name) ? "flex" : "none";
         }
     }
 
     /** @override */
     async _onEntry(entryId) {
         //Because we maybe smushed together multiple packs, look it up in the relevant index
-        const packEntry = this.metadata.packEntries.find(p => p._id === entryId);
+        const packEntry = this.collection.packEntries.find(p => p._id === entryId);
         if (!packEntry || !packEntry.pack) { return; }
 
         const entity = await packEntry.pack.getDocument(entryId);
@@ -117,9 +117,9 @@ class MatchItem extends Compendium {
                 callback: li => {
                     let entryId = li.attr('data-entry-id');
                     this.importOwnedItem(entryId).then(() => {
-                        //delete the previous one (saved in this.metadata.item)
-                        const actor = this.metadata.actor;
-                        if (actor) { actor.deleteOwnedItem(this.metadata.item._id) }
+                        //delete the previous one (saved in this.collection.item)
+                        const actor = this.collection.actor;
+                        if (actor) { Item.deleteDocuments([this.collection.item._id], {parent : actor}); }
                     });
                 }
             }
@@ -128,21 +128,20 @@ class MatchItem extends Compendium {
 
     async importOwnedItem(entryId) {
         //Because we maybe smushed together multiple packs, look it up in the relevant index
-        const packEntry = this.metadata.packEntries.find(p => p._id === entryId);
+        const packEntry = this.collection.packEntries.find(p => p._id === entryId);
         if (!packEntry || !packEntry.pack) { return; }
-        const entity = await packEntry.pack.getDocument(entryId);
-        const actor = this.metadata.actor;
+        const newItem = await packEntry.pack.getDocument(entryId);
+        const actor = this.collection.actor;
 
-        if (actor && entity) {
-            const newItemData = duplicate(entity.data);
-            actor.createOwnedItem(newItemData);
+        if (actor && newItem) {
+            actor.addEmbeddedItems([newItem], false);
         }
     }
 
 
     //Add the magnifying glass icon to all icon instances
     static addMatchControl(app, html, data) {
-        const actor = app.entity;
+        const actor = app.document;
         for (const item of data.actor.items) {
             if (app.options.editable) {
                 let matchButton = $(`<a class="item-control item-match" data-match=true title="${game.i18n.localize("PCI.ActorSheet.Match.HOVER")}"><i class="fas fa-search-plus"></i></a>`);

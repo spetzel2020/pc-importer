@@ -3,7 +3,7 @@
     "title": "PC Importer",
     "description": "<p>Import your PC character sheet to Foundry and match to SRD or other licensed content</p>Supported methods:<ol><li>MPMB (More Purple More Better)</li></ol>",
     "author" : "Spetzel",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "minimumCoreVersion": "0.8.6",
     "compatibleCoreVersion": "9",
     "languages": [{
@@ -26,6 +26,6 @@
     "bugs": "https://github.com/spetzel2020/pc-importer/issues",
     "changelog": "https://github.com/spetzel2020/pc-importer/blob/master/CHANGELOG.md",
     "manifest": "https://github.com/spetzel2020/pc-importer/releases/latest/download/module.json",
-    "download": "https://github.com/spetzel2020/pc-importer/releases/download/v0.8.0/pc-importer.zip",
+    "download": "https://github.com/spetzel2020/pc-importer/releases/download/v0.8.1/pc-importer.zip",
     "url": "https://github.com/spetzel2020/pc-importer"
 }
