@@ -5,13 +5,9 @@
 * For Foundry 0.7.x and earlier use [PC Importer v0.6.8](https://raw.githubusercontent.com/spetzel2020/pc-importer/v0.6.8/module.json)
 
 **Author**: Spetzel#0103
-
 **Version**: 0.8.0
-
 **Foundry VTT Compatibility**: 0.8.x and 9 (for Foundry 0.7.x and earlier, use the link above)
-
 **System Compatibility (If applicable)**: dnd5e
-
 **Translation Support**: en
 
 
@@ -38,6 +34,9 @@ PC Importer imports Player Character sheets from other systems and methods into 
 9. Click **Import**
 10. PC Importer will import recognized content into a newly created Actor (type character) and add unmatched content for the remaining classes, class features, feats, inventory, and spells. The name will show "...LOADING" after the Actor has been created, but while remaining content is being processed.
 11. Open the character sheet for your new Actor; click the magnifying-glass icon to show matching options - you can right-click a match to either Add or Replace it in the sheet
+
+## NEW: Manual matcher with Compendiums
+When the import finishes, open the new character sheet and click on the (+) icon next to unmatched entries to match manually with Compendiums
 
 ## Contribution
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T82XFQD)
