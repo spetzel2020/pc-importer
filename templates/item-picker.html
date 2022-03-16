@@ -1,5 +1,5 @@
-<div class="sidebar-tab compendium flexcol">
-    <!-- We use the same css as for Compendium lists-->
+<div class="compendium directory flexcol">
+    <!-- We use the same css as for Compendium lists (modeled on compendium.html)-->
     <header class="directory-header flexcol">
         <div class="select-list">
             <label for="list-type">{{localize "PCI.SelectList.ShowCandidate.LABEL"}}</label>
@@ -19,10 +19,10 @@
         </div>
     </header>
     <ol class="directory-list item-list">
-        {{#each items}}
-        <li class="directory-item item flexrow {{../cssClass}}" data-entry-id="{{this._id}}">
+        {{#each index}}
+        <li class="directory-item document flexrow {{../cssClass}}" data-document-id="{{this._id}}">
             <img data-src="{{this.img}}" title="{{this.name}}" />
-            <h4 class="item-name entry-name"><a>{{this.name}}</a></h4>
+            <h4 class="document-name entry-name"><a>{{this.name}}</a></h4>
         </li>
         {{/each}}
     </ol>
