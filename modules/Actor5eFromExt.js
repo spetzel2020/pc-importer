@@ -54,13 +54,15 @@
 13-Mar-2022	v0.8.0b: matchForItemType(): Convert levels to Int (previously Foundry seemed flexible about receiving a string, but no more?)
 14-Mar-2022			Problem is related to the way Foundry 9 uses default values rather than actual values - I don't know why this is so
 					matchForItemType(): Simplify by using just matchedItem and fullItemData; convert ItemData to raw values
-
-
+19-Sep-2022 v0.9.0	Issue: PC Importer button not showing up in toolbar in Foundry v10
+					Relates to Imports from dnd5e that are no longer accessible
+					Also DND5E is replaced by CONFIG.DND5E --> converted to constant KNOWN_LANGUAGES
+					Use Actor.create() directly instead of Actor
 */
 
 import {MODULE_NAME} from "./PCImporter.js";
-import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
-import {DND5E} from "/systems/dnd5e/module/config.js";
+//import Actor5e from "/systems/dnd5e/module/actor/entity.js";    //default export
+//import {DND5E} from "/systems/dnd5e/module/config.js";
 
 
 //The item types coming from MPMB (and FG?) -> the dnd5e pack(s) to use -> what we should label unknown items
@@ -193,7 +195,7 @@ export class Actor5eFromExt {
 		//v0.6.2: Since this actor will show up in the Actors list, we change the name to show that it's still loading
 		this.name = actorData.name;
 		actorData.name = this.name + game.i18n.localize("PCI.LoadingMessage");
-		this.actor = await Actor5e.create(actorData, options);
+		this.actor = await Actor.create(actorData, options);
 
 		//Now do the matching - do this on the created Actor so that we pull Items from the Compendium directly into the
 		//Actor rather than having to create intermediate values
@@ -201,13 +203,15 @@ export class Actor5eFromExt {
 	}
 
 	fixFoundryActor() {
+		const foundryVersion = game.data.release?.generation ?? game.data.version;
 		//LANGUAGES: Check that they are in the known set of DND5E languages
 		let unknownLanguages = [];
+		const KNOWN_LANGUAGES = (foundryVersion === 10) ? CONFIG.DND5E.languages : DND5E?.languages; 
 		this.actorData.data.traits.languages.value.forEach(lang => {
-			if (!(lang in DND5E.languages)) {unknownLanguages.push(lang);}
+			if (!(lang in KNOWN_LANGUAGES)) {unknownLanguages.push(lang);}
 		});
 		//Filter out the unknown languages
-		this.actorData.data.traits.languages.value = this.actorData.data.traits.languages.value.filter(lang => lang in DND5E.languages);
+		this.actorData.data.traits.languages.value = this.actorData.data.traits.languages.value.filter(lang => lang in KNOWN_LANGUAGES);
 		//And add them to custom
 		if (!this.actorData.data.traits.languages.custom) {this.actorData.data.traits.languages.custom = "";}
 		if (unknownLanguages.length) {
