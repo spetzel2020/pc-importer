@@ -1,6 +1,7 @@
 # PC Importer
 
 **IMPORTANT** 
+* **Not compatible with latest versions of Foundry.**
 * For Foundry 0.8.x and 9.x use [PC Importer v0.8.x](https://github.com/spetzel2020/pc-importer/releases/latest/download/module.json)
 * For Foundry 0.7.x and earlier use [PC Importer v0.6.8](https://raw.githubusercontent.com/spetzel2020/pc-importer/v0.6.8/module.json)
 
